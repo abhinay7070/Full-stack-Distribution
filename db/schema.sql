@@ -120,3 +120,23 @@ CREATE TABLE IF NOT EXISTS outreach_log (
     UNIQUE (touch_date, company_domain, contact_name, channel, touch_type)
 );
 CREATE INDEX IF NOT EXISTS idx_outreach_domain ON outreach_log(company_domain);
+
+-- One outreach email per company. source_type: 'pipeline' (scripts/enrich_emails.py), 'clay'
+-- (scripts/clay_bridge.py import), 'manual' (typed in the workbook). The pipeline never overwrites
+-- clay or manual rows.
+CREATE TABLE IF NOT EXISTS company_emails (
+    company_domain       TEXT PRIMARY KEY REFERENCES companies(company_domain) ON UPDATE CASCADE ON DELETE CASCADE,
+    email                TEXT NOT NULL,
+    contact_name         TEXT,
+    contact_role         TEXT,
+    email_confidence     TEXT NOT NULL,   -- published_ceo | published_founder | derived_from_pattern |
+                                          -- published_founders_inbox | published_generic | clay_valid |
+                                          -- clay_unverified | clay_invalid | guess_first_at_domain | manual
+    source_type          TEXT NOT NULL DEFAULT 'pipeline' CHECK (source_type IN ('pipeline','clay','manual')),
+    source_url           TEXT,
+    evidence             TEXT,
+    email_alt            TEXT,
+    email_alt_confidence TEXT,
+    all_published        TEXT,            -- JSON array of every company-domain address seen in public sources
+    found_at             TEXT NOT NULL
+);

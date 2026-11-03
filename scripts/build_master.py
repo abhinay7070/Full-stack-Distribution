@@ -48,6 +48,8 @@ EXAMPLE_DOMAIN = "example.com"
 STAGES = ["Not started", "Researching", "Contacted", "Follow-up 1", "Follow-up 2", "Replied", "Call booked",
           "Trial / proposal", "Offer", "Won", "Lost", "Not a fit"]
 CLOSED = ["Won", "Lost", "Not a fit"]
+EMAIL_CONF = ["published_ceo", "published_founder", "clay_valid", "derived_from_pattern", "published_founders_inbox",
+              "published_generic", "clay_unverified", "guess_first_at_domain", "clay_invalid", "manual"]
 CHANNELS = ["LinkedIn", "Email", "X", "Job application", "Warm intro", "Call", "Other"]
 TOUCH_TYPES = ["First touch", "Follow-up", "Reply", "Call", "Proposal", "Other"]
 OUTCOMES = ["Sent", "No reply", "Replied - positive", "Replied - negative", "Call booked", "Not a fit"]
@@ -116,7 +118,7 @@ def sync_from_workbook(conn) -> dict:
     if not XLSX.exists():
         return {"synced": False}
     wb = load_workbook(XLSX, data_only=True)
-    n_track = n_log = 0
+    n_track = n_log = n_email = 0
     if "Master" in wb.sheetnames:
         ws = wb["Master"]
         hdr = {c.value: i for i, c in enumerate(ws[HEADER_ROW]) if c.value}
@@ -126,6 +128,18 @@ def sync_from_workbook(conn) -> dict:
                 continue
             stage, act, when, notes = (row[hdr["stage"]], row[hdr["next_action"]], to_date(row[hdr["next_action_date"]]),
                                        row[hdr["notes"]])
+            em = row[hdr["email"]] if "email" in hdr else None
+            if isinstance(em, str) and "@" in em:
+                em = em.strip().lower()
+                cur = conn.execute("SELECT email FROM company_emails WHERE company_domain=?", (d,)).fetchone()
+                if not cur or cur["email"] != em:
+                    conn.execute(
+                        "INSERT INTO company_emails (company_domain, email, contact_name, email_confidence, source_type, "
+                        "evidence, found_at) VALUES (?,?,NULL,'manual','manual','typed in workbook',?) "
+                        "ON CONFLICT(company_domain) DO UPDATE SET email=excluded.email, contact_name=NULL, "
+                        "email_confidence='manual', source_type='manual', evidence=excluded.evidence, "
+                        "found_at=excluded.found_at", (d, em, pdb.utcnow()))
+                    n_email += 1
             if (stage and stage != "Not started") or act or when or notes:
                 conn.execute(
                     "INSERT INTO tracking (company_domain, stage, next_action, next_action_date, notes, updated_at) "
@@ -148,7 +162,7 @@ def sync_from_workbook(conn) -> dict:
                                "touch_type, angle, outcome, next_step, notes) VALUES (?,?,?,?,?,?,?,?,?)", vals)
             n_log += cur.rowcount
     conn.commit()
-    return {"synced": True, "tracking_rows": n_track, "new_log_rows": n_log}
+    return {"synced": True, "tracking_rows": n_track, "new_log_rows": n_log, "manual_emails": n_email}
 
 
 # --------------------------------------------------------------------------- 2. tier + wave
@@ -262,6 +276,7 @@ def assemble(conn) -> dict:
     for f in conn.execute("SELECT * FROM founders ORDER BY founder_id"):
         founders[f["company_domain"]].append(dict(f))
     track = {r["company_domain"]: dict(r) for r in conn.execute("SELECT * FROM tracking")}
+    emails = {r["company_domain"]: dict(r) for r in conn.execute("SELECT * FROM company_emails")}
     now = pdb.utcnow()
     rows = []
     for m in master:
@@ -292,6 +307,10 @@ def assemble(conn) -> dict:
             "ceo_name": (ceo or {}).get("full_name"), "ceo_role": (ceo or {}).get("role"),
             "ceo_linkedin": (ceo or {}).get("linkedin_url"),
             "ceo_x": f"@{ceo['x_handle']}" if ceo and ceo.get("x_handle") else None,
+            "email": (emails.get(d) or {}).get("email"), "email_confidence": (emails.get(d) or {}).get("email_confidence"),
+            "email_contact": (emails.get(d) or {}).get("contact_name"), "email_alt": (emails.get(d) or {}).get("email_alt"),
+            "email_source": (emails.get(d) or {}).get("source_url") if str((emails.get(d) or {}).get("source_url") or "")
+            .startswith("http") else None,
             "founders_count": len(founders[d]), "risk_flags": "|".join(risks),
             "score_breakdown": m["rank_breakdown"], **comp, "website": f"https://{d}",
         })
@@ -320,7 +339,10 @@ def assemble(conn) -> dict:
                 "is_ceo": "Y" if re.search(r"\bceo\b|chief executive", f["role"] or "", re.I) else "",
                 "is_technical": {1: "Y", 0: "N"}.get(f["is_technical"], "?"), "linkedin_url": f["linkedin_url"],
                 "x_handle": f"@{f['x_handle']}" if f["x_handle"] else None,
-                "email": f["verified_email"], "email_status": f["verification_status"]})
+                "email": f["verified_email"] or (emails.get(d) or {}).get("email")
+                if (emails.get(d) or {}).get("contact_name") == f["full_name"] else f["verified_email"],
+                "email_status": (emails.get(d) or {}).get("email_confidence")
+                if (emails.get(d) or {}).get("contact_name") == f["full_name"] else f["verification_status"]})
     contacts.sort(key=lambda c: (WAVES.index(c["wave"]), c["company_domain"], c["is_ceo"] != "Y"))
 
     signals = []
@@ -382,6 +404,8 @@ MASTER_COLS = [
     ("founder_tier", 14, "data"), ("headcount", 9, "data"), ("sector", 18, "data"), ("hq_country", 7, "data"),
     ("batch_or_investor", 16, "data"), ("one_liner", 45, "data"),
     ("ceo_name", 20, "data"), ("ceo_role", 14, "data"), ("ceo_linkedin", 14, "link"), ("ceo_x", 14, "data"),
+    ("email", 28, "input"), ("email_confidence", 22, "data"), ("email_contact", 18, "data"), ("email_alt", 24, "data"),
+    ("email_source", 10, "link"),
     ("founders_count", 7, "data"), ("risk_flags", 30, "data"), ("score_breakdown", 45, "data"),
     ("score_signals", 7, "data"), ("score_hiring", 7, "data"), ("score_capital", 7, "data"),
     ("score_founders", 7, "data"), ("score_size", 7, "data"), ("score_penalties", 7, "data"),
@@ -504,6 +528,9 @@ def build_workbook(data: dict) -> dict:
     red = PatternFill("solid", fgColor="F8CBAD")
     ws.conditional_formatting.add(f"{C['due']}2:{C['due']}{last}",
                                   CellIsRule(operator="equal", formula=['"DUE"'], fill=red, font=Font(name=FONT, bold=True)))
+    for conf, color in (("guess_first_at_domain", "808080"), ("clay_invalid", "C00000")):
+        ws.conditional_formatting.add(f"{C['email']}2:{C['email']}{last}", FormulaRule(
+            formula=[f'{C["email_confidence"]}2="{conf}"'], font=Font(name=FONT, italic=True, color=color)))
     tier_fill = {"A_high_confidence": "C6EFCE", "B_likely_fit": "DDEBF7", "C_needs_enrichment": "FFF2CC",
                  "D_review": "F2F2F2"}
     for t, color in tier_fill.items():
@@ -662,6 +689,14 @@ def build_dashboard(ws, C, last):
         ws[f"{cc}{tot}"].font = Font(name=FONT, bold=True)
     ws.cell(row=tot + 1, column=1, value="Calls implied by targets").font = F_BASE
     ws.cell(row=tot + 1, column=2, value=f"=ROUND(G{tot}*$B$9,0)").font = F_BASE
+
+    section(ws, tot + 3, "Email coverage (Master.email_confidence)")
+    e0 = tot + 4
+    for i, k in enumerate(EMAIL_CONF, e0):
+        ws.cell(row=i, column=1, value=k).font = F_BASE
+        ws.cell(row=i, column=2, value=f'=COUNTIF({M("email_confidence")},$A{i})').font = F_BASE
+    ws.cell(row=e0 + len(EMAIL_CONF), column=1, value="No email").font = Font(name=FONT, bold=True)
+    ws.cell(row=e0 + len(EMAIL_CONF), column=2, value=f'=COUNTBLANK({M("email")})').font = Font(name=FONT, bold=True)
     for row in ws.iter_rows():
         for c in row:
             if c.font is None or c.font.name != FONT:
@@ -764,7 +799,14 @@ DEFS = {
     "score_founders": "H3 points.", "score_size": "Headcount fit points.", "score_penalties": "Negative points.",
     "website": "https://domain.", "full_name": "Founder name.", "role": "Founder title.", "is_ceo": "Y if CEO.",
     "is_technical": "Y/N/? from H3 classifier.", "linkedin_url": "LinkedIn.", "x_handle": "X handle.",
-    "email": "INPUT once found.", "email_status": "unverified | valid | invalid | catch_all | risky | unknown.",
+    "email": "Master: one outreach email per company (yellow: overwrite to correct it; synced to DB as manual). "
+             "Contacts: the founder's address when it is that person's.",
+    "email_confidence": "published_ceo / published_founder (self-published on YC Launch or bio) > clay_valid > "
+                        "derived_from_pattern > published_founders_inbox > published_generic > clay_unverified > "
+                        "guess_first_at_domain (UNVERIFIED pattern guess) > manual.",
+    "email_contact": "Whose address it is (founder name, 'founders inbox', 'company inbox').",
+    "email_alt": "Next-best different address (e.g. founders@ when the CEO's own address is the pick).",
+    "email_source": "Public page where the address was published.", "email_status": "unverified | valid | invalid | catch_all | risky | unknown.",
     "hypothesis": "H1/H2/H3.", "signal": "Signal name.", "event_date": "Date of the underlying event (H2).",
     "detail": "Evidence text.", "evidence_strength": "Confidence label.", "source": "Source dataset / feed.",
     "url": "Evidence or posting URL.", "captured_at": "When the pipeline captured it.", "title": "Posting title.",

@@ -153,3 +153,27 @@ One key (`company_domain`), one entity per tab, the DB as source of truth:
 **Fit vs timing.** `icp_tier` (A high confidence · B likely fit · C needs enrichment · D review) says how sure the ICP match is; `wave` (W1 Hot days 1–7 · W2 Warm days 8–14 · W3 Cold-fit days 15–30 · Nurture · Enrich first · Review fit) says when to act. `rank_score` is unchanged from `master_rank.py`; its parts are in `score_*` columns and stored in the `scores` table.
 
 **Edits are never lost.** On every rebuild the yellow Master cells are upserted into `tracking` and new Outreach_Log rows into `outreach_log` (append-only; duplicates ignored) before the workbook is rewritten. To remove a logged touch, delete it from the `outreach_log` table too. Same-company duplicate domains are folded via `DOMAIN_ALIASES` in `pipeline_db.py`.
+
+## Email enrichment (one email per company)
+
+```bash
+python3 scripts/enrich_emails.py                 # public evidence + pattern guess -> company_emails
+python3 scripts/clay_bridge.py export            # master/clay_import.csv for a Clay table
+python3 scripts/clay_bridge.py import <clay.csv> # merge Clay finder + validation results back
+python3 scripts/build_master.py                  # Master.email / email_confidence / email_alt columns
+```
+
+No finder API, DNS or SMTP is reachable from this environment, so `enrich_emails.py` only uses addresses companies published themselves (YC Launch posts, descriptions, founder bios) on their own domain, then falls back to an **unverified** `first@domain` guess for the CEO. Clay results are merged by `email_confidence` rank:
+
+| Rank | `email_confidence` | Meaning |
+|---|---|---|
+| 1 | `manual` | Typed into the yellow Master `email` cell (never overwritten) |
+| 2 | `published_ceo` / `published_founder` | The founder's own address, self-published |
+| 3 | `clay_valid` | Clay finder result that passed validation |
+| 4 | `derived_from_pattern` | CEO address built from a published founder address's pattern |
+| 5 | `published_founders_inbox` / `published_generic` | founders@ / hello@ published by the company |
+| 6 | `clay_unverified` | Clay result without a valid status (catch-all, unknown) |
+| 7 | `guess_first_at_domain` | Unverified guess (grey italic in Master) — validate before sending |
+| 8 | `clay_invalid` | Validation failed (red in Master) |
+
+The losing address is kept in `email_alt`. Reports: `raw_sources/email_enrichment_report.json`, `raw_sources/clay_import_report.json`.
