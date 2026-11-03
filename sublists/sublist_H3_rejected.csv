@@ -1,0 +1,714 @@
+source,cohort,company_name,company_domain,website,reason
+a16z_speedrun,a16z Speedrun SR004,Alpaka Games,alpakagames.co,https://alpakagames.co,geo:TR
+a16z_speedrun,a16z Speedrun SR004,Chronicler,chronicler.io,https://chronicler.io,h3:non-technical founder: David Tsui (title 'COO')
+a16z_speedrun,a16z Speedrun SR004,Circle Games,circle.gs,https://circle.gs,geo:TR
+a16z_speedrun,a16z Speedrun SR004,Clubs Poker,clubspoker.com,https://clubspoker.com/,headcount:49
+a16z_speedrun,a16z Speedrun SR004,Coverstar,coverstar.app,https://coverstar.app/,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR004,Double Dusk,doubledusk.com,https://doubledusk.com/,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR004,Figment,figment.games,https://figment.games/,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR004,FLORA,florafauna.ai,https://florafauna.ai,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR004,Ghosted,ghosted.co,https://ghosted.co,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR004,Greathorn Games,greathorn.games,https://greathorn.games,geo:CA
+a16z_speedrun,a16z Speedrun SR004,Hooper,hooper.gg,https://hooper.gg,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR004,Intangible,intangible.ai,https://www.intangible.ai,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR004,Mini Studio,ministudio.ai,https://ministudio.ai/,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR004,Nilo,nilo.io,https://www.nilo.io/,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR004,Plots,plots.events,https://plots.events,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR004,Spekter Games,spekter.games,https://spekter.games/,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR004,Talus Robotics,,,no_usable_domain
+a16z_speedrun,a16z Speedrun SR004,trophi.ai,trophi.ai,https://www.trophi.ai,geo:CA
+a16z_speedrun,a16z Speedrun SR004,Unbound,unbound.io,https://www.unbound.io,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR004,Waveful,waveful.com,https://waveful.com,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR005,AndThen,andthen.chat,https://andthen.chat/,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR005,Argu AI,argu.ai,https://argu.ai,geo:IL
+a16z_speedrun,a16z Speedrun SR005,Arise Labs,,,no_usable_domain
+a16z_speedrun,a16z Speedrun SR005,Atrios,atrios.com,https://www.atrios.com,h3:non-technical founder: Daisy Dolan (title 'COO')
+a16z_speedrun,a16z Speedrun SR005,Axon,axonlabs.co,https://www.axonlabs.co/,sector:raw hardware (no AI/autonomy/software signal)
+a16z_speedrun,a16z Speedrun SR005,Color,azimov.ai,https://www.azimov.ai/,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR005,doublespeed,doublespeed.ai,https://doublespeed.ai,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR005,EverCurrent,evercurrent.ai,https://evercurrent.ai,sector:raw hardware (no AI/autonomy/software signal)
+a16z_speedrun,a16z Speedrun SR005,General Magic,generalmagic.inc,https://generalmagic.inc,geo:CA
+a16z_speedrun,a16z Speedrun SR005,Jigsaw,jigsaw.build,https://jigsaw.build,h3:non-technical founder: Jongbin (Jay) Won (title 'COO')
+a16z_speedrun,a16z Speedrun SR005,Kanu AI,getkanu.com,https://getkanu.com,h3:non-technical founder: Harsh Patel (title 'COO & Co-Founder')
+a16z_speedrun,a16z Speedrun SR005,Lekondo,lekondo.com,https://lekondo.com,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR005,Limy AI,limy.ai,https://limy.ai,h3:non-technical founder: Ido Zabarsky (title 'COO')
+a16z_speedrun,a16z Speedrun SR005,Luvu,withbasis.co,https://withbasis.co/,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR005,Moescape AI,moescape.ai,https://moescape.ai/,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR005,Moona Health,moona.health,https://www.moona.health/,h3:non-technical founder: Paul Deschamps (title 'COO')
+a16z_speedrun,a16z Speedrun SR005,Ocoder,,,no_usable_domain
+a16z_speedrun,a16z Speedrun SR005,Oleum,,,no_usable_domain
+a16z_speedrun,a16z Speedrun SR005,Prepp,,,no_usable_domain
+a16z_speedrun,a16z Speedrun SR005,Sans Strings Studio,sansstrings.studio,https://sansstrings.studio/,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR005,Shockwave,shockwave.com,https://www.shockwave.com,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR005,SoulLink,soullink.io,https://soullink.io,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR005,Sounding,,https://www.linkedin.com/in/notavailable,no_usable_domain
+a16z_speedrun,a16z Speedrun SR005,Taya,tayanecklace.com,https://tayanecklace.com,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR005,Variant,tryvariant.ai,https://www.tryvariant.ai/,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR005,YKB,ykb.app,https://ykb.app/,sector:consumer (description)
+a16z_speedrun,a16z Speedrun SR005,Zero Billion,zerobillion.ai,https://www.zerobillion.ai/,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR005,Zingroll,zingroll.com,https://www.zingroll.com,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR006,Advocate,advocatewellbeing.com,https://advocatewellbeing.com,sector:consumer (description)
+a16z_speedrun,a16z Speedrun SR006,Alike,alike.work,https://alike.work,h3:non-technical founder: Danial Hussain (title 'Chief Commercial Officer')
+a16z_speedrun,a16z Speedrun SR006,Antihero Studios,antiherostudios.com,https://www.antiherostudios.com/,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR006,August,tryaugust.com,https://tryaugust.com,geo:IL
+a16z_speedrun,a16z Speedrun SR006,Auto,auto.inc,https://auto.inc,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR006,Belong,belong.us,https://belong.us,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR006,Clair Health,wearclair.com,https://www.wearclair.com,sector:raw hardware (no AI/autonomy/software signal)
+a16z_speedrun,a16z Speedrun SR006,Concorda,concordahq.com,https://www.concordahq.com,h3:non-technical founder: Ke Ma (title 'COO')
+a16z_speedrun,a16z Speedrun SR006,Idilio,idilio.tv,https://idilio.tv/en,geo:CO
+a16z_speedrun,a16z Speedrun SR006,Loops AI,loopsai.com,https://loopsai.com,h3:non-technical founder: Ilker Zorluoglu (title 'President')
+a16z_speedrun,a16z Speedrun SR006,Miraka,miraka.ai,https://miraka.ai,h3:non-technical founder: Kazuo Nakamura (title 'COO')
+a16z_speedrun,a16z Speedrun SR006,Mirror Mirror AI,mirrormirrorai.com,https://mirrormirrorai.com/,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR006,Oasiz,oasiz.ai,https://www.oasiz.ai/,sector:consumer (Gaming)
+a16z_speedrun,a16z Speedrun SR006,Omi Health,joinomi.com,https://www.joinomi.com,sector:biotech/pharma
+a16z_speedrun,a16z Speedrun SR006,PicPet,picpet.app,https://picpet.app/,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR006,Piper-ai,piper-ai.com,https://piper-ai.com,h3:non-technical founder: Roi Menzin (title 'CRO')
+a16z_speedrun,a16z Speedrun SR006,Pluvo,pluvo.io,https://pluvo.io/,"h3:non-technical founder: Seb Fallenbuchl (title 'Co-founder & Chief Growth Officer'); Vanessa Galarneau (title 'Co-Founder, COO & CFO')"
+a16z_speedrun,a16z Speedrun SR006,Sellara,sellara.io,https://www.sellara.io,h3:non-technical founder: Spencer Secord (title 'COO')
+a16z_speedrun,a16z Speedrun SR006,snag,snagsublets.com,https://snagsublets.com/,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR006,Snapp AI,trysnapp.ai,https://trysnapp.ai,h3:non-technical founder: Min Park (title 'CFO / COO')
+a16z_speedrun,a16z Speedrun SR006,Straia,straia.io,https://straia.io,sector:consumer edtech
+a16z_speedrun,a16z Speedrun SR006,SUN,sunapp.ai,https://sunapp.ai,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR006,Syncere,syncere.com,https://syncere.com,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR006,Taxnova,taxnova.ai,https://taxnova.ai,h3:non-technical founder: George Nichkov (title 'CEO & CFO')
+a16z_speedrun,a16z Speedrun SR006,Variant,variantnow.com,https://variantnow.com,geo:IL
+a16z_speedrun,a16z Speedrun SR006,Vereda,ia.br,https://www.vereda.ia.br/,geo:BR
+a16z_speedrun,a16z Speedrun SR007,Blueprint,blueprint.io,https://blueprint.io,geo:CA
+a16z_speedrun,a16z Speedrun SR007,DRS,teamdrs.ai,https://www.teamdrs.ai/,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR007,Fictional,fictional.ai,https://fictional.ai,sector:consumer (Media / Entertainment / Creator Economy)
+a16z_speedrun,a16z Speedrun SR007,Orbits,tryorbits.com,https://tryorbits.com,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR007,PhotonSpear,photonspear.space,https://www.photonspear.space,sector:raw hardware (no AI/autonomy/software signal)
+a16z_speedrun,a16z Speedrun SR007,Reelful,reelful.app,https://www.reelful.app/,sector:consumer (Consumer)
+a16z_speedrun,a16z Speedrun SR007,Rumbo,rumbo-ai.com,https://rumbo-ai.com,geo:AR
+a16z_speedrun,a16z Speedrun SR007,Vene Health,venehealth.com,https://venehealth.com,sector:consumer (description)
+entrepreneur_first,Entrepreneur First 2025,A51,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Agnost AI,agnost.ai,https://agnost.ai/,geo:IN
+entrepreneur_first,Entrepreneur First 2025,Appstack,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Ariana.dev,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Aule Space,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Autoset,autoset.dev,https://autoset.dev/,geo:IN
+entrepreneur_first,Entrepreneur First 2025,Brushless,brushless.ai,https://brushless.ai/,geo:IN
+entrepreneur_first,Entrepreneur First 2025,Decawork,decawork.ai,https://decawork.ai/,geo:IN
+entrepreneur_first,Entrepreneur First 2025,faff,usefaff.com,https://www.usefaff.com/,geo:IN
+entrepreneur_first,Entrepreneur First 2025,General Reasoning,gr.inc,https://www.gr.inc/,h3:non-technical founder: Chengxi Taylor (title 'President')
+entrepreneur_first,Entrepreneur First 2025,Jack & Jill,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Keyframe,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Lavender Health,lavenderhealth.ai,https://lavenderhealth.ai,geo:IN
+entrepreneur_first,Entrepreneur First 2025,Lemonade,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Lightning Tree,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,Nometria,nometria.com,https://nometria.com,geo:IN
+entrepreneur_first,Entrepreneur First 2025,pleasefix.ai,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2025,shatterdome,shatterdome.energy,https://shatterdome.energy/,geo:IN
+entrepreneur_first,Entrepreneur First 2025,Specter,tryspecter.ai,https://tryspecter.ai,geo:IN
+entrepreneur_first,Entrepreneur First 2025,Steadwing,steadwing.com,https://steadwing.com,geo:IN
+entrepreneur_first,Entrepreneur First 2025,Tacit Machines,tacitmachines.com,https://tacitmachines.com/,sector:biotech/pharma
+entrepreneur_first,Entrepreneur First 2025,Ulyssean,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Eliot AI,meeteliot.com,https://meeteliot.com/,h3:non-technical founder: Lee Forsyth (title 'COO')
+entrepreneur_first,Entrepreneur First 2026,FirstSight.Labs,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Gini Health,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Goldfish,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Greenwich Mercantile,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Harlow,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,hug,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Hyphenbox,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Invariant AI,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Isochronic,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Lattice Energy,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Layrd,thelayrd.com,https://thelayrd.com,geo:IN
+entrepreneur_first,Entrepreneur First 2026,Lokantara Space,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Marv Labs,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Meadow,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Miles,trymiles.ai,https://trymiles.ai/,geo:IN
+entrepreneur_first,Entrepreneur First 2026,MyPip,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Narion Technologies,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Omnibook,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Open Swarm,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Operon,operonlabs.co,https://operonlabs.co/,geo:IN
+entrepreneur_first,Entrepreneur First 2026,Pragma,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Promethee,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Saturn Labs,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Seeft,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Shatterdome Energy,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Stead,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Tacit Intelligence,,,no_usable_domain
+entrepreneur_first,Entrepreneur First 2026,Tieout,,,no_usable_domain
+techstars,ABN AMRO & Techstars Future of Finance Accelerator 2025,Better,bettercharge.ai,https://bettercharge.ai,geo:IL
+techstars,Build in Tulsa Techstars Accelerator 2025,Aja Labs,ajalabs.co,https://ajalabs.co,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Build in Tulsa Techstars Accelerator 2025,Altior Academy,altior.academy,https://altior.academy,sector:consumer edtech
+techstars,Build in Tulsa Techstars Accelerator 2025,CropMind,cropmind.ca,https://cropmind.ca,geo:CA
+techstars,Build in Tulsa Techstars Accelerator 2025,Goldilocks Smart Solutions,goldilockssmartsolutions.com,https://goldilockssmartsolutions.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Build in Tulsa Techstars Accelerator 2025,Plurawl,plurawl.com,https://plurawl.com,sector:consumer edtech
+techstars,Build in Tulsa Techstars Accelerator 2025,Seaspire Skincare,seaspireskincare.com,https://seaspireskincare.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Build in Tulsa Techstars Accelerator 2025,Senzi.Me,pathogenix.ai,https://pathogenix.ai,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Northwestern Medicine & Techstars Healthcare Accelerator 2026,Soihtu DTx,soihtudtx.com,https://soihtudtx.com,sector:biotech/pharma
+techstars,Techstars AI Health Baltimore 2025,AidRx,aidrx.app,https://aidrx.app,geo:CA
+techstars,Techstars AI Health Baltimore 2025,Compose Health,composehealth.ai,https://composehealth.ai,geo:CA
+techstars,Techstars AI Health Baltimore 2026,allumbra,allumbra.com,https://allumbra.com,sector:biotech/pharma
+techstars,Techstars AI Health Baltimore 2026,Citrus Oncology,citrusoncology.com,https://citrusoncology.com,sector:biotech/pharma
+techstars,Techstars Alabama EnergyTech Accelerator 2025,Emission Free Generators,emissionfreegenerators.com,https://emissionfreegenerators.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Alabama EnergyTech Accelerator 2025,Petra Power,petrapower.com,https://petrapower.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Chicago 2026,Forgebee,forgebee.buzz,https://forgebee.buzz,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Chicago 2026,WattShift,wattshift.com,https://wattshift.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Columbus Powered by The Ohio State University 2025,Avionova,avionova.tech,https://avionova.tech,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Columbus Powered by The Ohio State University 2025,FibrX,fibrx.io,https://fibrx.io,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Columbus Powered by The Ohio State University 2025,Generation Environment,generationenvironment.com,https://generationenvironment.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Columbus Powered by The Ohio State University 2025,KeystoneBio,keystonebio.co,https://keystonebio.co,sector:biotech/pharma
+techstars,Techstars Columbus Powered by The Ohio State University 2025,Origami Space Development,origamispace.com,https://origamispace.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Columbus Powered by The Ohio State University 2025,Pull To Refresh,pulltorefresh.earth,https://pulltorefresh.earth,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Economic Mobility Powered by Samvid Ventures 2025,Hutsy,hutsy.ca,https://hutsy.ca,geo:CA
+techstars,Techstars Future of Food Powered by Ecolab 2025,Arbia,arbia.io,https://arbia.io,geo:CA
+techstars,Techstars Future of Food Powered by Ecolab 2025,FabriSight,tryfabrisight.com,https://tryfabrisight.com,geo:CA
+techstars,Techstars Future of Food Powered by Ecolab 2025,Kartorium,kartorium.com,https://kartorium.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Future of Food Powered by Ecolab 2025,OpenFarming,openfarming.earth,https://openfarming.earth,geo:AE
+techstars,Techstars Healthcare Accelerator powered by Permanente Medicine Mid-Atlantic States 2025,Medicus,medicusai.co,https://medicusai.co,sector:biotech/pharma
+techstars,Techstars Healthcare Accelerator powered by Permanente Medicine Mid-Atlantic States 2025,TrackiMed,trackimed.com,https://trackimed.com,geo:IL
+techstars,Techstars London Accelerator 2025,Renn,getrenn.com,https://getrenn.com,geo:IL
+techstars,Techstars New York City Accelerator 2025,Nephrogen,nephrogenbiotech.com,https://nephrogenbiotech.com,sector:biotech/pharma
+techstars,Techstars New York City Accelerator 2025,Reflector Bio,reflector.bio,https://reflector.bio,sector:biotech/pharma
+techstars,Techstars New York City Accelerator 2025,Smart Bricks,smart-bricks.com,https://smart-bricks.com,geo:AE
+techstars,Techstars New York City Accelerator 2025,Tobe Energy,tobe.energy,https://tobe.energy,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars New York City Accelerator 2026,Arcticar,arcticar.com,https://arcticar.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars New York City Accelerator 2026,Chain,wechain.mx,https://wechain.mx,geo:MX
+techstars,Techstars San Diego powered by San Diego State University 2025,Laibl,laibl.co,https://laibl.co,geo:CA
+techstars,Techstars San Francisco 2025,Mae - Making Auto Easy,makingautoeasy.com,https://makingautoeasy.com,geo:CA
+techstars,Techstars San Francisco 2025,Neural Defend,neuraldefend.com,https://neuraldefend.com,geo:IN
+techstars,Techstars San Francisco 2025,OptiFab Technologies,opti-fab.com,https://opti-fab.com,geo:CA
+techstars,Techstars San Francisco 2025,Talimai SAS,brio.ink,https://brio.ink,sector:consumer edtech
+techstars,Techstars San Francisco 2025,Trinzz,trinzz.com,https://trinzz.com,geo:IN
+techstars,Techstars Space Accelerator 2025,ANT61,ant61.com,https://ant61.com,geo:AU
+techstars,Techstars Space Accelerator 2025,Azora,azora.space,https://azora.space,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Space Accelerator 2025,CISGAM,cisgam.com,https://cisgam.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Briefcase Technology,briefcase.technology,https://briefcase.technology,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Crystal aOS,crystalaos.com,https://crystalaos.com,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Juxtabyte,juxtabyte.com,https://juxtabyte.com,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,MuseAI,museai.au,https://museai.au,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,OncoRevive,oncorevive.com,https://oncorevive.com,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Onsite,onsite.fm,https://onsite.fm,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Our Leg Up,ourlegup.com,https://ourlegup.com,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Sedso.ai,sedso.ai,https://sedso.ai,geo:SG
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Slice,slicetobuy.com,https://slicetobuy.com,geo:NZ
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,SurfLab,surflab.ai,https://surflab.ai,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,VetNotes.com,vetnotes.com,https://vetnotes.com,geo:AU
+techstars,Techstars Tech Central Sydney powered by NSW Government 2025,Xillions,xillions.ai,https://xillions.ai,geo:AU
+techstars,Techstars Tokyo Accelerator 2025,Blueconomy AI,theblueconomy.ai,https://theblueconomy.ai,geo:IN
+techstars,Techstars Tokyo Accelerator 2025,Cascade,cascaded.ai,https://cascaded.ai,geo:JP
+techstars,Techstars Tokyo Accelerator 2025,DLeader,dleader.co.jp,https://dleader.co.jp,geo:JP
+techstars,Techstars Tokyo Accelerator 2025,O-ID,o-id.net,https://o-id.net,geo:JP
+techstars,Techstars Tokyo Accelerator 2025,Tokoshie,birtht.xyz,https://birtht.xyz,geo:JP
+techstars,Techstars Transformative World Torino 2025,Recrewty,recrewty.com,https://recrewty.com,geo:ME
+techstars,Techstars Web3 Accelerator 2025,0xBridge,0xbridge.xyz,https://0xbridge.xyz,geo:IN
+techstars,Techstars Workforce Development Accelerator 2025,Arbol,growarbol.com,https://growarbol.com,sector:consumer edtech
+techstars,Techstars Workforce Development Accelerator 2025,Earn & Learn,earnlearn.us,https://earnlearn.us,sector:consumer edtech
+techstars,Techstars Workforce Development Accelerator 2025,Pique,pique.so,https://pique.so,sector:consumer edtech
+techstars,Techstars Workforce Development Accelerator 2025,StudioUS,studious.net,https://studious.net,sector:consumer edtech
+techstars,Techstars Workforce Development Accelerator 2025,Work Simplr,worksimplr.com,https://worksimplr.com,sector:consumer edtech
+techstars,Techstars Workforce Development Accelerator 2026,Gild,getgild.com,https://getgild.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Workforce Development Accelerator 2026,Obert,obertworkwear.com,https://obertworkwear.com,sector:raw hardware (no AI/autonomy/software signal)
+techstars,Techstars Workforce Development Accelerator 2026,Utiva,utiva.co,https://utiva.co,sector:consumer edtech
+yc,YC F25,AirCaps,aircaps.com,https://aircaps.com,sector:consumer (Consumer)
+yc,YC F25,Aleph Lab,alephlab.ai,http://alephlab.ai/,sector:consumer (Consumer)
+yc,YC F25,Allus AI,allus.ai,https://allus.ai,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F25,AnswerThis,answerthis.io,https://answerthis.io/,sector:consumer (Consumer)
+yc,YC F25,Anto Biosciences,anto.bio,https://www.anto.bio/,sector:biotech/pharma
+yc,YC F25,Aspect,aspect.inc,https://aspect.inc,h3:non-technical founder: Gurish Sharma (bio 'GTM')
+yc,YC F25,Axial,axialcompute.com,https://axialcompute.com,headcount:1
+yc,YC F25,Bolna AI,bolna.ai,https://bolna.ai,geo:IN
+yc,YC F25,Boom AI,useboom.ai,https://useboom.ai,geo:MX
+yc,YC F25,Bron,apple.com,https://apps.apple.com/app/apple-store/id6761323087?pt=128695024&ct=anish&mt=,sector:consumer (Consumer)
+yc,YC F25,Caddy,caddy.app,https://caddy.app/,h3:non-technical founder: Rajiv Sancheti (title 'Founder/COO')
+yc,YC F25,Casey,caseyinsure.com,https://caseyinsure.com/,h3:non-technical founder: Maximilian Thoelen (bio 'private equity')
+yc,YC F25,Coasts,coasts.dev,https://coasts.dev,status:Inactive
+yc,YC F25,ComplyDo,complydo.io,https://www.complydo.io/,h3:non-technical founder: Leo Schuhmann (bio 'Consulting')
+yc,YC F25,Crunched,usecrunched.com,https://usecrunched.com/,h3:non-technical founder: Philip Borge (bio 'McKinsey'); Michael Sakowski (bio 'consultant')
+yc,YC F25,Digipals,digipals.app,https://www.digipals.app/,sector:consumer (Consumer)
+yc,YC F25,DiligenceSquared,diligencesquared.com,https://diligencesquared.com/,h3:non-technical founder: Frederik Hansen (bio 'Private Equity'); Soren Biltoft-Knudsen (title 'Founder/President')
+yc,YC F25,Dome,domeapi.io,https://domeapi.io,status:Inactive
+yc,YC F25,Efference,efference.ai,https://efference.ai,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F25,Efficient Computation Inc.,ecomp.so,https://ecomp.so/,geo:IN
+yc,YC F25,Exonic,exonic.ai,https://exonic.ai,sector:biotech/pharma
+yc,YC F25,Fernstone,fernstone.com,https://www.fernstone.com,h3:non-technical founder: James Chen (bio 'BCG')
+yc,YC F25,Fifth Door,fifthdoor.com,https://fifthdoor.com,sector:consumer (Consumer)
+yc,YC F25,Flick,flick.art,https://flick.art,sector:consumer (Consumer)
+yc,YC F25,Forge Robotics,forge-robotics.com,https://forge-robotics.com,headcount:1
+yc,YC F25,Icarus,icarus.one,https://www.icarus.one/,headcount:50
+yc,YC F25,Koyal,koyal.ai,https://koyal.ai,sector:consumer (Consumer)
+yc,YC F25,Layers,layers.bio,https://www.layers.bio/,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC F25,Mayflower,mayflowervisa.com,https://mayflowervisa.com,h3:non-technical founder: Naren Chittem (title 'Founder/COO')
+yc,YC F25,Miniswap,miniswap.gg,https://miniswap.gg/,sector:consumer (Consumer)
+yc,YC F25,Mixy,usemixy.com,https://usemixy.com,sector:consumer (Consumer)
+yc,YC F25,Narrative,usenarrative.ai,http://www.usenarrative.ai,sector:consumer (Consumer)
+yc,YC F25,Nori,nori.ai,https://nori.ai,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC F25,Nucleo,nucleoresearch.com,https://nucleoresearch.com/,sector:biotech/pharma
+yc,YC F25,Paceline Bio,paceline.bio,https://paceline.bio/,sector:biotech/pharma
+yc,YC F25,Parrot,parrotapp.com,https://parrotapp.com/,sector:consumer (Consumer)
+yc,YC F25,Prox,,,no_usable_domain
+yc,YC F25,Redapto,redapto.com,https://www.redapto.com/,geo:IN
+yc,YC F25,Remedy,useremedy.co,http://www.useremedy.co,status:Acquired
+yc,YC F25,Rovi Health,rovi.health,https://www.rovi.health,h3:non-technical founder: Santosh Vallabhaneni (bio 'GTM')
+yc,YC F25,Rovr,withrovr.com,https://www.withrovr.com/,status:Inactive
+yc,YC F25,Sava Trust Company,savatrustcompany.com,https://www.savatrustcompany.com,h3:non-technical founder: Rush Sadiwala (title 'Founder/COO')
+yc,YC F25,Scoop,scooplabs.ai,https://scooplabs.ai,sector:biotech/pharma
+yc,YC F25,SellRaze,sellraze.com,https://sellraze.com,sector:consumer (Consumer)
+yc,YC F25,Sorce,sorce.jobs,https://sorce.jobs,h3:non-technical founder: David Alade (title 'Founder/COO')
+yc,YC F25,Sylvian,sylvian.ai,https://sylvian.ai,status:Inactive
+yc,YC F25,Tell if AI,tellif.ai,https://tellif.ai,sector:agency/services
+yc,YC F25,The Hog,thehog.ai,https://thehog.ai/,h3:non-technical founder: Hudson Liao (bio 'growth')
+yc,YC F25,Tornyol,tornyol.com,https://tornyol.com/,sector:consumer (Consumer)
+yc,YC F25,Uplane,uplane.com,https://uplane.com,h3:non-technical founder: Julius Körfgen (bio 'Marketing')
+yc,YC F25,Wardstone,wardstone.us,https://www.wardstone.us,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F25,Zalos,zalos.ai,https://www.zalos.ai/,h3:non-technical founder: William Fairbairn (bio 'McKinsey')
+yc,YC F25,Zephyr Fusion,zephyrfusion.com,https://www.zephyrfusion.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Agent 37,agent37.com,https://www.agent37.com/cloud,headcount:0
+yc,YC F26,Ageospatial,ageospatial.com,https://ageospatial.com/,headcount:1
+yc,YC F26,Altair Health,altair-health.com,https://www.altair-health.com,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC F26,antimattr,antimattr.one,https://www.antimattr.one/project-mnemosyne?utm_source=bookface&utm_medium=social&utm_campaign=bookface_antimattr_profile,sector:consumer (Consumer)
+yc,YC F26,Antropi Robotics,antropi.world,https://www.antropi.world/,headcount:0
+yc,YC F26,Asakana,asakana.co,https://www.asakana.co/,h3:non-technical founder: Yudai Matsuoka (title 'Founder/President')
+yc,YC F26,Ascenix,ascenix.co,https://www.ascenix.co/,geo:CA
+yc,YC F26,Asim,asim-group.com,https://www.asim-group.com,h3:non-technical founder: Tristan Lecourtois (title 'Founder/COO')
+yc,YC F26,Audora,audora.art,https://audora.art,headcount:1
+yc,YC F26,Bayworks,bayworks.app,https://bayworks.app,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Blinka,blinka.co,https://blinka.co,headcount:0
+yc,YC F26,Caladh,caladh.com,https://caladh.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Canos,canos.ai,https://www.canos.ai,headcount:0
+yc,YC F26,Capveon,capveon.ai,https://capveon.ai,h3:non-technical founder: Brison Moorhead (title 'Founder/COO')
+yc,YC F26,Cardinal Square,cardinalsquare.com,https://cardinalsquare.com/,sector:consumer edtech
+yc,YC F26,Caveman,caveman.so,https://caveman.so,headcount:1
+yc,YC F26,Cesara,cesara.com,https://cesara.com,headcount:0
+yc,YC F26,ChemPilot.ai,chempilot.ai,https://chempilot.ai/,sector:biotech/pharma
+yc,YC F26,Clean,tryclean.ai,http://www.tryclean.ai,h3:non-technical founder: Pavan Kumar Naguvanahalli Yashavantha (bio 'Sales')
+yc,YC F26,Collar,usecollarai.com,https://usecollarai.com,h3:non-technical founder: Jamie Yau (title 'Founder/COO')
+yc,YC F26,Confetti,confetti.build,https://confetti.build,sector:consumer (Consumer)
+yc,YC F26,Cyclon,cyclon.ai,https://cyclon.ai/,sector:consumer (Consumer)
+yc,YC F26,Databuddy,databuddy.cc,https://www.databuddy.cc,headcount:1
+yc,YC F26,Decent,decent.com,https://decent.com,h3:non-technical founder: Nick Soman (bio 'Growth')
+yc,YC F26,Dydema,dydema.com,https://dydema.com/,sector:consumer (Consumer)
+yc,YC F26,Forward,useforward.co,https://www.useforward.co/,h3:non-technical founder: Daniel Yoon (bio 'Lawyer')
+yc,YC F26,GrayPass,graypass.com,https://graypass.com/,geo:CA
+yc,YC F26,Halmos Labs,halmoslabs.com,https://halmoslabs.com/,sector:biotech/pharma
+yc,YC F26,Helios Intelligence,myhelios.com,https://www.myhelios.com/,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC F26,Hemlock,hemlock.inc,https://hemlock.inc,headcount:1
+yc,YC F26,herdr,herdr.dev,https://herdr.dev/,geo:TR
+yc,YC F26,Hesper AI,gethesperai.com,https://gethesperai.com,h3:non-technical founder: Nitish Badu (title 'Founder/COO')
+yc,YC F26,Ignition Benefits,ignitionbenefits.com,https://www.ignitionbenefits.com/,h3:non-technical founder: Nick Taranto (bio 'MBA')
+yc,YC F26,Inflection Space Systems,inflection-space.com,https://inflection-space.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Jinko,gojinko.com,https://gojinko.com,h3:non-technical founder: Kevin Gauthier (bio 'marketing'); Sebastien Texier (bio 'marketing')
+yc,YC F26,Kailash Labs,kailashlabs.com,https://www.kailashlabs.com/,geo:IN
+yc,YC F26,Keres,keresaero.com,https://www.keresaero.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Lantern AI,lantern.md,https://lantern.md,h3:non-technical founder: Thomas Chan (bio 'sales')
+yc,YC F26,Latent,runlatent.ai,http://runlatent.ai/,headcount:1
+yc,YC F26,Liquid Energy,liquidenergy.world,https://www.liquidenergy.world,geo:CA
+yc,YC F26,Lux Foods,luxfoods.xyz,https://www.luxfoods.xyz,sector:biotech/pharma
+yc,YC F26,Mantle,,,no_usable_domain
+yc,YC F26,Melty,melty.gg,https://www.melty.gg,headcount:0
+yc,YC F26,Micora,micora.com,https://micora.com,h3:non-technical founder: Frederik (Fredy) Mareels (bio 'Investment Bank')
+yc,YC F26,Munito AI,munito.ai,https://munito.ai,headcount:1
+yc,YC F26,Native,native.no,https://native.no/,h3:non-technical founder: Benjamin Bekken (bio 'marketing')
+yc,YC F26,Nitroduck,nitroduck.tech,https://nitroduck.tech/,sector:biotech/pharma
+yc,YC F26,Nxtcure Labs,nxtcure.com,https://nxtcure.com,headcount:0
+yc,YC F26,Oasive,oasive.ai,https://www.oasive.ai,headcount:1
+yc,YC F26,OpenHack,openhack.com,https://openhack.com,headcount:1
+yc,YC F26,OpenScaffold,,,no_usable_domain
+yc,YC F26,Orgo,orgo.ai,https://www.orgo.ai,headcount:0
+yc,YC F26,ORO AI,oroagents.com,https://www.oroagents.com,geo:CA
+yc,YC F26,Papaya,papaya.fyi,https://papaya.fyi/,h3:non-technical founder: Macy Mody (bio 'GTM')
+yc,YC F26,Perit.AI,perit.ai,https://www.perit.ai/,headcount:47
+yc,YC F26,Petrichor,petrichorbio.com,https://petrichorbio.com/,sector:biotech/pharma
+yc,YC F26,Phone Harness,phone-harness.com,https://phone-harness.com/,headcount:1
+yc,YC F26,Praxis,runpraxis.ai,https://runpraxis.ai,h3:non-technical founder: Diana Khramina (bio 'GTM')
+yc,YC F26,Primordiant,primordiant.com,https://primordiant.com,sector:biotech/pharma
+yc,YC F26,Quippy,quippyapp.com,https://quippyapp.com,headcount:1
+yc,YC F26,RATLOG,ratlog.space,https://www.ratlog.space/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Raven,ravenphone.com,https://ravenphone.com,headcount:1
+yc,YC F26,Redoubt Insurance,redoubt.insure,https://www.redoubt.insure,headcount:0
+yc,YC F26,Resin Technologies,resineda.com,https://resineda.com/,headcount:0
+yc,YC F26,Rhem Labs,rhem.ai,https://rhem.ai,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC F26,RightNow,runinfra.ai,https://runinfra.ai/,h3:non-technical founder: Osama Jaber (title 'Founder/CMO')
+yc,YC F26,Roma,roma.app,https://roma.app,sector:consumer (Consumer)
+yc,YC F26,Routant,routant.ai,https://routant.ai/,headcount:0
+yc,YC F26,RouterPlus,routerplus.com,https://routerplus.com,geo:IN
+yc,YC F26,Shire Intelligence,shireintelligence.com,https://shireintelligence.com/,sector:consumer (Consumer)
+yc,YC F26,Silica,silicamachines.com,https://silicamachines.com/,headcount:1
+yc,YC F26,Simantic,simantic.com,https://simantic.com,geo:CA
+yc,YC F26,Sinter,sinter.systems,https://sinter.systems,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Sintropix,sintropix.com,https://sintropix.com/,geo:CL
+yc,YC F26,Spine,joinspine.ai,https://www.joinspine.ai/,headcount:0
+yc,YC F26,STASIS,get-stasis.com,https://www.get-stasis.com/,sector:consumer (Consumer)
+yc,YC F26,Streamline Systems,streamlinesystems.ltd,https://streamlinesystems.ltd/,h3:non-technical founder: Charlie Jessett (title 'Founder/COO')
+yc,YC F26,Super Powers Mobility (SPM),spm.us,https://www.spm.us,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,Taan.ai,taan.ai,https://taan.ai/,headcount:0
+yc,YC F26,Talos,talos-us.com,https://www.talos-us.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC F26,The Agentic Data Co.,theagenticdatacompany.com,https://theagenticdatacompany.com,h3:non-technical founder: Matias Voldby Drejer (bio 'Growth')
+yc,YC F26,The Company Company,thecompany.company,https://www.thecompany.company,headcount:1
+yc,YC F26,The Subvocal Company,subvocal.company,https://subvocal.company,sector:consumer (Consumer)
+yc,YC F26,UXDuck,uxduck.com,https://uxduck.com,headcount:1
+yc,YC F26,Veeza AI,veeza.ai,https://veeza.ai,sector:consumer (Consumer)
+yc,YC F26,Vexo,vexoai.com,https://www.vexoai.com/,sector:consumer (Consumer)
+yc,YC F26,Vyra,usevyra.com,https://usevyra.com,sector:consumer (Consumer)
+yc,YC F26,Wingman Law,wingmanlaw.com,https://www.wingmanlaw.com,h3:non-technical founder: Nicholas Le (bio 'attorney')
+yc,YC F26,Yam,hiyam.ai,https://hiyam.ai/,sector:consumer (Consumer)
+yc,YC S25,Acrely,acrely.ai,https://www.acrely.ai,status:Inactive
+yc,YC S25,Alara,alaradental.com,http://alaradental.com,headcount:0
+yc,YC S25,Altur,altur.io,https://altur.io,geo:MX
+yc,YC S25,Ambral,ambral.com,https://www.ambral.com/,h3:non-technical founder: Sam Brickman (bio 'PM')
+yc,YC S25,Avelis Health,avelishealth.com,https://avelishealth.com,h3:non-technical founder: Angel Onuoha (bio 'PM')
+yc,YC S25,b12 Labs,b12-labs.com,https://b12-labs.com/,sector:biotech/pharma
+yc,YC S25,Blank Bio,blank.bio,http://blank.bio/,sector:biotech/pharma
+yc,YC S25,Blue,heyblue.com,https://heyblue.com/,sector:consumer (Consumer)
+yc,YC S25,Certus AI,certus-ai.com,https://www.certus-ai.com/,h3:non-technical founder: Gurveer Singh (bio 'growth'); Adam Gamieldien (title 'Founder/CRO')
+yc,YC S25,Char,char.com,https://char.com,geo:KR
+yc,YC S25,CLODO,clodo.ai,https://clodo.ai,sector:biotech/pharma
+yc,YC S25,Closera,closera.com,https://closera.com,status:Inactive
+yc,YC S25,cocreate,cocreate.so,https://cocreate.so,sector:consumer (Consumer)
+yc,YC S25,Convexia,convexia.bio,https://convexia.bio,sector:biotech/pharma
+yc,YC S25,Costream,costream.ai,https://www.costream.ai,sector:consumer (Consumer)
+yc,YC S25,Design Arena,designarena.ai,https://www.designarena.ai/,sector:consumer (Consumer)
+yc,YC S25,Duranium,duranium.co,https://www.duranium.co/,h3:non-technical founder: Brenden Prins-McKinney (bio 'consultant')
+yc,YC S25,Epicenter,epicenter.so,https://epicenter.so,headcount:1
+yc,YC S25,F2,f2.ai,http://f2.ai,h3:non-technical founder: Don Muir (bio 'PE investor')
+yc,YC S25,Flai,useflai.com,https://www.useflai.com/,headcount:40
+yc,YC S25,Freya,freyavoice.ai,https://freyavoice.ai/,geo:TR
+yc,YC S25,Humoniq,humoniq.ai,https://humoniq.ai,h3:non-technical founder: Will Weber (title 'Founder/CRO')
+yc,YC S25,Kestroll,kestroll.com,https://www.kestroll.com/,sector:consumer (Consumer)
+yc,YC S25,Knowlify,knowlify.com,https://www.knowlify.com/,h3:non-technical founder: Jonathan Maynard (title 'Founder/COO')
+yc,YC S25,Metis,withmetis.ai,https://withmetis.ai,status:Acquired
+yc,YC S25,Nexa Labs,nexa.farm,https://nexa.farm/,status:Acquired
+yc,YC S25,Normal,normal.ai,https://www.normal.ai,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC S25,Novaflow,novaflow.ai,https://www.novaflow.ai,sector:biotech/pharma
+yc,YC S25,Nox Metals,noxmetals.co,https://noxmetals.co/,headcount:52
+yc,YC S25,Nozomio,nozomio.com,https://www.nozomio.com/,sector:consumer (Consumer)
+yc,YC S25,Nuntius,nuntius.ai,https://www.nuntius.ai,status:Inactive
+yc,YC S25,OnDeck AI,ondeckai.com,https://www.ondeckai.com,geo:CA
+yc,YC S25,OneStop,askonestop.com,https://www.askonestop.com,sector:consumer (Consumer)
+yc,YC S25,Opennote,opennote.com,https://opennote.com,status:Acquired
+yc,YC S25,Paloma,getpaloma.ai,https://getpaloma.ai/,h3:non-technical founder: Alex Avnit (title 'Founder/CRO')
+yc,YC S25,Panels,usepanels.com,https://www.usepanels.com/,headcount:1
+yc,YC S25,Panoptive,panoptive.com,https://www.panoptive.com,sector:biotech/pharma
+yc,YC S25,Pingo,pingo.ai,https://pingo.ai,sector:consumer (Consumer)
+yc,YC S25,Pleom,pleom.com,https://pleom.com,headcount:0
+yc,YC S25,Preseen,preseen.com,https://preseen.com,headcount:1
+yc,YC S25,RealRoots,realroots.com,http://www.realroots.com,sector:consumer (Consumer)
+yc,YC S25,Rebulk,rebulk.com,https://www.rebulk.com,h3:non-technical founder: Warren Wijaya Wang (bio 'Strategy & Operations')
+yc,YC S25,Riverbank,riverbank.sh,https://www.riverbank.sh/,headcount:1
+yc,YC S25,Ruvo,ruvo.com,https://ruvo.com/,geo:BR
+yc,YC S25,Solva,solvatechnology.com,https://solvatechnology.com,h3:non-technical founder: Sorena Amini (title 'Founder/COO')
+yc,YC S25,Spotlight Realty,spotlight.realty,https://www.spotlight.realty,h3:non-technical founder: Aryan Sharma (title 'Founder/CFO')
+yc,YC S25,TectoAI,tecto.ai,https://www.tecto.ai/,status:Inactive
+yc,YC S25,Tesora,tesora.ai,https://tesora.ai,h3:non-technical founder: Vivek Rao (bio 'McKinsey')
+yc,YC S25,The Prompting Company,promptingcompany.com,https://www.promptingcompany.com,h3:non-technical founder: Michelle Marcelline (title 'Founder/COO')
+yc,YC S25,TwentyTwo,twentytwo.bio,https://twentytwo.bio/,sector:biotech/pharma
+yc,YC S26,Aerogen Systems,aerogensystems.com,https://www.aerogensystems.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC S26,Allia Health,allia.health,https://allia.health/,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC S26,"Applied Electrodynamics, Inc.",ae-dyn.com,https://www.ae-dyn.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC S26,Arbital,arbital.xyz,https://www.arbital.xyz,h3:non-technical founder: Steven Mulyawan (title 'Founder/COO')
+yc,YC S26,Atlas Discovery,atlasdiscovery.bio,https://atlasdiscovery.bio,sector:biotech/pharma
+yc,YC S26,Audun,audun.co,https://audun.co,h3:non-technical founder: Magnus Vonen (bio 'McKinsey')
+yc,YC S26,Bernard,bernardhq.com,https://bernardhq.com/,h3:non-technical founder: Dan Katzman (bio 'strategy and operations')
+yc,YC S26,Billow AI Labs,thebillow.ai,https://thebillow.ai/,headcount:0
+yc,YC S26,Bloomy,bloomylearning.com,https://bloomylearning.com/,headcount:1
+yc,YC S26,Care GP,caregp.com.au,https://caregp.com.au/,geo:AU
+yc,YC S26,Caution,caution.co,https://caution.co,geo:KY
+yc,YC S26,Click,useclick.ai,https://www.useclick.ai,headcount:1
+yc,YC S26,Codag,codag.ai,https://codag.ai/,headcount:1
+yc,YC S26,Conifer,conifer.build,https://www.conifer.build,h3:non-technical founder: Michael Jeffords (title 'Founder/CGO')
+yc,YC S26,CueBench,cuebench.dev,https://cuebench.dev,h3:non-technical founder: Neel Gadde (title 'Founder/COO')
+yc,YC S26,Denta,denta.com,https://denta.com,headcount:1
+yc,YC S26,Dipole Labs,dipolelabs.com,https://dipolelabs.com/,headcount:0
+yc,YC S26,Donkey,donkey.trade,https://donkey.trade,h3:non-technical founder: Benjamin Martindale (bio 'marketing')
+yc,YC S26,Egoist Machines,ego.ist,https://ego.ist/,sector:consumer (Consumer)
+yc,YC S26,Ekho Labs,ekholabs.com,https://ekholabs.com/,headcount:0
+yc,YC S26,Executor,executor.sh,https://executor.sh,headcount:1
+yc,YC S26,Financial Datasets,financialdatasets.ai,https://financialdatasets.ai/,headcount:1
+yc,YC S26,Gamgee,gamgee.io,https://gamgee.io/,sector:biotech/pharma
+yc,YC S26,General Context Labs,generalcontextlabs.com,https://generalcontextlabs.com,sector:consumer (Consumer)
+yc,YC S26,Glen,tryglen.com,https://www.tryglen.com/,headcount:1
+yc,YC S26,Graphify Labs,graphify.com,https://www.graphify.com/,headcount:1
+yc,YC S26,Greypoint Industries,greypointindustries.com,https://greypointindustries.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC S26,Grocalo,grocalo.com,https://grocalo.com/,sector:consumer (Consumer)
+yc,YC S26,GUILD,guildai.co,https://www.guildai.co,h3:non-technical founder: Erim Gurlemis (title 'Founder/COO')
+yc,YC S26,Gutgutgoose,gutgutgoose.com,https://gutgutgoose.com/,sector:biotech/pharma
+yc,YC S26,Hilstart,hilstart.io,https://hilstart.io/,headcount:0
+yc,YC S26,Hop Aero,hopaero.com,https://hopaero.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC S26,Hubble,hubble.ai,https://hubble.ai/,h3:non-technical founder: Prabha Dublish (bio 'PM')
+yc,YC S26,Illume Labs,illumelabs.ai,https://www.illumelabs.ai,sector:biotech/pharma
+yc,YC S26,Jcode,jcode.sh,https://jcode.sh/,headcount:1
+yc,YC S26,Lamb Labs,lamb-labs.com,http://lamb-labs.com,headcount:0
+yc,YC S26,LATO,latolabs.io,https://www.latolabs.io/,h3:non-technical founder: Tymek Staniszewski (bio 'private equity')
+yc,YC S26,LemonLime,lemonlime.com,https://www.lemonlime.com/,h3:non-technical founder: Jordan Zietz (bio 'sales')
+yc,YC S26,Luca IQ,lucaiq.com,https://lucaiq.com/,h3:non-technical founder: Angelo Policicchio (bio 'CPA')
+yc,YC S26,Lumeria,lumeria.skin,https://lumeria.skin,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC S26,machine0,machine0.io,https://machine0.io,headcount:1
+yc,YC S26,Magma,magmahq.ai,https://magmahq.ai,headcount:1
+yc,YC S26,Mentlio,mentlio.com,https://mentlio.com,headcount:0
+yc,YC S26,Meteoric,meteoric.earth,https://meteoric.earth/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC S26,Mochi,mochi.tv,https://www.mochi.tv/,sector:consumer (Consumer)
+yc,YC S26,Molagri,molagri.com,https://molagri.com,geo:CA
+yc,YC S26,Moonshot,moonshot.computer,https://moonshot.computer/,sector:consumer (Consumer)
+yc,YC S26,MusicArena,musicarena.io,https://musicarena.io/,headcount:-1
+yc,YC S26,Neuromorphic,neuromorphic.vision,https://www.neuromorphic.vision/,sector:biotech/pharma
+yc,YC S26,Nex,nex.ai,https://nex.ai,h3:non-technical founder: Najmuzzaman (Nazz) Mohammad (bio 'PM')
+yc,YC S26,Omanta,omanta.com,https://omanta.com/,sector:biotech/pharma
+yc,YC S26,OneCLI,onecli.sh,https://onecli.sh,geo:IL
+yc,YC S26,Operon,operonsolutions.com,https://operonsolutions.com/en,headcount:0
+yc,YC S26,OS3,os3robotics.com,https://os3robotics.com/,sector:biotech/pharma
+yc,YC S26,Osseus,osseus.ai,https://osseus.ai/,sector:biotech/pharma
+yc,YC S26,Palisade,palisade.run,https://palisade.run,headcount:1
+yc,YC S26,Palisade,palisade-ai.com,https://palisade-ai.com/,headcount:1
+yc,YC S26,Petrarch,petrarch.co,https://petrarch.co/,h3:non-technical founder: Samuel Hahn (title 'Founder/COO')
+yc,YC S26,Praxis Robotics,praxisrobotics.io,https://www.praxisrobotics.io,h3:non-technical founder: Dev Karpe (title 'Founder/COO')
+yc,YC S26,"Prescience, Inc.",getprescience.com,https://www.getprescience.com/,h3:non-technical founder: Aditya Jain (title 'Founder/President & COO')
+yc,YC S26,Proprio Robotics,propriorobotics.com,https://www.propriorobotics.com/,headcount:1
+yc,YC S26,Rasyn,rasyn.ai,https://www.rasyn.ai/,sector:biotech/pharma
+yc,YC S26,Rise Reforming,rise-reforming.com,https://rise-reforming.com/home,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC S26,RonanRx Inc.,ronanrx.com,https://ronanrx.com/,sector:biotech/pharma
+yc,YC S26,Shielded,shieldedglobal.com,https://www.shieldedglobal.com/,headcount:0
+yc,YC S26,Sidekick,textsidekick.com,https://textsidekick.com/,headcount:1
+yc,YC S26,Spectre Intelligence,spectreintelligence.ai,https://www.spectreintelligence.ai,sector:biotech/pharma
+yc,YC S26,Sunflower,sunflowerclinic.com,https://sunflowerclinic.com/,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC S26,TareBio,tarebio.com,https://tarebio.com/,headcount:1
+yc,YC S26,tash,tradetash.com,https://www.tradetash.com,sector:consumer (Consumer)
+yc,YC S26,Tracer,tracerml.ai,https://tracerml.ai,headcount:1
+yc,YC S26,Tsenta,tsenta.com,https://tsenta.com,sector:consumer (Consumer)
+yc,YC S26,Verdict Machine,verdictmachine.com,https://verdictmachine.com,geo:IL
+yc,YC S26,Waybill,waybill.to,https://www.waybill.to/,geo:IN
+yc,YC S26,Wondering,wondering.app,https://wondering.app,sector:consumer (Consumer)
+yc,YC S26,WonderTx,wondertx.ai,https://wondertx.ai/,sector:biotech/pharma
+yc,YC S26,Zaplar,zaplar.com,https://zaplar.com,h3:non-technical founder: Oscar Karlstromer (bio 'sales')
+yc,YC W25,Altrina,altrina.com,https://altrina.com,status:Inactive
+yc,YC W25,Amby Health,tryamby.com,https://tryamby.com,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC W25,Astro,astroenergy.ai,https://www.astroenergy.ai/,headcount:1
+yc,YC W25,awen,awen.ai,https://www.awen.ai/,h3:non-technical founder: Thibault Henriet (bio 'Head of Operations')
+yc,YC W25,Bezel,trybezel.com,https://www.trybezel.com/,headcount:1
+yc,YC W25,Bud,bud.app,https://bud.app/,status:Acquired
+yc,YC W25,Calltree,calltree.ai,https://calltree.ai,h3:non-technical founder: Robertson Taylor (title 'Founder/CRO')
+yc,YC W25,Candor,usecandor.ai,https://www.usecandor.ai,sector:biotech/pharma
+yc,YC W25,Cifrato,cifrato.ai,https://cifrato.ai,geo:CO
+yc,YC W25,Conntour,conntour.com,https://www.conntour.com/,geo:IL
+yc,YC W25,Cuckoo Labs,cuckoo.so,https://www.cuckoo.so/,geo:KR
+yc,YC W25,Delineate,delineate.pro,https://delineate.pro/,sector:biotech/pharma
+yc,YC W25,Edexia,edexia.com,https://www.edexia.com/,geo:AU
+yc,YC W25,Egress Health,tryegress.com,https://tryegress.com,status:Acquired
+yc,YC W25,Exin Therapeutics,exintherapeutics.com,https://www.exintherapeutics.com/,sector:biotech/pharma
+yc,YC W25,Forge Automation,forgeautomation.ca,https://www.forgeautomation.ca,geo:CA
+yc,YC W25,Fuse AI,fuseai.com,https://fuseai.com/,h3:non-technical founder: Saurav Bubber (bio 'growth')
+yc,YC W25,G LNK,glnkco.com,https://glnkco.com/,sector:biotech/pharma
+yc,YC W25,General Trajectory,generaltrajectory.com,https://www.generaltrajectory.com/,headcount:1
+yc,YC W25,HealthKey,gethealthkey.com,https://gethealthkey.com/,h3:non-technical founder: Josh Sabol (bio 'Product Manager')
+yc,YC W25,Instinct Space,instinct-space.com,https://www.instinct-space.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W25,Inversion Semiconductor,inversionsemi.com,https://www.inversionsemi.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W25,Invo,tryinvo.com,https://www.tryinvo.com/,headcount:1
+yc,YC W25,Karoo,karoo.ca,https://www.karoo.ca,geo:CA
+yc,YC W25,Lucid,lucid.ai,https://lucid.ai,sector:consumer (Consumer)
+yc,YC W25,Maritime Fusion,maritimefusion.com,https://maritimefusion.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W25,Mentra,mentra.glass,https://mentra.glass,sector:consumer (Consumer)
+yc,YC W25,Misprint,misprint.com,https://www.misprint.com,sector:consumer (Consumer)
+yc,YC W25,Miyagi Labs,miyagilabs.ai,https://miyagilabs.ai,sector:consumer edtech
+yc,YC W25,Mosaic,mosaic.so,https://mosaic.so,sector:consumer (Consumer)
+yc,YC W25,Mundo AI,mundoai.world,https://mundoai.world,geo:CA
+yc,YC W25,Oki,okihome.ai,https://okihome.ai,sector:consumer (Consumer)
+yc,YC W25,Olive,fromolive.com,https://fromolive.com,status:Inactive
+yc,YC W25,Onlook,onlook.com,https://onlook.com/,h3:non-technical founder: Daniel Farrell (bio 'Designer')
+yc,YC W25,OpenIntake,openintake.ai,https://www.openintake.ai/,h3:non-technical founder: Grayson Pike (bio 'consultant')
+yc,YC W25,Optifye.ai,optifye.ai,https://www.optifye.ai,geo:IN
+yc,YC W25,Orbital Operations,orbitalops.tech,https://www.orbitalops.tech/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W25,Ovlo,ovlo.ai,https://ovlo.ai,geo:AE
+yc,YC W25,Pickle,pickle.com,https://www.pickle.com,sector:consumer (Consumer)
+yc,YC W25,Reditus Space,reditus.space,https://www.reditus.space/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W25,Retrofit,retrofit.shop,https://www.retrofit.shop/,sector:consumer (Consumer)
+yc,YC W25,SAMMY Labs,sammylabs.com,https://www.sammylabs.com,h3:non-technical founder: Joe Savidge (bio 'Banker')
+yc,YC W25,Solidroad,solidroad.com,https://solidroad.com,h3:non-technical founder: Mark Hughes (bio 'Sales')
+yc,YC W25,Spott,spott.io,https://spott.io,headcount:50
+yc,YC W25,Stamp,stampmail.ai,https://www.stampmail.ai/,headcount:1
+yc,YC W25,Sublingual,sublingual.ai,https://sublingual.ai/,status:Inactive
+yc,YC W25,superglue,superglue.ai,https://superglue.ai/,h3:non-technical founder: Adina Goerres (bio 'GTM')
+yc,YC W25,Swerve,getswerve.com,https://www.getswerve.com/,sector:consumer (Consumer)
+yc,YC W25,TensorPool,tensorpool.dev,https://tensorpool.dev,status:Acquired
+yc,YC W25,Toothy AI,toothy.ai,https://www.toothy.ai/,h3:non-technical founder: Tejas Konduru (title 'Founder/CRO')
+yc,YC W25,Trava,usetrava.com,https://www.usetrava.com/,headcount:1
+yc,YC W25,Uncommon Therapeutics,uncommontherapeutics.com,https://uncommontherapeutics.com,sector:biotech/pharma
+yc,YC W25,Vocality Health,vocalityhealth.com,https://www.vocalityhealth.com,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC W25,Wildcard,wild-card.ai,https://wild-card.ai,headcount:0
+yc,YC W25,ZeroEntropy,zeroentropy.dev,https://www.zeroentropy.dev,status:Acquired
+yc,YC W26,10x Science,10xscience.com,https://10xscience.com,sector:biotech/pharma
+yc,YC W26,Anchorhead,anchorhead.ai,https://www.anchorhead.ai,headcount:1
+yc,YC W26,Aurorin CAD,aurorincad.com,https://aurorincad.com,headcount:1
+yc,YC W26,AxionOrbital Space,axionorbital.space,https://axionorbital.space/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W26,Balance,getbalance.ai,https://getbalance.ai,h3:non-technical founder: Emil Munk (bio 'McKinsey')
+yc,YC W26,Beyond Reach Labs,beyondreachlabs.com,https://www.beyondreachlabs.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W26,Brumby,brumby.com,https://brumby.com,geo:AU
+yc,YC W26,Button Computer,buttoncomputer.com,https://buttoncomputer.com,headcount:1
+yc,YC W26,Cardboard,cardboard.ai,https://cardboard.ai,geo:IN
+yc,YC W26,Cardinal,trycardinal.com,https://trycardinal.com,headcount:0
+yc,YC W26,Caretta,caretta.so,https://www.caretta.so,h3:non-technical founder: Pavlos Markesinis (title 'Founder/COO')
+yc,YC W26,CatchBack Cards,catchbackcards.com,https://catchbackcards.com,sector:consumer (Consumer)
+yc,YC W26,CellType,celltype.com,https://www.celltype.com,sector:biotech/pharma
+yc,YC W26,ClaimGlide,claimglide.com,https://claimglide.com/,headcount:1
+yc,YC W26,CodeWisp,codewisp.ai,https://codewisp.ai/,sector:consumer (Consumer)
+yc,YC W26,Corvera,corvera.ai,https://corvera.ai/,h3:non-technical founder: Christopher Kong (bio 'sales')
+yc,YC W26,DAIVIN!,daivin.tech,https://www.daivin.tech/,headcount:1
+yc,YC W26,Ditto Biosciences,dittobio.com,https://www.dittobio.com/,sector:biotech/pharma
+yc,YC W26,Doomersion,doomersion.com,https://doomersion.com/,sector:consumer (Consumer)
+yc,YC W26,Envariant,envariant.ai,https://envariant.ai/,headcount:1
+yc,YC W26,Fort,fort.cx,https://fort.cx,sector:consumer (Consumer)
+yc,YC W26,"Galactic Resource Utilization Space, Inc. (GRU Space)",gru.space,https://gru.space,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W26,General Legal,general.legal,https://general.legal,headcount:40
+yc,YC W26,Hlabs,hlaboratories.com,https://www.hlaboratories.com,headcount:1
+yc,YC W26,Human Archive,humanarchive.ai,https://www.humanarchive.ai/,headcount:100
+yc,YC W26,InventoryQuant,inventoryquant.com,https://www.inventoryquant.com,headcount:1
+yc,YC W26,Janeen,janeen.care,https://janeen.care,sector:biotech/pharma
+yc,YC W26,Jinba,jinba.io,https://jinba.io,h3:non-technical founder: Takuya Norisugi (title 'Founder/COO')
+yc,YC W26,Khotan (formerly Pollinate),khotan.com,https://www.khotan.com/,geo:AU
+yc,YC W26,Klaus AI,klausai.com,https://klausai.com,status:Inactive
+yc,YC W26,Kyten Technologies,kytentech.com,https://kytentech.com,status:Inactive
+yc,YC W26,LegalOS,legalos.ai,https://www.legalos.ai,h3:non-technical founder: Rachel Asir (title 'Founder/COO')
+yc,YC W26,Mendral,mendral.com,https://mendral.com/,status:Inactive
+yc,YC W26,Milliray,milliray.com,https://milliray.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W26,Mirabelle,meetmirabelle.com,https://meetmirabelle.com,sector:consumer (Consumer)
+yc,YC W26,Moritz,moritzlegal.com,http://moritzlegal.com/,h3:non-technical founder: Pamir Ehsas (bio 'lawyer')
+yc,YC W26,Ndea,ndea.com,https://ndea.com,sector:biotech/pharma
+yc,YC W26,o11,o11.ai,https://o11.ai,h3:non-technical founder: Ajay Misra (title 'Founder/President')
+yc,YC W26,OpenSpec,openspec.dev,http://openspec.dev,geo:AU
+yc,YC W26,Origami Robotics,origami-robotics.com,https://www.origami-robotics.com,h3:non-technical founder: Ryan Xie (title 'Founder/COO')
+yc,YC W26,Origin,origin.bio,https://origin.bio/,sector:biotech/pharma
+yc,YC W26,Ossus,ossus.com,https://www.ossus.com,h3:non-technical founder: Carl-Hugo Jacobsson (bio 'growth')
+yc,YC W26,Overdrive Health,overdrive.health,https://overdrive.health,headcount:1
+yc,YC W26,Oxus,oxus-ai.com,https://oxus-ai.com/,sector:biotech/pharma
+yc,YC W26,Pax Historia,paxhistoria.co,https://www.paxhistoria.co,sector:consumer (Consumer)
+yc,YC W26,Pocket,heypocket.com,https://heypocket.com/now,sector:consumer (Consumer)
+yc,YC W26,Prana,pranadoc.com,https://pranadoc.com,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC W26,Proximitty,proximitty.ai,https://proximitty.ai,h3:non-technical founder: Wye Yew Ho (bio 'Growth')
+yc,YC W26,Q2Q,tryq2q.com,https://www.tryq2q.com/,status:Inactive
+yc,YC W26,Reframe,usereframe.ai,http://usereframe.ai,headcount:1
+yc,YC W26,Remix,remix.re,https://remix.re,headcount:0
+yc,YC W26,Ressl AI,ressl.ai,https://ressl.ai,geo:IN
+yc,YC W26,Revion,revion.inc,https://revion.inc,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC W26,Rhizome AI,rhizomeai.com,https://rhizomeai.com/,headcount:1
+yc,YC W26,Rubric AI,,,no_usable_domain
+yc,YC W26,Sequence Markets,sequencemkts.com,https://sequencemkts.com/,geo:CA
+yc,YC W26,SideKit,appsidekit.com,https://appsidekit.com,geo:CA
+yc,YC W26,Squid,squid.energy,https://squid.energy,h3:non-technical founder: Conor Jones (bio 'BCG')
+yc,YC W26,Strand AI,strandai.com,https://strandai.com,sector:biotech/pharma
+yc,YC W26,Tepali,tepali.com,https://tepali.com,h3:non-technical founder: Chrisvin Jabamani (bio 'scaled operations')
+yc,YC W26,Traverse,traverse.so,https://www.traverse.so,headcount:1
+yc,YC W26,Travo,travoai.com,https://www.travoai.com/,h3:non-technical founder: Alexander Calafiura (title 'Founder/COO')
+yc,YC W26,Valgo,valgo.ai,https://valgo.ai,h3:non-technical founder: Jon Qian (title 'Founder/President')
+yc,YC W26,Vector Legal,vectorlegal.com,https://vectorlegal.com,h3:non-technical founder: Mitch Duncombe (bio 'lawyer')
+yc,YC W26,Vela,tryvela.ai,https://tryvela.ai,h3:non-technical founder: Gobhanu Sasankar Korisepati (bio 'BCG')
+yc,YC W26,Veriad,veriad.com,https://veriad.com,h3:non-technical founder: Anton Muratov (bio 'GTM')
+yc,YC W26,VOYGR,voygr.tech,https://voygr.tech,h3:non-technical founder: Vlad Baskakov (bio 'GTM')
+yc,YC W26,Wideframe,wideframe.com,https://wideframe.com,h3:non-technical founder: Daniel Pearson (bio 'growth')
+yc,YC W26,Zymbly,zymbly.com,https://www.zymbly.com,headcount:0
+yc,YC X25,Acolite,acolite.ai,https://acolite.ai,h3:non-technical founder: Daniel Siryakov (bio 'PM')
+yc,YC X25,Atum Works,atum.works,https://atum.works/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC X25,Aviro,aviro.ai,https://www.aviro.ai/,h3:non-technical founder: Ayush Karupakula (title 'Founder/COO')
+yc,YC X25,BitPatrol,bitpatrol.io,https://www.bitpatrol.io/,status:Acquired
+yc,YC X25,Blaxel,blaxel.ai,https://blaxel.ai,status:Acquired
+yc,YC X25,Bloom,bloom.diy,https://bloom.diy/,h3:non-technical founder: Sirian Maathuis (bio 'Designer')
+yc,YC X25,Blueshoe,blueshoe.com,https://blueshoe.com,h3:non-technical founder: Casey O'Grady (bio 'Consulting')
+yc,YC X25,Bramante,bramantebio.com,https://www.bramantebio.com,sector:biotech/pharma
+yc,YC X25,Capacitive,capacitive.ai,https://capacitive.ai/,h3:non-technical founder: Rohan Radhakeesoon (title 'Founder/CFO')
+yc,YC X25,Cascade Space,cascadespace.com,https://cascadespace.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC X25,Caucus,usecaucus.com,https://www.usecaucus.com/,status:Inactive
+yc,YC X25,Chiron,projectchiron.org,https://projectchiron.org,sector:consumer edtech
+yc,YC X25,chrt,chrt.com,https://chrt.com,sector:biotech/pharma
+yc,YC X25,Claim Health,claimhealth.com,https://www.claimhealth.com,h3:non-technical founder: Kevin Calcado (bio 'sales')
+yc,YC X25,Eloquent AI,eloquentai.co,https://www.eloquentai.co/,h3:non-technical founder: Tugce Bulut (bio 'consultant')
+yc,YC X25,Foundation Industries,foundation-industries.com,https://www.foundation-industries.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC X25,Frekil,frekil.com,https://www.frekil.com,sector:biotech/pharma
+yc,YC X25,Galen AI,galenai.com,https://www.galenai.com/,status:Acquired
+yc,YC X25,Golf,golf.dev,https://golf.dev/,headcount:1
+yc,YC X25,Kanava AI,kanava.ai,https://kanava.ai/,status:Inactive
+yc,YC X25,Kirana AI,kirana-ai.com,https://www.kirana-ai.com,status:Acquired
+yc,YC X25,Lucis,lucis.life,https://www.lucis.life,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC X25,Method,withmethod.ai,https://withmethod.ai/,headcount:1
+yc,YC X25,neoncoral,neoncoral.inc,http://neoncoral.inc,headcount:1
+yc,YC X25,Novoflow,novoflow.io,https://www.novoflow.io/,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC X25,Opusense AI,opusense.com,https://www.opusense.com/,geo:CA
+yc,YC X25,ParaQuery,paraquery.com,https://paraquery.com,headcount:1
+yc,YC X25,Percival,percy.tech,https://percy.tech,status:Inactive
+yc,YC X25,Photonium,photoniumoptics.com,https://www.photoniumoptics.com/,sector:biotech/pharma
+yc,YC X25,Propolis,propolis.tech,https://propolis.tech/,status:Acquired
+yc,YC X25,Synthio Labs,synthiolabs.com,https://synthiolabs.com/,sector:biotech/pharma
+yc,YC X25,Tegore,tegore.ai,https://tegore.ai/,headcount:1
+yc,YC X25,Text.ai,text.ai,https://www.text.ai/,sector:consumer (Consumer)
+yc,YC X25,The Robot Learning Company,robot-learning.co,https://www.robot-learning.co/,headcount:1
+yc,YC X25,throxy,throxy.com,https://throxy.com/,headcount:55
+yc,YC X25,Units,units.school,https://units.school,headcount:1
+yc,YC X25,Vassar Robotics,vassarrobotics.com,https://www.vassarrobotics.com,sector:consumer (Consumer)
+yc,YC X25,VoiceOS,voiceos.com,https://voiceos.com,sector:consumer (Consumer)
+yc,YC X25,Waffle,waffle.ai,https://www.waffle.ai,sector:consumer (Consumer)
+yc,YC X25,Wavedash,wavedash.com,https://wavedash.com,sector:consumer (Consumer)
+yc,YC X25,Willow,willowvoice.com,https://willowvoice.com/,sector:consumer (Consumer)
+yc,YC X25,YouLearn,youlearn.ai,https://www.youlearn.ai/,sector:consumer edtech
+yc,YC X26,9 Mothers,9mothers.com,https://9mothers.com,h3:non-technical founder: Bogdan Pyzh (title 'Founder/COO')
+yc,YC X26,AbInitio Bio,abinitio-bio.com,https://www.abinitio-bio.com,sector:biotech/pharma
+yc,YC X26,Adialante,adialante.com,http://www.adialante.com,sector:healthcare non-software (Healthcare -> Diagnostics)
+yc,YC X26,Aernata,aernata.com,https://aernata.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC X26,Akkari,akkari.io,https://akkari.io/,h3:non-technical founder: Michael Moore (bio 'GTM')
+yc,YC X26,Allowance,useallowance.com,https://useallowance.com/,headcount:1
+yc,YC X26,Andco,useandco.com,http://www.useandco.com,h3:non-technical founder: Ryan Xue (bio 'consultant'); Michael Lemm (title 'Founder/COO')
+yc,YC X26,ANORIA,anoria.com,https://www.anoria.com,sector:consumer (Consumer)
+yc,YC X26,"Apollo Atomics, Inc.",apolloatomics.com,https://apolloatomics.com/,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC X26,Arctic Health,arctic.health,https://arctic.health,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC X26,Arga Labs,argalabs.com,https://www.argalabs.com/,geo:CA
+yc,YC X26,Autostep,autostep.ai,https://autostep.ai/,headcount:1
+yc,YC X26,Avea Robotics,avearobotics.com,https://www.avearobotics.com,status:Acquired
+yc,YC X26,BentoLabs AI,bentolabs.ai,https://bentolabs.ai/,geo:IN
+yc,YC X26,BioStack Platforms,getbiostack.com,https://www.getbiostack.com/,sector:biotech/pharma
+yc,YC X26,CharacterQuilt,characterquilt.com,https://characterquilt.com,sector:agency/services
+yc,YC X26,Clara,askclara.com,http://askclara.com,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC X26,Clawvisor,clawvisor.com,https://clawvisor.com,headcount:1
+yc,YC X26,decuff,decuff.ai,https://decuff.ai,headcount:1
+yc,YC X26,Dispatch,dispatch.space,https://dispatch.space/,sector:biotech/pharma
+yc,YC X26,Drafted,drafted.ai,https://www.drafted.ai/,sector:consumer (Consumer)
+yc,YC X26,Enjamb Labs,enjamb.ai,https://www.enjamb.ai,sector:biotech/pharma
+yc,YC X26,FinalDose,finaldose.ai,https://finaldose.ai/,sector:biotech/pharma
+yc,YC X26,General Aviation Company,generalaviation.com,https://generalaviation.com,sector:raw hardware (no AI/autonomy/software signal)
+yc,YC X26,Gojiberry AI,gojiberry.ai,https://www.gojiberry.ai,h3:non-technical founder: Pierre-Eliott Lallemant (bio 'Go-To-Market'); Romàn Czerny (title 'Founder/CMO')
+yc,YC X26,GovGuard,govguard.com,https://govguard.com,headcount:0
+yc,YC X26,Hedge,hedgespecialty.com,https://www.hedgespecialty.com/,h3:non-technical founder: Luke Button (bio 'growth')
+yc,YC X26,"HEVN, inc",gethevn.com,https://gethevn.com,h3:non-technical founder: Pavel Mitsevich (title 'Founder/CMO')
+yc,YC X26,HeyClicky,heyclicky.com,https://heyclicky.com/,headcount:0
+yc,YC X26,Hub,hub.xyz,https://hub.xyz,headcount:60
+yc,YC X26,Imperfect,imperfect.co,https://imperfect.co,sector:consumer (Consumer)
+yc,YC X26,Infera,infera.bio,https://www.infera.bio,sector:biotech/pharma
+yc,YC X26,InstaBox,instabox.sh,https://instabox.sh/,h3:non-technical founder: Hang Huang (bio 'PM')
+yc,YC X26,jo,askjo.ai,https://askjo.ai,sector:consumer (Consumer)
+yc,YC X26,Juno,junocompanion.com,https://junocompanion.com/,sector:healthcare non-software (Healthcare -> Consumer Health and Wellness)
+yc,YC X26,Kinro,kinro.com,https://www.kinro.com/,h3:non-technical founder: Corentin Hugot (title 'Founder/COO')
+yc,YC X26,Klarify,klarify.ca,https://www.klarify.ca/,geo:CA
+yc,YC X26,Kuli,kuli.one,https://kuli.one,headcount:1
+yc,YC X26,Lab0,lab0.ai,https://lab0.ai,geo:IN
+yc,YC X26,Lattice Health,latticehealthai.com,https://www.latticehealthai.com/,headcount:1
+yc,YC X26,Light Anchor,lightanchor.ai,https://lightanchor.ai,geo:KR
+yc,YC X26,Limrun,lim.run,https://lim.run,headcount:1
+yc,YC X26,Lumius,lumius-imaging.com,https://www.lumius-imaging.com,sector:healthcare non-software (Healthcare -> Medical Devices)
+yc,YC X26,Maquoketa Research,maquoketa.net,https://www.maquoketa.net,h3:non-technical founder: David Muchow (title 'Founder/COO')
+yc,YC X26,Memoir,memoirmeet.com,https://www.memoirmeet.com/,headcount:1
+yc,YC X26,Modern,getmodern.ai,https://getmodern.ai,geo:AU
+yc,YC X26,Oddpool,oddpool.com,https://www.oddpool.com,status:Inactive
+yc,YC X26,Ontora,ontora.com,https://ontora.com,h3:non-technical founder: Leon Iwanowitsch (bio 'Consulting')
+yc,YC X26,Panacea,withpanacea.com,https://withpanacea.com,sector:biotech/pharma
+yc,YC X26,Pavoot,pavoot.com,https://pavoot.com,headcount:0
+yc,YC X26,PLAN0 AI,plan0.ai,https://plan0.ai/,h3:non-technical founder: Arash Barati (bio 'private equity')
+yc,YC X26,Plena Health,plena.health,https://www.plena.health/,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC X26,Pops,pops.fyi,https://pops.fyi,headcount:1
+yc,YC X26,Prism,tryprism.com,https://tryprism.com/,sector:agency/services
+yc,YC X26,ProjectX,projectx.cloud,https://www.projectx.cloud/,geo:IN
+yc,YC X26,Prototyping.io,prototyping.io,https://www.prototyping.io,status:Acquired
+yc,YC X26,RASPIRE,raspire.com,https://raspire.com/,geo:EG
+yc,YC X26,Regbase,regbase.com,https://regbase.com,h3:non-technical founder: Natalie Aresta-Katz (bio 'MBA')
+yc,YC X26,RentAHuman,rentahuman.ai,https://rentahuman.ai,sector:consumer (Consumer)
+yc,YC X26,Result,result.dev,https://result.dev/,geo:IN
+yc,YC X26,Smartbase,smartbase.so,https://www.smartbase.so/,status:Inactive
+yc,YC X26,smol machines,smolmachines.com,https://smolmachines.com/,headcount:1
+yc,YC X26,Standard Signal,standardsignal.com,https://standardsignal.com,headcount:1
+yc,YC X26,Standout,standout.work,https://standout.work,h3:non-technical founder: Witold de La Chapelle (title 'Founder/CRO')
+yc,YC X26,Taiga,taigabilling.com,https://taigabilling.com,sector:healthcare non-software (Healthcare -> Healthcare Services)
+yc,YC X26,Teaflask,teaflask.com,https://teaflask.com,headcount:1
+yc,YC X26,Thomas,madebythomas.ai,https://madebythomas.ai,geo:CO
+yc,YC X26,Totalis,totalis.trade,https://www.totalis.trade,headcount:0
+yc,YC X26,Uno Wallet,myunowallet.com,https://myunowallet.com/,h3:non-technical founder: Mordi Shadpour (bio 'MBA')
+yc,YC X26,Walter,walter.one,https://www.walter.one,headcount:0
+yc,YC X26,Wealor,wealor.ai,https://wealor.ai/,headcount:0
+yc,YC X26,YouArt,youart.ai,https://youart.ai,sector:consumer (Consumer)

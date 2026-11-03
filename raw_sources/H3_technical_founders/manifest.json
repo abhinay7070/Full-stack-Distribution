@@ -1,0 +1,72 @@
+{
+  "snapshot_at": "2026-11-03T06:32:31+00:00",
+  "sources": [
+    {
+      "name": "yc_devasheeshG",
+      "repo": "https://github.com/devasheeshG/yc-api",
+      "branch": "gh-pages",
+      "commit": "bcdaab35a0af44bfb3f4d36ff3a81ae0d770d7eb",
+      "commit_date": "2026-11-03T04:25:22+00:00",
+      "files": [
+        "raw_sources/H3_technical_founders/yc_devasheeshG/meta.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/winter-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/spring-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/summer-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/fall-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/winter-2026.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/spring-2026.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/summer-2026.json.gz",
+        "raw_sources/H3_technical_founders/yc_devasheeshG/fall-2026.json.gz"
+      ]
+    },
+    {
+      "name": "yc_oss_crosscheck",
+      "repo": "https://github.com/yc-oss/api",
+      "branch": "main",
+      "commit": "ac465527d80a9de507fc62e900b491716c8a071a",
+      "commit_date": "2026-11-03T04:39:49+00:00",
+      "files": [
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/winter-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/spring-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/summer-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/fall-2025.json.gz",
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/winter-2026.json.gz",
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/spring-2026.json.gz",
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/summer-2026.json.gz",
+        "raw_sources/H3_technical_founders/yc_oss_crosscheck/fall-2026.json.gz"
+      ]
+    },
+    {
+      "name": "speedrun_startuppy",
+      "repo": "https://github.com/JohnMarcBautista/startuppy",
+      "branch": "main",
+      "commit": "df5544d8cf784c3f2c3b06d2e05dd2b750180e87",
+      "commit_date": "2026-11-02T17:14:56+00:00",
+      "files": [
+        "raw_sources/H3_technical_founders/speedrun_startuppy/data.json.gz"
+      ]
+    },
+    {
+      "name": "ldws123_founders",
+      "repo": "https://github.com/LdwS123/startup-portfolio-scrapers",
+      "branch": "main",
+      "commit": "4eecd85bdda2ae71b3df4f472176180bce8c1c89",
+      "commit_date": "2026-08-22T21:57:00+02:00",
+      "files": [
+        "raw_sources/H3_technical_founders/ldws123_founders/a16z.csv.gz",
+        "raw_sources/H3_technical_founders/ldws123_founders/entrepreneur_first.csv.gz"
+      ]
+    },
+    {
+      "name": "portfolios_yigitmeteozcan",
+      "repo": "https://github.com/yigitmeteozcan/startups",
+      "branch": "main",
+      "commit": "a33ca1bc8598f936db957febeef8b5ed8a155e99",
+      "commit_date": "2026-11-02T16:11:39+00:00",
+      "files": [
+        "raw_sources/H3_technical_founders/portfolios_yigitmeteozcan/ef.json.gz",
+        "raw_sources/H3_technical_founders/portfolios_yigitmeteozcan/techstars.json.gz"
+      ]
+    }
+  ]
+}

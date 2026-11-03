@@ -30,3 +30,30 @@ Identifies, enriches, and scores US/UK/EU Seed–Series A B2B startups (3–35 e
 pip install -r requirements.txt
 python3 scripts/init_db.py
 ```
+
+## H3 — Technical founders (run 2026-11-03)
+
+```bash
+python3 scripts/h3_snapshot.py <dir-with-cloned-sources>   # freeze raw sources (gzip) + manifest.json
+python3 scripts/h3_ingest.py                               # filter, classify, upsert DB, write CSVs
+```
+
+| Source | Upstream (public GitHub mirror) | Cohorts |
+|---|---|---|
+| Y Combinator | `devasheeshG/yc-api` (gh-pages), cross-checked against `yc-oss/api` | W25, X25, S25, F25, W26, X26, S26, F26 |
+| a16z Speedrun | `JohnMarcBautista/startuppy` + founders from `LdwS123/startup-portfolio-scrapers` | SR004–SR007 |
+| Entrepreneur First | `yigitmeteozcan/startups` + domains from `LdwS123/startup-portfolio-scrapers` | 2025–2026 |
+| Techstars | `yigitmeteozcan/startups` | 2025–2026 programs |
+
+Commit SHAs are in `raw_sources/H3_technical_founders/manifest.json`; run counts in `h3_run_report.json` and the `ingestion_runs` table.
+
+**H3 tiers** (`h3_tier` column)
+
+| Tier | Rule |
+|---|---|
+| `A_verified` | Every founder's title/bio shows a technical background; ≤1 GTM-function founder |
+| `B_likely` | ≥1 technical founder, rest have no background signal; no non-technical founder |
+| `C_unverified` | Source publishes no founder background (Techstars, Speedrun SR007, part of EF) |
+
+Records that fail ICP or H3 are written to `sublists/sublist_H3_rejected.csv` with the reason, not to the DB.
+`gtm_headcount_founders` counts founders only (lower bound); non-founder staff roles are not published by these sources.

@@ -1,0 +1,240 @@
+{
+  "generated_at": "2026-11-03T06:36:53Z",
+  "per_source": {
+    "yc": {
+      "raw": 1440,
+      "unique_domains": 1436,
+      "pass": 933
+    },
+    "a16z_speedrun": {
+      "raw": 208,
+      "unique_domains": 202,
+      "pass": 126
+    },
+    "entrepreneur_first": {
+      "raw": 104,
+      "unique_domains": 69,
+      "pass": 53
+    },
+    "techstars": {
+      "raw": 273,
+      "unique_domains": 273,
+      "pass": 200
+    }
+  },
+  "exported": 1312,
+  "rejected": 713,
+  "yc_crosscheck": {
+    "winter-2025": {
+      "primary": 166,
+      "yc_oss": 166,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    },
+    "spring-2025": {
+      "primary": 144,
+      "yc_oss": 144,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    },
+    "summer-2025": {
+      "primary": 166,
+      "yc_oss": 166,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    },
+    "fall-2025": {
+      "primary": 145,
+      "yc_oss": 145,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    },
+    "winter-2026": {
+      "primary": 197,
+      "yc_oss": 197,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    },
+    "spring-2026": {
+      "primary": 193,
+      "yc_oss": 193,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    },
+    "summer-2026": {
+      "primary": 228,
+      "yc_oss": 228,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    },
+    "fall-2026": {
+      "primary": 201,
+      "yc_oss": 201,
+      "missing_in_primary": [],
+      "extra_in_primary": []
+    }
+  },
+  "tiers": {
+    "A_verified": 634,
+    "B_likely": 310,
+    "C_unverified": 368
+  },
+  "reject_reasons": [
+    [
+      "h3:non-technical founder",
+      129
+    ],
+    [
+      "sector:consumer",
+      112
+    ],
+    [
+      "headcount:1",
+      75
+    ],
+    [
+      "sector:biotech/pharma",
+      64
+    ],
+    [
+      "sector:raw hardware",
+      59
+    ],
+    [
+      "no_usable_domain",
+      45
+    ],
+    [
+      "headcount:0",
+      33
+    ],
+    [
+      "geo:IN",
+      30
+    ],
+    [
+      "geo:CA",
+      28
+    ],
+    [
+      "sector:healthcare non-software",
+      20
+    ],
+    [
+      "status:Inactive",
+      20
+    ],
+    [
+      "geo:AU",
+      17
+    ],
+    [
+      "status:Acquired",
+      15
+    ],
+    [
+      "sector:consumer edtech",
+      14
+    ],
+    [
+      "geo:IL",
+      9
+    ],
+    [
+      "geo:TR",
+      4
+    ],
+    [
+      "geo:JP",
+      4
+    ],
+    [
+      "geo:AE",
+      3
+    ],
+    [
+      "geo:CO",
+      3
+    ],
+    [
+      "geo:KR",
+      3
+    ],
+    [
+      "geo:MX",
+      3
+    ],
+    [
+      "sector:agency/services",
+      3
+    ],
+    [
+      "headcount:50",
+      2
+    ],
+    [
+      "headcount:40",
+      2
+    ],
+    [
+      "geo:BR",
+      2
+    ],
+    [
+      "headcount:55",
+      1
+    ],
+    [
+      "headcount:52",
+      1
+    ],
+    [
+      "headcount:100",
+      1
+    ],
+    [
+      "headcount:60",
+      1
+    ],
+    [
+      "geo:EG",
+      1
+    ],
+    [
+      "headcount:-1",
+      1
+    ],
+    [
+      "geo:KY",
+      1
+    ],
+    [
+      "headcount:47",
+      1
+    ],
+    [
+      "geo:CL",
+      1
+    ],
+    [
+      "headcount:49",
+      1
+    ],
+    [
+      "geo:AR",
+      1
+    ],
+    [
+      "geo:NZ",
+      1
+    ],
+    [
+      "geo:SG",
+      1
+    ],
+    [
+      "geo:ME",
+      1
+    ]
+  ]
+}
