@@ -1,0 +1,65 @@
+{
+  "snapshot_at": "2026-11-03T06:55:52+00:00",
+  "sources": [
+    {
+      "name": "yc_waas",
+      "description": "YC Work at a Startup: every YC company flagged hiring, with full jobs[] (refreshed daily)",
+      "repo": "https://github.com/devasheeshG/yc-api",
+      "branch": "gh-pages",
+      "commit": "bcdaab35a0af44bfb3f4d36ff3a81ae0d770d7eb",
+      "commit_date": "2026-11-03T04:25:22+00:00",
+      "files": [
+        "raw_sources/H1_job_arbitrage/yc_waas/meta.json.gz",
+        "raw_sources/H1_job_arbitrage/yc_waas/hiring.json.gz"
+      ]
+    },
+    {
+      "name": "open_jobs_data",
+      "description": "Daily normalized dump of Greenhouse/Lever/Ashby/Workable/... boards for ~380 companies",
+      "repo": "https://github.com/ConorsCode/open-jobs-data",
+      "branch": "main",
+      "commit": "6b3b3b5870436df2ddd85f611bd5a41142314c19",
+      "commit_date": "2026-11-02T14:22:46+00:00",
+      "files": [
+        "raw_sources/H1_job_arbitrage/open_jobs_data/companies.json.gz",
+        "raw_sources/H1_job_arbitrage/open_jobs_data/jobs.json.gz",
+        "raw_sources/H1_job_arbitrage/open_jobs_data/summary.json.gz"
+      ]
+    },
+    {
+      "name": "open_ats_feed",
+      "description": "Board-token index (Common Crawl -> verified against vendor APIs): 18k live boards + posting counts",
+      "repo": "https://github.com/veresk06/open-ats-feed",
+      "branch": "main",
+      "commit": "01b3908c8a8fe13bb4117cd2b2f7e2c7d489a108",
+      "commit_date": "2026-09-05T03:44:10+03:00",
+      "files": [
+        "raw_sources/H1_job_arbitrage/open_ats_feed/all.csv.gz",
+        "raw_sources/H1_job_arbitrage/open_ats_feed/tokens.json.gz",
+        "raw_sources/H1_job_arbitrage/open_ats_feed/role-census-titles.json.gz"
+      ]
+    },
+    {
+      "name": "startuppy_jobs",
+      "description": "Curated startup job list (Ashby/Greenhouse URLs)",
+      "repo": "https://github.com/JohnMarcBautista/startuppy",
+      "branch": "main",
+      "commit": "df5544d8cf784c3f2c3b06d2e05dd2b750180e87",
+      "commit_date": "2026-11-02T17:14:56+00:00",
+      "files": [
+        "raw_sources/H1_job_arbitrage/startuppy_jobs/jobs.json.gz"
+      ]
+    },
+    {
+      "name": "getro_portfolios",
+      "description": "Getro VC job-board portfolios (Antler, Techstars, Accel, GC, Insight, Point Nine): active-job counts",
+      "repo": "https://github.com/LdwS123/startup-portfolio-scrapers",
+      "branch": "main",
+      "commit": "4eecd85bdda2ae71b3df4f472176180bce8c1c89",
+      "commit_date": "2026-08-22T21:57:00+02:00",
+      "files": [
+        "raw_sources/H1_job_arbitrage/getro_portfolios/getro_portfolios.csv.gz"
+      ]
+    }
+  ]
+}

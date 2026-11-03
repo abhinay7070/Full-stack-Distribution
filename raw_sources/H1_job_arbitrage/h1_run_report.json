@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-11-03T07:04:59Z",
+  "sources": {
+    "yc": {
+      "feed_companies": 1505,
+      "meta_hiring_count": 1505,
+      "feed_last_updated": "2026-11-03T04:25:10Z",
+      "companies_with_jobs": 1415,
+      "jobs_total": 6353
+    },
+    "open_jobs_data": {
+      "companies_tracked": 378,
+      "postings": 38145,
+      "matched_to_universe": 1,
+      "rejected_name_collisions": [
+        "Speak (33 postings) vs speak.careers (headcount None)"
+      ]
+    },
+    "startuppy_jobs": {
+      "postings": 260,
+      "closed": 67,
+      "outside_universe": 185,
+      "matched": 8
+    },
+    "ats_live": {
+      "status": "network_policy_denied",
+      "checked_at": "2026-11-03T06:56:40Z",
+      "blocked_hosts": {
+        "ashby": "api.ashbyhq.com",
+        "greenhouse": "boards-api.greenhouse.io",
+        "lever": "api.lever.co",
+        "workable": "apply.workable.com"
+      },
+      "fix": "Allow these hosts in the environment's Network access settings, then re-run."
+    },
+    "open_ats_feed": {
+      "live_boards_indexed": 18164,
+      "universe_domains_mapped": 165
+    },
+    "getro": {
+      "rows": 3224,
+      "universe_context": 58,
+      "new_icp_candidates_titles_unknown": 232
+    }
+  },
+  "universe": {
+    "companies": 1668,
+    "already_in_db": 1511,
+    "yc_hiring_icp_candidates": 644,
+    "db_companies_no_postings_visible": 1024
+  },
+  "matched_companies": 326,
+  "matched_postings": 650,
+  "by_strength": {
+    "S1": 258,
+    "S2": 57,
+    "S3": 11
+  },
+  "by_family": {
+    "devrel": 11,
+    "exact_role": 23,
+    "marketing": 75,
+    "sales": 163,
+    "gtm_generalist": 54,
+    "bizops_generalist": 34,
+    "hidden_gtm": 12,
+    "presales": 15,
+    "customer": 53,
+    "growth": 41,
+    "partnerships": 15,
+    "revops": 2,
+    "other_non_eng": 11,
+    "recruiting": 1
+  },
+  "h1_x_h3": 249,
+  "new_companies_added": 0,
+  "new_companies_tagged_h3_by_rule": 0,
+  "rejected_rows": 1364,
+  "reject_reasons": {
+    "yc_stage": 339,
+    "engineering-only postings": 274,
+    "batch": 212,
+    "not in ICP universe": 185,
+    "sector": 108,
+    "no open postings in feed": 90,
+    "geo": 56,
+    "headcount": 43,
+    "no GTM role; non-eng postings {'engineering'": 22,
+    "no GTM role; non-eng postings {'other_non_eng'": 16,
+    "status": 7,
+    "no usable company domain": 6,
+    "no GTM role; non-eng postings {'bizops_generalist'": 2,
+    "no GTM role; non-eng postings {'not_a_role'": 2,
+    "no GTM role; non-eng postings {'recruiting'": 1,
+    "no postings found in any source": 1
+  },
+  "watchlist_rows": 337,
+  "reconciliation": {
+    "yc_feed_companies": 1505,
+    "yc_icp_candidates": 644,
+    "yc_icp_rejects": 861,
+    "yc_balanced": true,
+    "universe": 1668,
+    "matched": 326,
+    "role_rejects": 318,
+    "db_no_postings_visible": 1024,
+    "universe_balanced": true,
+    "paused_postings_skipped": 3
+  }
+}

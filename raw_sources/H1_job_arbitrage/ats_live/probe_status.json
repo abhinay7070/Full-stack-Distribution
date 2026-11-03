@@ -1,0 +1,11 @@
+{
+  "status": "network_policy_denied",
+  "checked_at": "2026-11-03T06:56:40Z",
+  "blocked_hosts": {
+    "ashby": "api.ashbyhq.com",
+    "greenhouse": "boards-api.greenhouse.io",
+    "lever": "api.lever.co",
+    "workable": "apply.workable.com"
+  },
+  "fix": "Allow these hosts in the environment's Network access settings, then re-run."
+}

@@ -1,0 +1,338 @@
+company_domain,company_name,source,stage,headcount,hq_country,sector,ats_provider,ats_slug,open_postings,as_of,next_step
+axiom.trade,Axiom,db_universe,,2,US,Fintech,ashby,axiom,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+ladderai.com,Ladder,db_universe,,2,US,Vertical AI,ashby,ladder,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+osmosis.ai,Osmosis,db_universe,,6,US,Infra,greenhouse,osmosis,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+harperinsure.com,Harper,db_universe,,25,US,Fintech,ashby,harperinsure,27,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+infinite.net,Infinite,db_universe,,4,US,Fintech,breezy,infinite,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+afterquery.com,AfterQuery,db_universe,,30,US,Infra,ashby,afterquery,33,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+mastra.ai,Mastra,db_universe,,30,US,DevTools,ashby,mastra,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+cedarcopilot.com,Cedar,db_universe,,2,US,DevTools,ashby,cedar,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+chestnutmortgage.com,Chestnut,db_universe,,2,US,Fintech,ashby,chestnut,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+joinminerva.ai,Minerva,db_universe,,5,US,Fintech,ashby,minerva,8,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+almond.bot,Almond,db_universe,,6,US,Industrial / Physical AI,teamtailor,almond,21,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+usesieve.com,sieve,db_universe,,2,US,Fintech,ashby,sieve,11,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+truthsystems.ai,truthsystems,db_universe,,6,US,Infra,ashby,truthsystems,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+getlark.ai,Lark,db_universe,,5,US,DevTools,ashby,lark,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+wafer.ai,Wafer,db_universe,,15,US,DevTools,ashby,wafer,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+bootloop.ai,BootLoop,db_universe,,3,US,DevTools,ashby,bootloop,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+fulcrumresearch.ai,Fulcrum,db_universe,,2,US,AI Agents,ashby,fulcrum,11,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+kernel.sh,KERNEL,db_universe,,22,US,DevTools,ashby,kernel,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+fleetline.ai,Fleetline,db_universe,,11,US,Vertical AI,ashby,fleetline,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+asksapien.ai,Sapien,db_universe,,2,US,AI Agents,ashby,sapien,11,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+getburnt.ai,burnt,db_universe,,3,US,AI Agents,greenhouse,burnt,8,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+agent.nexus,Nexus,db_universe,,2,BE,AI Agents,greenhouse,nexus,5,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+hyperspell.com,Hyperspell,db_universe,,8,US,Infra,ashby,hyperspell,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+cranston.ai,Cranston AI,db_universe,,8,US,Fintech,ashby,cranston,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+sf-tensor.com,SF Tensor,db_universe,,6,US,Infra,ashby,sf-tensor,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+moss.dev,Moss,db_universe,,5,US,DevTools,ashby,moss,34,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+mantisbiotech.com,Mantis,db_universe,,3,US,Infra,greenhouse,mantis,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+compresr.ai,Compresr,db_universe,,3,US,Infra,ashby,compresr,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+constellation.space,Constellation Space,db_universe,,4,US,Infra,ashby,constellationspace,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+polymathlabs.ai,Polymath,db_universe,,6,US,AI Agents,ashby,polymath,5,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+silahq.com,Sila,db_universe,,2,,AI Agents,lever,sila,210,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+foresight.tt,Foresight,db_universe,,2,US,B2B SaaS,ashby,foresight,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+sazabi.com,Sazabi,db_universe,,10,US,Infra,ashby,sazabi,8,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+tryluke.dev,Stage,db_universe,,2,US,DevTools,greenhouse,stage,137,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+hexaagents.com,Hexa,db_universe,,3,GB,B2B SaaS,ashby,hexa,23,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+trellistech.com,Trellis,db_universe,,5,US,AI Agents,lever,trellis,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+complir.io,Complir,db_universe,,13,DK,AI Agents,ashby,complir,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+tester.army,TesterArmy,db_universe,,6,PL,DevTools,greenhouse,tester,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+openworklabs.com,OpenWork,db_universe,,4,US,DevTools,greenhouse,openwork,15,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+assemble.ai,Assemble,db_universe,,4,US,AI Agents,ashby,assemble,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+litmushiring.com,Litmus,db_universe,,4,US,Vertical AI,ashby,litmus,28,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+tridentsecurity.io,Trident,db_universe,,4,US,Infra,greenhouse,trident,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+orchestra.ai,Orchestra,db_universe,,2,US,DevTools,greenhouse,orchestra,29,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+mosaic.inc,Mosaic,db_universe,,2,US,DevTools,ashby,mosaic,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+joinmarble.ai,Marble,db_universe,,2,US,AI Agents,ashby,marble,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+context.dev,Context.dev,db_universe,,6,US,Infra,ashby,context,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+elitehq.ai,Elite,db_universe,,2,US,AI Agents,greenhouse,elite,12,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+heytenor.com,Tenor,db_universe,,3,US,Infra,ashby,tenor,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+tryopentag.com,OpenTag,db_universe,,3,US,Vertical AI,recruitee,opentag,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+meetriver.com,River,db_universe,,2,US,Infra,ashby,river,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+withhopper.com,Hopper,db_universe,,2,US,Infra,ashby,hopper,36,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+larkagents.com,Lark,db_universe,,2,US,Industrial / Physical AI,ashby,lark,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+superserve.ai,Superserve,db_universe,,3,US,DevTools,greenhouse,superserve,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+withkiwi.ai,Kiwi,db_universe,,2,US,AI Agents,ashby,kiwi,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+prototypes.fun,Proto,db_universe,,2,US,DevTools,greenhouse,proto,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+anchr.tech,Anchr,db_universe,,5,US,Industrial / Physical AI,recruitee,anchr,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+athena.lawyer,Athena,db_universe,,6,US,AI Agents,greenhouse,athena,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+getcedar.ai,Cedar,db_universe,,4,US,AI Agents,ashby,cedar,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+coalition.systems,Coalition Systems,db_universe,,4,US,AI Agents,greenhouse,coalition,38,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+darwin.so,Darwin,db_universe,,5,US,Infra,ashby,darwin,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+meetdex.ai,Dex,db_universe,,8,GB,AI Agents,ashby,dex,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+emanate.ai,Emanate,db_universe,,7,US,Industrial / Physical AI,ashby,emanate,11,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+fliptexts.com,Flip,db_universe,,3,US,Fintech,greenhouse,flip,12,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+nexxa.ai,Nexxa.ai,db_universe,,9,US,Industrial / Physical AI,ashby,nexxa,16,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+joinoasis.com,Oasis,db_universe,,5,US,AI Agents,greenhouse,oasis,19,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+getpartyhat.com,PartyHat,db_universe,,2,US,Infra,ashby,partyhat,21,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+pencil.dev,Pen.dev,db_universe,,9,US,DevTools,ashby,pencil,23,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+sentra.app,Sentra,db_universe,,12,US,Infra,ashby,sentra,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+simula.ad,Simula,db_universe,,5,US,Infra,greenhouse,simula,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+getspace.so,Space,db_universe,,4,US,Infra,greenhouse,space,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+sweatpals.com,SweatPals,db_universe,,14,US,B2B SaaS,ashby,sweatpals,5,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+joinvega.com,Vega,db_universe,,2,US,AI Agents,ashby,vega,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+withkrew.com,Krew,db_universe,,,US,B2B SaaS,ashby,krew,5,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+getfleetcraft.com,Fleetcraft,db_universe,,,GB,B2B SaaS,ashby,fleetcraft,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+delfa.ai,Delfa,db_universe,,,GB,AI Agents,ashby,delfa,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+usefaction.com,Faction,db_universe,,,GB,B2B SaaS,ashby,faction,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+flyatlas.ai,Atlas,db_universe,,,GB,Infra,ashby,atlas,8,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+truvo.com,Truvo,db_universe,,,US,B2B SaaS,ashby,truvo,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+heliconindustries.com,Helicon,db_universe,,,GB,B2B SaaS,ashby,helicon,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+plexusaero.space,Plexus,db_universe,,,US,Industrial / Physical AI,lever,plexus,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+hirenimbus.com,Nimbus,db_universe,,,US,Fintech,greenhouse,nimbus,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+monaventures.co,Mona,db_universe,,,US,Fintech,ashby,mona,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+speak.careers,Speak_,db_universe,,,US,B2B SaaS,ashby,speak,38,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+joinattain.com,Attain,db_universe,,5,US,B2B SaaS,greenhouse,attain,16,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+stream.claims,Stream,db_universe,,15,US,Fintech,ashby,stream,5,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+knowtex.ai,Knowtex,db_universe,,,US,Vertical AI,ashby,knowtex,4,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+magicpatterns.com,Magic Patterns,db_universe,,10,US,DevTools,ashby,magicpatterns,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+usehaven.ai,Haven,db_universe,,3,US,Vertical AI,greenhouse,haven,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+twenty.com,Twenty,db_universe,,11,FR,DevTools,ashby,twenty,28,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+sweep.dev,Sweep,db_universe,,4,US,DevTools,ashby,sweep,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+momentic.ai,Momentic,db_universe,,18,US,DevTools,greenhouse,momentic,24,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+pivotrobotics.com,Pivot Robotics,db_universe,,8,US,Industrial / Physical AI,ashby,pivotrobotics,6,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+paradigmai.com,Paradigm,db_universe,,8,US,AI Agents,greenhouse,paradigm,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+hazelai.com,Hazel,db_universe,,7,US,Vertical AI,greenhouse,hazel,17,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+useoffstream.com,Offstream,db_universe,,10,US,Infra,ashby,offstream,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+starcloud.com,Starcloud,db_universe,,12,US,Industrial / Physical AI,greenhouse,starcloud,12,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+ctgt.ai,CTGT,db_universe,,10,US,Infra,ashby,ctgt,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+abundant.ai,Abundant,db_universe,,7,US,Infra,ashby,abundant,7,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+capy.ai,Capy,db_universe,,6,US,DevTools,ashby,capy,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+ryvn.ai,Ryvn,db_universe,,5,US,DevTools,ashby,ryvn,1,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+ambral.com,Ambral,db_universe,,4,US,B2B SaaS,ashby,ambral,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+eloquentai.co,Eloquent AI,db_universe,,5,US,Fintech,ashby,eloquentai,12,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+solvatechnology.com,Solva,db_universe,,7,US,Fintech,ashby,solva,2,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+guildai.co,GUILD,db_universe,,2,US,Industrial / Physical AI,greenhouse,guild,5,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+hubble.ai,Hubble,db_universe,,2,US,B2B SaaS,breezy,hubble,3,2026-09-03 (open-ats-feed),"board known, titles not in snapshot - h1_ats_probe.py"
+4degrees.ai,4Degrees,getro:Techstars,seed,2,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+aazzur.com,AAZZUR,getro:Techstars,seed,2,DE,Fintech,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+acclinate.com,Acclinate,getro:Techstars,series_a,3,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+adsgency.ai,AdsGency AI,getro:Techstars,seed,2,US,AI Agents,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+akdemia.com,Akdemia,getro:Techstars,seed,2,US,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ampd.io,Ampd,getro:Techstars,seed,2,US,AI Agents,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+anam.ai,Anam.ai,getro:Techstars,seed,2,GB,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ansur.no,AnsuR,getro:Techstars,pre_seed,2,NO,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+arvist.ai,Arvist,getro:Techstars,seed,2,US,Infra,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+atomchat.io,ATOM,getro:Techstars,seed,3,US,B2B SaaS,,,25,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+goauntflow.com,Aunt Flow,getro:Techstars,series_a,2,US,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+avocadosys.com,Avocado Systems,getro:Techstars,seed,2,US,Infra,,,9,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+awarehealth.io,Aware Health,getro:Techstars,seed,2,US,B2B SaaS,,,10,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+azmed.co,AZmed,getro:Techstars,series_a,3,FR,B2B SaaS,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+playballbox.com,BallBox,getro:Techstars,pre_seed,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+getbild.com,Bild,getro:Techstars,series_a,2,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+bobscontainers.com,Bob's Containers,getro:Techstars,seed,2,US,B2B SaaS,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+boldmetrics.com,Bold Metrics,getro:Techstars,series_a,2,US,Vertical AI,greenhouse,boldmetrics,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+bosframework.com,BOS Framework,getro:Techstars,seed,2,US,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+boxesdevices.com,BOxES 4.0 Devices,getro:Techstars,pre_seed,2,US,B2B SaaS,,,120,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+brysk.com,Brysk,getro:Techstars,seed,2,US,Infra,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cachet.me,Cachet,getro:Techstars,series_a,2,EE,B2B SaaS,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cangrade.com,Cangrade,getro:Techstars,seed,2,US,B2B SaaS,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+captain.ai,Captain AI,getro:Techstars,seed,2,GB,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+carbonanalytics.com,Carbon Analytics,getro:Techstars,pre_seed,2,GB,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+circularplace.fr,CircularPlace,getro:Techstars,seed,2,FR,B2B SaaS,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cledara.com,Cledara,getro:Techstars,series_a,3,GB,Fintech,,,10,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+comebackmobility.com,ComeBack Mobility,getro:Techstars,pre_seed,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+croct.com,Croct,getro:Techstars,seed,2,US,DevTools,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cubbit.io,Cubbit,getro:Techstars,seed,2,IT,B2B SaaS,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cycle.eco,Cycle,getro:Techstars,series_a,3,DE,B2B SaaS,recruitee,cycle,13,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+deephow.com,DeepHow,getro:Techstars,series_a,3,US,B2B SaaS,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+dfns.co,Dfns,getro:Techstars,series_a,3,FR,Infra,,,13,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+divethru.com,DiveThru,getro:Techstars,pre_seed,2,US,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+docstation.co,DocStation,getro:Techstars,seed,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+docsumo.com,Docsumo,getro:Techstars,seed,3,US,Fintech,lever,docsumo,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+klearly.nl,Klearly,getro:Antler,series_a,2,NL,Fintech,,,30,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+netbird.io,NetBird,getro:Antler,series_a,2,DE,B2B SaaS,ashby,netbird,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+capsa.ai,Capsa AI,getro:Antler,series_a,2,GB,B2B SaaS,,,10,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+noxus.ai,Noxus,getro:Antler,pre_seed,2,GB,B2B SaaS,,,9,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+airmo.io,AIRMO,getro:Antler,seed,2,DE,B2B SaaS,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cloutkitchen.net,Clout Kitchen,getro:Antler,seed,2,US,B2B SaaS,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+netnow.io,NetNow,getro:Antler,pre_seed,2,US,Fintech,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+adaptive.live,Adaptive,getro:Antler,seed,2,US,Infra,ashby,adaptive,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+spherical-systems.com,Spherical Systems,getro:Antler,pre_seed,2,US,B2B SaaS,,,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+simplyblock.io,simplyblock,getro:Antler,seed,2,DE,Infra,,,6,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+diesta.co.uk,Diesta,getro:Antler,seed,2,GB,Fintech,,,6,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+receipts.no,Receipts,getro:Antler,seed,2,NO,B2B SaaS,,,6,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+qmill.com,Qmill,getro:Antler,seed,2,FI,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+doneservices.se,Done,getro:Antler,seed,2,SE,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+steep.app,Steep,getro:Antler,seed,2,SE,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+usemast.com,Mast,getro:Antler,seed,2,GB,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+brizo.se,Brizo,getro:Antler,seed,2,SE,B2B SaaS,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+fero.com,FERO,getro:Antler,seed,2,US,Fintech,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+onramper.com,Onramper,getro:Antler,seed,2,NL,Fintech,recruitee,onramper,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+tracktitan.io,Track Titan,getro:Antler,seed,2,GB,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+aiba.ai,AiBA,getro:Antler,seed,2,NO,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+hifibridge.com,Hifi,getro:Antler,seed,2,US,Fintech,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+pickles.co,Pickles,getro:Antler,seed,2,GB,B2B SaaS,breezy,pickles,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+jenni.ai,Jenni AI,getro:Antler,pre_seed,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+usetwirl.com,Twirl,getro:Antler,pre_seed,2,GB,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+treyd.io,Treyd,getro:Antler,series_a,3,SE,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+nudgelabs.com,NudgeLabs,getro:Antler,pre_seed,2,SE,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+mentium.io,Mentium.io,getro:Antler,seed,2,US,AI Agents,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+skleo.de,Skleo,getro:Antler,seed,6,DE,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+remedylogic.com,Remedy Logic,getro:Antler,seed,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+100ms.live,100ms,getro:Accel,series_a,3,US,Infra,lever,100ms,9,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+aegisai.ai,AegisAI,getro:Accel,seed,2,US,Infra,,,15,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+agaveapi.com,Agave,getro:Accel,seed,2,US,B2B SaaS,,,10,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+altinity.com,Altinity ,getro:Accel,seed,3,US,Infra,,,9,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+getaptly.com,Aptly,getro:Accel,seed,2,US,B2B SaaS,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+binocs.co,Binocs ,getro:Accel,seed,2,US,AI Agents,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+campaignmonitor.com,Campaign Monitor,getro:Accel,series_a,3,GB,B2B SaaS,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cointracker.io,CoinTracker,getro:Accel,series_a,3,US,B2B SaaS,ashby,cointracker,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+deepnote.com,Deepnote,getro:Accel,series_a,2,CZ,B2B SaaS,ashby,deepnote,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+delightree.com,Delightree,getro:Accel,seed,2,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ema.co,Ema Unlimited,getro:Accel,series_a,3,US,B2B SaaS,,,42,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+fibr.ai,Fibr,getro:Accel,seed,2,US,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+fin.com,Fin Assistant. (2015 - 2019),getro:Accel,series_a,2,US,AI Agents,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+getflipturn.com,Flipturn,getro:Accel,series_a,2,US,Infra,ashby,flipturn,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+folk.app,folk,getro:Accel,seed,3,FR,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+gameforge.com,Gameforge,getro:Accel,series_a,4,DE,B2B SaaS,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+gofundme.com,GoFundMe,getro:Accel,series_a,4,US,B2B SaaS,greenhouse,gofundme,44,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+higgsfield.ai,Higgsfield AI,getro:Accel,series_a,2,US,B2B SaaS,ashby,higgsfieldai,69,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+onkernel.com,Kernel,getro:Accel,series_a,2,US,AI Agents,ashby,kernel,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+laravel.com,Laravel,getro:Accel,series_a,2,US,B2B SaaS,,,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+lightdash.com,Lightdash,getro:Accel,series_a,2,GB,B2B SaaS,ashby,lightdash,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+medigo.com,Medigo,getro:Accel,series_a,2,DE,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+minoanexperience.com,Minoan,getro:Accel,seed,3,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+nuitee.com,Nuitée | Enabling All Companies to Build Travel Solutions,getro:Accel,series_a,4,IE,Infra,greenhouse,nuitee,21,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+phasevtrials.com,PhaseV,getro:Accel,series_a,2,US,Vertical AI,greenhouse,phasev,12,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+process.st,Process Street,getro:Accel,series_a,2,US,B2B SaaS,greenhouse,processstreet,14,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+prodigaltech.com,Prodigal,getro:Accel,series_a,2,US,Fintech,greenhouse,prodigal,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+rapidcanvas.ai,RapidCanvas,getro:Accel,series_a,3,US,AI Agents,,,14,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+readme.com,ReadMe,getro:Accel,series_a,3,US,B2B SaaS,ashby,readme,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+getrhythms.ai,Rhythms,getro:Accel,seed,2,US,B2B SaaS,ashby,rhythms,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+securden.com,Securden,getro:Accel,series_a,3,US,Infra,,,20,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+smallstep.com,Smallstep,getro:Accel,series_a,2,US,Infra,ashby,smallstep,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+stonly.com,Stonly,getro:Accel,series_a,2,FR,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+superpayments.com,Super Payments,getro:Accel,seed,2,GB,Fintech,greenhouse,superpayments,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+synthflow.ai,Synthflow,getro:Accel,series_a,3,DE,AI Agents,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+temaetfs.com,Tema ETFs,getro:Accel,seed,2,US,Infra,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+tessl.io,Tessl,getro:Accel,series_a,2,GB,B2B SaaS,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+tracebit.com,Tracebit,getro:Accel,series_a,2,GB,B2B SaaS,ashby,tracebit,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+uniqode.com,Uniqode (Formerly Beaconstac),getro:Accel,series_a,3,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+v-comply.com,VComply,getro:Accel,series_a,2,US,B2B SaaS,,,10,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+viso.ai,VISOA,getro:Accel,seed,2,US,Infra,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+vorlonsecurity.com,Vorlon,getro:Accel,series_a,2,US,B2B SaaS,,,17,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+welltheory.com,WellTheory,getro:Accel,series_a,2,US,B2B SaaS,ashby,welltheory,14,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+zoca.com,Zoca,getro:Accel,seed,3,US,B2B SaaS,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+afori.com,Afori,getro:General Catalyst,pre_seed,2,ES,AI Agents,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+alsym.com,Alsym Energy,getro:General Catalyst,pre_seed,3,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+anagramsecurity.com,Anagram,getro:General Catalyst,series_a,2,US,Infra,ashby,anagram,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+andesite.ai,Andesite,getro:General Catalyst,series_a,3,US,Infra,greenhouse,andesite,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+joinarlo.com,Arlo,getro:General Catalyst,seed,2,US,B2B SaaS,ashby,arlo,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+authzed.com,Authzed,getro:General Catalyst,series_a,2,US,B2B SaaS,ashby,authzed,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ayr.energy,Ayr Energy,getro:General Catalyst,seed,2,EE,B2B SaaS,,,18,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+joinbetter.com,Better Health Supplies,getro:General Catalyst,series_a,3,US,B2B SaaS,ashby,joinbetter,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cartesia.ai,Cartesia,getro:General Catalyst,series_a,2,FR,B2B SaaS,ashby,cartesia,31,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+chalk.ai,Chalk,getro:General Catalyst,series_a,2,US,Vertical AI,ashby,chalk,19,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+chambercardio.com,Chamber Cardio,getro:General Catalyst,series_a,2,US,B2B SaaS,ashby,chambercardio,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+civicroundtable.com,Civic Roundtable,getro:General Catalyst,seed,2,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+clariumhealth.com,Clarium,getro:General Catalyst,series_a,2,US,B2B SaaS,ashby,clarium,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+cointracker.io,CoinTracker,getro:General Catalyst,series_a,3,US,B2B SaaS,ashby,cointracker,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+emidat.com,Emidat,getro:General Catalyst,seed,2,DE,B2B SaaS,ashby,emidat,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+encentive.de,Encentive GMBH,getro:General Catalyst,seed,2,DE,B2B SaaS,,,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+eudia.com,Eudia,getro:General Catalyst,series_a,3,US,B2B SaaS,greenhouse,eudia,19,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+evvy.com,Evvy,getro:General Catalyst,series_a,3,US,B2B SaaS,ashby,evvy,15,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+fabrichealth.com,Fabric,getro:General Catalyst,series_a,4,US,B2B SaaS,,,17,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+farohealth.com,Faro Health,getro:General Catalyst,series_a,2,US,Infra,,,6,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+fever.energy,Fever,getro:General Catalyst,seed,2,SE,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+generalintuition.com,General Intuition,getro:General Catalyst,pre_seed,2,US,B2B SaaS,,,13,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+geordie.ai,Geordie AI,getro:General Catalyst,series_a,2,GB,Infra,ashby,geordieai,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+goodstack.io,Goodstack,getro:General Catalyst,series_a,3,GB,B2B SaaS,ashby,goodstack,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+gusto.com,Gusto,getro:General Catalyst,series_a,5,US,B2B SaaS,greenhouse,gusto,91,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+healthex.io,HealthEx,getro:General Catalyst,series_a,3,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+highlightai.com,Highlight,getro:General Catalyst,series_a,2,US,B2B SaaS,ashby,highlightai,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+homewardhealth.com,Homeward,getro:General Catalyst,pre_seed,3,US,B2B SaaS,greenhouse,homeward,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+huuva.io,Huuva,getro:General Catalyst,seed,2,FI,B2B SaaS,teamtailor,huuva,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+integral.de,Integral,getro:General Catalyst,pre_seed,2,DE,Fintech,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+jadu.ar,JADU,getro:General Catalyst,series_a,3,US,B2B SaaS,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+kick.co,Kick,getro:General Catalyst,seed,2,US,B2B SaaS,,,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+joinladder.com,Ladder,getro:General Catalyst,seed,2,US,B2B SaaS,ashby,ladder,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+layerhealth.com,Layer Health,getro:General Catalyst,series_a,2,US,B2B SaaS,greenhouse,layerhealth,15,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+lila.ai,Lila Sciences,getro:General Catalyst,pre_seed,3,US,Vertical AI,greenhouse,lilasciences,131,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+lunos.ai,Lunos,getro:General Catalyst,pre_seed,2,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+mdally.com,MD Ally,getro:General Catalyst,series_a,2,US,B2B SaaS,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+medeloop.ai,Medeloop,getro:General Catalyst,series_a,2,US,Infra,greenhouse,medeloop,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+medely.com,Medely,getro:General Catalyst,seed,5,US,B2B SaaS,ashby,medely,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+method.security,Method Security,getro:General Catalyst,series_a,2,US,Infra,greenhouse,method,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+oneschema.co,OneSchema,getro:General Catalyst,seed,2,US,B2B SaaS,ashby,oneschema,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+orchard-robotics.com,Orchard Robotics,getro:General Catalyst,series_a,2,US,Infra,,,26,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+pacificfusion.com,Pacific Fusion,getro:General Catalyst,series_a,3,US,B2B SaaS,greenhouse,pacificfusion,29,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+pallet.com,Pallet,getro:General Catalyst,series_a,2,US,Infra,greenhouse,pallet,13,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+payrails.com,Payrails,getro:General Catalyst,series_a,3,DE,Fintech,ashby,payrails,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+powerus.de,PowerUs,getro:General Catalyst,series_a,3,DE,B2B SaaS,ashby,powerus,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ranger.net,Ranger,getro:General Catalyst,seed,2,US,B2B SaaS,lever,ranger,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+getsapien.com,Sapien,getro:General Catalyst,seed,2,US,B2B SaaS,ashby,sapien,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+section4.com,Section4,getro:General Catalyst,series_a,3,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+somethings.com,Somethings,getro:General Catalyst,series_a,2,US,B2B SaaS,ashby,somethings,10,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+stacks.ai,Stacks,getro:General Catalyst,series_a,2,US,Fintech,ashby,stacks,107,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+tigrisdata.com,Tigris Data,getro:General Catalyst,series_a,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+triumpharcade.com,Triumph,getro:General Catalyst,series_a,2,US,Fintech,,,16,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+twenty.io,Twenty,getro:General Catalyst,series_a,2,GB,B2B SaaS,ashby,twenty,28,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+welltheory.com,WellTheory,getro:General Catalyst,series_a,2,US,B2B SaaS,ashby,welltheory,14,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+yuzu.health,Yuzu,getro:General Catalyst,series_a,2,US,B2B SaaS,,,15,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+zarminali.com,Zarminali Health,getro:General Catalyst,series_a,2,US,B2B SaaS,,,66,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+zipsec.com,Zip Security,getro:General Catalyst,series_a,2,US,Infra,,,19,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+a.team,A.Team,getro:Insight Partners,series_a,3,US,AI Agents,,,13,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+apiphani.io,Apiphani,getro:Insight Partners,series_a,3,US,B2B SaaS,greenhouse,apiphani,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+apricothealth.ai,Apricot,getro:Insight Partners,series_a,2,US,B2B SaaS,teamtailor,apricot,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+beyondmath.com,BeyondMath,getro:Insight Partners,seed,2,GB,B2B SaaS,ashby,beyondmath,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+gobloominghealth.com,Blooming Health,getro:Insight Partners,series_a,2,US,B2B SaaS,,,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+bubble.io,Bubble,getro:Insight Partners,series_a,4,US,B2B SaaS,ashby,bubble,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+civicplus.com,CivicPlus,getro:Insight Partners,pre_seed,4,US,B2B SaaS,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+compliancequest.com,ComplianceQuest,getro:Insight Partners,series_a,4,US,B2B SaaS,,,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+crewai.com,crewAI,getro:Insight Partners,series_a,2,US,AI Agents,,,9,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+dragonboat.io,dragonboat,getro:Insight Partners,series_a,2,US,AI Agents,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+easyaerial.com,Easy Aerial,getro:Insight Partners,series_a,2,US,B2B SaaS,,,15,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+exacare.com,ExaCare,getro:Insight Partners,series_a,2,US,B2B SaaS,,,37,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+expedock.com,Expedock,getro:Insight Partners,series_a,3,US,B2B SaaS,,,20,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+fastino.ai,Fastino,getro:Insight Partners,seed,2,US,Infra,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+govly.com,Govly,getro:Insight Partners,series_a,2,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+govwell.com,Govwell,getro:Insight Partners,seed,2,US,B2B SaaS,ashby,govwell,17,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+herondata.io,Heron Data,getro:Insight Partners,series_a,2,GB,Fintech,ashby,herondata,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+jump.ai,Jump - Advisor Ai,getro:Insight Partners,series_a,3,US,B2B SaaS,,,12,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+kubit.ai,Kubit,getro:Insight Partners,series_a,2,US,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+leapsome.com,Leapsome,getro:Insight Partners,series_a,3,US,B2B SaaS,ashby,leapsome,18,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+themarbleway.com,Marble Law,getro:Insight Partners,seed,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+markt-pilot.com,Markt Pilot,getro:Insight Partners,series_a,3,US,B2B SaaS,,,9,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ory.sh,ORY,getro:Insight Partners,series_a,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+outbuild.com,Outbuild,getro:Insight Partners,series_a,2,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+parachutehealth.com,Parachute Health,getro:Insight Partners,pre_seed,4,US,B2B SaaS,greenhouse,parachutehealth,16,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+phasevtrials.com,PhaseV,getro:Insight Partners,series_a,2,US,Vertical AI,greenhouse,phasev,12,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+remarcable.com,Remarcable,getro:Insight Partners,series_a,3,US,B2B SaaS,,,13,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+resolvepay.com,Resolve,getro:Insight Partners,series_a,2,US,Fintech,,,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+resolve.io,Resolve Systems,getro:Insight Partners,seed,3,BG,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+restream.io,Restream,getro:Insight Partners,series_a,3,US,B2B SaaS,ashby,restream,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+rollstack.com,Rollstack,getro:Insight Partners,series_a,2,US,B2B SaaS,ashby,rollstack,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+runware.ai,Runware,getro:Insight Partners,series_a,2,FR,Vertical AI,,,15,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+shipium.com,Shipium,getro:Insight Partners,series_a,3,US,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+sparetech.io,SPARETECH,getro:Insight Partners,series_a,3,DE,B2B SaaS,greenhouse,sparetech,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+splitwise.com,Splitwise,getro:Insight Partners,series_a,2,US,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+testkube.io,Testkube,getro:Insight Partners,series_a,2,US,B2B SaaS,,,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+tradelink.co,TradeLink,getro:Insight Partners,series_a,3,DE,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+transmitsecurity.com,Transmit Security,getro:Insight Partners,series_a,4,US,Infra,greenhouse,transmitsecurity,14,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+trengo.com,Trengo,getro:Insight Partners,series_a,3,NL,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+uniform.dev,Uniform,getro:Insight Partners,series_a,3,US,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+unobravo.com,Unobravo,getro:Insight Partners,series_a,4,IT,B2B SaaS,teamtailor,unobravo,7,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+workato.com,Workato,getro:Insight Partners,pre_seed,5,US,B2B SaaS,greenhouse,workato,154,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+workithealth.com,Workit Health,getro:Insight Partners,pre_seed,3,US,B2B SaaS,greenhouse,workithealth,8,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ammp.io,AMMP Technologies,getro:Point Nine,seed,2,NL,B2B SaaS,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+amperecloud.com,Amperecloud,getro:Point Nine,series_a,3,DE,B2B SaaS,recruitee,amperecloud,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+bluelayer.io,BlueLayer,getro:Point Nine,seed,2,GB,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+figures.hr,FIGURES,getro:Point Nine,seed,2,FR,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+findable.no,Findable,getro:Point Nine,series_a,3,NO,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+gitbook.com,Gitbook,getro:Point Nine,seed,2,US,B2B SaaS,ashby,gitbook,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+getkisi.com,Kisi Security,getro:Point Nine,seed,3,US,Infra,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+metals-hub.com,Metalshub,getro:Point Nine,series_a,2,DE,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+ontruck.com,OnTruck,getro:Point Nine,pre_seed,2,ES,B2B SaaS,,,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+petsapp.com,PetsApp,getro:Point Nine,series_a,2,GB,B2B SaaS,,,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+polaranalytics.com,Polar Analytics,getro:Point Nine,series_a,2,US,B2B SaaS,ashby,polaranalytics,5,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+remerge.io,Remerge,getro:Point Nine,series_a,3,PL,B2B SaaS,breezy,remerge,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+reonic.com,Reonic,getro:Point Nine,series_a,2,DE,B2B SaaS,ashby,reonic,33,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+rerun.io,Rerun.io,getro:Point Nine,seed,3,SE,B2B SaaS,ashby,rerun,6,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+rootglobal.io,Root Global,getro:Point Nine,seed,2,DE,Fintech,ashby,rootglobal,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+tradelink.co,TradeLink,getro:Point Nine,series_a,3,DE,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+upciti.com,Upciti,getro:Point Nine,series_a,2,FR,B2B SaaS,,,3,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+up.codes,UpCodes,getro:Point Nine,series_a,2,US,B2B SaaS,ashby,upcodes,2,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+vev.co,vev,getro:Point Nine,seed,2,NL,B2B SaaS,,,4,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+tryvital.io,Vital,getro:Point Nine,seed,2,US,B2B SaaS,,,11,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
+whereby.com,Whereby,getro:Point Nine,series_a,2,NO,B2B SaaS,lever,whereby,1,2026-08-22 (getro snapshot),titles not in feed - resolve with h1_ats_probe.py once ATS hosts allowed
