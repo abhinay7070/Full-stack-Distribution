@@ -77,3 +77,46 @@ CREATE TABLE IF NOT EXISTS ingestion_runs (
     started_at          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
     completed_at        TEXT
 );
+
+-- ---------------------------------------------------------------------------
+-- Tracking layer (written by scripts/build_master.py; edited by the user in
+-- master/gtm_master.xlsx and synced back on every rebuild).
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS scores (
+    company_domain      TEXT PRIMARY KEY REFERENCES companies(company_domain) ON UPDATE CASCADE ON DELETE CASCADE,
+    rank                INTEGER,
+    rank_score          INTEGER,
+    score_signals       INTEGER,   -- 25 x number of hypotheses matched
+    score_hiring        INTEGER,   -- H1 role points
+    score_capital       INTEGER,   -- H2 recency points (incl. weak-evidence penalty)
+    score_founders      INTEGER,   -- H3 tier points
+    score_size          INTEGER,   -- headcount fit points
+    score_penalties     INTEGER,   -- unverified funding / unknown geo / possible past Series A
+    icp_tier            TEXT,      -- A_high_confidence | B_likely_fit | C_needs_enrichment | D_review
+    wave                TEXT,      -- outreach wave (see README)
+    computed_at         TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tracking (
+    company_domain      TEXT PRIMARY KEY REFERENCES companies(company_domain) ON UPDATE CASCADE ON DELETE CASCADE,
+    stage               TEXT NOT NULL DEFAULT 'Not started',
+    next_action         TEXT,
+    next_action_date    TEXT,      -- YYYY-MM-DD
+    notes               TEXT,
+    updated_at          TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+);
+
+CREATE TABLE IF NOT EXISTS outreach_log (
+    touch_id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    touch_date          TEXT NOT NULL,   -- YYYY-MM-DD
+    company_domain      TEXT NOT NULL,
+    contact_name        TEXT,
+    channel             TEXT,            -- LinkedIn | Email | X | Job application | Intro | Call | Other
+    touch_type          TEXT,            -- First touch | Follow-up | Reply | Call | Proposal | Other
+    angle               TEXT,
+    outcome             TEXT,            -- Sent | No reply | Replied - positive | Replied - negative | Call booked | Not a fit
+    next_step           TEXT,
+    notes               TEXT,
+    UNIQUE (touch_date, company_domain, contact_name, channel, touch_type)
+);
+CREATE INDEX IF NOT EXISTS idx_outreach_domain ON outreach_log(company_domain);

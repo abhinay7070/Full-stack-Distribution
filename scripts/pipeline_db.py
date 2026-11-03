@@ -46,6 +46,13 @@ SHARED_HOSTS = {
 }
 
 
+# Same company published under two domains: alias -> canonical. Applied by normalize_domain,
+# so every ingest maps the alias to one row (build_master.py folds any existing alias row in).
+DOMAIN_ALIASES = {
+    "joinpasito.com": "pasito.ai",
+}
+
+
 def utcnow() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -70,7 +77,7 @@ def normalize_domain(value: str | None) -> str | None:
     root = f"{ext.domain}.{ext.suffix}"
     if root in SHARED_HOSTS:
         return None
-    return root
+    return DOMAIN_ALIASES.get(root, root)
 
 
 def normalize_name(name: str) -> str:

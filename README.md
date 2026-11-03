@@ -130,3 +130,26 @@ python3 scripts/master_rank.py                             # cross-hypothesis ra
 | `sublists/sublist_H2_rejected.csv` | New-company candidates rejected, with reason |
 | `sublists/sublist_H2_watchlist.csv` | Relevant signals that could not be keyed to a domain / stage |
 | `sublists/master_priority.csv` | All non-disqualified companies ranked across H1-H3 (`rank_breakdown` explains every point) |
+
+## Master workbook (tracking layer)
+
+```bash
+python3 scripts/build_master.py   # sync your edits -> DB, re-score, rewrite master/gtm_master.xlsx + master/*.csv
+```
+
+One key (`company_domain`), one entity per tab, the DB as source of truth:
+
+| Tab | Grain | Notes |
+|---|---|---|
+| `Start_Here` | — | Daily routine, colour legend, wave and tier definitions |
+| `Dashboard` | — | Live formulas: wave × tier matrix, signal coverage, pipeline by stage, activity, 30-day plan vs actual (yellow inputs) |
+| `Master` | 1 row per company (1,756) | Sorted wave → rank_score. Yellow = you edit (`stage`, `next_action`, `next_action_date`, `notes`); green = formulas (`due`, `touches`, `last_touch`, `days_since_raise`) |
+| `Contacts` | 1 row per founder | CEO flag, technical flag, LinkedIn / X, email (input) |
+| `Signals` | 1 row per evidence | Every H1/H2/H3 proof with source URL |
+| `Open_Roles` | 1 row per GTM posting | H1 taxonomy, comp, URL |
+| `Outreach_Log` | 1 row per touch | You fill in; row 2 is an example (`example.com`) excluded from counts |
+| `Data_Dictionary` | 1 row per column | Definition of every column |
+
+**Fit vs timing.** `icp_tier` (A high confidence · B likely fit · C needs enrichment · D review) says how sure the ICP match is; `wave` (W1 Hot days 1–7 · W2 Warm days 8–14 · W3 Cold-fit days 15–30 · Nurture · Enrich first · Review fit) says when to act. `rank_score` is unchanged from `master_rank.py`; its parts are in `score_*` columns and stored in the `scores` table.
+
+**Edits are never lost.** On every rebuild the yellow Master cells are upserted into `tracking` and new Outreach_Log rows into `outreach_log` (append-only; duplicates ignored) before the workbook is rewritten. To remove a logged touch, delete it from the `outreach_log` table too. Same-company duplicate domains are folded via `DOMAIN_ALIASES` in `pipeline_db.py`.
