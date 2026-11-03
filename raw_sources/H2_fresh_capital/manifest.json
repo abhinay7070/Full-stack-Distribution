@@ -1,0 +1,109 @@
+{
+  "snapshot_at": "2026-11-03T07:16:59+00:00",
+  "sources": [
+    {
+      "name": "yc_directory",
+      "description": "All 6,362 YC companies with YC-attached news[] (title, url, date)",
+      "repo": "https://github.com/devasheeshG/yc-api",
+      "commit": "bcdaab35a0af44bfb3f4d36ff3a81ae0d770d7eb",
+      "commit_date": "2026-11-03T04:25:22+00:00",
+      "files": 1,
+      "paths": [
+        "raw_sources/H2_fresh_capital/yc_directory/all.json.gz"
+      ]
+    },
+    {
+      "name": "fliar_funding_sample",
+      "description": "Fliar Radar funding rounds 2019-2026-06, 25% company-hash sample, domain-keyed",
+      "repo": "https://github.com/Busineessfree/global-startup-funding",
+      "commit": "225b3e0e84e5ed4a45b5311b20760930cfde9c72",
+      "commit_date": "2026-10-17T16:00:08+05:30",
+      "files": 1,
+      "paths": [
+        "raw_sources/H2_fresh_capital/fliar_funding_sample/global_startup_funding_sample.csv.gz"
+      ]
+    },
+    {
+      "name": "fliar_funding_sample",
+      "description": "US subset sample",
+      "repo": "https://github.com/Busineessfree/us-startup-funding-2019-2026",
+      "commit": "d8e46ef7e5a60e25ac7775baa655253d0e4befda",
+      "commit_date": "2026-10-17T23:52:47+05:30",
+      "files": 1,
+      "paths": [
+        "raw_sources/H2_fresh_capital/fliar_funding_sample/us_startup_funding_2019_2026_sample.csv.gz"
+      ]
+    },
+    {
+      "name": "fliar_funding_sample",
+      "description": "UK subset sample",
+      "repo": "https://github.com/Busineessfree/uk-startup-funding-2019-2026",
+      "commit": "105adcfb6f0721a8e68c6fa768d68d051e7deb4f",
+      "commit_date": "2026-10-18T00:41:55+05:30",
+      "files": 1,
+      "paths": [
+        "raw_sources/H2_fresh_capital/fliar_funding_sample/uk_startup_funding_2019_2026_sample.csv.gz"
+      ]
+    },
+    {
+      "name": "fliar_funding_sample",
+      "description": "AI subset sample",
+      "repo": "https://github.com/Busineessfree/ai-startup-funding",
+      "commit": "c4c8ebb9412524f04e07bd6f5c3747b69c630115",
+      "commit_date": "2026-10-17T16:04:29+05:30",
+      "files": 1,
+      "paths": [
+        "raw_sources/H2_fresh_capital/fliar_funding_sample/ai_startup_funding_sample.csv.gz"
+      ]
+    },
+    {
+      "name": "startup_pulse_daily",
+      "description": "Daily snapshots 2026-07-08..: RSS headlines (TechCrunch, Techmeme, Sifted, ...) + SEC Form D filings",
+      "repo": "https://github.com/brianboler/startupdashboard",
+      "commit": "79d889b71e9e304a7aad6e1b97e1201f28016784",
+      "commit_date": "2026-11-02T20:41:15+00:00",
+      "files": 118,
+      "paths": [
+        "raw_sources/H2_fresh_capital/startup_pulse_daily/2026-07-08.json.gz",
+        "raw_sources/H2_fresh_capital/startup_pulse_daily/2026-07-09.json.gz",
+        "...",
+        "raw_sources/H2_fresh_capital/startup_pulse_daily/2026-11-01.json.gz",
+        "raw_sources/H2_fresh_capital/startup_pulse_daily/2026-11-02.json.gz"
+      ]
+    },
+    {
+      "name": "formd_tracker",
+      "description": "SEC Form D issuer CIK -> company domain / YC company",
+      "repo": "https://github.com/LBB2005/formd-tracker",
+      "commit": "d9583c4bc86bfbc6b26df03a4e9710fc83b2fcc1",
+      "commit_date": "2026-11-02T19:24:18+00:00",
+      "files": 2,
+      "paths": [
+        "raw_sources/H2_fresh_capital/formd_tracker/company_domains.parquet",
+        "raw_sources/H2_fresh_capital/formd_tracker/yc_matches.parquet"
+      ]
+    },
+    {
+      "name": "formd_bay_area",
+      "description": "SF Bay Area startups with Form D raises 2023-10..2026-09 (latest date, total sold)",
+      "repo": "https://github.com/Puraav/funded-and-sponsoring",
+      "commit": "d0d357b432f8a3060a36c74a0875632765ef73f1",
+      "commit_date": "2026-11-02T22:41:00+00:00",
+      "files": 1,
+      "paths": [
+        "raw_sources/H2_fresh_capital/formd_bay_area/companies.json.gz"
+      ]
+    },
+    {
+      "name": "landedjobs_recent_raises",
+      "description": "Recently funded AI startups (round, amount, date)",
+      "repo": "https://github.com/landedjobs/recently-funded-ai-startups-hiring",
+      "commit": "e2a0d5a94d96f6a3e78cf6f6be72996f94c9be89",
+      "commit_date": "2026-07-24T15:37:56+05:30",
+      "files": 1,
+      "paths": [
+        "raw_sources/H2_fresh_capital/landedjobs_recent_raises/startups.json.gz"
+      ]
+    }
+  ]
+}

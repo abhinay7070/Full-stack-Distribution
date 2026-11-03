@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-11-03T07:25:18Z",
+  "scope": {
+    "run_date": "2026-11-03",
+    "window_start": "2025-05-01",
+    "fresh_start": "2026-09-04",
+    "yc_directory": {
+      "companies": 6362,
+      "funding_headlines": 1477,
+      "events_used": 1315
+    },
+    "fliar_radar": {
+      "rounds_unique": 26602,
+      "max_date": "2026-06-12",
+      "events_on_universe": 405,
+      "new_candidates": 0,
+      "note": "25% company-hash sample of Fliar Radar; recall per company is all-or-nothing"
+    },
+    "startup_pulse_daily": {
+      "days": 118,
+      "first_day": "2026-07-08",
+      "last_day": "2026-11-02",
+      "funding_headlines_unique": 646,
+      "headlines_matched_to_universe": 18,
+      "form_d_filings_unique": 3201,
+      "note": "feed keeps top ~40 Form D filings and ~60 headlines per day (not exhaustive)"
+    },
+    "sec_form_d": {
+      "filings_considered": 4815,
+      "fund_or_non_startup_issuer": 2150,
+      "unmatched": 2482,
+      "new_issuer_watchlist": 156,
+      "matched_to_universe": 27
+    },
+    "landedjobs": {
+      "rows": 99,
+      "matched_to_universe": 1
+    }
+  },
+  "universe_db_companies": 1758,
+  "new_companies_added": 0,
+  "h2_tagged": 454,
+  "h2_by_tier": {
+    "fresh_60d": 126,
+    "in_window": 328
+  },
+  "h2_by_stage": {
+    "unknown": 97,
+    "seed": 116,
+    "pre_seed": 131,
+    "series_a": 110
+  },
+  "h2_by_confidence": {
+    "company_attached": 79,
+    "form_d": 18,
+    "program_terms": 112,
+    "headline_name_match": 7,
+    "company_attached_unnamed": 11,
+    "domain_keyed": 227
+  },
+  "h2_by_amount_band": {
+    "$1-15M": 237,
+    ">$15M": 80,
+    "undisclosed": 18,
+    "<$1M": 119
+  },
+  "funding_window_status": {
+    "accelerator_check_only": 1013,
+    "verified_in_window": 343,
+    "external_raise_before_window_only": 29,
+    "past_series_a": 1,
+    "no_evidence": 372
+  },
+  "rejected_rows": 1681,
+  "rejected_by_reason": {
+    "past Series A": 881,
+    "sector": 332,
+    "geo": 303,
+    "founded": 71,
+    "yc_stage": 70,
+    "headcount": 16,
+    "status": 7,
+    "domain conflict": 1
+  },
+  "watchlist_rows": 434,
+  "watchlist_by_kind": {
+    "new_form_d_issuer": 156,
+    "new_round_stage_undisclosed": 97,
+    "recent_raise_unmatched": 78,
+    "unmatched_funding_headline": 103
+  },
+  "reconciliation": {
+    "status_rows": 1758,
+    "db_after": 1758,
+    "balanced": true
+  }
+}

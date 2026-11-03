@@ -98,3 +98,35 @@ Internships are downgraded one level; `[PAUSED]` postings and "General Applicati
 | `sublists/sublist_H1_ats_watchlist.csv` | Hiring but titles not visible (known ATS board or Getro count) → resolve with `h1_ats_probe.py` |
 
 Companies first seen in H1 that pass the H3 founder rules on evidence (tier A/B) are also tagged H3 (proof source `h1_ingest:h3_rules`). Reconciliation and counts: `raw_sources/H1_job_arbitrage/h1_run_report.json`.
+
+## H2 — Fresh capital (run 2026-11-03)
+
+```bash
+python3 scripts/h2_snapshot.py <dir-with-cloned-sources>   # freeze raw sources + manifest.json
+python3 scripts/h2_ingest.py                               # funding-event ledger -> H2 tags, funding columns, CSVs
+python3 scripts/master_rank.py                             # cross-hypothesis ranking
+```
+
+**Scope: every pre-seed / seed / Series A raise, no dollar cap.** Amounts are banded (`<$1M`, `$1-15M`, `>$15M`) instead of filtered. Series B or later on reliable evidence → `disqualification_reason` + `status='disqualified'`. An undisclosed-stage round ≥ $40M is treated as past Series A.
+
+| Source | Upstream | Evidence |
+|---|---|---|
+| YC directory `news[]` | `devasheeshG/yc-api` `companies/all.json` (6,362 companies) | `company_attached` (headline names the company) / `company_attached_unnamed` |
+| YC standard deal | program terms | `program_terms`: $500K pre-seed at batch start (date = quarter start, approximate) |
+| Fliar Radar rounds | `Busineessfree/*-startup-funding*` (25% company sample, to 2026-06-12, **CC BY-NC 4.0**) | `domain_keyed` |
+| Daily RSS headlines + Form D | `brianboler/startupdashboard` (2026-07-08 → 2026-11-02; top ~60 headlines / ~40 filings per day) | `headline_name_match`, `form_d` |
+| SEC Form D, Bay Area | `Puraav/funded-and-sponsoring` | `form_d` |
+| Form D CIK → domain | `LBB2005/formd-tracker` | link only; must be corroborated by the issuer's legal name |
+| Recent raises list | `landedjobs/recently-funded-ai-startups-hiring` | `headline_name_match` |
+
+**H2 tag**: `fresh_60d` = any capital event in the last 60 days (incl. a YC batch that started within 60 days); `in_window` = an external raise dated 2025-05-01 → run date. Every company gets `funding_window_status` in `sublist_H2_funding_status_all.csv`: `verified_in_window`, `accelerator_check_only`, `external_raise_before_window_only`, `past_series_a`, `no_evidence`.
+
+**New companies** are added only with a domain and an ICP pass (US/UK/EU; B2B/software signal; non-ICP keywords such as medical, consumer, games, real estate rejected; founded ≥ 2016; YC directory ICP verdict overrides other sources). Rounds with an undisclosed stage, unmatched headlines and new Form D issuers go to `sublist_H2_watchlist.csv`.
+
+| File | Grain |
+|---|---|
+| `sublists/sublist_H2_fresh_capital.csv` | One row per H2-tagged company: best capital event, confidence, evidence URL, all events |
+| `sublists/sublist_H2_funding_status_all.csv` | Every company in the DB: funding verification status |
+| `sublists/sublist_H2_rejected.csv` | New-company candidates rejected, with reason |
+| `sublists/sublist_H2_watchlist.csv` | Relevant signals that could not be keyed to a domain / stage |
+| `sublists/master_priority.csv` | All non-disqualified companies ranked across H1-H3 (`rank_breakdown` explains every point) |
