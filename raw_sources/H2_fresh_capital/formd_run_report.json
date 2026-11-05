@@ -1,0 +1,25 @@
+{
+ "run_at": "2026-11-05T06:00:08Z",
+ "filings": 92432,
+ "rejected": 85535,
+ "reject_reasons": {
+  "pooled_fund": 39235,
+  "skipped_name_prefilter": 25304,
+  "industry": 8168,
+  "entity": 3789,
+  "pooled_or_non_startup_name": 2978,
+  "incorporated_over_5y_non_tech_or_large": 2181,
+  "geo": 1279,
+  "amount_under_100k": 1231,
+  "business_combination": 1034,
+  "amount_over_40m_past_series_a": 301,
+  "revenue_over_25m": 31,
+  "not_yet_formed": 3,
+  "doc_error_404": 1
+ },
+ "issuers_icp": 5355,
+ "resolution": {
+  "not_run": 5355,
+  "resolved": 0
+ }
+}
