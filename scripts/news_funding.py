@@ -77,44 +77,48 @@ NEWS_HOSTS = {"techcrunch.com", "eu-startups.com", "uktech.news", "techfundingne
               "lu.ma", "techcrunch.events", "tcdisrupt.com", "beehiiv.com", "mailchi.mp", "list-manage.com"}
 
 
-def collect() -> dict[str, list]:
-    RAW.mkdir(parents=True, exist_ok=True)
-    allitems = {}
-    for name, (tpl, _) in FEEDS.items():
-        items, n = [], 1
-        while n <= 600:
-            r = hf.fetch(tpl.format(n=n), max_age=3600 * 12 if n <= 3 else None, timeout=30, retries=2)
-            if r.status != 200 or "<item" not in r.text:
-                break
+def collect_feed(name: str) -> list:
+    tpl = FEEDS[name][0]
+    items, n = [], 1
+    while n <= 700:
+        r = hf.fetch(tpl.format(n=n), max_age=3600 * 12 if n <= 3 else None, timeout=30, retries=2)
+        if r.status != 200 or "<item" not in r.text:
+            break
+        try:
+            root = ET.fromstring(r.text.encode("utf-8", "replace"))
+        except ET.ParseError:
+            txt = re.sub(r"&(?!amp;|lt;|gt;|quot;|apos;|#)", "&amp;", r.text)
             try:
-                root = ET.fromstring(r.text.encode("utf-8", "replace"))
+                root = ET.fromstring(txt.encode("utf-8", "replace"))
             except ET.ParseError:
-                txt = re.sub(r"&(?!amp;|lt;|gt;|quot;|apos;|#)", "&amp;", r.text)
-                try:
-                    root = ET.fromstring(txt.encode("utf-8", "replace"))
-                except ET.ParseError:
-                    break
-            page = []
-            for it in root.iter("item"):
-                try:
-                    d = parsedate_to_datetime(it.findtext("pubDate") or "").date().isoformat()
-                except (TypeError, ValueError):
-                    d = None
-                page.append({"title": html.unescape(it.findtext("title") or ""), "link": it.findtext("link"),
-                             "date": d, "cats": [c.text for c in it.findall("category") if c.text],
-                             "content": (it.findtext("content:encoded", namespaces=NS) or it.findtext("description")
-                                         or "")[:30000]})
-            items += page
-            if not page or all((p["date"] or "9999") < START for p in page):
                 break
-            n += 1
-        with gzip.open(RAW / f"{name}.jsonl.gz", "wt") as f:
-            for it in items:
-                f.write(json.dumps(it) + "\n")
-        allitems[name] = items
-        print(f"{name}: {n} pages, {len(items)} items, oldest {min((i['date'] or '9') for i in items) if items else '-'}",
-              file=sys.stderr)
-    return allitems
+        page = []
+        for it in root.iter("item"):
+            try:
+                d = parsedate_to_datetime(it.findtext("pubDate") or "").date().isoformat()
+            except (TypeError, ValueError):
+                d = None
+            page.append({"title": html.unescape(it.findtext("title") or ""), "link": it.findtext("link"),
+                         "date": d, "cats": [c.text for c in it.findall("category") if c.text],
+                         "content": (it.findtext("content:encoded", namespaces=NS) or it.findtext("description")
+                                     or "")[:30000]})
+        items += page
+        if not page or all((p["date"] or "9999") < START for p in page):
+            break
+        n += 1
+    with gzip.open(RAW / f"{name}.jsonl.gz", "wt") as f:
+        for it in items:
+            f.write(json.dumps(it) + "\n")
+    print(f"{name}: {n} pages, {len(items)} items, oldest {min((i['date'] or '9') for i in items) if items else '-'}",
+          file=sys.stderr, flush=True)
+    return items
+
+
+def collect() -> dict[str, list]:
+    from concurrent.futures import ThreadPoolExecutor
+    RAW.mkdir(parents=True, exist_ok=True)
+    with ThreadPoolExecutor(len(FEEDS)) as ex:
+        return dict(zip(FEEDS, ex.map(collect_feed, FEEDS)))
 
 
 def to_usd(m) -> int | None:
