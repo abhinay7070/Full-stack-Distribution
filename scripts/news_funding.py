@@ -102,6 +102,8 @@ def collect_feed(name: str) -> list:
                          "date": d, "cats": [c.text for c in it.findall("category") if c.text],
                          "content": (it.findtext("content:encoded", namespaces=NS) or it.findtext("description")
                                      or "")[:30000]})
+        if items and page and page[0]["link"] == items[-len(page)]["link"]:
+            break  # feed ignores ?paged=: same page again
         items += page
         if not page or all((p["date"] or "9999") < START for p in page):
             break
@@ -162,8 +164,9 @@ def links(content: str) -> list[str]:
 
 def parse(items: dict[str, list]) -> list[dict]:
     import resolve_domains as rd
-    rounds = []
+    rounds, seen = [], set()
     for feed, its in items.items():
+        its = [i for i in its if not (i["link"] in seen or seen.add(i["link"]))]
         home = FEEDS[feed][1]
         for it in its:
             if not it["date"] or it["date"] < START:
