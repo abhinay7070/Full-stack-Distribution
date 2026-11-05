@@ -1,18 +1,17 @@
 {
- "run_at": "2026-11-03T09:49:45Z",
- "companies": 1756,
- "text_blocks_scanned": 5848,
- "companies_with_published_address": 542,
- "published_addresses_on_company_domain": 611,
+ "run_at": "2026-11-05T07:21:18Z",
+ "companies": 13757,
+ "text_blocks_scanned": 9234,
+ "companies_with_published_address": 4425,
+ "published_addresses_on_company_domain": 5508,
  "by_confidence": {
-  "guess_first_at_domain": 732,
-  "none_no_founder_on_file": 493,
-  "published_founders_inbox": 261,
-  "published_ceo": 197,
-  "published_generic": 62,
-  "unmatched_personal_seen": 19,
-  "published_founder": 7,
-  "clay_or_manual_kept": 4
+  "none_no_founder_on_file": 6101,
+  "guess_first_at_domain": 3784,
+  "published_generic": 2901,
+  "unmatched_personal_seen": 1006,
+  "published_founders_inbox": 558,
+  "published_ceo": 385,
+  "published_founder": 28
  },
  "verification": "none - DNS, SMTP and finder APIs are blocked in this environment"
 }

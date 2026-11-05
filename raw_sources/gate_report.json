@@ -1,20 +1,197 @@
 {
- "run_at": "2026-11-05T05:38:49Z",
+ "run_at": "2026-11-05T07:24:46Z",
  "fingerprint": {
-  "companies": 7053,
-  "sha1": "d97d3f1f1a72df0d6e703685b6e300d53a53f42e",
+  "companies": 13758,
+  "sha1": "2fbe647adbd793198521025c95d7f0e64cbdebcd",
   "tags": {
-   "H0": 6797,
-   "H1": 326,
-   "H2": 454,
-   "H3": 1434
+   "H0": 8288,
+   "H1": 1398,
+   "H2": 5911,
+   "H3": 2175,
+   "H4": 520,
+   "H5": 1576,
+   "H6": 1661,
+   "H7": 194,
+   "H8": 18,
+   "H10": 790
   }
  },
  "hard_failures": {},
  "warnings": {
-  "medium_confidence_resolutions": 0
+  "series_b_plus_event_on_live_company": 30,
+  "homepage_unreachable": 605,
+  "parked_homepage": 16,
+  "medium_confidence_resolutions": 3044
  },
- "examples": {},
- "resolution_audit_sample": [],
- "resolution_status": {}
+ "examples": {
+  "series_b_plus_event_on_live_company": "hypersonica.com: Hypersonica secures \u20ac100 million to boost sovereign hypersonic deep-strike systems for Europe and its allies"
+ },
+ "resolution_audit_sample": [
+  {
+   "entity_key": "formd:2133797",
+   "name": "SEEYA Technologies, LLC",
+   "domain": "tryseeya.com",
+   "score": 4,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\"]"
+  },
+  {
+   "entity_key": "ats:obviant",
+   "name": "obviant",
+   "domain": "obviant.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "hn:deviceflow",
+   "name": "Deviceflow",
+   "domain": "deviceflow.com",
+   "score": 8,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:attio",
+   "name": "Attio",
+   "domain": "attio.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2155354",
+   "name": "Terrace Systems, Inc.",
+   "domain": "terrace.com",
+   "score": 6,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2125198",
+   "name": "Troman Industries, Inc.",
+   "domain": "tromanindustries.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"city 'elkhart'\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "hn:coast",
+   "name": "Coast",
+   "domain": "coastinc.com",
+   "score": 7,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\"]"
+  },
+  {
+   "entity_key": "news:gudea",
+   "name": "Gudea",
+   "domain": "gudea.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2086861",
+   "name": "Sperity Health, Inc.",
+   "domain": "sperityhealth.com",
+   "score": 7,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"city 'mobile'\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:1524543",
+   "name": "LifeAire Systems, LLC",
+   "domain": "lifeaire.com",
+   "score": 11,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"person 'worrilow'\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:tajir",
+   "name": "tajir",
+   "domain": "tajir.app",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2161767",
+   "name": "Navispend, Inc.",
+   "domain": "navispend.ai",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2062338",
+   "name": "Box House Holdings, Inc.",
+   "domain": "boxhouse.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
+  },
+  {
+   "entity_key": "news:idwell",
+   "name": "iDWELL",
+   "domain": "idwell.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:careway",
+   "name": "careway",
+   "domain": "careway.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "hn:aptira",
+   "name": "Aptira",
+   "domain": "aptira.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2155507",
+   "name": "Rise Energy Inc",
+   "domain": "riseenergyservices.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2147273",
+   "name": "Easy Trader App, Inc.",
+   "domain": "easytraderapp.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
+  },
+  {
+   "entity_key": "ats:reka",
+   "name": "reka",
+   "domain": "reka.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2079919",
+   "name": "Revin Inc.",
+   "domain": "revin.ai",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  }
+ ],
+ "resolution_status": {
+  "ambiguous": 811,
+  "no_dns_candidate": 1429,
+  "resolved": 6442,
+  "unresolved": 2892
+ }
 }

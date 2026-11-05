@@ -177,3 +177,45 @@ No finder API, DNS or SMTP is reachable from this environment, so `enrich_emails
 | 8 | `clay_invalid` | Validation failed (red in Master) |
 
 The losing address is kept in `email_alt`. Reports: `raw_sources/email_enrichment_report.json`, `raw_sources/clay_import_report.json`.
+
+## v2 — Maximum ICP universe (H0-H10), run 2026-11-05
+
+```bash
+python3 scripts/formd_collect.py && python3 scripts/formd_ingest.py      # SEC Form D -> US raises -> domains
+python3 scripts/h0_universe.py <ext>                                     # YC / 37 Getro VC networks / accelerators
+python3 scripts/hn_hiring.py && python3 scripts/news_funding.py          # HN Who is hiring, 17 funding-news feeds
+python3 scripts/ats_sweep.py                                             # 7 ATS providers, ~55k boards
+python3 scripts/universe_ingest.py all                                   # resolve -> ICP gate -> DB
+python3 scripts/signals_collect.py all <ext>                             # launches, TrustMRR, GitHub
+./scripts/run_pipeline_v2.sh                                             # site scan -> tags -> emails -> workbook -> gates
+```
+
+**Your SAM (hard filters):** US / UK / Europe · Seed to Series A · 3-35 employees · B2B SaaS, AI Agents, DevTools, Infra,
+Vertical AI, Physical-AI beneficiaries. Excluded: biotech, pure hardware, consumer apps, agencies/services/funds, brick &
+mortar, past Series A. Known failures go to the `Outside_SAM` tab (kept, not deleted).
+
+**ICP fit score (0-100)** = geography 20 + stage 30 + headcount 25 + sector 25 -> `A · Core ICP` (>= 80 with confirmed
+geo, stage evidence, size and core sector) · `B · Strong fit` (65-79) · `C · Probable - verify` (50-64, no software
+evidence, dead site, or name-only domain match) · `D · Long-shot`. `rank_score` (priority) is unchanged in spirit and
+extended with H4-H10 points. `gtm_play` routes each company: Job / Retainer (capital, revenue, launch-outbound) /
+Founder DM / Warm intro / Nurture.
+
+| Source | Raw | Kept in ICP universe |
+|---|---|---|
+| SEC Form D 2025-05-01 -> 2026-11-05 (bulk + EFTS) | 92,432 filings | 5,355 ICP issuers; 3,524 resolved to a verified domain, 1,831 in Unresolved_TAM |
+| YC + 37 Getro VC networks + Techstars/500/Alchemist/EF/Speedrun/Antler | 25,267 records | 6,797 domains |
+| ATS boards (Ashby, Greenhouse, Lever, Recruitee, Breezy, Teamtailor) | 15,741 boards with jobs | 1,549 admitted; 16,402 postings classified |
+| HN Who is hiring (19 threads) | 5,778 posts | 661 admitted |
+| Funding news (17 feeds, US/UK/EU) | 5,862 rounds | 2,649 admitted |
+| TrustMRR verified revenue | 1,556 startups | 200 (H7) |
+
+Admission rule for name-only sources: explicit early-stage evidence (stage, accelerator, founding role, team <= 35, first
+GTM hire) or presence in another ICP source; otherwise `sublist_unverified_stage_pool.csv`. Every name->domain decision is in
+the `resolutions` table with score and evidence. `gate_check.py` enforces invariants (PASS on this run) and prints an audit
+sample; tagging converges in two passes (H6 reads H3 tags set in the same run).
+
+**Known gaps (this run):** Workable sweep and the second ATS pass were stopped for time (re-run `ats_sweep.py` +
+`universe_ingest.py ats`); ~3,000 domains not yet site-scanned (re-run `site_scan.py --to-cache` then `--load`); H8 GitHub
+org parser did not match GitHub's current markup (trending-only, 18 companies); tech.eu and Silicon Republic feeds ignore
+paging (latest items only); UKTN pages stop at 2026-01; 20 VC boards on Consider need a CSRF token and were not used;
+H9 needs `inputs/linkedin_connections.csv`; 30 companies carry a Series B+ news event and should be checked by hand.
