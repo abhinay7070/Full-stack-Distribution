@@ -1,0 +1,227 @@
+source,name,domain,reason
+hn_whoishiring,Shepherd,shepherdinsurance.com,late_stage
+hn_whoishiring,Tandem Health,tandemhealth.ai,late_stage
+hn_whoishiring,MONUMENTAL,monumental.co,late_stage
+hn_whoishiring,River,riverinc.com,sector:consumer (description)
+hn_whoishiring,Stratirus,stratirus.com,sector:agency/services
+hn_whoishiring,Ledgebrook,ledgebrook.com,late_stage
+hn_whoishiring,Return,return.energy,headcount:150
+hn_whoishiring,DuckDuckGo,duckduckgo.com,headcount:300
+hn_whoishiring,Middesk,middesk.com,late_stage
+hn_whoishiring,Rootly,rootly.com,late_stage
+hn_whoishiring,Enthought,enthought.jp,geo:JP
+hn_whoishiring,Credit Genie,creditgenie.com,late_stage
+hn_whoishiring,America First Policy Institute,americafirstpolicy.com,institution_name
+hn_whoishiring,Flow Traders,flowtraders.com,geo:HK
+hn_whoishiring,Aloe,aloe.inc,geo:CA
+hn_whoishiring,Modash.io,modash.io,headcount:90
+hn_whoishiring,UNICEF,unicef.org,sector:agency/services
+hn_whoishiring,Marker Learning,markerlearning.com,late_stage
+hn_whoishiring,Stealth,stealth.com,late_stage
+hn_whoishiring,EggAI,egg-ai.com,sector:agency/services
+hn_whoishiring,Avoca,avoca.ai,late_stage
+hn_whoishiring,Search Atlas,searchatlas.com,headcount:160
+hn_whoishiring,Snout https://snout.com/,snout.com,geo:CA
+hn_whoishiring,Checkly,checklyhq.com,late_stage
+hn_whoishiring,Arrangr,arrangr.com,late_stage
+hn_whoishiring,Yardstik,yardstik.com,late_stage
+hn_whoishiring,ko-br,ko-br.com,geo:EG
+hn_whoishiring,Seeq,seeq.com,sector:biotech/pharma
+hn_whoishiring,Hospitable,hospitable.com,headcount:122
+hn_whoishiring,JUPUS,jupus.de,headcount:85
+hn_whoishiring,Tempus AI,tempus.com,sector:biotech/pharma
+hn_whoishiring,Mattermost,mattermost.com,late_stage
+hn_whoishiring,Opaxa,opaxa.com,late_stage
+hn_whoishiring,Elman,elman.ai,sector:biotech/pharma
+hn_whoishiring,Axmed,axmed.com,sector:biotech/pharma
+hn_whoishiring,Close,close.com,headcount:130
+hn_whoishiring,Freeform,freeform.co,late_stage
+hn_whoishiring,NetBird,netbird.io,headcount:500
+hn_whoishiring,OneChronos,onechronos.com,late_stage
+hn_whoishiring,Propel Labs,propellabs.ai,sector:agency/services
+hn_whoishiring,Quill,quill.co,late_stage
+hn_whoishiring,Rust developer/software engineer at NLnet foundation in Amsterdam,nlnet.nl,institution_name
+hn_whoishiring,Findigs,findigs.com,late_stage
+hn_whoishiring,Wikimedia Foundation,wikimediafoundation.org,institution_name
+hn_whoishiring,Factory,factory.ai,late_stage
+hn_whoishiring,Child Mind Institute,childmind.org,institution_name
+hn_whoishiring,Pathos AI,pathos.com,late_stage
+hn_whoishiring,Spacelift,spacelift.io,late_stage
+hn_whoishiring,Virtasant,virtasant.com,sector:agency/services
+hn_whoishiring,Anterior,anterior.app,late_stage
+hn_whoishiring,This Dot Labs,thisdot.co,sector:agency/services
+hn_whoishiring,St. Jude Children's Research Hospital,stjude.org,institution_name
+hn_whoishiring,Miltenyi Biotec,miltenyibiotec.com,sector:biotech/pharma
+hn_whoishiring,vCluster Labs,vcluster.com,geo:CA
+hn_whoishiring,PermitFlow,permitflow.com,late_stage
+hn_whoishiring,We’re hiring at Langfuse,langfuse.com,late_stage
+hn_whoishiring,Obi9,obi9.ai,sector:biotech/pharma
+hn_whoishiring,SmarterDx,smarterdx.com,late_stage
+hn_whoishiring,Temporal Technologies,temporal.io,late_stage
+hn_whoishiring,Foxglove,foxglove.dev,late_stage
+hn_whoishiring,Stanford Research Computing,stanford.edu,institution_tld
+hn_whoishiring,Gauss Labs,gausslabs.com,geo:KR
+hn_whoishiring,Unitary Foundation,unitary.foundation,institution_name
+hn_whoishiring,Mosaic Wellness,mosaicwellness.co,geo:IN
+hn_whoishiring,XP Health,xphealth.co,late_stage
+hn_whoishiring,Alaffia Health,alaffiahealth.com,late_stage
+hn_whoishiring,Hey HN! Air Space Intelligence,airspace-intelligence.com,late_stage
+hn_whoishiring,Forecasting Research Institute,forecastingresearch.org,institution_name
+hn_whoishiring,IPinfo.io,ipinfo.io,headcount:60
+hn_whoishiring,The Tiny Pharma Company,tinypharma.bio,sector:biotech/pharma
+hn_whoishiring,Adyen,adyen.com,late_stage
+hn_whoishiring,Opendate,opendate.io,sector:consumer (description)
+hn_whoishiring,Dashdoc,dashdoc.com,late_stage
+hn_whoishiring,Logen.io,logen.io,geo:IN
+hn_whoishiring,Makeship,makeship.com,geo:CA
+hn_whoishiring,Beautiful.ai,beautiful.ai,late_stage
+hn_whoishiring,Fusionbox,fusionbox.com,sector:agency/services
+hn_whoishiring,Weave Bio,weave.bio,sector:biotech/pharma
+hn_whoishiring,Tech Mahindra,techmahindra.com,geo:MX
+hn_whoishiring,Riskified,riskified.com,late_stage
+hn_whoishiring,*Scribd,scribd.com,geo:CA
+hn_whoishiring,Caplight,caplight.com,late_stage
+hn_whoishiring,Fathom,fathom.ai,late_stage
+hn_whoishiring,Neo.Tax,neo.tax,late_stage
+hn_whoishiring,Scribd,scribdinc.com,geo:CA
+hn_whoishiring,Beatdapp,beatdapp.com,geo:CA
+hn_whoishiring,Foam,foaminc.com,late_stage
+hn_whoishiring,Cephla,cephla.com,sector:biotech/pharma
+hn_whoishiring,Viam,viam.com,late_stage
+hn_whoishiring,Kong,konghq.com,geo:CA
+hn_whoishiring,Prolific Machines,prolific-machines.com,sector:biotech/pharma
+hn_whoishiring,Compa.AI,compa.ai,late_stage
+hn_whoishiring,MiLaboratories,milaboratories.com,sector:biotech/pharma
+hn_whoishiring,Evervault,evervault.com,late_stage
+hn_whoishiring,Vantage,vantage.sh,headcount:75
+hn_whoishiring,Blackbird,blackbird.us,sector:agency/services
+hn_whoishiring,BillionToOne,billiontoone.com,late_stage
+hn_whoishiring,Higharc,higharc.com,headcount:200
+hn_whoishiring,Found,found.com,late_stage
+hn_whoishiring,General Fusion,generalfusion.com,geo:CA
+hn_whoishiring,PetsApp,petsapp.com,sector:biotech/pharma
+hn_whoishiring,Baseten Labs,trybaseten.com,late_stage
+hn_whoishiring,Synthesia,synthesia.io,late_stage
+hn_whoishiring,Simple Ventures,simpleventures.ca,geo:CA
+hn_whoishiring,Rad AI Multiple roles,radai.com,late_stage
+hn_whoishiring,Campus,campusai.com,late_stage
+hn_whoishiring,Locket,locketcamera.com,sector:consumer (description)
+hn_whoishiring,PhysicsX,physicsx.ai,late_stage
+hn_whoishiring,"Treatment Technologies & Insights, Inc.",treatmentinsights.com,sector:biotech/pharma
+hn_whoishiring,Range Finance,range.com,late_stage
+hn_whoishiring,Tech Mahindra,mahindra.com,geo:IN
+hn_whoishiring,Cyngn,cyngn.com,late_stage
+hn_whoishiring,Quadrature,quadrature.ai,geo:SG
+hn_whoishiring,Verkada,verkada.com,late_stage
+hn_whoishiring,BackNine Insurance,backnineinsurance.com,late_stage
+hn_whoishiring,Zigment,zigment.ai,geo:IN
+hn_whoishiring,Formical,formical.bio,sector:biotech/pharma
+hn_whoishiring,Pinwheel,pinwheelapi.com,late_stage
+hn_whoishiring,Matterworks.ai,matterworks.ai,sector:biotech/pharma
+hn_whoishiring,Ploid AI,ploid.ai,sector:biotech/pharma
+hn_whoishiring,Fieldguide,fieldguide.io,late_stage
+hn_whoishiring,Comulate,comulate.com,late_stage
+hn_whoishiring,Joom,joom.com,sector:biotech/pharma
+hn_whoishiring,Sage,sagehealth.com,late_stage
+hn_whoishiring,Layer Health,layerhealth.com,sector:biotech/pharma
+hn_whoishiring,Cradle,cradle.bio,sector:biotech/pharma
+hn_whoishiring,CrossnoKaye,crossnokaye.com,late_stage
+hn_whoishiring,Jahia,jahia.com,late_stage
+hn_whoishiring,Upway,upway.shop,late_stage
+hn_whoishiring,Reckon Digital,reckondigital.com,sector:agency/services
+hn_whoishiring,Digital Health Strategies,digitalhealthstrategies.com,late_stage
+hn_whoishiring,Jurisphere.ai,jurisphere.ai,geo:IN
+hn_whoishiring,ASBL,asbl.in,geo:IN
+hn_whoishiring,Coveo,coveo.com,geo:CA
+hn_whoishiring,Graphite,graphite.dev,late_stage
+hn_whoishiring,Foundation Source,foundationsource.com,institution_name
+hn_whoishiring,Stainless,stainless.com,headcount:60
+hn_whoishiring,Procore,procore.com,late_stage
+hn_whoishiring,Hack Club,hackclub.com,sector:consumer (description)
+hn_whoishiring,Runable,runable.com,geo:IN
+hn_whoishiring,AppFolio,appfolio.com,late_stage
+hn_whoishiring,Teamtailor,teamtailor.com,headcount:600
+hn_whoishiring,On Time Bride,ontimebride.com,sector:consumer (description)
+hn_whoishiring,JigsawStack,jigsawstack.com,geo:IN
+hn_whoishiring,Positron,positron.solutions,geo:KR
+hn_whoishiring,ASBL,asbl.ai,geo:IN
+hn_whoishiring,Tamarind Bio,tamarind.bio,sector:biotech/pharma
+hn_whoishiring,Prove AI,proveai.com,geo:BR
+hn_whoishiring,Eventellect,eventellect.com,sector:consumer (description)
+hn_whoishiring,Bond Home,bondhome.io,geo:BR
+hn_whoishiring,Monadical.com,monadical.com,sector:agency/services
+hn_whoishiring,Link11,link11.com,late_stage
+hn_whoishiring,Abnormal.AI,abnormal.ai,late_stage
+hn_whoishiring,Metly,meetmetly.com,sector:biotech/pharma
+hn_whoishiring,Document Crunch,documentcrunch.com,late_stage
+hn_whoishiring,Graphite,graphite.com,late_stage
+hn_whoishiring,Finch,finch.com,late_stage
+hn_whoishiring,Crux,cruxclimate.com,late_stage
+hn_whoishiring,Narraduct,narraduct.com,sector:agency/services
+hn_whoishiring,Culture Biosciences,culturebiosciences.com,sector:biotech/pharma
+hn_whoishiring,foam.ai,foam.ai,late_stage
+hn_whoishiring,Alembic,alembic.com,late_stage
+hn_whoishiring,mod.io,mod.io,geo:AU
+hn_whoishiring,Foundation Health,foundationhealth.com,institution_name
+hn_whoishiring,Strum AI,strum-ai.com,late_stage
+hn_whoishiring,BAND,joinband.com,late_stage
+hn_whoishiring,Harvard SEAS,harvard.edu,institution_tld
+hn_whoishiring,10x Partners,10x-partners.com,sector:agency/services
+hn_whoishiring,Product Consultant / AudioDiary / https://audiodiary.ai / Remote / CONTRACT / flexible hours / Up to $250 daily or perfo,audiodiary.ai,late_stage
+hn_whoishiring,Sitch App,joinsitch.com,sector:consumer (description)
+hn_whoishiring,Pomelo Care,pomelocare.com,late_stage
+hn_whoishiring,Shamrock ai,shamrockfoods.com,geo:IN
+hn_whoishiring,Communications Security Establishment Canada,cse-cst.gc.ca,geo:CA
+hn_whoishiring,bld.ai,bld.ai,geo:SG
+hn_whoishiring,PetsApp,petsapp.dev,sector:biotech/pharma
+hn_whoishiring,Bluesky,bsky.social,sector:consumer (description)
+hn_whoishiring,Clio,clio.com,late_stage
+hn_whoishiring,thelab,thelabnyc.com,geo:TR
+hn_whoishiring,Parable,askparable.com,late_stage
+hn_whoishiring,10x Genomics,10xgenomics.com,sector:biotech/pharma
+hn_whoishiring,Atrix,atrix.ai,sector:biotech/pharma
+hn_whoishiring,"Parsnip  is an app like ""Duolingo for cooking"", powered by an AI-enabled personalized learning platform that works for m",parsnip.ai,sector:consumer (description)
+hn_whoishiring,SewerAI,sewerai.com,late_stage
+hn_whoishiring,Mission Control,missioncontrolhq.com,geo:CA
+hn_whoishiring,Watchful,watchfulhq.com,geo:NZ
+hn_whoishiring,CommunityScale,communityscale.com,sector:agency/services
+hn_whoishiring,Synca,synca.ai,sector:agency/services
+hn_whoishiring,RentSpree,rentspree.com,late_stage
+hn_whoishiring,April,tryapril.com,geo:IN
+hn_whoishiring,ELI Beamlines,eli-beams.eu,headcount:350
+hn_whoishiring,Stile Education,stileeducation.com,geo:AU
+hn_whoishiring,Monad Foundation,monad.foundation,institution_name
+hn_whoishiring,Sharecare,sharecare.com,geo:CA
+hn_whoishiring,7Gen,7gen.com,late_stage
+hn_whoishiring,Nexus Intelligence,getnexus.ai,sector:biotech/pharma
+hn_whoishiring,Matroid,matroid.com,late_stage
+hn_whoishiring,Topos Institute,topos.institute,institution_name
+hn_whoishiring,EVgo,evgo.com,late_stage
+hn_whoishiring,Tulip,tulip.co,sector:biotech/pharma
+hn_whoishiring,DESY,desy.de,sector:biotech/pharma
+hn_whoishiring,Camber fka Juniper,camber.health,sector:consumer (description)
+hn_whoishiring,The Alan Turing Institute,turing.ac.uk,institution_tld
+hn_whoishiring,Fathom,fathom.video,headcount:70
+hn_whoishiring,Roboflow,roboflow.com,late_stage
+hn_whoishiring,Lumafield,lumafield.com,late_stage
+hn_whoishiring,360Me,360me.xyz,sector:biotech/pharma
+hn_whoishiring,lemongrasscloud.com,lemongrasscloud.com,sector:agency/services
+hn_whoishiring,Linn-Benton Community College,linnbenton.edu,institution_tld
+hn_whoishiring,Nooks,nooks.ai,late_stage
+hn_whoishiring,Galaxy,getgalaxy.io,headcount:100
+hn_whoishiring,Treez,treez.io,late_stage
+hn_whoishiring,Plotly,plotly.com,geo:CA
+hn_whoishiring,Shakudo,shakudo.io,geo:CA
+hn_whoishiring,Obsidian Security,obsidiansecurity.io,late_stage
+hn_whoishiring,Slides With Friends,slideswith.com,geo:CA
+hn_whoishiring,Fleetio,fleetio.com,late_stage
+hn_whoishiring,sherl0ck,sherl0ck.com,geo:IN
+hn_whoishiring,Datakami,datakami.com,sector:agency/services
+hn_whoishiring,Prophecy.io,prophecy.io,late_stage
+hn_whoishiring,Cantina,cantina.co,sector:consumer (description)
+hn_whoishiring,Smile ID,usesmileid.com,late_stage
+hn_whoishiring,Audiencekey.com,audiencekey.com,sector:agency/services
+hn_whoishiring,Monad Foundation,monad.xyz,institution_name
+hn_whoishiring,Sobek AI,sobek.ai,sector:biotech/pharma
+hn_whoishiring,Parallel Systems,moveparallel.com,late_stage
+hn_whoishiring,Kittl.com,kittl.com,headcount:100
