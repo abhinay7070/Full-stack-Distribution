@@ -5,3 +5,4 @@ __pycache__/
 db/*.db-journal
 db/*.db-wal
 db/*.db-shm
+.cache/

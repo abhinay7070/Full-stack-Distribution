@@ -22,17 +22,23 @@ RAW_DIR = ROOT / "raw_sources"
 SUBLIST_DIR = ROOT / "sublists"
 
 HYPOTHESES = {
+    "H0": "H0_icp_universe",        # firmographic ICP fit, no live signal yet (weight 0: membership, not a signal)
     "H1": "H1_job_arbitrage",
     "H2": "H2_fresh_capital",
     "H3": "H3_technical_founders",
     "H4": "H4_launch_decay",
     "H5": "H5_outbound_stack",
     "H6": "H6_founder_led_sales",
+    "H7": "H7_revenue_no_gtm",
+    "H8": "H8_oss_traction",
+    "H9": "H9_warm_paths",
+    "H10": "H10_stale_gtm_roles",
 }
 
 # Points added to priority_score the first time a company matches a hypothesis.
 # Re-ingesting the same hypothesis never adds points again (idempotent).
-HYPOTHESIS_WEIGHTS = {h: 1 for h in HYPOTHESES}
+HYPOTHESIS_WEIGHTS = {h: (0 if h == "H0" else 1) for h in HYPOTHESES}
+SIGNAL_HYPOTHESES = [h for h in HYPOTHESES if h != "H0"]
 
 # Offline public-suffix snapshot: deterministic, no network call at import time.
 _extract = tldextract.TLDExtract(suffix_list_urls=())
@@ -92,11 +98,31 @@ def connect(db_path: Path = DB_PATH) -> sqlite3.Connection:
     return conn
 
 
+def migrate(conn: sqlite3.Connection) -> None:
+    """v2: widen ingestion_runs.hypothesis CHECK to every key in HYPOTHESES (SQLite cannot ALTER a CHECK)."""
+    row = conn.execute("SELECT sql FROM sqlite_master WHERE name='ingestion_runs'").fetchone()
+    if row and "'H10'" not in row["sql"]:
+        conn.executescript("""
+            ALTER TABLE ingestion_runs RENAME TO ingestion_runs_v1;
+        """)
+        conn.executescript(SCHEMA_PATH.read_text())
+        conn.execute("INSERT INTO ingestion_runs SELECT * FROM ingestion_runs_v1")
+        conn.execute("DROP TABLE ingestion_runs_v1")
+        conn.commit()
+    conn.executescript(SCHEMA_PATH.read_text())
+    have = {r[1] for r in conn.execute("PRAGMA table_info(companies)")}
+    for col in ("headcount_band", "founded_year", "linkedin_url", "sources"):
+        if col not in have:
+            conn.execute(f"ALTER TABLE companies ADD COLUMN {col} TEXT")
+    if "score_motion" not in {r[1] for r in conn.execute("PRAGMA table_info(scores)")}:
+        conn.execute("ALTER TABLE scores ADD COLUMN score_motion INTEGER")
+    conn.commit()
+
+
 def init_db(db_path: Path = DB_PATH) -> sqlite3.Connection:
     db_path.parent.mkdir(parents=True, exist_ok=True)
     conn = connect(db_path)
-    conn.executescript(SCHEMA_PATH.read_text())
-    conn.commit()
+    migrate(conn)
     return conn
 
 
@@ -105,6 +131,7 @@ def init_db(db_path: Path = DB_PATH) -> sqlite3.Connection:
 _COMPANY_FIELDS = (
     "company_name", "one_liner", "hq_country", "sector", "batch_or_investor",
     "funding_stage", "funding_amount", "funding_date", "headcount", "gtm_headcount",
+    "headcount_band", "founded_year", "linkedin_url",
 )
 
 
@@ -154,7 +181,7 @@ def upsert_company(conn: sqlite3.Connection, domain_or_url: str, hypothesis: str
     score = row["priority_score"]
     if hypothesis not in tags:
         tags.append(hypothesis)
-        tags.sort()
+        tags.sort(key=lambda h: int(h[1:]))
         score += HYPOTHESIS_WEIGHTS[hypothesis]
     if proof and not any(p.get("url") == proof.get("url") and p.get("hypothesis") == hypothesis
                          for p in proofs):

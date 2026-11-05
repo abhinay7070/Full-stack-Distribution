@@ -64,7 +64,7 @@ CREATE INDEX IF NOT EXISTS idx_founders_domain ON founders(company_domain);
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS ingestion_runs (
     run_id              INTEGER PRIMARY KEY AUTOINCREMENT,
-    hypothesis          TEXT NOT NULL CHECK (hypothesis IN ('H1','H2','H3','H4','H5','H6')),
+    hypothesis          TEXT NOT NULL CHECK (hypothesis IN ('H0','H1','H2','H3','H4','H5','H6','H7','H8','H9','H10')),
     source              TEXT NOT NULL,                  -- e.g. "yc_waas", "wellfound", "finsmes"
     query               TEXT NOT NULL,                  -- exact query/filter/URL template used
     raw_path            TEXT,                           -- raw_sources/<H>/... file(s) written
@@ -91,6 +91,7 @@ CREATE TABLE IF NOT EXISTS scores (
     score_capital       INTEGER,   -- H2 recency points (incl. weak-evidence penalty)
     score_founders      INTEGER,   -- H3 tier points
     score_size          INTEGER,   -- headcount fit points
+    score_motion        INTEGER,   -- H4 launch + H5 outbound + H8 OSS points (v2)
     score_penalties     INTEGER,   -- unverified funding / unknown geo / possible past Series A
     icp_tier            TEXT,      -- A_high_confidence | B_likely_fit | C_needs_enrichment | D_review
     wave                TEXT,      -- outreach wave (see README)
@@ -140,3 +141,70 @@ CREATE TABLE IF NOT EXISTS company_emails (
     all_published        TEXT,            -- JSON array of every company-domain address seen in public sources
     found_at             TEXT NOT NULL
 );
+
+-- ---------------------------------------------------------------------------
+-- v2 evidence tables (one row per observation; companies stays one row per domain)
+-- ---------------------------------------------------------------------------
+-- Every job posting seen in any source (YC WaaS, Ashby, Greenhouse, Lever, Workable, HN Who is hiring, ...).
+CREATE TABLE IF NOT EXISTS jobs (
+    job_key          TEXT PRIMARY KEY,                -- source:stable id
+    company_domain   TEXT NOT NULL REFERENCES companies(company_domain) ON UPDATE CASCADE ON DELETE CASCADE,
+    source           TEXT NOT NULL,
+    title            TEXT NOT NULL,
+    url              TEXT,
+    location         TEXT,
+    department       TEXT,
+    comp             TEXT,
+    posted_at        TEXT,                            -- ISO date from the source, if it publishes one
+    first_seen_at    TEXT NOT NULL,
+    last_seen_at     TEXT NOT NULL,
+    family           TEXT,                            -- H1 taxonomy family
+    strength         TEXT,                            -- S1/S2/S3/none
+    text_signals     TEXT,                            -- JSON: outbound tools / founder-led phrases found in the description
+    description_snip TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_jobs_domain ON jobs(company_domain);
+
+-- Homepage + DNS scan per domain (H5 stack, H6 founder booking links, H8 GitHub org, liveness).
+CREATE TABLE IF NOT EXISTS site_scan (
+    company_domain   TEXT PRIMARY KEY REFERENCES companies(company_domain) ON UPDATE CASCADE ON DELETE CASCADE,
+    http_status      INTEGER,
+    final_url        TEXT,
+    title            TEXT,
+    tech             TEXT,                            -- JSON array of detected tools
+    github_orgs      TEXT,                            -- JSON array
+    booking_links    TEXT,                            -- JSON array (calendly / cal.com / hubspot meetings / savvycal)
+    social           TEXT,                            -- JSON {linkedin, x}
+    emails           TEXT,                            -- JSON array of addresses on the page
+    mx               TEXT,                            -- JSON array
+    spf              TEXT,
+    txt_verifications TEXT,                           -- JSON array of tool verification tokens in TXT records
+    scanned_at       TEXT NOT NULL
+);
+
+-- Every capital event from any source (Form D, news, VC portfolios, accelerators). H2 is derived from this.
+CREATE TABLE IF NOT EXISTS funding_events (
+    event_key        TEXT PRIMARY KEY,                -- source:stable id
+    company_domain   TEXT NOT NULL REFERENCES companies(company_domain) ON UPDATE CASCADE ON DELETE CASCADE,
+    source           TEXT NOT NULL,
+    event_date       TEXT,
+    stage            TEXT,                            -- pre_seed | seed | series_a | series_b_plus | unknown
+    amount_usd       INTEGER,
+    confidence       TEXT,                            -- form_d | domain_keyed | news_linked | portfolio_listed | ...
+    url              TEXT,
+    detail           TEXT,
+    captured_at      TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_fe_domain ON funding_events(company_domain);
+
+-- Name -> domain decisions (scripts/resolve_domains.py); audit trail for every new company.
+CREATE TABLE IF NOT EXISTS resolutions (
+    entity_key TEXT PRIMARY KEY, name TEXT, domain TEXT, score INTEGER, confidence TEXT, status TEXT,
+    evidence TEXT, tried INTEGER, resolved_at TEXT
+);
+
+-- v2 columns (added by ALTER TABLE in existing DBs; scripts/pipeline_db.migrate adds them if missing)
+-- companies.headcount_band TEXT   e.g. '1-10', '11-50' (source band when no exact count)
+-- companies.founded_year   TEXT
+-- companies.linkedin_url   TEXT
+-- companies.sources        TEXT   JSON array of source names that list the company

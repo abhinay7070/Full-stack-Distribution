@@ -1,0 +1,26 @@
+{
+ "run_at": "2026-11-05T05:27:35Z",
+ "records": 25267,
+ "unique_domains_kept": 6797,
+ "by_source_records": {
+  "yc": 6369,
+  "getro": 9133,
+  "techstars": 5105,
+  "500": 2241,
+  "ef": 539,
+  "alchemist": 515,
+  "antler": 1075,
+  "a16z-speedrun": 290
+ },
+ "stats": {
+  "reject:headcount": 80,
+  "reject:status": 1691,
+  "reject:stage": 4464,
+  "reject:too_old": 2555,
+  "no_domain": 2650,
+  "reject:geo": 2713,
+  "kept_records": 7766,
+  "reject:sector": 2056,
+  "reject:headcount_band": 1292
+ }
+}

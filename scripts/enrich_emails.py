@@ -162,6 +162,19 @@ def main() -> None:
                 a = max(0, m.start() - 90)
                 found[dom][em] = {"source": label, "url": url, "snippet": " ".join(text[a:m.end() + 30].split())}
 
+    # homepage-published addresses (site_scan) count as public evidence too
+    try:
+        for r in conn.execute("SELECT company_domain, emails FROM site_scan"):
+            d = r["company_domain"]
+            if d not in live:
+                continue
+            for em in json.loads(r["emails"] or "[]"):
+                local, _, host = em.partition("@")
+                if pdb.normalize_domain(host) == d and not EXCLUDE.match(local) and len(local) >= 2:
+                    found[d].setdefault(em.lower(), {"source": "homepage", "url": f"https://{d}",
+                                                     "snippet": f"published on https://{d}"})
+    except Exception as e:  # noqa: BLE001
+        print("site_scan emails unavailable:", e, file=sys.stderr)
     stats = defaultdict(int)
     out = []
     for d in sorted(live):
