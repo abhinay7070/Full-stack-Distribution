@@ -55,7 +55,7 @@ TOUCH_TYPES = ["First touch", "Follow-up", "Reply", "Call", "Proposal", "Other"]
 OUTCOMES = ["Sent", "No reply", "Replied - positive", "Replied - negative", "Call booked", "Not a fit"]
 WAVES = ["W1 Hot (days 1-7)", "W2 Warm (days 8-14)", "W3 Cold-fit (days 15-30)", "Nurture (day 30+)",
          "Enrich first", "Review fit"]
-TIERS = ["A_high_confidence", "B_likely_fit", "C_needs_enrichment", "D_review"]
+TIERS = ["A · Core ICP", "B · Strong fit", "C · Probable - verify", "D · Long-shot"]
 HYP_FILES = {"H0_Universe": "sublist_H0_icp_universe.csv", "H1_Hiring": "sublist_H1_job_arbitrage.csv",
              "H2_Capital": "sublist_H2_fresh_capital.csv", "H3_Founders": "sublist_H3_technical_founders.csv",
              "H3x_Founders": "sublist_H3_expanded.csv", "H4_Launch": "sublist_H4_launch_decay.csv",
@@ -219,16 +219,9 @@ def classify(m: dict, founders: list[dict], email: dict | None) -> tuple[str, st
     hard = [r for r in risks if r in ("consumer_keyword", "bio_keyword", "services_keyword") or r.startswith("site_")]
     strong_funding = st == "verified_in_window" and "funding_name_match_verify" not in risks \
         and "possible_past_series_a" not in risks
-    evidence = strong_funding or program_in_window or listed_early or (segment == "bootstrapped_revenue" and mrr >= 10000)
-    if strong_funding and geo and size_ok and contact and not [r for r in risks if r != "no_founder_contact" or not contact]:
-        tier = "A_high_confidence"
-    elif evidence and geo and contact and not hard and "possible_past_series_a" not in risks \
-            and "domain_match_medium_verify" not in risks and (size_ok or band == "11-50" or hc is None):
-        tier = "B_likely_fit"
-    elif geo and not hard:
-        tier = "C_needs_enrichment"
-    else:
-        tier = "D_review"
+    tier = m["icp_class"]  # from icp_rules.fit(): 100-point ICP fit score -> A/B/C/D (or Outside SAM)
+    if tier in ("A · Core ICP", "B · Strong fit") and (m["site_flags"] or "domain_match_medium_verify" in risks):
+        tier = "C · Probable - verify"  # dead/parked site or a name-only domain match: verify before outreach
     fams = m["h1_family"] or ""
     days = None
     if m.get("funding_date") and st == "verified_in_window":
@@ -236,11 +229,11 @@ def classify(m: dict, founders: list[dict], email: dict | None) -> tuple[str, st
             days = (date.today() - date.fromisoformat(m["funding_date"][:10])).days
         except ValueError:
             days = None
-    if tier == "D_review":
+    if tier in ("D · Long-shot", "Outside SAM"):
         wave = "Review fit"
     elif "exact_role" in fams or "H9" in tags:
         wave = "W1 Hot (days 1-7)"  # exact job or a warm path: never bury it, even if data is thin
-    elif tier == "C_needs_enrichment":
+    elif tier == "C · Probable - verify":
         wave = "Enrich first"
     elif m["h1_strength"] == "S1" or "H10" in tags:
         wave = "W1 Hot (days 1-7)"
@@ -253,6 +246,23 @@ def classify(m: dict, founders: list[dict], email: dict | None) -> tuple[str, st
     else:
         wave = "Nurture (day 30+)"
     return tier, wave, risks, segment
+
+
+def gtm_play(m: dict) -> str:
+    tags = set((m["matched_hypotheses"] or "").split("|"))
+    if "H9" in tags:
+        return "Warm intro"
+    if m["h1_strength"] in ("S1", "S2") or "H10" in tags:
+        return "Job: apply + CEO DM"
+    if m["h2_tier"] == "fresh_60d" or ("H2" in tags and m["h2_confidence"] not in ("program_terms",)):
+        return "Retainer: capital-led"
+    if "H7" in tags:
+        return "Retainer: revenue-led"
+    if "H4" in tags or "H5" in tags:
+        return "Retainer: launch/outbound sprint"
+    if "H6" in tags or "H3" in tags:
+        return "Founder DM: teardown"
+    return "Nurture"
 
 
 def suggested_action(wave: str, m: dict, risks: list[str]) -> str:
@@ -325,7 +335,11 @@ def assemble(conn) -> dict:
         tags = [t for t in alltags if t != "H0"]
         rows.append({
             "rank": int(m["rank"]), "company_domain": d, "company_name": m["company_name"], "wave": wave,
-            "icp_tier": tier, "rank_score": int(m["rank_score"]),
+            "icp_tier": tier, "icp_fit_score": to_int(m["icp_fit_score"]), "sector_category": m["sector_category"],
+            "gtm_play": gtm_play(m), "fit_geo": to_int(m["fit_geo"]), "fit_stage": to_int(m["fit_stage"]),
+            "fit_headcount": to_int(m["fit_headcount"]), "fit_sector": to_int(m["fit_sector"]),
+            "stage_evidence": m["stage_evidence"], "outside_sam_reason": m["outside_sam_reason"],
+            "rank_score": int(m["rank_score"]),
             "stage": t.get("stage") or "Not started", "next_action": t.get("next_action"),
             "next_action_date": to_date(t.get("next_action_date")), "notes": t.get("notes"),
             "suggested_action": suggested_action(wave, m, risks),
@@ -372,7 +386,9 @@ def assemble(conn) -> dict:
             (d, int(m["rank"]), int(m["rank_score"]), *comp.values(), tier, wave, now))
     conn.commit()
     # wave-first ordering inside the sheet keeps today's work on top; rank stays the global score order
-    rows.sort(key=lambda r: (WAVES.index(r["wave"]), -r["rank_score"], r["headcount"] or 99))
+    outside = sorted([r for r in rows if r["icp_tier"] == "Outside SAM"], key=lambda r: -r["icp_fit_score"])
+    rows = [r for r in rows if r["icp_tier"] != "Outside SAM"]
+    rows.sort(key=lambda r: (WAVES.index(r["wave"]), -r["icp_fit_score"], -r["rank_score"]))
 
     contacts = []
     by_domain = {r["company_domain"]: r for r in rows}
@@ -449,7 +465,7 @@ def assemble(conn) -> dict:
     sources = [dict(r) for r in conn.execute(
         "SELECT hypothesis, source, query, raw_path, records_raw, records_unique, records_icp_pass, stop_reason, "
         "MAX(completed_at) AS completed_at FROM ingestion_runs GROUP BY hypothesis, source ORDER BY hypothesis, source")]
-    return {"rows": rows, "contacts": contacts, "signals": signals, "roles": roles, "log": log, "hyp": hyp,
+    return {"rows": rows, "outside": outside, "contacts": contacts, "signals": signals, "roles": roles, "log": log, "hyp": hyp,
             "events": events, "unresolved": unresolved, "sources": sources}
 
 
@@ -474,7 +490,8 @@ WRAP = Alignment(wrap_text=True, vertical="top")
 # (header, width, kind) ; kind: data | input | formula | link | date | money
 MASTER_COLS = [
     ("rank", 6, "data"), ("company_domain", 22, "data"), ("company_name", 22, "data"), ("wave", 20, "data"),
-    ("icp_tier", 18, "data"), ("rank_score", 9, "data"),
+    ("icp_tier", 18, "data"), ("icp_fit_score", 8, "data"), ("sector_category", 13, "data"), ("gtm_play", 22, "data"),
+    ("rank_score", 9, "data"),
     ("stage", 14, "input"), ("next_action", 30, "input"), ("next_action_date", 13, "input_date"),
     ("notes", 30, "input"), ("due", 7, "formula"), ("touches", 8, "formula"), ("last_touch", 12, "formula"),
     ("suggested_action", 50, "data"), ("signals", 10, "data"), ("signal_count", 7, "data"),
@@ -496,6 +513,8 @@ MASTER_COLS = [
     ("founders_count", 7, "data"), ("risk_flags", 30, "data"), ("score_breakdown", 45, "data"),
     ("score_signals", 7, "data"), ("score_hiring", 7, "data"), ("score_capital", 7, "data"),
     ("score_founders", 7, "data"), ("score_size", 7, "data"), ("score_motion", 7, "data"), ("score_penalties", 7, "data"),
+    ("fit_geo", 6, "data"), ("fit_stage", 6, "data"), ("fit_headcount", 6, "data"), ("fit_sector", 6, "data"),
+    ("stage_evidence", 18, "data"),
     ("website", 14, "link"),
 ]
 
@@ -618,8 +637,8 @@ def build_workbook(data: dict) -> dict:
     for conf, color in (("guess_first_at_domain", "808080"), ("clay_invalid", "C00000")):
         ws.conditional_formatting.add(f"{C['email']}2:{C['email']}{last}", FormulaRule(
             formula=[f'{C["email_confidence"]}2="{conf}"'], font=Font(name=FONT, italic=True, color=color)))
-    tier_fill = {"A_high_confidence": "C6EFCE", "B_likely_fit": "DDEBF7", "C_needs_enrichment": "FFF2CC",
-                 "D_review": "F2F2F2"}
+    tier_fill = {"A · Core ICP": "C6EFCE", "B · Strong fit": "DDEBF7", "C · Probable - verify": "FFF2CC",
+                 "D · Long-shot": "F2F2F2"}
     for t, color in tier_fill.items():
         ws.conditional_formatting.add(f"{C['icp_tier']}2:{C['icp_tier']}{last}",
                                       FormulaRule(formula=[f'{C["icp_tier"]}2="{t}"'], fill=PatternFill("solid", fgColor=color)))
@@ -686,6 +705,16 @@ def build_workbook(data: dict) -> dict:
     style_header(wun, UN_COLS)
     write_table(wun, UN_COLS, data["unresolved"])
     wun.auto_filter.ref = f"A1:{get_column_letter(len(UN_COLS))}{len(data['unresolved']) + 1}"
+    OUT_COLS = [("rank", 6, "data"), ("company_domain", 22, "data"), ("company_name", 22, "data"),
+                ("outside_sam_reason", 30, "data"), ("icp_fit_score", 8, "data"), ("sector_category", 13, "data"),
+                ("signals", 12, "data"), ("why_now", 45, "data"), ("headcount", 8, "data"), ("hq_country", 6, "data"),
+                ("batch_or_investor", 16, "data"), ("one_liner", 45, "data"), ("ceo_name", 20, "data"),
+                ("ceo_linkedin", 10, "link"), ("website", 10, "link")]
+    wout = wb.create_sheet("Outside_SAM")
+    style_header(wout, OUT_COLS)
+    write_table(wout, OUT_COLS, data["outside"])
+    wout.auto_filter.ref = f"A1:{get_column_letter(len(OUT_COLS))}{len(data['outside']) + 1}"
+    extra["Outside_SAM"] = len(data["outside"])
     SRC_COLS = [("hypothesis", 6, "data"), ("source", 24, "data"), ("query", 60, "data"), ("raw_path", 40, "data"),
                 ("records_raw", 10, "data"), ("records_unique", 10, "data"), ("records_icp_pass", 10, "data"),
                 ("stop_reason", 12, "data"), ("completed_at", 20, "data")]
@@ -879,12 +908,18 @@ def build_start(ws, data):
         ("Review fit", "Tier D: possible consumer / bio / services or unknown geo. Decide keep or 'Not a fit'.", None),
         ("", None, None),
         ("ICP TIERS (fit)", None, F_H2),
-        ("A_high_confidence", "Verified: US/UK/EU HQ, 2-35 people, external raise (pre-seed→A) since 2025-05-01 "
-         "(Form D, linked news, domain-keyed round), founder on file, no risk flags.", None),
-        ("B_likely_fit", "Early-stage evidence (raise, accelerator batch, VC portfolio stage <= A, or >= $10K MRR), "
-         "location and founder known, live site, no hard flags; size 1-35 or 11-50 band.", None),
-        ("C_needs_enrichment", "Location known, but headcount, founder contact or funding evidence missing.", None),
-        ("D_review", "Keyword risk (consumer/bio/services), unknown geo or conflicting funding evidence.", None),
+        ("ICP fit score (0-100)", "Geography 20 (US/UK/EU confirmed) + Stage 30 (verified Seed-A raise 30, pre-seed or "
+         "2025-26 accelerator 24, VC portfolio <= A 20, older cohort 16, name-match 15, hiring-text only 12) + Headcount 25 "
+         "(exact 3-35 = 25, 1-10 / 11-50 band 15, unknown 8) + Sector 25 (AI Agents / DevTools / Infra / Vertical AI / "
+         "Physical AI 25, B2B SaaS 22).", None),
+        ("A · Core ICP", "Score >= 80: confirmed in-SAM on most dimensions.", None),
+        ("B · Strong fit", "65-79.", None),
+        ("C · Probable - verify", "50-64, or a dead site / name-only domain match: enrich (Clay) before outreach.", None),
+        ("D · Long-shot", "< 50.", None),
+        ("Outside SAM", "Known to fail a hard filter (headcount < 3 or > 35, biotech, consumer app, agency/services/fund, "
+         "brick & mortar, possibly past Series A). Kept on the Outside_SAM tab, not in Master.", None),
+        ("gtm_play", "Job: apply + CEO DM | Retainer: capital-led | Retainer: revenue-led | Retainer: launch/outbound "
+         "sprint | Founder DM: teardown | Warm intro | Nurture.", None),
         ("", None, None),
         ("OUTREACH_LOG EXAMPLE", "Row 2 of Outreach_Log is an example (example.com) and is excluded from every count. "
          "Format: 2026-11-04 | acme.ai | Jane Doe (CEO) | LinkedIn | First touch | angle | Sent | Follow-up in 3 days.",
@@ -907,7 +942,13 @@ def build_start(ws, data):
 
 
 DEFS = {
-    "rank": "Global order by rank_score (1 = highest).", "company_domain": "Primary key: normalized root domain.",
+    "rank": "Global order by rank_score (1 = highest).",
+    "icp_fit_score": "0-100 ICP fit (geo 20 + stage 30 + headcount 25 + sector 25).",
+    "sector_category": "AI Agents | DevTools | Infra | Vertical AI | Physical AI | B2B SaaS.",
+    "gtm_play": "Recommended motion for this company.", "fit_geo": "Fit points: geography (max 20).",
+    "fit_stage": "Fit points: stage evidence (max 30).", "fit_headcount": "Fit points: headcount (max 25).",
+    "fit_sector": "Fit points: sector (max 25).", "stage_evidence": "Strongest stage proof found.",
+    "outside_sam_reason": "Hard-filter failure(s).", "company_domain": "Primary key: normalized root domain.",
     "wave": "When to contact (see Start_Here).", "icp_tier": "How sure we are of ICP fit (see Start_Here).",
     "rank_score": "Priority score; components in score_* columns.", "stage": "INPUT pipeline stage (dropdown).",
     "next_action": "INPUT your next step.", "next_action_date": "INPUT date of next step (drives due).",

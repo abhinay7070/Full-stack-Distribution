@@ -29,6 +29,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import icp_rules as icp  # noqa: E402
 import pipeline_db as pdb  # noqa: E402
 
 OUT = pdb.SUBLIST_DIR / "master_priority.csv"
@@ -44,7 +45,33 @@ def load(name: str) -> dict[str, dict]:
         return {r["company_domain"]: r for r in csv.DictReader(f) if r.get("company_domain")}
 
 
-COLS = ["rank", "rank_score", "rank_breakdown", "priority_score", "signal_count", "matched_hypotheses", "company_domain",
+STRONG = {"form_d", "domain_keyed", "news_linked", "company_attached"}
+WEAK = {"headline_name_match", "company_attached_unnamed", "news_resolved"}
+
+
+def stage_evidence(c, cap_conf, cap_amt, cap_stage, tags) -> str:
+    bi = c["batch_or_investor"] or ""
+    srcs = c["sources"] or ""
+    yc = re.search(r"YC [WXSF](\d\d)", bi)
+    if cap_conf in STRONG:
+        if cap_stage == "pre_seed" or (cap_amt and cap_amt < 1_000_000 and cap_stage not in ("seed", "series_a")):
+            return "verified_pre_seed"
+        return "verified_seed_a"
+    if cap_conf == "program_terms" or (yc and int(yc.group(1)) >= 25) or re.search(r"SR00[4-7]|2025|2026", bi):
+        return "accelerator_in_window"
+    if "getro" in srcs:
+        return "vc_listed_early"
+    if bi:
+        return "accelerator_older"
+    if cap_conf in WEAK:
+        return "weak_name_match"
+    if "H1" in tags or "hn_whoishiring" in srcs or "ats" in srcs or "H0" in tags:
+        return "text_only"
+    return "none"
+
+
+COLS = ["rank", "icp_fit_score", "icp_class", "sector_category", "outside_sam_reason", "fit_geo", "fit_stage",
+        "fit_headcount", "fit_sector", "stage_evidence", "rank_score", "rank_breakdown", "priority_score", "signal_count", "matched_hypotheses", "company_domain",
         "company_name", "one_liner", "sector", "hq_country", "batch_or_investor", "sources", "headcount", "headcount_band",
         "why_now", "h1_best_role", "h1_strength", "h1_family", "h1_role_url", "h1_comp", "gtm_roles_open", "open_roles_total",
         "h2_tier", "h2_event", "h2_confidence", "funding_stage", "funding_amount", "funding_date", "funding_window_status",
@@ -105,14 +132,17 @@ def main() -> None:
         b = h2.get(d)
         ev = sorted([e for e in fev.get(d, []) if e["stage"] != "series_b_plus" and e["event_date"]],
                     key=lambda e: e["event_date"], reverse=True)
-        cap_date, cap_conf, cap_txt, cap_tier = None, None, "", ""
+        cap_date, cap_conf, cap_txt, cap_tier, cap_amt, cap_stage = None, None, "", "", None, None
         if b:
+            cap_amt = int(float(b["amount_usd"])) if b.get("amount_usd") else None
+            cap_stage = b.get("round_stage")
             cap_date, cap_conf = b["capital_event_date"], b["confidence"]
             cap_txt = f"{b['capital_event_date']} {b['round_label'] or b['round_stage']} {b['amount_band']}"
             cap_tier = b["h2_tier"]
         if ev and (not cap_date or ev[0]["event_date"] > cap_date or (cap_conf == "program_terms")):
             e = ev[0]
             cap_date, cap_conf = e["event_date"], e["confidence"]
+            cap_amt, cap_stage = e["amount_usd"], e["stage"]
             cap_txt = f"{e['event_date']} {e['stage']} ${(e['amount_usd'] or 0) / 1e6:.1f}M ({e['source']})"
             cap_tier = "fresh_60d" if (TODAY - date.fromisoformat(cap_date)).days <= 60 else "in_window"
         if "H2" in tags and cap_date:
@@ -186,9 +216,14 @@ def main() -> None:
             flags += site_flags
         if resconf.get(d) == "medium" and len(json.loads(c["sources"] or "[]")) <= 1:
             flags.append("domain_match_medium_verify")
+        sev = stage_evidence(c, cap_conf, cap_amt, cap_stage, tags)
+        text = f"{c['one_liner'] or ''} {soc.get('desc') or ''} {(s.get('title') or '') if s else ''}"
+        fitr = icp.fit(country=c["hq_country"], headcount=hc, band=band, sector_label=c["sector"], text=text,
+                       stage_evidence=sev, possible_past_a="possible_past_series_a_verify" in flags)
         fl = founders.get(d, [])
         ceo = next((f for f in fl if re.search(r"\bceo\b|chief executive", f["role"] or "", re.I)), fl[0] if fl else None)
         rows.append({
+            **fitr, "stage_evidence": sev,
             "rank_score": sum(pts.values()), "rank_breakdown": " ".join(f"{k}{v:+d}" for k, v in pts.items()),
             "priority_score": c["priority_score"], "signal_count": len(sig), "matched_hypotheses": "|".join(tags),
             "company_domain": d, "company_name": c["company_name"], "one_liner": c["one_liner"], "sector": c["sector"],

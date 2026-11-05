@@ -80,3 +80,85 @@ def stage_from_text(t: str | None) -> str | None:
         if re.search(pat, t):
             return st
     return None
+
+
+# --------------------------------------------------------------------------- ICP fit score (0-100) + SAM class
+# Your SAM: US / UK / Europe (remote-friendly) | Seed -> Series A | 3-35 employees |
+# B2B SaaS, AI Agents, DevTools, Infra, Vertical AI, Hardware/Physical-AI beneficiaries.
+# Hard exclusions: biotech, pure hardware, consumer apps, agencies/services, brick & mortar.
+BRICK = re.compile(r"\b(restaurant|cafe|coffee shop|bakery|retail store|boutique|salon|spa\b|gym\b|fitness studio|"
+                   r"dental (clinic|practice)|medical clinic|real estate (brokerage|agency)|property management company|"
+                   r"construction company|general contractor|franchise|hotel|winery|brewery|distillery|food truck|"
+                   r"grocery|laundromat|car wash|daycare|farm\b|apparel brand|clothing brand)\b", re.I)
+CONSUMER_X = re.compile(r"\b(consumer app|dating|for (kids|parents|families|couples|teens|gamers|fans|singles)|"
+                        r"mobile game|social network for|personal finance app|fitness app|meditation app|"
+                        r"direct-to-consumer|d2c brand|dtc brand)\b", re.I)
+BIO_X = re.compile(r"\b(therapeutic|drug (discovery|development|candidate)|biotech|antibod|gene (therapy|editing)|"
+                   r"cell therapy|clinical[- ]stage|small molecule|pharmaceutical|oncology|vaccine)\w*", re.I)
+SERVICE_X = re.compile(r"\b(marketing agency|creative agency|dev(elopment)? shop|staffing agency|recruiting agency|"
+                       r"consultancy|we are an agency|digital agency|outsourc\w+ (team|development)|hedge fund|"
+                       r"asset management firm|proprietary trading|prop trading|investment firm|law firm|"
+                       r"accounting firm)\b", re.I)
+SECTOR_CAT = {"AI Agents": "AI Agents", "DevTools": "DevTools", "Infra": "Infra", "Vertical AI": "Vertical AI",
+              "B2B SaaS": "B2B SaaS", "Industrial / Physical AI": "Physical AI", "Fintech": None}
+AI_WORD = re.compile(r"\b(ai|a\.i\.|llm|agent\w*|machine learning|ml|genai|copilot|autonomous)\b", re.I)
+
+
+def sector_category(label: str | None, text: str) -> str:
+    if label == "Fintech":
+        return "Vertical AI" if AI_WORD.search(text or "") else "B2B SaaS"
+    return SECTOR_CAT.get(label or "", None) or ("Vertical AI" if AI_WORD.search(text or "") else "B2B SaaS")
+
+
+def fit(*, country: str | None, headcount: int | None, band: str | None, sector_label: str | None, text: str,
+        stage_evidence: str, possible_past_a: bool = False) -> dict:
+    """stage_evidence: verified_seed_a | verified_pre_seed | accelerator_in_window | vc_listed_early |
+    accelerator_older | weak_name_match | text_only | none."""
+    hard = []
+    t = text or ""
+    if BIO_X.search(t):
+        hard.append("sector:biotech")
+    if CONSUMER_X.search(t):
+        hard.append("sector:consumer_app")
+    if SERVICE_X.search(t):
+        hard.append("sector:agency_services_or_fund")
+    soft = re.search(r"\b(software|saas|platform|ai\b|api|app for|tool|automat\w+|agent\w*|analytics|data|"
+                     r"cloud|marketplace|os\b|operating system|copilot|llm|ml\b)", t, re.I)
+    if BRICK.search(t) and not soft:
+        hard.append("sector:brick_and_mortar")
+    if headcount is not None and headcount < 3:
+        hard.append(f"headcount:{headcount}_below_3")
+    if headcount is not None and headcount > 35:
+        hard.append(f"headcount:{headcount}_above_35")
+    if possible_past_a:
+        hard.append("stage:possible_past_series_a")
+    geo = 20 if country in h3.ALLOWED else 8 if country is None else 0
+    stage = {"verified_seed_a": 30, "verified_pre_seed": 24, "accelerator_in_window": 24, "vc_listed_early": 20,
+             "accelerator_older": 16, "weak_name_match": 15, "text_only": 12, "none": 5}.get(stage_evidence, 5)
+    if possible_past_a:
+        stage = 0
+    if headcount is not None:
+        size = 25 if 3 <= headcount <= 35 else 0
+    elif band == "1-10":
+        size = 15
+    elif band == "11-50":
+        size = 15
+    else:
+        size = 8
+    cat = sector_category(sector_label, t)
+    sector = 25 if cat in ("AI Agents", "DevTools", "Infra", "Vertical AI", "Physical AI") else 22 if cat == "B2B SaaS" else 10
+    if hard and any(h.startswith("sector") for h in hard):
+        sector = 0
+    score = geo + stage + size + sector
+    if hard:
+        cls = "Outside SAM"
+    elif score >= 80 and geo == 20 and stage >= 20 and size >= 15 and sector >= 22:
+        cls = "A · Core ICP"
+    elif score >= 65 and stage >= 15:
+        cls = "B · Strong fit"
+    elif score >= 50:
+        cls = "C · Probable - verify"
+    else:
+        cls = "D · Long-shot"
+    return {"icp_fit_score": score, "fit_geo": geo, "fit_stage": stage, "fit_headcount": size, "fit_sector": sector,
+            "icp_class": cls, "sector_category": cat, "outside_sam_reason": "|".join(hard)}
