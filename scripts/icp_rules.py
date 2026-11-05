@@ -86,7 +86,7 @@ def stage_from_text(t: str | None) -> str | None:
 # Your SAM: US / UK / Europe (remote-friendly) | Seed -> Series A | 3-35 employees |
 # B2B SaaS, AI Agents, DevTools, Infra, Vertical AI, Hardware/Physical-AI beneficiaries.
 # Hard exclusions: biotech, pure hardware, consumer apps, agencies/services, brick & mortar.
-BRICK = re.compile(r"\b(restaurant|cafe|coffee shop|bakery|retail store|boutique|salon|spa\b|gym\b|fitness studio|"
+BRICK = re.compile(r"\b(tattoo|cosmetic clinic|aesthetic clinic|skincare brand|beverage brand|food brand|restaurant|cafe|coffee shop|bakery|retail store|boutique|salon|spa\b|gym\b|fitness studio|"
                    r"dental (clinic|practice)|medical clinic|real estate (brokerage|agency)|property management company|"
                    r"construction company|general contractor|franchise|hotel|winery|brewery|distillery|food truck|"
                    r"grocery|laundromat|car wash|daycare|farm\b|apparel brand|clothing brand)\b", re.I)
@@ -102,6 +102,16 @@ SERVICE_X = re.compile(r"\b(marketing agency|creative agency|dev(elopment)? shop
 SECTOR_CAT = {"AI Agents": "AI Agents", "DevTools": "DevTools", "Infra": "Infra", "Vertical AI": "Vertical AI",
               "B2B SaaS": "B2B SaaS", "Industrial / Physical AI": "Physical AI", "Fintech": None}
 AI_WORD = re.compile(r"\b(ai|a\.i\.|llm|agent\w*|machine learning|ml|genai|copilot|autonomous)\b", re.I)
+
+
+SOFTWARE_SIGNAL = re.compile(
+    r"\b(software|saas|platform|ai\b|a\.i\.|artificial intelligence|machine learning|ml\b|llm|genai|agent\w*|"
+    r"api\b|apis\b|sdk|developer|devops|cloud|data|analytics|automat\w+|workflow|copilot|infrastructure|"
+    r"cyber\w*|security|compliance|fintech|insurtech|regtech|legaltech|proptech|healthtech|edtech|martech|"
+    r"crm|erp|marketplace|app\b|apps\b|web|digital|engineering team|open[- ]source|robot\w*|autonom\w+|"
+    r"computer vision|model\w*|inference|gpu|compute|database|payments?|banking|tech\b|technology|startup|"
+    r"code|coding|enterprise|design tool|b2b|online|internet|mobile|iot|sensor\w*|semiconductor)",
+    re.I)
 
 
 def sector_category(label: str | None, text: str) -> str:
@@ -146,12 +156,17 @@ def fit(*, country: str | None, headcount: int | None, band: str | None, sector_
     else:
         size = 8
     cat = sector_category(sector_label, t)
-    sector = 25 if cat in ("AI Agents", "DevTools", "Infra", "Vertical AI", "Physical AI") else 22 if cat == "B2B SaaS" else 10
+    if not SOFTWARE_SIGNAL.search(t):
+        cat = "Unclear"  # no software / AI evidence in any text we hold: not scored as B2B SaaS by default
+    sector = 25 if cat in ("AI Agents", "DevTools", "Infra", "Vertical AI", "Physical AI") else 22 if cat == "B2B SaaS" \
+        else 10
     if hard and any(h.startswith("sector") for h in hard):
         sector = 0
     score = geo + stage + size + sector
     if hard:
         cls = "Outside SAM"
+    elif cat == "Unclear":
+        cls = "C · Probable - verify" if score >= 50 else "D · Long-shot"  # no software/AI evidence: verify first
     elif score >= 80 and geo == 20 and stage >= 20 and size >= 15 and sector >= 22:
         cls = "A · Core ICP"
     elif score >= 65 and stage >= 15:

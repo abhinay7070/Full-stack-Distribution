@@ -217,7 +217,8 @@ def main() -> None:
         if resconf.get(d) == "medium" and len(json.loads(c["sources"] or "[]")) <= 1:
             flags.append("domain_match_medium_verify")
         sev = stage_evidence(c, cap_conf, cap_amt, cap_stage, tags)
-        text = f"{c['one_liner'] or ''} {soc.get('desc') or ''} {(s.get('title') or '') if s else ''}"
+        snips = " ".join((p.get("snippet") or "")[:200] for p in json.loads(c["live_signal_proof"])[:6])
+        text = f"{c['one_liner'] or ''} {soc.get('desc') or ''} {(s.get('title') or '') if s else ''} {snips}"
         fitr = icp.fit(country=c["hq_country"], headcount=hc, band=band, sector_label=c["sector"], text=text,
                        stage_evidence=sev, possible_past_a="possible_past_series_a_verify" in flags)
         fl = founders.get(d, [])
