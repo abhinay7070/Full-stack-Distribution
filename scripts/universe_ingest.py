@@ -141,6 +141,9 @@ def ingest_hn(conn) -> dict:
             pool.append({"source": "hn_whoishiring", "name": ps[0]["company"], "domain": d, "reason": why,
                          "date": ps[-1]["posted_at"], "url": ps[-1]["url"], "evidence": ps[-1]["first_line"][:200]})
             continue
+        pdb.upsert_company(conn, d, "H0", proof={"source": "hn_whoishiring", "url": ps[-1]["url"],
+                                                 "snippet": f"[universe|hn_whoishiring] {ps[-1]['first_line'][:160]}"},
+                           company_name=None)
         best = None
         for p in ps:
             for role in (p["roles"] or [p["first_line"][:120]]):
@@ -154,9 +157,6 @@ def ingest_hn(conn) -> dict:
                      p["posted_at"], c["family"], c["strength"], None, p["text"][:1500]))
                 if c["strength"] and (not best or h1.STRENGTH_ORDER[c["strength"]] < h1.STRENGTH_ORDER[best[0]["strength"]]):
                     best = (c, role, p)
-        pdb.upsert_company(conn, d, "H0", proof={"source": "hn_whoishiring", "url": ps[-1]["url"],
-                                                 "snippet": f"[universe|hn_whoishiring] {ps[-1]['first_line'][:160]}"},
-                           company_name=None)
         row = conn.execute("SELECT company_name, hq_country, headcount, sector FROM companies WHERE company_domain=?",
                            (d,)).fetchone()
         sets = {"company_name": ps[0]["company"][:100] if not row["company_name"] else None,
@@ -316,6 +316,8 @@ def ingest_ats(conn) -> dict:
         st["admit"] += 1
         sector = label or (conn.execute("SELECT sector FROM companies WHERE company_domain=?", (d,)).fetchone() or
                            {"sector": ""})["sector"] or ""
+        pdb.upsert_company(conn, d, "H0", proof={"source": f"ats:{bs[0]['provider']}", "url": bs[0]["jobs"][0].get("url"),
+                                                 "snippet": f"[universe|ats] {n_open} open roles"})
         best = None
         for b in bs:
             for j in b["jobs"]:
@@ -334,8 +336,6 @@ def ingest_ats(conn) -> dict:
                      json.dumps(sig) if sig else None, (j.get("description") or "")[:1500]))
                 if c["strength"] and (not best or h1.STRENGTH_ORDER[c["strength"]] < h1.STRENGTH_ORDER[best[0]["strength"]]):
                     best = (c, j, b)
-        pdb.upsert_company(conn, d, "H0", proof={"source": f"ats:{bs[0]['provider']}", "url": bs[0]["jobs"][0].get("url"),
-                                                 "snippet": f"[universe|ats] {n_open} open roles"})
         row = conn.execute("SELECT company_name, hq_country, sector FROM companies WHERE company_domain=?", (d,)).fetchone()
         sets = {"company_name": (bs[0].get("company_name") or bs[0]["slug"].replace("-", " ").title())[:100]
                 if not row["company_name"] else None, "hq_country": country if not row["hq_country"] else None,
