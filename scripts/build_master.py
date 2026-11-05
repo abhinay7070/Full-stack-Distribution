@@ -248,6 +248,48 @@ def classify(m: dict, founders: list[dict], email: dict | None) -> tuple[str, st
     return tier, wave, risks, segment
 
 
+def cluster_ring(m: dict, tier: str, email: dict | None) -> tuple[str, str]:
+    """Primary pain cluster (first match wins) + effort ring (R1 sniper / R2 rifle / R3 net / Enrich / Review)."""
+    fam, s1 = m["h1_family"] or "", m["h1_strength"] or ""
+    try:
+        fresh = m["funding_window_status"] == "verified_in_window" and \
+            (date.today() - date.fromisoformat((m["funding_date"] or "")[:10])).days <= 90
+    except ValueError:
+        fresh = False
+    if m["h10_days_open"]:
+        cl = "C2 Stale GTM role"
+    elif s1 and re.search(r"exact_role|hidden_gtm", fam):
+        cl = "C1a Hiring my exact role"
+    elif s1 in ("S1", "S2"):
+        cl = "C1 Hiring GTM"
+    elif m["h4_tier"] in ("decay_window", "pre_decay"):
+        cl = "C6 Just launched"
+    elif fresh:
+        cl = "C3 Fresh capital"
+    elif m["h6_strength"] and m["h3_tier"] in ("A_verified", "B_likely"):
+        cl = "C4 Founder-led, technical"
+    elif m["h5_strength"] == "S1":
+        cl = "C5 Outbound tooling live"
+    elif float(m["h7_mrr"] or 0) >= 10000:
+        cl = "C7 Revenue, no GTM team"
+    else:
+        cl = "C8 Fit only (nurture)"
+    reach = (email or {}).get("email_confidence") in ("published_ceo", "published_founder", "published_founders_inbox",
+                                                       "clay_valid")
+    if tier.startswith("D") or tier == "Outside SAM":
+        ring = "Review"
+    elif tier.startswith("C"):
+        ring = "Enrich"
+    elif cl in ("C1a Hiring my exact role", "C2 Stale GTM role") or (cl == "C1 Hiring GTM" and reach) \
+            or int(m["signal_count"] or 0) >= 3:
+        ring = "R1 Sniper"
+    elif not cl.startswith("C8"):
+        ring = "R2 Rifle"
+    else:
+        ring = "R3 Net"
+    return cl, ring
+
+
 def gtm_play(m: dict) -> str:
     tags = set((m["matched_hypotheses"] or "").split("|"))
     if "H9" in tags:
@@ -336,7 +378,7 @@ def assemble(conn) -> dict:
         rows.append({
             "rank": int(m["rank"]), "company_domain": d, "company_name": m["company_name"], "wave": wave,
             "icp_tier": tier, "icp_fit_score": to_int(m["icp_fit_score"]), "sector_category": m["sector_category"],
-            "gtm_play": gtm_play(m), "fit_geo": to_int(m["fit_geo"]), "fit_stage": to_int(m["fit_stage"]),
+            "gtm_play": gtm_play(m), **dict(zip(("cluster", "ring"), cluster_ring(m, tier, emails.get(d)))), "fit_geo": to_int(m["fit_geo"]), "fit_stage": to_int(m["fit_stage"]),
             "fit_headcount": to_int(m["fit_headcount"]), "fit_sector": to_int(m["fit_sector"]),
             "stage_evidence": m["stage_evidence"], "outside_sam_reason": m["outside_sam_reason"],
             "rank_score": int(m["rank_score"]),
@@ -388,7 +430,8 @@ def assemble(conn) -> dict:
     # wave-first ordering inside the sheet keeps today's work on top; rank stays the global score order
     outside = sorted([r for r in rows if r["icp_tier"] == "Outside SAM"], key=lambda r: -r["icp_fit_score"])
     rows = [r for r in rows if r["icp_tier"] != "Outside SAM"]
-    rows.sort(key=lambda r: (WAVES.index(r["wave"]), -r["icp_fit_score"], -r["rank_score"]))
+    RINGS = ["R1 Sniper", "R2 Rifle", "R3 Net", "Enrich", "Review"]
+    rows.sort(key=lambda r: (RINGS.index(r["ring"]), WAVES.index(r["wave"]), -r["icp_fit_score"], -r["rank_score"]))
 
     contacts = []
     by_domain = {r["company_domain"]: r for r in rows}
@@ -490,7 +533,7 @@ WRAP = Alignment(wrap_text=True, vertical="top")
 # (header, width, kind) ; kind: data | input | formula | link | date | money
 MASTER_COLS = [
     ("rank", 6, "data"), ("company_domain", 22, "data"), ("company_name", 22, "data"), ("wave", 20, "data"),
-    ("icp_tier", 18, "data"), ("icp_fit_score", 8, "data"), ("sector_category", 13, "data"), ("gtm_play", 22, "data"),
+    ("icp_tier", 18, "data"), ("ring", 10, "data"), ("cluster", 22, "data"), ("icp_fit_score", 8, "data"), ("sector_category", 13, "data"), ("gtm_play", 22, "data"),
     ("rank_score", 9, "data"),
     ("stage", 14, "input"), ("next_action", 30, "input"), ("next_action_date", 13, "input_date"),
     ("notes", 30, "input"), ("due", 7, "formula"), ("touches", 8, "formula"), ("last_touch", 12, "formula"),
@@ -945,7 +988,9 @@ DEFS = {
     "rank": "Global order by rank_score (1 = highest).",
     "icp_fit_score": "0-100 ICP fit (geo 20 + stage 30 + headcount 25 + sector 25).",
     "sector_category": "AI Agents | DevTools | Infra | Vertical AI | Physical AI | B2B SaaS.",
-    "gtm_play": "Recommended motion for this company.", "fit_geo": "Fit points: geography (max 20).",
+    "gtm_play": "Recommended motion for this company.",
+    "ring": "Effort ring: R1 Sniper (deep, multi-channel) / R2 Rifle (semi-personal) / R3 Net (light touch) / Enrich / Review.",
+    "cluster": "Primary pain cluster (why they would talk now); see Start_Here and PLAYBOOK.md.", "fit_geo": "Fit points: geography (max 20).",
     "fit_stage": "Fit points: stage evidence (max 30).", "fit_headcount": "Fit points: headcount (max 25).",
     "fit_sector": "Fit points: sector (max 25).", "stage_evidence": "Strongest stage proof found.",
     "outside_sam_reason": "Hard-filter failure(s).", "company_domain": "Primary key: normalized root domain.",
