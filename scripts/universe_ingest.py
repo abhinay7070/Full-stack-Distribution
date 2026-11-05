@@ -261,6 +261,9 @@ def ingest_ats(conn) -> dict:
         key = (b["provider"], b["slug"])
         dom = site_slugs.get(key)
         infer = [o.split(":", 1)[1] for o in b.get("origins", []) if o.startswith("infer:")]
+        site = [o.split(":", 1)[1] for o in b.get("origins", []) if o.startswith("site:")]
+        if not dom and site:
+            dom = site[0]  # the company's own homepage links this board
         txt = " ".join(f"{j.get('title')} {j.get('description') or ''}" for j in b["jobs"][:15])[:30000]
         if not dom and infer:
             for d in infer:

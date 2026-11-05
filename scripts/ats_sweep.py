@@ -177,6 +177,14 @@ def main() -> None:
             for prov, ss in p["ats_slugs"].items():
                 for s in ss:
                     add(prov, s, "hn_whoishiring")
+    sc = pdb.ROOT / ".cache" / "site_scan.jsonl"
+    if sc.exists():  # ATS boards linked from company homepages (careers links / embeds)
+        for line in open(sc):
+            r = json.loads(line)
+            ats = (json.loads(r.get("social") or "{}") or {}).get("ats") or {}
+            for prov, ss in ats.items():
+                for s_ in ss:
+                    add(prov.replace("_embed", ""), s_, f"site:{r['company_domain']}")
     conn = pdb.connect()
     for c in conn.execute("SELECT company_domain, company_name FROM companies WHERE status!='disqualified'"):
         for s in slug_variants(c["company_domain"], c["company_name"]):
