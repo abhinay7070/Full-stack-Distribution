@@ -14,13 +14,15 @@ for i in 0 1 2 3; do python3 scripts/site_scan.py --to-cache --shard=$i/4 & done
 python3 scripts/site_scan.py --load
 log "GitHub orgs (H8)";                   python3 scripts/signals_collect.py h8 "${EXT:-}"
 log "gate: before tags";                  python3 scripts/gate_check.py --fingerprint .cache/fp_before_tags.json
-log "tag H3x-H10";                        python3 scripts/tag_signals.py
+log "tag H3x-H10 (2 passes: H6 reads H3 set in pass 1)"; python3 scripts/tag_signals.py >/dev/null; python3 scripts/tag_signals.py
 log "tag again (idempotency check)";      python3 scripts/gate_check.py --fingerprint .cache/fp_tags1.json
 python3 scripts/tag_signals.py >/dev/null
 python3 scripts/gate_check.py --fingerprint .cache/fp_tags2.json >/dev/null
 python3 scripts/gate_check.py --compare .cache/fp_tags1.json .cache/fp_tags2.json
 log "emails";                             python3 scripts/enrich_emails.py
 log "workbook";                           python3 scripts/build_master.py
-log "recalc";                             python3 /mnt/skills/public/xlsx/scripts/recalc.py master/gtm_master.xlsx 600
+log "recalc"
+if [ -f /mnt/skills/public/xlsx/scripts/recalc.py ]; then python3 /mnt/skills/public/xlsx/scripts/recalc.py master/gtm_master.xlsx 900
+else echo "recalc helper not present: formulas compute when the file is opened in Excel / Google Sheets / LibreOffice"; fi
 log "gate: final";                        python3 scripts/gate_check.py --sample 25
 log "done"

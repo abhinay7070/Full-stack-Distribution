@@ -93,6 +93,11 @@ def main() -> None:
     h3rows = []
     for d, c in comp.items():
         if '"H3"' in c["matched_hypotheses"]:
+            prev = [p for p in json.loads(c["live_signal_proof"]) if p.get("source") == "tag_signals:h3_rules"]
+            if prev:  # keep rows tagged by earlier runs in the sublist (idempotent output)
+                m = re.match(r"\[H3\|(\w+)\]\s*(.*)", prev[0].get("snippet") or "")
+                h3rows.append({"company_domain": d, "company_name": c["company_name"],
+                               "h3_tier": m.group(1) if m else "", "reason": m.group(2) if m else "", "founders": ""})
             continue
         fl = []
         if d in yc:

@@ -158,7 +158,8 @@ def main() -> None:
         if not status:
             status = "verified_in_window" if cap_date and cap_conf != "program_terms" else \
                 "accelerator_check_only" if cap_conf == "program_terms" else "no_evidence"
-        if "possible_past_series_a" in ((fs.get(d) or {}).get("flags") or ""):
+        late = [e for e in fev.get(d, []) if e["stage"] == "series_b_plus" and e["confidence"] in STRONG]
+        if "possible_past_series_a" in ((fs.get(d) or {}).get("flags") or "") or late:
             pts["possible_past_series_a"] = -15
             flags.append("possible_past_series_a_verify")
         # ---- H3
