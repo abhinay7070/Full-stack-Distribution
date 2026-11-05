@@ -61,9 +61,9 @@ FUNDING = re.compile(rf"\b{VERB}\b.*?(\$|€|£|eur|usd|gbp|million|\bm\b|seed|s
 NOT_STARTUP = re.compile(r"\b(closes|launches|raises|announces)\b.{0,30}\b(fund|fund [ivx]+|vehicle|lp)\b|"
                          r"\b(acquires|acquired|acquisition|merger|ipo|spac|layoffs?|shuts down)\b", re.I)
 AMT = re.compile(r"(?:(\$|€|£|us\$|usd|eur|gbp|chf|sek)\s?(\d+(?:[.,]\d+)?)\s?(k|m|mn|million|bn|billion|b)\b|"
-                 r"(\d+(?:[.,]\d+)?)\s?(million|m|bn|billion|mio\.?|millionen)\s?(dollars|euros?|pounds|eur|usd|gbp|€|\$|£))",
+                 r"(\d+(?:[.,]\d+)?)\s?(million|m|bn|billion|mio\.?|millionen|milliarden)\s?(dollars?|euros?|pounds|eur|usd|gbp|€|\$|£))",
                  re.I)
-FX = {"$": 1, "us$": 1, "usd": 1, "dollars": 1, "€": 1.1, "eur": 1.1, "euro": 1.1, "euros": 1.1, "£": 1.3,
+FX = {"$": 1, "us$": 1, "usd": 1, "dollars": 1, "dollar": 1, "€": 1.1, "eur": 1.1, "euro": 1.1, "euros": 1.1, "£": 1.3,
       "gbp": 1.3, "pounds": 1.3, "chf": 1.13, "sek": 0.095}
 BASED = re.compile(r"\b([A-Z][a-zA-ZÀ-ſ.\- ]{2,30})-based\b")
 NEWS_HOSTS = {"techcrunch.com", "eu-startups.com", "uktech.news", "techfundingnews.com", "siliconcanals.com",
@@ -132,12 +132,14 @@ def to_usd(m) -> int | None:
         v = float(val.replace(",", "."))
     except ValueError:
         return None
-    k = 1e3 if mult == "k" else 1e9 if mult in ("bn", "billion", "b") else 1e6
+    k = 1e3 if mult == "k" else 1e9 if mult in ("bn", "billion", "b", "milliarden") else 1e6
     return int(v * k * FX.get(cur, 1))
 
 
 def subjects(title: str) -> list[str]:
-    t = re.sub(r"^(exclusive|breaking|funding|scoop|news)\s*[:\-–|]\s*", "", title, flags=re.I)
+    t = re.sub(r"^(#?\s*deal ?monitor|exclusive|breaking|funding|scoop|news|startup ?radar|investment round-?up)\s*[:\-–|]+\s*",
+               "", title, flags=re.I)
+    t = re.split(r"\s+[–|]\s+", t)[0]  # roundups: first deal only
     m = re.match(rf"^(.{{2,90}}?)\s*,?\s+(?:has\s+|have\s+|just\s+)?{VERB}\b", t, re.I)
     if not m:
         return []
@@ -148,6 +150,8 @@ def subjects(title: str) -> list[str]:
                r"medtech|legaltech|regtech|climate tech|cleantech|deeptech|saas)\s+", "", s, flags=re.I)
     s = re.sub(r",.*$", "", s).strip()
     s = re.sub(r"^(the|a|an)\s+", "", s, flags=re.I)
+    s = re.sub(r"^[A-Z][\w.\- ]{1,25}[’']s\s+", "", s)  # "Amsterdam's Trusk" -> "Trusk"
+    s = re.sub(r"^([^:]{2,40}):\s.*$", r"\1", s)  # "Airmo: SpaceTech" -> "Airmo"
     if not s or len(s) > 60 or len(s.split()) > 6:
         return []
     return [s]
@@ -188,7 +192,7 @@ def parse(items: dict[str, list]) -> list[dict]:
             dom = next((h for h in hosts if short and (short in re.sub(r"[^a-z0-9]", "", h.split(".")[0])
                                                        or re.sub(r"[^a-z0-9]", "", h.split(".")[0]) in full)
                         and len(short) >= 3), None)
-            bm = BASED.search(lead)
+            bm = BASED.search(lead) or re.search(r"\b(Berlin|Münchner|Hamburger|Kölner|Frankfurter|Wiener|Zürcher)(?:er)?\b", title)
             country = icp.country_of(bm.group(1)) if bm else None
             if not country and bm:
                 country = {"london": "GB", "berlin": "DE", "paris": "FR", "amsterdam": "NL", "stockholm": "SE",
