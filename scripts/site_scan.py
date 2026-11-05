@@ -117,8 +117,51 @@ def scan(domain: str) -> dict:
             "spf": spf, "txt_verifications": json.dumps(tokens), "scanned_at": pdb.utcnow()}
 
 
+def scan_to_cache() -> None:
+    """Network phase only (no DB writes): .cache/site_scan.jsonl; load with --load."""
+    import sqlite3
+    ro = sqlite3.connect(f"file:{pdb.DB_PATH}?mode=ro", uri=True)
+    doms = [r[0] for r in ro.execute("SELECT company_domain FROM companies WHERE status!='disqualified'")]
+    out = pdb.ROOT / ".cache" / "site_scan.jsonl"
+    done = set()
+    if out.exists():
+        done = {json.loads(x)["company_domain"] for x in open(out)}
+    todo = [d for d in doms if d not in done]
+    print(f"scan_to_cache: {len(todo)} domains", file=sys.stderr)
+    n = 0
+    with open(out, "a") as f, ThreadPoolExecutor(32) as ex:
+        for row in ex.map(scan, todo):
+            f.write(json.dumps(row) + "\n")
+            n += 1
+            if n % 500 == 0:
+                f.flush()
+                print(f"  {n}/{len(todo)}", file=sys.stderr)
+
+
+def load_cache(conn) -> int:
+    p = pdb.ROOT / ".cache" / "site_scan.jsonl"
+    live = {r[0] for r in conn.execute("SELECT company_domain FROM companies")}
+    n = 0
+    for x in open(p):
+        row = json.loads(x)
+        if row["company_domain"] not in live:
+            continue
+        cols = list(row)
+        conn.execute(f"INSERT OR REPLACE INTO site_scan ({', '.join(cols)}) VALUES ({', '.join('?' * len(cols))})",
+                     list(row.values()))
+        n += 1
+    conn.commit()
+    return n
+
+
 def main() -> None:
+    if "--to-cache" in sys.argv:
+        scan_to_cache()
+        return
     conn = pdb.init_db()
+    if "--load" in sys.argv:
+        print(json.dumps({"loaded": load_cache(conn)}))
+        return
     only_new = "--only-new" in sys.argv
     done = {r[0] for r in conn.execute("SELECT company_domain FROM site_scan")} if only_new else set()
     doms = [r[0] for r in conn.execute("SELECT company_domain FROM companies WHERE status!='disqualified'")
