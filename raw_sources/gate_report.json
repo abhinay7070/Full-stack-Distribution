@@ -1,0 +1,20 @@
+{
+ "run_at": "2026-11-05T05:38:49Z",
+ "fingerprint": {
+  "companies": 7053,
+  "sha1": "d97d3f1f1a72df0d6e703685b6e300d53a53f42e",
+  "tags": {
+   "H0": 6797,
+   "H1": 326,
+   "H2": 454,
+   "H3": 1434
+  }
+ },
+ "hard_failures": {},
+ "warnings": {
+  "medium_confidence_resolutions": 0
+ },
+ "examples": {},
+ "resolution_audit_sample": [],
+ "resolution_status": {}
+}
