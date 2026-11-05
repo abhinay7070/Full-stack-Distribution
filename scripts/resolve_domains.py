@@ -216,8 +216,8 @@ def resolve(entities: list[dict], workers: int = 24, refresh: bool = False) -> d
                           res["evidence"], res["tried"], pdb.utcnow()))
             done[e["key"]] = {"entity_key": e["key"], "name": e["name"], **res}
             n += 1
+            conn.commit()  # short write transactions: parallel jobs never wait long for the lock
             if n % 200 == 0:
-                conn.commit()
                 print(f"  resolved {n}/{len(todo)}", file=sys.stderr)
     conn.commit()
     return {e["key"]: done[e["key"]] for e in entities}

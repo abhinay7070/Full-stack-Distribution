@@ -92,7 +92,7 @@ def normalize_name(name: str) -> str:
 
 
 def connect(db_path: Path = DB_PATH) -> sqlite3.Connection:
-    conn = sqlite3.connect(db_path)
+    conn = sqlite3.connect(db_path, timeout=900)  # parallel ingest jobs wait for the write lock instead of failing
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
