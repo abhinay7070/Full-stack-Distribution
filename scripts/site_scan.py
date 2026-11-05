@@ -122,10 +122,14 @@ def scan_to_cache() -> None:
     import sqlite3
     ro = sqlite3.connect(f"file:{pdb.DB_PATH}?mode=ro", uri=True)
     doms = [r[0] for r in ro.execute("SELECT company_domain FROM companies WHERE status!='disqualified'")]
-    out = pdb.ROOT / ".cache" / "site_scan.jsonl"
+    shard = next((a.split("=")[1] for a in sys.argv if a.startswith("--shard=")), None)  # e.g. --shard=2/4
+    out = pdb.ROOT / ".cache" / (f"site_scan.{shard.replace('/', 'of')}.jsonl" if shard else "site_scan.jsonl")
     done = set()
-    if out.exists():
-        done = {json.loads(x)["company_domain"] for x in open(out)}
+    for f in (pdb.ROOT / ".cache").glob("site_scan*.jsonl"):
+        done |= {json.loads(x)["company_domain"] for x in open(f)}
+    if shard:
+        i, n = map(int, shard.split("/"))
+        doms = [d for k, d in enumerate(sorted(doms)) if k % n == i]
     todo = [d for d in doms if d not in done]
     print(f"scan_to_cache: {len(todo)} domains", file=sys.stderr)
     n = 0
@@ -139,10 +143,10 @@ def scan_to_cache() -> None:
 
 
 def load_cache(conn) -> int:
-    p = pdb.ROOT / ".cache" / "site_scan.jsonl"
     live = {r[0] for r in conn.execute("SELECT company_domain FROM companies")}
     n = 0
-    for x in open(p):
+    lines = [x for f in sorted((pdb.ROOT / ".cache").glob("site_scan*.jsonl")) for x in open(f)]
+    for x in lines:
         row = json.loads(x)
         if row["company_domain"] not in live:
             continue

@@ -4,11 +4,14 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 log() { echo "[$(date -u +%H:%M:%S)] $*"; }
-log "site scan (new domains)";            python3 scripts/site_scan.py --to-cache
+log "site scan (new domains, 4 shards)";
+for i in 0 1 2 3; do python3 scripts/site_scan.py --to-cache --shard=$i/4 & done; wait
 log "site scan load";                     python3 scripts/site_scan.py --load
 log "ATS second pass (homepage slugs)";   python3 scripts/ats_sweep.py --providers ashby,greenhouse,lever
 log "ATS ingest";                         python3 scripts/universe_ingest.py ats
-log "site scan (domains added by ATS)";   python3 scripts/site_scan.py --to-cache && python3 scripts/site_scan.py --load
+log "site scan (domains added by ATS)";
+for i in 0 1 2 3; do python3 scripts/site_scan.py --to-cache --shard=$i/4 & done; wait
+python3 scripts/site_scan.py --load
 log "GitHub orgs (H8)";                   python3 scripts/signals_collect.py h8 "${EXT:-}"
 log "gate: before tags";                  python3 scripts/gate_check.py --fingerprint .cache/fp_before_tags.json
 log "tag H3x-H10";                        python3 scripts/tag_signals.py
