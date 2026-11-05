@@ -88,7 +88,7 @@ def dns(domain: str, typ: str) -> list[str]:
 
 def scan(domain: str) -> dict:
     p = rd.page(domain)
-    raw = p.get("raw") or ""
+    raw = (p.get("raw") or "")[:400_000]  # head + body start carries scripts, meta, nav/footer links
     tech = sorted(k for k, rx in TECH_RE.items() if rx.search(raw))
     gh = []
     for m in GH.finditer(raw):

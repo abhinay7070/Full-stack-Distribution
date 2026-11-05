@@ -102,7 +102,7 @@ def page(domain: str) -> dict:
         r2 = hf.fetch(f"https://www.{domain}/", timeout=10, retries=0, max_bytes=1_500_000)
         if 0 < r2.status < 400:
             r = r2
-    t = r.text or ""
+    t = (r.text or "")[:600_000]
     title = " ".join(re.findall(r"<title[^>]*>(.*?)</title>", t, re.S | re.I)[:1])
     og = " ".join(re.findall(r'<meta[^>]+property=["\']og:(?:site_name|title)["\'][^>]+content=["\']([^"\']+)', t, re.I))
     desc = " ".join(re.findall(r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']+)', t, re.I))
