@@ -274,6 +274,10 @@ def ingest_ats(conn) -> dict:
         if dom:
             mapped[key] = dom
         else:
+            n_open = len({(j.get("title") or "").lower() for j in b["jobs"]})
+            if n_open > 40 or LATE.search(txt) or not EARLY.search(txt):
+                b["_skip"] = "no_early_evidence_or_large"  # could not pass the admission gate: do not resolve
+                continue
             nm = b.get("company_name") or b["slug"].replace("-", " ").replace("_", " ")
             hosts = [pdb.normalize_domain(u) for u in re.findall(r"https?://[^\s\"'<>)]+", txt)]
             hosts = [h for h in dict.fromkeys(hosts) if h and "ashbyhq" not in h and "greenhouse" not in h
