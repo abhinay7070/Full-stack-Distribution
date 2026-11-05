@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-05T06:00:08Z",
+ "run_at": "2026-11-05T06:44:23Z",
  "filings": 92432,
  "rejected": 85535,
  "reject_reasons": {
@@ -19,7 +19,9 @@
  },
  "issuers_icp": 5355,
  "resolution": {
-  "not_run": 5355,
-  "resolved": 0
+  "resolved": 3524,
+  "unresolved": 1097,
+  "no_dns_candidate": 516,
+  "ambiguous": 218
  }
 }
