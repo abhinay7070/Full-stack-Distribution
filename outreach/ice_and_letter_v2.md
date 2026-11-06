@@ -33,7 +33,7 @@ The fix was bartenders.
 
 Tudor went to the bars with a deal: he'd supply the ice, and they'd sell cold drinks at the same price as warm ones.
 
-People tried one. Then they didn't want warm ones again. The bars ordered more. Then everyone else did.
+People tried one. Then they didn't want warm ones again. Soon the bars wanted more, and so did everyone else.
 
 He never convinced the city. He convinced a few bartenders.
 
@@ -81,7 +81,7 @@ I applied for your GTM Engineer role. If you've read this far, you've watched me
 
 The faster test: three weeks on Bluejay's outbound, US hours (9am-2pm ET). You pay at the end, only if it worked.
 
-Week 1: your bartenders, by name. My guess is agencies that build voice agents [CONFIRM: name 3]. Their clients all ask how they test them.
+Week 1: your bartenders, by name. My guess is agencies that build voice agents [CONFIRM: name 3]. Every client asks them how to test the agent.
 Week 2: first sequence live.
 Week 3: meetings on your calendar.
 
