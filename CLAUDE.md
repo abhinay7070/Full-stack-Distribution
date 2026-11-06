@@ -82,3 +82,7 @@ Gate: PASS. Workbook recalculated, 0 formula errors.
    `formd_collect.py` then uses EFTS only after the last bulk quarter.
 10. **Precision review**: run `gate_check.py --sample 40` and eyeball `resolution_audit_sample` in
     `raw_sources/gate_report.json`. Medium-confidence domain matches (~3,000) are tier-capped at C until verified.
+
+## Parked tasks (start only on the owner's keyword)
+- **"to-do stories"**: build a verified real-story library for outreach. Full spec in `TODO_STORIES.md`.
+  When the owner says "to-do stories", read that file and start with the 2-year pilot.
