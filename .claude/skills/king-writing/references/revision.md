@@ -37,6 +37,14 @@ King's own rhythm: **two drafts and a polish.** Writers vary; Vonnegut perfected
 - King is a natural "putter-inner". The formula is the counterweight. Examples: 4,000 → 3,600 words; 350,000 → 315,000 (300,000 if possible).
 - Judicious cutting has an immediate effect. You'll feel it, and your reader will too.
 
+### Guardrail: the formula serves the story, never the reverse
+- The 10% applies to a **first draft** (door shut, puffy). A text that was already revised may have little left to cut. Then cut less, and say why.
+- Every cut must remove something that is not the story (repetition, the obvious, stage directions, fear words, explaining that does the reader's thinking).
+  **Never cut** a true qualifier ("almost nobody" is not "nobody"), a load-bearing detail (the blue 8), the writer's voice line, or texture that makes a person real.
+- Every change is either **style** (same meaning, better form) or **content** (new fact, removed fact, changed claim). Style changes are the skill's job.
+  Content changes need a reason the writer can veto, and every new fact gets a [CONFIRM] tag until it's checked.
+- If a cut changes what the text claims, revert it.
+
 ## 4. Edit taxonomy (reverse-engineered from King's annotated "1408" revision)
 Tag each change in your change log with one of these:
 

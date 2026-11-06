@@ -82,6 +82,30 @@ def paragraphs(text):
     return [p for p in re.split(r"\n\s*\n", text.strip()) if p.strip()]
 
 
+STOP = set("a an the is are was were be been am to of and or but in on at for with he she it they we you i his her its "
+           "their our your my me him them this that these those had has have do did not no so as by from up out "
+           "would could will can just then there here what who all every".split())
+
+
+def _stem(w):
+    for suf in ("ing", "ed", "es", "s", "d"):
+        if w.endswith(suf) and len(w) - len(suf) >= 4:
+            return w[: -len(suf)]
+    return w
+
+
+def repeated_phrases(text, n=3):
+    """Near-repeats: the same n content words (stemmed, stop words dropped) used 2+ times.
+    Catches 'convince a whole city' ~ 'never convinced the city' style echoes.
+    Reported for review, not penalised: a deliberate callback (voice device V10) is fine."""
+    raw = re.findall(r"[a-z0-9']+", text.lower())
+    toks = [_stem(w) for w in raw if w not in STOP and w not in {"rohan", "abhinay", "regards", "thanks"}]
+    seen = {}
+    for i in range(len(toks) - n + 1):
+        seen.setdefault(tuple(toks[i:i + n]), []).append(i)
+    return sorted(" ".join(g) for g, pos in seen.items() if len(pos) > 1 and pos[-1] - pos[0] > n)[:15]
+
+
 def analyse(text):
     norm = text.replace("’", "'").replace("“", '"').replace("”", '"')
     low = norm.lower()
@@ -121,6 +145,8 @@ def analyse(text):
         "contractions_per_1000": round(1000 * len(re.findall(r"\w'(s|t|re|ll|ve|d|m)\b", norm)) / W, 1),
         "you_per_1000": round(1000 * len(re.findall(r"\byou(r|rs)?\b", low)) / W, 1),
         "pronoun_openers": sum(bool(re.match(r"(it|this|that|they)\b", s.strip().lower())) for s in sents),
+        "placeholders": re.findall(r"\{[^{}\n]{1,60}\}|\[(?:CONFIRM|TODO|TK|NAME|COMPANY|X)[^\]\n]{0,60}\]|\bTODO\b|\bXX+\b", norm),
+        "repeats": repeated_phrases(norm),
     }
 
 
@@ -173,6 +199,13 @@ def score(a, mode="fiction"):
     # 10 talk-like register (contractions)
     check("sounds like talk", 6, min(1, a["contractions_per_1000"] / 12),
           "Use contractions (it's, don't, I'd). Writing is seduction; good talk is part of it.")
+    if a["placeholders"]:  # unfilled template or unverified claim = never ship
+        findings.append({"check": "PLACEHOLDERS (score capped at 50)", "weight": 0, "earned": 0,
+                         "fix": f"Fill or verify before sending: {a['placeholders']}"})
+        pts = min(pts, 50)
+    if a["repeats"]:
+        findings.append({"check": "repeated phrases (review, no penalty)", "weight": 0, "earned": 0,
+                         "fix": f"Keep only deliberate callbacks: {a['repeats']}"})
     return round(pts), findings
 
 

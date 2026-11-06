@@ -62,6 +62,7 @@ That makes the method visible, and the user learns by watching it, the way King 
 - For REVISE: a short **change log** in the "1408" style: a numbered list, each item gives the cut or change and its reason in a few words (see `references/revision.md` §Edit taxonomy).
 - Lint score before and after, if a shell is available. If it isn't, run the rubric by hand and say so.
 - Never pad the reply with praise of the user's draft. Say what's wrong, the way an Ideal Reader would.
+- Label every change as **style** (same meaning) or **content** (fact or claim changed). Tag every new, unverified fact [CONFIRM]. The lint script caps the score at 50 until the tags are resolved.
 
 ## Honesty about limits
 - King writes fiction. `business.md` is an **adaptation**: it applies his rules to short persuasion. The adaptation is not his.

@@ -18,7 +18,7 @@
 | Paragraph as map of intent | Mobile: 1-3 lines per paragraph. White space signals an easy read. A one-line paragraph carries the hook. |
 | Back story in the back | Your background goes in one line, or a link. Lead with *their* story. |
 | Research is spice | Use research to make one sentence true and specific, not to show off. |
-| 2nd draft = 1st − 10% | For short-form, **cut 30-50%**. A 180-word first draft becomes 90-110 words. |
+| 2nd draft = 1st − 10% | A raw short-form first draft usually cuts 30-50% (180 → 90-110 words). An already-tight draft may cut under 10%. Never cut meaning to hit the number (see revision.md §Guardrail). |
 | Door shut, door open | Write 5 versions fast, rest an hour, then cut. Show the best to one trusted reader. |
 | Kill your darlings | Your cleverest line is the first suspect. |
 | Tell the truth | Every claim must be verifiable. One false detail kills trust, and that fault can't be repaired. |
