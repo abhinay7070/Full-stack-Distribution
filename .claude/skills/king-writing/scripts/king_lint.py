@@ -145,7 +145,7 @@ def analyse(text):
         "contractions_per_1000": round(1000 * len(re.findall(r"\w'(s|t|re|ll|ve|d|m)\b", norm)) / W, 1),
         "you_per_1000": round(1000 * len(re.findall(r"\byou(r|rs)?\b", low)) / W, 1),
         "pronoun_openers": sum(bool(re.match(r"(it|this|that|they)\b", s.strip().lower())) for s in sents),
-        "placeholders": re.findall(r"\{[^{}\n]{1,60}\}|\[(?:CONFIRM|TODO|TK|NAME|COMPANY|X)[^\]\n]{0,60}\]|\bTODO\b|\bXX+\b", norm),
+        "placeholders": re.findall(r"\{[^{}\n]{1,60}\}|\[(?:CONFIRM|TODO|TK|NAME|COMPANY|X)[^\]\n]{0,60}\]|\[[^\]\n]{0,80}(?::|\blink\b|\.\.\.|…)[^\]\n]{0,80}\]|\bTODO\b|\bXX+\b", norm),
         "repeats": repeated_phrases(norm),
     }
 

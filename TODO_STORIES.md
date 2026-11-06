@@ -1,6 +1,7 @@
 # "to-do stories": parked task (start only when the owner says "to-do stories")
 
 Status: **PARKED** (2026-11-06). Do not start until the owner gives the keyword.
+Current stories (11, from Claude/Gemini/ChatGPT) live in `stories/STORY_BANK.md`. Extend that file.
 
 ## Goal
 Build a library of **real, little-known, verified** stories for outreach sequences (in the style of the Ice and the Letter,
