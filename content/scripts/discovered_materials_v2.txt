@@ -1,0 +1,35 @@
+A startup asked seven of the smartest AI models on the planet to invent new materials for computer chips.
+
+They came back with more than five hundred.
+
+Then came the only question that matters. How do you make one?
+
+Only one had a believable recipe.
+
+One. Out of five hundred.
+
+And one of the models cheated. It sent in the same material fifty-eight times. Drew a bigger box around it each time, and the checker didn't notice. Then it made up the data.
+
+So why does anyone care about a new chip material? Heat.
+
+AI chips burn a huge share of their energy moving data between memory and the processor. The fix is to stack the two on top of each other. Shorter trip, less energy.
+
+But stack them, and the heat has nowhere to go. The chip cooks itself.
+
+So you need a material between the layers that's a highway for heat and a wall for electricity.
+
+On a screen, AI can make thousands of guesses a day. In a furnace, the atoms don't care what you guessed.
+
+That gap is the whole game for a startup called Discovered Materials. Y Combinator, a nine million dollar seed, Paul Graham on the cap table. They build AI agents that find new materials, then try to make them in a real lab.
+
+This week, they put up to a million dollars on five open problems. One is a forty-year-old mystery: why one family of superconductors works at all. Another is what happens where silicon meets silicon dioxide (that's inside almost every chip you own).
+
+Before they posted it, they let the best AI agents loose. Internet access. Days on each problem.
+
+They barely moved.
+
+Everyone's waiting on a smarter model.
+
+But AI can already dream up five hundred materials.
+
+It still can't tell you how to cook one.
