@@ -1,0 +1,49 @@
+duty_id,duty,pct_founding,pct_non_founding,lift,z
+L1,"Define ICP, segments and personas",15.2,11.8,1.29,2.2
+L2,Talk to customers / voice of customer research,11.1,7.6,1.46,2.7
+L3,"Positioning, messaging and narrative",34.6,27.1,1.28,3.6
+L4,Competitive and market intelligence,11.9,18.2,0.66,-3.5
+L5,Become a product expert / feed product team,12.3,14.7,0.84,-1.4
+D1,Own GTM / growth strategy and the plan,30.0,19.7,1.52,5.4
+D2,Build the repeatable playbook from 0 to 1,55.9,24.8,2.25,14.7
+D3,Run experiments and growth tests,21.1,10.8,1.95,6.8
+D4,Choose and open new channels,8.7,5.2,1.66,3.2
+D5,"Forecast, set targets, allocate budget",16.4,21.9,0.75,-2.8
+F1,Prospect and build target account / lead lists,32.8,31.1,1.05,0.8
+F2,Data sourcing and enrichment,7.9,4.9,1.61,2.9
+F3,"Buying signals, intent and triggers (why now)",12.3,8.6,1.44,2.8
+F4,Account research and account-based targeting,8.3,8.1,1.03,0.2
+F5,"Lead scoring, routing and inbound triage",6.1,6.0,1.01,0.1
+F6,Generate pipeline / top-of-funnel demand (outcome),27.5,21.3,1.29,3.2
+R1,Run outbound campaigns and sequences,43.9,28.3,1.55,7.3
+R2,Write copy and personalise messages,9.7,9.1,1.06,0.4
+R3,Cold calls and LinkedIn / social selling,8.3,5.8,1.44,2.3
+R4,Email deliverability and sending infrastructure,1.8,0.8,2.25,2.3
+R5,"Content marketing, SEO and case studies",14.2,12.6,1.12,1.0
+R6,Paid acquisition,6.7,6.2,1.08,0.4
+R7,"Events, conferences and community",31.8,30.0,1.06,0.8
+R8,"Lifecycle, nurture and email marketing",11.5,12.0,0.96,-0.3
+R9,"Partnerships, channel and referral programs",25.5,24.8,1.03,0.3
+R10,Founder-led selling support / founder brand,14.2,13.4,1.05,0.5
+B1,"Respond to replies and inbound, follow up",12.3,8.9,1.39,2.6
+B2,Qualify prospects (discovery),28.1,24.0,1.17,2.0
+B3,Book meetings and demos,4.9,3.9,1.24,1.0
+B4,Handle objections,8.3,5.6,1.49,2.5
+B5,Hand off qualified opportunities to AE / founder,6.1,9.1,0.67,-2.3
+C1,Run demos and sales presentations,24.1,17.1,1.41,3.9
+C2,Negotiate and close deals / carry quota,32.6,29.4,1.11,1.5
+C3,Manage the pipeline and deal flow,24.5,21.9,1.12,1.3
+C4,"Pricing, proposals, RFPs and procurement",17.2,16.0,1.08,0.7
+P1,Onboard and implement customers,5.9,11.6,0.5,-3.9
+P2,"Retain, expand and upsell accounts",23.3,23.6,0.99,-0.1
+M1,"Track metrics, dashboards and reporting",35.8,43.3,0.83,-3.2
+M2,Optimise funnel and conversion rates,24.7,26.3,0.94,-0.8
+M3,Feed learnings back to founders / product / sales,22.1,8.5,2.59,9.7
+S1,Own the CRM and data hygiene,16.2,23.0,0.71,-3.4
+S2,Automate workflows and integrate tools,35.2,35.2,1.0,0.0
+S3,"Build internal tools, scripts and AI agents",18.6,15.4,1.21,1.9
+S4,Select and own the GTM tech stack,6.3,6.5,0.97,-0.2
+S5,Document processes and playbooks,7.3,11.5,0.63,-2.8
+S6,Enable and train the team,10.3,16.7,0.62,-3.7
+O1,Hire and manage a team,2.0,2.8,0.71,-1.1
+O2,Represent the company externally / exec presence,9.3,10.9,0.86,-1.1

@@ -23,6 +23,7 @@ with **no silent omissions**: every record that is dropped is logged with a reas
 | `raw_sources/` | Unfiltered raw payloads per hypothesis (gzip) + run reports |
 | `sublists/` | Per-hypothesis CSVs, rejected / pool / unresolved lists, `master_priority.csv` |
 | `master/gtm_master.xlsx` | The workbook (Master, Dashboard, H0-H10 tabs, Contacts, Signals, Open_Roles, Funding_Events, Unresolved_TAM, Outside_SAM, Sources, Outreach_Log, Data_Dictionary) |
+| `research/gtm_role_scope/` | Role-scope research for the 8-o agent: 6,183 full GTM postings, extracted lines, stats, and `SCOPE.md` (the unified agent scope). Scripts: `role_corpus_collect.py` -> `role_scope_analyze.py` -> `role_scope_synthesize.py`; taxonomy in `role_taxonomy.py` |
 | `.cache/` | gitignored: HTTP cache, parsed intermediates. Deleting it only costs re-fetch time |
 
 Hypotheses: H0 universe (weight 0) · H1 hiring GTM · H2 fresh capital · H3 technical founders · H4 launch decay ·

@@ -1,0 +1,301 @@
+a,b,a_label,b_label,both,phi
+F1,R1,Prospect and build target account / lead lists,Run outbound campaigns and sequences,505,0.43
+F1,B2,Prospect and build target account / lead lists,Qualify prospects (discovery),417,0.407
+F1,R3,Prospect and build target account / lead lists,Cold calls and LinkedIn / social selling,205,0.364
+R1,R3,Run outbound campaigns and sequences,Cold calls and LinkedIn / social selling,222,0.359
+M1,M2,"Track metrics, dashboards and reporting",Optimise funnel and conversion rates,440,0.345
+R1,B2,Run outbound campaigns and sequences,Qualify prospects (discovery),433,0.333
+F2,S1,Data sourcing and enrichment,Own the CRM and data hygiene,146,0.329
+F1,F6,Prospect and build target account / lead lists,Generate pipeline / top-of-funnel demand (outcome),321,0.315
+B2,S1,Qualify prospects (discovery),Own the CRM and data hygiene,308,0.31
+C2,C4,Negotiate and close deals / carry quota,"Pricing, proposals, RFPs and procurement",112,0.307
+D5,R6,"Forecast, set targets, allocate budget",Paid acquisition,99,0.302
+F6,R1,Generate pipeline / top-of-funnel demand (outcome),Run outbound campaigns and sequences,352,0.301
+R6,M2,Paid acquisition,Optimise funnel and conversion rates,144,0.301
+R5,R6,"Content marketing, SEO and case studies",Paid acquisition,76,0.3
+L3,B2,"Positioning, messaging and narrative",Qualify prospects (discovery),318,0.299
+L1,F4,"Define ICP, segments and personas",Account research and account-based targeting,102,0.297
+R3,B2,Cold calls and LinkedIn / social selling,Qualify prospects (discovery),173,0.29
+D3,M2,Run experiments and growth tests,Optimise funnel and conversion rates,253,0.289
+C2,C3,Negotiate and close deals / carry quota,Manage the pipeline and deal flow,139,0.289
+L3,F1,"Positioning, messaging and narrative",Prospect and build target account / lead lists,336,0.288
+F6,B2,Generate pipeline / top-of-funnel demand (outcome),Qualify prospects (discovery),290,0.286
+D3,R6,Run experiments and growth tests,Paid acquisition,104,0.281
+S2,S3,Automate workflows and integrate tools,"Build internal tools, scripts and AI agents",214,0.281
+F2,S2,Data sourcing and enrichment,Automate workflows and integrate tools,146,0.273
+F1,S1,Prospect and build target account / lead lists,Own the CRM and data hygiene,313,0.267
+R6,R10,Paid acquisition,Founder-led selling support / founder brand,76,0.267
+L1,L3,"Define ICP, segments and personas","Positioning, messaging and narrative",191,0.266
+R1,S1,Run outbound campaigns and sequences,Own the CRM and data hygiene,350,0.266
+M1,S2,"Track metrics, dashboards and reporting",Automate workflows and integrate tools,389,0.263
+L1,R2,"Define ICP, segments and personas",Write copy and personalise messages,104,0.26
+R1,B1,Run outbound campaigns and sequences,"Respond to replies and inbound, follow up",180,0.26
+L1,R1,"Define ICP, segments and personas",Run outbound campaigns and sequences,243,0.258
+L3,R1,"Positioning, messaging and narrative",Run outbound campaigns and sequences,364,0.258
+D3,D4,Run experiments and growth tests,Choose and open new channels,104,0.257
+F1,B1,Prospect and build target account / lead lists,"Respond to replies and inbound, follow up",162,0.255
+F1,B3,Prospect and build target account / lead lists,Book meetings and demos,120,0.255
+F2,S4,Data sourcing and enrichment,Select and own the GTM tech stack,59,0.253
+C3,C4,Manage the pipeline and deal flow,"Pricing, proposals, RFPs and procurement",87,0.25
+L1,B2,"Define ICP, segments and personas",Qualify prospects (discovery),202,0.248
+F5,S1,"Lead scoring, routing and inbound triage",Own the CRM and data hygiene,111,0.247
+D4,R6,Choose and open new channels,Paid acquisition,60,0.241
+R6,M1,Paid acquisition,"Track metrics, dashboards and reporting",145,0.241
+F4,R2,Account research and account-based targeting,Write copy and personalise messages,71,0.24
+B2,B5,Qualify prospects (discovery),Hand off qualified opportunities to AE / founder,138,0.237
+R3,B3,Cold calls and LinkedIn / social selling,Book meetings and demos,61,0.236
+R7,R9,"Events, conferences and community","Partnerships, channel and referral programs",164,0.235
+R1,B3,Run outbound campaigns and sequences,Book meetings and demos,126,0.233
+D1,C3,Own GTM / growth strategy and the plan,Manage the pipeline and deal flow,134,0.229
+F3,F4,"Buying signals, intent and triggers (why now)",Account research and account-based targeting,70,0.226
+F4,B1,Account research and account-based targeting,"Respond to replies and inbound, follow up",67,0.225
+S1,S4,Own the CRM and data hygiene,Select and own the GTM tech stack,98,0.224
+R3,B4,Cold calls and LinkedIn / social selling,Handle objections,53,0.222
+L1,F3,"Define ICP, segments and personas","Buying signals, intent and triggers (why now)",97,0.218
+D4,M2,Choose and open new channels,Optimise funnel and conversion rates,130,0.217
+D5,M1,"Forecast, set targets, allocate budget","Track metrics, dashboards and reporting",230,0.212
+F1,B5,Prospect and build target account / lead lists,Hand off qualified opportunities to AE / founder,140,0.212
+B5,S1,Hand off qualified opportunities to AE / founder,Own the CRM and data hygiene,116,0.212
+B1,B2,"Respond to replies and inbound, follow up",Qualify prospects (discovery),140,0.209
+S2,S4,Automate workflows and integrate tools,Select and own the GTM tech stack,105,0.209
+D5,M2,"Forecast, set targets, allocate budget",Optimise funnel and conversion rates,199,0.208
+M1,S3,"Track metrics, dashboards and reporting","Build internal tools, scripts and AI agents",227,0.206
+L3,F4,"Positioning, messaging and narrative",Account research and account-based targeting,116,0.205
+R5,R7,"Content marketing, SEO and case studies","Events, conferences and community",117,0.205
+R5,R10,"Content marketing, SEO and case studies",Founder-led selling support / founder brand,75,0.205
+D2,M3,Build the repeatable playbook from 0 to 1,Feed learnings back to founders / product / sales,120,0.204
+F2,R2,Data sourcing and enrichment,Write copy and personalise messages,66,0.204
+F3,R2,"Buying signals, intent and triggers (why now)",Write copy and personalise messages,73,0.204
+F1,F4,Prospect and build target account / lead lists,Account research and account-based targeting,133,0.2
+R5,M1,"Content marketing, SEO and case studies","Track metrics, dashboards and reporting",160,0.2
+B2,B3,Qualify prospects (discovery),Book meetings and demos,101,0.2
+L3,B4,"Positioning, messaging and narrative",Handle objections,83,0.199
+L3,R2,"Positioning, messaging and narrative",Write copy and personalise messages,128,0.198
+F4,R7,Account research and account-based targeting,"Events, conferences and community",105,0.198
+F6,R3,Generate pipeline / top-of-funnel demand (outcome),Cold calls and LinkedIn / social selling,125,0.198
+R5,M2,"Content marketing, SEO and case studies",Optimise funnel and conversion rates,140,0.198
+D4,R5,Choose and open new channels,"Content marketing, SEO and case studies",61,0.197
+F2,S3,Data sourcing and enrichment,"Build internal tools, scripts and AI agents",84,0.195
+F4,B5,Account research and account-based targeting,Hand off qualified opportunities to AE / founder,58,0.195
+R3,S1,Cold calls and LinkedIn / social selling,Own the CRM and data hygiene,128,0.195
+L1,S1,"Define ICP, segments and personas",Own the CRM and data hygiene,161,0.194
+C1,C3,Run demos and sales presentations,Manage the pipeline and deal flow,101,0.194
+F4,B2,Account research and account-based targeting,Qualify prospects (discovery),123,0.193
+R1,R2,Run outbound campaigns and sequences,Write copy and personalise messages,164,0.192
+R5,R8,"Content marketing, SEO and case studies","Lifecycle, nurture and email marketing",70,0.192
+L3,F6,"Positioning, messaging and narrative",Generate pipeline / top-of-funnel demand (outcome),231,0.191
+B4,B5,Handle objections,Hand off qualified opportunities to AE / founder,43,0.191
+L2,C4,Talk to customers / voice of customer research,"Pricing, proposals, RFPs and procurement",39,0.19
+D1,D2,Own GTM / growth strategy and the plan,Build the repeatable playbook from 0 to 1,204,0.19
+F2,F3,Data sourcing and enrichment,"Buying signals, intent and triggers (why now)",65,0.19
+R8,M2,"Lifecycle, nurture and email marketing",Optimise funnel and conversion rates,146,0.189
+B1,B3,"Respond to replies and inbound, follow up",Book meetings and demos,50,0.189
+B1,S1,"Respond to replies and inbound, follow up",Own the CRM and data hygiene,118,0.189
+B3,S1,Book meetings and demos,Own the CRM and data hygiene,87,0.189
+L1,F1,"Define ICP, segments and personas",Prospect and build target account / lead lists,196,0.188
+D3,R5,Run experiments and growth tests,"Content marketing, SEO and case studies",98,0.188
+C1,C4,Run demos and sales presentations,"Pricing, proposals, RFPs and procurement",76,0.188
+F4,R1,Account research and account-based targeting,Run outbound campaigns and sequences,144,0.187
+L3,R3,"Positioning, messaging and narrative",Cold calls and LinkedIn / social selling,131,0.186
+R6,R8,Paid acquisition,"Lifecycle, nurture and email marketing",59,0.186
+D3,M1,Run experiments and growth tests,"Track metrics, dashboards and reporting",251,0.185
+L1,F6,"Define ICP, segments and personas",Generate pipeline / top-of-funnel demand (outcome),153,0.184
+R5,R9,"Content marketing, SEO and case studies","Partnerships, channel and referral programs",84,0.184
+F4,F6,Account research and account-based targeting,Generate pipeline / top-of-funnel demand (outcome),103,0.183
+C1,C2,Run demos and sales presentations,Negotiate and close deals / carry quota,114,0.182
+R7,B1,"Events, conferences and community","Respond to replies and inbound, follow up",111,0.181
+L1,F5,"Define ICP, segments and personas","Lead scoring, routing and inbound triage",70,0.18
+F2,M1,Data sourcing and enrichment,"Track metrics, dashboards and reporting",144,0.18
+F1,B4,Prospect and build target account / lead lists,Handle objections,91,0.179
+F5,B2,"Lead scoring, routing and inbound triage",Qualify prospects (discovery),108,0.179
+P2,M1,"Retain, expand and upsell accounts","Track metrics, dashboards and reporting",191,0.179
+F3,S1,"Buying signals, intent and triggers (why now)",Own the CRM and data hygiene,121,0.178
+F1,C1,Prospect and build target account / lead lists,Run demos and sales presentations,181,0.177
+F5,B5,"Lead scoring, routing and inbound triage",Hand off qualified opportunities to AE / founder,50,0.176
+R8,M1,"Lifecycle, nurture and email marketing","Track metrics, dashboards and reporting",163,0.175
+D5,S1,"Forecast, set targets, allocate budget",Own the CRM and data hygiene,159,0.173
+R1,B4,Run outbound campaigns and sequences,Handle objections,99,0.173
+S3,S4,"Build internal tools, scripts and AI agents",Select and own the GTM tech stack,65,0.173
+B2,B4,Qualify prospects (discovery),Handle objections,84,0.172
+D5,S2,"Forecast, set targets, allocate budget",Automate workflows and integrate tools,179,0.171
+F3,F5,"Buying signals, intent and triggers (why now)","Lead scoring, routing and inbound triage",54,0.168
+S1,S2,Own the CRM and data hygiene,Automate workflows and integrate tools,250,0.168
+L3,S1,"Positioning, messaging and narrative",Own the CRM and data hygiene,230,0.167
+R2,B2,Write copy and personalise messages,Qualify prospects (discovery),131,0.167
+D3,S3,Run experiments and growth tests,"Build internal tools, scripts and AI agents",128,0.166
+F3,S4,"Buying signals, intent and triggers (why now)",Select and own the GTM tech stack,50,0.166
+D3,F3,Run experiments and growth tests,"Buying signals, intent and triggers (why now)",97,0.164
+P2,M2,"Retain, expand and upsell accounts",Optimise funnel and conversion rates,161,0.163
+R6,R9,Paid acquisition,"Partnerships, channel and referral programs",66,0.156
+F4,S1,Account research and account-based targeting,Own the CRM and data hygiene,99,0.155
+D3,R10,Run experiments and growth tests,Founder-led selling support / founder brand,99,0.154
+R2,S1,Write copy and personalise messages,Own the CRM and data hygiene,111,0.154
+R9,P2,"Partnerships, channel and referral programs","Retain, expand and upsell accounts",94,0.154
+R2,R3,Write copy and personalise messages,Cold calls and LinkedIn / social selling,64,0.153
+L3,B1,"Positioning, messaging and narrative","Respond to replies and inbound, follow up",113,0.151
+F2,F5,Data sourcing and enrichment,"Lead scoring, routing and inbound triage",46,0.151
+L3,B3,"Positioning, messaging and narrative",Book meetings and demos,82,0.15
+R1,B5,Run outbound campaigns and sequences,Hand off qualified opportunities to AE / founder,138,0.15
+L1,B4,"Define ICP, segments and personas",Handle objections,51,0.148
+L1,B5,"Define ICP, segments and personas",Hand off qualified opportunities to AE / founder,72,0.148
+D3,R2,Run experiments and growth tests,Write copy and personalise messages,90,0.147
+B1,B5,"Respond to replies and inbound, follow up",Hand off qualified opportunities to AE / founder,54,0.147
+M2,S3,Optimise funnel and conversion rates,"Build internal tools, scripts and AI agents",178,0.147
+F3,S2,"Buying signals, intent and triggers (why now)",Automate workflows and integrate tools,127,0.146
+L3,D3,"Positioning, messaging and narrative",Run experiments and growth tests,179,0.145
+D1,F6,Own GTM / growth strategy and the plan,Generate pipeline / top-of-funnel demand (outcome),168,0.145
+R5,S3,"Content marketing, SEO and case studies","Build internal tools, scripts and AI agents",78,0.145
+M1,S5,"Track metrics, dashboards and reporting",Document processes and playbooks,102,0.145
+L1,D1,"Define ICP, segments and personas",Own GTM / growth strategy and the plan,121,0.144
+R3,B1,Cold calls and LinkedIn / social selling,"Respond to replies and inbound, follow up",61,0.144
+L3,D2,"Positioning, messaging and narrative",Build the repeatable playbook from 0 to 1,241,0.143
+L4,O2,Competitive and market intelligence,Represent the company externally / exec presence,35,0.142
+R8,R9,"Lifecycle, nurture and email marketing","Partnerships, channel and referral programs",79,0.142
+F1,R2,Prospect and build target account / lead lists,Write copy and personalise messages,133,0.141
+L4,F1,Competitive and market intelligence,Prospect and build target account / lead lists,146,0.14
+L4,S5,Competitive and market intelligence,Document processes and playbooks,46,0.14
+F1,C3,Prospect and build target account / lead lists,Manage the pipeline and deal flow,164,0.14
+F6,R2,Generate pipeline / top-of-funnel demand (outcome),Write copy and personalise messages,104,0.14
+L1,B3,"Define ICP, segments and personas",Book meetings and demos,55,0.138
+R2,B1,Write copy and personalise messages,"Respond to replies and inbound, follow up",57,0.138
+R8,P2,"Lifecycle, nurture and email marketing","Retain, expand and upsell accounts",72,0.138
+D2,C2,Build the repeatable playbook from 0 to 1,Negotiate and close deals / carry quota,168,0.137
+F2,R1,Data sourcing and enrichment,Run outbound campaigns and sequences,135,0.137
+L3,D4,"Positioning, messaging and narrative",Choose and open new channels,97,0.136
+L4,B4,Competitive and market intelligence,Handle objections,41,0.136
+M1,S1,"Track metrics, dashboards and reporting",Own the CRM and data hygiene,292,0.134
+D1,M3,Own GTM / growth strategy and the plan,Feed learnings back to founders / product / sales,79,0.133
+D3,R8,Run experiments and growth tests,"Lifecycle, nurture and email marketing",90,0.133
+F3,M1,"Buying signals, intent and triggers (why now)","Track metrics, dashboards and reporting",149,0.133
+F5,R1,"Lead scoring, routing and inbound triage",Run outbound campaigns and sequences,116,0.133
+L1,D2,"Define ICP, segments and personas",Build the repeatable playbook from 0 to 1,154,0.132
+P2,S2,"Retain, expand and upsell accounts",Automate workflows and integrate tools,145,0.132
+M1,S4,"Track metrics, dashboards and reporting",Select and own the GTM tech stack,104,0.132
+D1,S4,Own GTM / growth strategy and the plan,Select and own the GTM tech stack,65,0.131
+D4,R2,Choose and open new channels,Write copy and personalise messages,50,0.131
+D5,R5,"Forecast, set targets, allocate budget","Content marketing, SEO and case studies",75,0.131
+F1,F5,Prospect and build target account / lead lists,"Lead scoring, routing and inbound triage",103,0.131
+L4,S6,Competitive and market intelligence,Enable and train the team,69,0.13
+F5,S4,"Lead scoring, routing and inbound triage",Select and own the GTM tech stack,35,0.13
+L1,D4,"Define ICP, segments and personas",Choose and open new channels,65,0.129
+L3,D1,"Positioning, messaging and narrative",Own GTM / growth strategy and the plan,177,0.128
+R9,M2,"Partnerships, channel and referral programs",Optimise funnel and conversion rates,165,0.128
+D4,R10,Choose and open new channels,Founder-led selling support / founder brand,53,0.127
+L3,S6,"Positioning, messaging and narrative",Enable and train the team,123,0.126
+F6,B3,Generate pipeline / top-of-funnel demand (outcome),Book meetings and demos,71,0.126
+R6,R7,Paid acquisition,"Events, conferences and community",81,0.126
+F3,B1,"Buying signals, intent and triggers (why now)","Respond to replies and inbound, follow up",56,0.125
+D1,R1,Own GTM / growth strategy and the plan,Run outbound campaigns and sequences,239,0.123
+F3,B5,"Buying signals, intent and triggers (why now)",Hand off qualified opportunities to AE / founder,52,0.123
+F3,P2,"Buying signals, intent and triggers (why now)","Retain, expand and upsell accounts",68,0.123
+P1,S2,Onboard and implement customers,Automate workflows and integrate tools,56,0.123
+D3,R9,Run experiments and growth tests,"Partnerships, channel and referral programs",111,0.122
+L3,L4,"Positioning, messaging and narrative",Competitive and market intelligence,118,0.121
+R9,M1,"Partnerships, channel and referral programs","Track metrics, dashboards and reporting",190,0.121
+B1,B4,"Respond to replies and inbound, follow up",Handle objections,35,0.121
+M2,S2,Optimise funnel and conversion rates,Automate workflows and integrate tools,281,0.121
+L4,B2,Competitive and market intelligence,Qualify prospects (discovery),130,0.12
+B5,S6,Hand off qualified opportunities to AE / founder,Enable and train the team,56,0.12
+D4,M1,Choose and open new channels,"Track metrics, dashboards and reporting",121,0.119
+D5,P2,"Forecast, set targets, allocate budget","Retain, expand and upsell accounts",89,0.119
+F2,M2,Data sourcing and enrichment,Optimise funnel and conversion rates,110,0.119
+C4,P2,"Pricing, proposals, RFPs and procurement","Retain, expand and upsell accounts",59,0.119
+F3,R8,"Buying signals, intent and triggers (why now)","Lifecycle, nurture and email marketing",58,0.118
+R3,B5,Cold calls and LinkedIn / social selling,Hand off qualified opportunities to AE / founder,52,0.118
+B5,C3,Hand off qualified opportunities to AE / founder,Manage the pipeline and deal flow,60,0.118
+L1,B1,"Define ICP, segments and personas","Respond to replies and inbound, follow up",70,0.117
+D3,R7,Run experiments and growth tests,"Events, conferences and community",153,0.117
+D4,R7,Choose and open new channels,"Events, conferences and community",84,0.117
+F6,C3,Generate pipeline / top-of-funnel demand (outcome),Manage the pipeline and deal flow,121,0.117
+F4,B3,Account research and account-based targeting,Book meetings and demos,35,0.116
+R8,S5,"Lifecycle, nurture and email marketing",Document processes and playbooks,40,0.116
+M2,S1,Optimise funnel and conversion rates,Own the CRM and data hygiene,242,0.116
+L1,F2,"Define ICP, segments and personas",Data sourcing and enrichment,65,0.115
+D1,R9,Own GTM / growth strategy and the plan,"Partnerships, channel and referral programs",111,0.115
+D5,S4,"Forecast, set targets, allocate budget",Select and own the GTM tech stack,54,0.115
+D5,S6,"Forecast, set targets, allocate budget",Enable and train the team,82,0.115
+F5,R8,"Lead scoring, routing and inbound triage","Lifecycle, nurture and email marketing",45,0.115
+R7,R8,"Events, conferences and community","Lifecycle, nurture and email marketing",100,0.115
+R10,M2,Founder-led selling support / founder brand,Optimise funnel and conversion rates,130,0.115
+L4,R3,Competitive and market intelligence,Cold calls and LinkedIn / social selling,61,0.113
+L4,R9,Competitive and market intelligence,"Partnerships, channel and referral programs",76,0.113
+F3,B2,"Buying signals, intent and triggers (why now)",Qualify prospects (discovery),120,0.113
+R10,M1,Founder-led selling support / founder brand,"Track metrics, dashboards and reporting",151,0.113
+L1,S6,"Define ICP, segments and personas",Enable and train the team,79,0.112
+F3,R1,"Buying signals, intent and triggers (why now)",Run outbound campaigns and sequences,146,0.112
+B4,S1,Handle objections,Own the CRM and data hygiene,62,0.112
+L1,M2,"Define ICP, segments and personas",Optimise funnel and conversion rates,162,0.111
+L2,M3,Talk to customers / voice of customer research,Feed learnings back to founders / product / sales,28,0.111
+B4,C1,Handle objections,Run demos and sales presentations,42,0.111
+F6,B1,Generate pipeline / top-of-funnel demand (outcome),"Respond to replies and inbound, follow up",94,0.11
+B3,B4,Book meetings and demos,Handle objections,25,0.11
+C3,S1,Manage the pipeline and deal flow,Own the CRM and data hygiene,123,0.11
+F4,R3,Account research and account-based targeting,Cold calls and LinkedIn / social selling,49,0.109
+L1,R8,"Define ICP, segments and personas","Lifecycle, nurture and email marketing",72,0.107
+D4,F3,Choose and open new channels,"Buying signals, intent and triggers (why now)",47,0.107
+D5,F2,"Forecast, set targets, allocate budget",Data sourcing and enrichment,65,0.107
+D5,R10,"Forecast, set targets, allocate budget",Founder-led selling support / founder brand,77,0.107
+L3,R5,"Positioning, messaging and narrative","Content marketing, SEO and case studies",101,0.106
+L3,R7,"Positioning, messaging and narrative","Events, conferences and community",197,0.106
+R2,R10,Write copy and personalise messages,Founder-led selling support / founder brand,56,0.106
+L2,C1,Talk to customers / voice of customer research,Run demos and sales presentations,37,0.105
+L3,B5,"Positioning, messaging and narrative",Hand off qualified opportunities to AE / founder,93,0.103
+L5,C4,Become a product expert / feed product team,"Pricing, proposals, RFPs and procurement",34,0.103
+D3,F4,Run experiments and growth tests,Account research and account-based targeting,70,0.103
+F3,M2,"Buying signals, intent and triggers (why now)",Optimise funnel and conversion rates,120,0.103
+F3,S3,"Buying signals, intent and triggers (why now)","Build internal tools, scripts and AI agents",72,0.103
+R1,S6,Run outbound campaigns and sequences,Enable and train the team,158,0.103
+D1,D4,Own GTM / growth strategy and the plan,Choose and open new channels,70,0.102
+D2,C3,Build the repeatable playbook from 0 to 1,Manage the pipeline and deal flow,131,0.102
+F4,R8,Account research and account-based targeting,"Lifecycle, nurture and email marketing",47,0.101
+S1,S6,Own the CRM and data hygiene,Enable and train the team,110,0.101
+F6,B5,Generate pipeline / top-of-funnel demand (outcome),Hand off qualified opportunities to AE / founder,85,0.1
+R2,R7,Write copy and personalise messages,"Events, conferences and community",92,0.1
+R2,S3,Write copy and personalise messages,"Build internal tools, scripts and AI agents",69,0.1
+L4,R5,Competitive and market intelligence,"Content marketing, SEO and case studies",54,0.099
+D1,D3,Own GTM / growth strategy and the plan,Run experiments and growth tests,127,0.099
+D4,R8,Choose and open new channels,"Lifecycle, nurture and email marketing",46,0.099
+D5,C3,"Forecast, set targets, allocate budget",Manage the pipeline and deal flow,85,0.099
+R8,S4,"Lifecycle, nurture and email marketing",Select and own the GTM tech stack,39,0.099
+B4,C3,Handle objections,Manage the pipeline and deal flow,39,0.099
+B4,S6,Handle objections,Enable and train the team,36,0.099
+R2,B3,Write copy and personalise messages,Book meetings and demos,36,0.098
+R2,B5,Write copy and personalise messages,Hand off qualified opportunities to AE / founder,46,0.098
+P1,P2,Onboard and implement customers,"Retain, expand and upsell accounts",30,0.098
+R1,R7,Run outbound campaigns and sequences,"Events, conferences and community",269,0.097
+L2,R10,Talk to customers / voice of customer research,Founder-led selling support / founder brand,31,0.096
+L5,C1,Become a product expert / feed product team,Run demos and sales presentations,45,0.096
+D3,M3,Run experiments and growth tests,Feed learnings back to founders / product / sales,69,0.096
+L3,M3,"Positioning, messaging and narrative",Feed learnings back to founders / product / sales,89,0.095
+R2,M2,Write copy and personalise messages,Optimise funnel and conversion rates,114,0.095
+R8,R10,"Lifecycle, nurture and email marketing",Founder-led selling support / founder brand,56,0.095
+R9,R10,"Partnerships, channel and referral programs",Founder-led selling support / founder brand,71,0.095
+R9,P1,"Partnerships, channel and referral programs",Onboard and implement customers,32,0.095
+L3,R10,"Positioning, messaging and narrative",Founder-led selling support / founder brand,109,0.094
+D1,D5,Own GTM / growth strategy and the plan,"Forecast, set targets, allocate budget",110,0.094
+F5,B1,"Lead scoring, routing and inbound triage","Respond to replies and inbound, follow up",39,0.094
+F5,S3,"Lead scoring, routing and inbound triage","Build internal tools, scripts and AI agents",54,0.094
+F6,M2,Generate pipeline / top-of-funnel demand (outcome),Optimise funnel and conversion rates,225,0.094
+D1,M2,Own GTM / growth strategy and the plan,Optimise funnel and conversion rates,189,0.093
+D5,F5,"Forecast, set targets, allocate budget","Lead scoring, routing and inbound triage",54,0.093
+D5,C2,"Forecast, set targets, allocate budget",Negotiate and close deals / carry quota,99,0.093
+F5,M2,"Lead scoring, routing and inbound triage",Optimise funnel and conversion rates,89,0.093
+S2,S5,Automate workflows and integrate tools,Document processes and playbooks,74,0.093
+D1,C2,Own GTM / growth strategy and the plan,Negotiate and close deals / carry quota,115,0.092
+R8,S2,"Lifecycle, nurture and email marketing",Automate workflows and integrate tools,113,0.092
+S2,S6,Automate workflows and integrate tools,Enable and train the team,123,0.092
+L1,R3,"Define ICP, segments and personas",Cold calls and LinkedIn / social selling,69,0.091
+L5,R9,Become a product expert / feed product team,"Partnerships, channel and referral programs",46,0.091
+F2,B5,Data sourcing and enrichment,Hand off qualified opportunities to AE / founder,41,0.091
+R1,R4,Run outbound campaigns and sequences,Email deliverability and sending infrastructure,27,0.091
+R3,S6,Cold calls and LinkedIn / social selling,Enable and train the team,58,0.091
+L5,R7,Become a product expert / feed product team,"Events, conferences and community",63,0.09
+D5,R8,"Forecast, set targets, allocate budget","Lifecycle, nurture and email marketing",70,0.09
+R2,S4,Write copy and personalise messages,Select and own the GTM tech stack,36,0.09
+L4,C4,Competitive and market intelligence,"Pricing, proposals, RFPs and procurement",48,0.089
+D5,S3,"Forecast, set targets, allocate budget","Build internal tools, scripts and AI agents",93,0.089
+D1,P2,Own GTM / growth strategy and the plan,"Retain, expand and upsell accounts",94,0.088
+D5,C4,"Forecast, set targets, allocate budget","Pricing, proposals, RFPs and procurement",60,0.088
+R7,O2,"Events, conferences and community",Represent the company externally / exec presence,44,0.088
+C2,P2,Negotiate and close deals / carry quota,"Retain, expand and upsell accounts",85,0.088
+P2,S6,"Retain, expand and upsell accounts",Enable and train the team,66,0.088

@@ -1,0 +1,14 @@
+{
+  "postings": 6183,
+  "boards_fetched": 1365,
+  "by_text_source": {
+    "live_ats_full": 5072,
+    "status_ok": 6134,
+    "live_yc_waas": 552,
+    "db_snip_1500cap": 36,
+    "status_empty": 36,
+    "raw_ats_6000cap": 424,
+    "status_short": 13,
+    "raw_hn_full": 99
+  }
+}

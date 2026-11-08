@@ -1,0 +1,17 @@
+cluster,size,duties,labels,mean_phi,pct_core_postings_any
+6,12,L1 L3 F1 F3 F4 F6 R1 R2 R3 B1 B2 B3,"Define ICP, segments and personas | Positioning, messaging and narrative | Prospect and build target account / lead lists | Buying signals, intent and triggers (why now) | Account research and account-based targeting | Generate pipeline / top-of-funnel demand (outcome) | Run outbound campaigns and sequences | Write copy and personalise messages | Cold calls and LinkedIn / social selling | Respond to replies and inbound, follow up | Qualify prospects (discovery) | Book meetings and demos",0.201,78.6
+13,9,D3 D4 D5 R5 R6 R8 R10 M1 M2,"Run experiments and growth tests | Choose and open new channels | Forecast, set targets, allocate budget | Content marketing, SEO and case studies | Paid acquisition | Lifecycle, nurture and email marketing | Founder-led selling support / founder brand | Track metrics, dashboards and reporting | Optimise funnel and conversion rates",0.188,74.4
+7,6,F2 F5 S1 S2 S3 S4,"Data sourcing and enrichment | Lead scoring, routing and inbound triage | Own the CRM and data hygiene | Automate workflows and integrate tools | Build internal tools, scripts and AI agents | Select and own the GTM tech stack",0.192,62.3
+1,3,D1 D2 M3,Own GTM / growth strategy and the plan | Build the repeatable playbook from 0 to 1 | Feed learnings back to founders / product / sales,0.176,49.3
+2,4,C1 C2 C3 C4,"Run demos and sales presentations | Negotiate and close deals / carry quota | Manage the pipeline and deal flow | Pricing, proposals, RFPs and procurement",0.235,42.5
+12,2,R7 R9,"Events, conferences and community | Partnerships, channel and referral programs",0.235,38.4
+9,2,L4 O2,Competitive and market intelligence | Represent the company externally / exec presence,0.142,19.0
+15,1,P2,"Retain, expand and upsell accounts",1.0,17.2
+5,2,B4 B5,Handle objections | Hand off qualified opportunities to AE / founder,0.191,17.1
+10,1,S6,Enable and train the team,1.0,15.8
+16,1,L5,Become a product expert / feed product team,1.0,8.9
+11,1,S5,Document processes and playbooks,1.0,8.7
+3,1,L2,Talk to customers / voice of customer research,1.0,6.6
+14,1,P1,Onboard and implement customers,1.0,5.5
+4,1,O1,Hire and manage a team,1.0,2.3
+8,1,R4,Email deliverability and sending infrastructure,1.0,2.0

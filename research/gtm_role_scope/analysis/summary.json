@@ -1,0 +1,140 @@
+{
+  "method": {
+    "corpus": "GTM-family postings (h1_ingest taxonomy) at companies in db/gtm_pipeline.db, plus YC WaaS roles",
+    "text": "full posting text re-fetched live from Ashby / Greenhouse / Lever / YC WaaS where still open; else raw 6,000-char sweep payload; HN posts = full founder comment",
+    "scope_basis": "duties are matched on the responsibilities section only (headings detected); postings with no responsibilities heading use body lines minus company intro / benefits / process sections",
+    "usable_rule": ">= 3 responsibility lines",
+    "core": "archetype in demand_gen, growth, gtm_engineer, gtm_generalist_lead, revops, sdr_bdr, or a founding / first-hire title",
+    "prevalence_ci": "Wilson score interval, 95%",
+    "market_comparison": "GTM postings at boards with >= 80 open jobs (scaled companies), random 12,000, seed 7; lift and two-proportion z on the same basis (flattened full text, 6,000-char cap)",
+    "company_level": "a company counts once per duty if any of its usable GTM postings asks for it",
+    "nmf": "TF-IDF (1-2 grams, min_df 8, max_df 0.25) over unique core responsibility lines; NMF k=30, seed 7",
+    "fx": "fixed rates to USD: EUR 1.08, GBP 1.27, CHF 1.13, CAD 0.72; annual base midpoints 25K-600K only",
+    "limits": "regex taxonomy => precision/recall not 100% (see taxonomy_coverage); postings != demand weight; closed postings use capped text; headcount known for a minority of companies"
+  },
+  "counts": {
+    "postings": 6183,
+    "usable": 5547,
+    "core": 1680,
+    "founding_any": 494,
+    "small_team_known": 893,
+    "companies": 1599,
+    "bullets": 112896,
+    "core_unique_resp_lines": 17012,
+    "market_postings": 2352,
+    "text_source": {
+      "live_ats_full": 5072,
+      "live_yc_waas": 552,
+      "db_snip_1500cap": 36,
+      "raw_ats_6000cap": 424,
+      "raw_hn_full": 99
+    },
+    "scope_basis": {
+      "sectioned": 4005,
+      "unsectioned": 1542
+    }
+  },
+  "taxonomy_coverage_core_lines": 61.3,
+  "core_archetypes": {
+    "sdr_bdr": 511,
+    "gtm_generalist_lead": 234,
+    "demand_gen": 211,
+    "growth": 211,
+    "gtm_engineer": 169,
+    "ae_closer": 110,
+    "revops": 108,
+    "content_pmm_brand": 33,
+    "customer_success": 26,
+    "other_gtm": 22,
+    "solutions": 18,
+    "devrel": 10,
+    "partnerships": 9,
+    "sales_leader": 4,
+    "bizops": 4
+  },
+  "core_seniority": {
+    "mid": 983,
+    "lead": 445,
+    "exec": 89,
+    "senior": 73,
+    "junior": 55,
+    "intern": 35
+  },
+  "core_comp_usd": {
+    "n": 1110,
+    "p25": 80000,
+    "median": 122500,
+    "p75": 175000
+  },
+  "core_years_exp": {
+    "n": 779,
+    "median": 4.0,
+    "dist": {
+      "0": 13,
+      "1": 117,
+      "2": 132,
+      "3": 114,
+      "4": 68,
+      "5": 155,
+      "6": 44,
+      "7": 52,
+      "8": 41,
+      "9": 1,
+      "10": 42
+    }
+  },
+  "core_bundle_size": {
+    "median": 8.0,
+    "dist": {
+      "0": 22,
+      "1": 35,
+      "2": 91,
+      "3": 94,
+      "4": 103,
+      "5": 113,
+      "6": 127,
+      "7": 140,
+      "8": 126,
+      "9": 119,
+      "10": 120,
+      "11": 125,
+      "12": 79,
+      "13": 79,
+      "14": 68,
+      "15": 74,
+      "16": 46,
+      "17": 27,
+      "18": 19,
+      "19": 24,
+      "20": 21,
+      "21": 9,
+      "22": 6,
+      "23": 3,
+      "24": 3,
+      "25": 5,
+      "26": 1,
+      "28": 1
+    }
+  },
+  "geo_core": {
+    "US": 1019,
+    "unknown": 371,
+    "GB": 92,
+    "DE": 88,
+    "FR": 28,
+    "NL": 18,
+    "PL": 15,
+    "DK": 10,
+    "IE": 6,
+    "BE": 6,
+    "PT": 5,
+    "SE": 5
+  },
+  "tier_core": {
+    "C \u00b7 Probable - verify": 830,
+    "B \u00b7 Strong fit": 395,
+    "A \u00b7 Core ICP": 324,
+    "Outside SAM": 75,
+    "D \u00b7 Long-shot": 56
+  }
+}

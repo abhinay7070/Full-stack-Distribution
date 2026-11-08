@@ -1,0 +1,49 @@
+duty_id,stage,block,duty,postings_all,pct_all,ci95_all,pct_core,ci95_core,pct_founding,pct_small_team,companies,pct_companies
+L1,LEARN,Brain,"Define ICP, segments and personas",671,12.1,11.3-13.0,19.6,17.8-21.5,15.2,11.8,425,26.6
+L2,LEARN,Brain,Talk to customers / voice of customer research,441,8.0,7.3-8.7,6.6,5.5-7.9,11.1,9.5,321,20.1
+L3,LEARN,Brain,"Positioning, messaging and narrative",1538,27.7,26.6-28.9,32.7,30.5-35.0,34.6,27.9,820,51.3
+L4,LEARN,Brain,Competitive and market intelligence,977,17.6,16.6-18.6,15.2,13.6-17.0,11.9,9.4,541,33.8
+L5,LEARN,Brain,Become a product expert / feed product team,802,14.5,13.6-15.4,8.9,7.7-10.4,12.3,12.9,485,30.3
+D1,DECIDE,Lab,Own GTM / growth strategy and the plan,1142,20.6,19.5-21.7,24.3,22.3-26.4,30.0,23.0,631,39.5
+D2,DECIDE,Lab,Build the repeatable playbook from 0 to 1,1531,27.6,26.4-28.8,34.1,31.9-36.4,55.9,38.1,793,49.6
+D3,DECIDE,Lab,Run experiments and growth tests,649,11.7,10.9-12.6,23.7,21.7-25.8,21.1,15.0,430,26.9
+D4,DECIDE,Lab,Choose and open new channels,308,5.6,5.0-6.2,11.4,10.0-13.0,8.7,7.8,250,15.6
+D5,DECIDE,Lab,"Forecast, set targets, allocate budget",1186,21.4,20.3-22.5,20.3,18.4-22.3,16.4,14.4,619,38.7
+F1,FIND,Radar,Prospect and build target account / lead lists,1734,31.3,30.1-32.5,40.8,38.5-43.2,32.8,32.9,803,50.2
+F2,FIND,Radar,Data sourcing and enrichment,287,5.2,4.6-5.8,12.1,10.7-13.8,7.9,6.9,214,13.4
+F3,FIND,Radar,"Buying signals, intent and triggers (why now)",494,8.9,8.2-9.7,14.1,12.5-15.9,12.3,8.5,355,22.2
+F4,FIND,Radar,Account research and account-based targeting,449,8.1,7.4-8.8,11.7,10.2-13.3,8.3,6.8,289,18.1
+F5,FIND,Radar,"Lead scoring, routing and inbound triage",334,6.0,5.4-6.7,10.2,8.9-11.8,6.1,5.8,233,14.6
+F6,FIND,Radar,Generate pipeline / top-of-funnel demand (outcome),1214,21.9,20.8-23.0,29.5,27.4-31.7,27.5,22.5,623,39.0
+R1,REACH,Voice,Run outbound campaigns and sequences,1646,29.7,28.5-30.9,47.7,45.4-50.1,43.9,39.0,835,52.2
+R2,REACH,Voice,Write copy and personalise messages,510,9.2,8.5-10.0,13.6,12.0-15.3,9.7,10.4,344,21.5
+R3,REACH,Voice,Cold calls and LinkedIn / social selling,333,6.0,5.4-6.7,14.5,12.9-16.2,8.3,9.3,199,12.4
+R4,REACH,Voice,Email deliverability and sending infrastructure,50,0.9,0.7-1.2,2.0,1.5-2.8,1.8,1.5,43,2.7
+R5,REACH,(outside: content),"Content marketing, SEO and case studies",709,12.8,11.9-13.7,13.2,11.7-14.9,14.2,16.1,466,29.1
+R6,REACH,(outside: ads),Paid acquisition,346,6.2,5.6-6.9,10.6,9.2-12.2,6.7,4.6,232,14.5
+R7,REACH,(outside: events),"Events, conferences and community",1673,30.2,29.0-31.4,28.9,26.8-31.1,31.8,31.7,836,52.3
+R8,REACH,Voice,"Lifecycle, nurture and email marketing",664,12.0,11.1-12.9,14.3,12.7-16.0,11.5,9.4,434,27.1
+R9,REACH,(adjacent: partners),"Partnerships, channel and referral programs",1379,24.9,23.7-26.0,19.2,17.4-21.2,25.5,19.6,715,44.7
+R10,REACH,Voice,Founder-led selling support / founder brand,749,13.5,12.6-14.4,15.0,13.4-16.8,14.2,12.5,481,30.1
+B1,REPLY,Reply,"Respond to replies and inbound, follow up",509,9.2,8.4-10.0,13.2,11.7-14.9,12.3,14.8,357,22.3
+B2,REPLY,Reply,Qualify prospects (discovery),1352,24.4,23.3-25.5,37.1,34.9-39.5,28.1,24.9,679,42.5
+B3,REPLY,Reply,Book meetings and demos,222,4.0,3.5-4.6,8.8,7.5-10.3,4.9,4.4,161,10.1
+B4,REPLY,Reply,Handle objections,323,5.8,5.2-6.5,7.6,6.4-8.9,8.3,7.3,211,13.2
+B5,REPLY,Reply,Hand off qualified opportunities to AE / founder,491,8.9,8.1-9.6,12.1,10.6-13.7,6.1,5.4,319,19.9
+C1,CLOSE,(outside: closing),Run demos and sales presentations,985,17.8,16.8-18.8,18.2,16.4-20.1,24.1,21.9,570,35.6
+C2,CLOSE,(outside: closing),Negotiate and close deals / carry quota,1648,29.7,28.5-30.9,21.5,19.6-23.5,32.6,28.7,818,51.2
+C3,CLOSE,Lab,Manage the pipeline and deal flow,1226,22.1,21.0-23.2,17.5,15.8-19.4,24.5,20.6,632,39.5
+C4,CLOSE,(outside: closing),"Pricing, proposals, RFPs and procurement",891,16.1,15.1-17.1,12.0,10.5-13.6,17.2,14.4,523,32.7
+P1,POST-SALE,(outside: post-sale),Onboard and implement customers,617,11.1,10.3-12.0,5.5,4.5-6.7,5.9,9.2,376,23.5
+P2,POST-SALE,(outside: post-sale),"Retain, expand and upsell accounts",1306,23.5,22.4-24.7,17.2,15.5-19.1,23.3,20.4,672,42.0
+M1,IMPROVE,Lab,"Track metrics, dashboards and reporting",2363,42.6,41.3-43.9,46.5,44.1-48.9,35.8,39.5,1007,63.0
+M2,IMPROVE,Lab,Optimise funnel and conversion rates,1450,26.1,25.0-27.3,38.3,36.0-40.7,24.7,28.8,746,46.7
+M3,IMPROVE,Lab,Feed learnings back to founders / product / sales,539,9.7,9.0-10.5,11.8,10.3-13.4,22.1,19.9,360,22.5
+S1,SYSTEMS,Memory,Own the CRM and data hygiene,1240,22.4,21.3-23.5,30.8,28.6-33.0,16.2,19.1,640,40.0
+S2,SYSTEMS,Connections,Automate workflows and integrate tools,1953,35.2,34.0-36.5,36.2,34.0-38.6,35.2,35.8,916,57.3
+S3,SYSTEMS,Lab,"Build internal tools, scripts and AI agents",868,15.6,14.7-16.6,20.2,18.3-22.2,18.6,19.7,502,31.4
+S4,SYSTEMS,Connections,Select and own the GTM tech stack,359,6.5,5.9-7.2,9.2,7.9-10.7,6.3,7.6,247,15.4
+S5,SYSTEMS,Playbooks,Document processes and playbooks,617,11.1,10.3-12.0,8.7,7.4-10.1,7.3,8.1,414,25.9
+S6,SYSTEMS,Playbooks,Enable and train the team,897,16.2,15.2-17.2,15.8,14.1-17.6,10.3,13.4,463,29.0
+O1,LEAD,(human),Hire and manage a team,154,2.8,2.4-3.2,2.3,1.7-3.1,2.0,3.2,122,7.6
+O2,LEAD,(human),Represent the company externally / exec presence,596,10.7,10.0-11.6,5.8,4.8-7.1,9.3,8.8,375,23.5

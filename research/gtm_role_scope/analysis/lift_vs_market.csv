@@ -1,0 +1,123 @@
+duty_id,duty,stage,pct_icp,pct_market,lift,z
+L1,"Define ICP, segments and personas",LEARN,17.0,12.2,1.38,5.3
+L2,Talk to customers / voice of customer research,LEARN,12.8,7.4,1.72,6.9
+L3,"Positioning, messaging and narrative",LEARN,37.4,27.3,1.37,8.7
+L4,Competitive and market intelligence,LEARN,47.1,37.6,1.25,7.9
+L5,Become a product expert / feed product team,LEARN,19.9,13.1,1.52,7.3
+D1,Own GTM / growth strategy and the plan,DECIDE,31.2,25.7,1.21,4.9
+D2,Build the repeatable playbook from 0 to 1,DECIDE,43.8,21.9,2.0,18.7
+D3,Run experiments and growth tests,DECIDE,18.7,9.9,1.89,9.8
+D4,Choose and open new channels,DECIDE,9.2,5.3,1.75,6.0
+D5,"Forecast, set targets, allocate budget",DECIDE,32.4,26.5,1.22,5.2
+F1,Prospect and build target account / lead lists,FIND,39.6,36.8,1.07,2.3
+F2,Data sourcing and enrichment,FIND,12.0,12.1,0.99,-0.1
+F3,"Buying signals, intent and triggers (why now)",FIND,16.3,14.4,1.13,2.2
+F4,Account research and account-based targeting,FIND,11.1,10.3,1.08,1.1
+F5,"Lead scoring, routing and inbound triage",FIND,8.8,4.4,1.98,6.8
+F6,Generate pipeline / top-of-funnel demand (outcome),FIND,29.7,22.0,1.35,7.0
+R1,Run outbound campaigns and sequences,REACH,39.8,28.1,1.41,10.0
+R2,Write copy and personalise messages,REACH,20.5,10.8,1.9,10.4
+R3,Cold calls and LinkedIn / social selling,REACH,8.8,5.3,1.66,5.4
+R4,Email deliverability and sending infrastructure,REACH,3.0,0.2,17.6,7.9
+R5,"Content marketing, SEO and case studies",REACH,20.5,21.6,0.95,-1.1
+R6,Paid acquisition,REACH,9.4,11.8,0.8,-3.3
+R7,"Events, conferences and community",REACH,47.6,47.6,1.0,-0.0
+R8,"Lifecycle, nurture and email marketing",REACH,19.8,15.6,1.26,4.4
+R9,"Partnerships, channel and referral programs",REACH,39.0,41.0,0.95,-1.7
+R10,Founder-led selling support / founder brand,REACH,26.5,25.6,1.03,0.8
+B1,"Respond to replies and inbound, follow up",REPLY,14.3,9.6,1.48,5.7
+B2,Qualify prospects (discovery),REPLY,47.0,44.3,1.06,2.3
+B3,Book meetings and demos,REPLY,6.4,5.5,1.17,1.6
+B4,Handle objections,REPLY,8.0,4.8,1.68,5.2
+B5,Hand off qualified opportunities to AE / founder,REPLY,12.3,8.0,1.53,5.6
+C1,Run demos and sales presentations,CLOSE,23.1,20.6,1.12,2.4
+C2,Negotiate and close deals / carry quota,CLOSE,42.7,40.5,1.05,1.8
+C3,Manage the pipeline and deal flow,CLOSE,31.4,25.7,1.22,5.1
+C4,"Pricing, proposals, RFPs and procurement",CLOSE,23.9,29.2,0.82,-5.0
+P1,Onboard and implement customers,POST-SALE,16.3,12.6,1.29,4.2
+P2,"Retain, expand and upsell accounts",POST-SALE,31.4,26.0,1.21,4.8
+M1,"Track metrics, dashboards and reporting",IMPROVE,63.0,51.5,1.22,9.7
+M2,Optimise funnel and conversion rates,IMPROVE,37.9,29.7,1.27,7.0
+M3,Feed learnings back to founders / product / sales,IMPROVE,15.4,4.8,3.24,13.3
+S1,Own the CRM and data hygiene,SYSTEMS,37.5,33.2,1.13,3.7
+S2,Automate workflows and integrate tools,SYSTEMS,62.6,51.1,1.23,9.7
+S3,"Build internal tools, scripts and AI agents",SYSTEMS,42.3,34.4,1.23,6.6
+S4,Select and own the GTM tech stack,SYSTEMS,13.8,7.6,1.82,7.9
+S5,Document processes and playbooks,SYSTEMS,18.0,14.5,1.24,3.8
+S6,Enable and train the team,SYSTEMS,26.3,26.0,1.01,0.3
+O1,Hire and manage a team,LEAD,7.3,4.4,1.67,4.9
+O2,Represent the company externally / exec presence,LEAD,32.4,19.9,1.63,11.3
+tool:HubSpot,HubSpot,TOOL,12.7,3.3,3.88,12.9
+tool:Salesforce,Salesforce,TOOL,14.0,27.2,0.51,-14.3
+tool:Attio,Attio,TOOL,1.0,0.0,22.57,4.5
+tool:Pipedrive,Pipedrive,TOOL,0.0,0.0,1.15,0.1
+tool:Clay,Clay,TOOL,3.8,7.4,0.51,-7.0
+tool:Apollo,Apollo,TOOL,2.7,0.4,6.35,6.6
+tool:ZoomInfo,ZoomInfo,TOOL,1.4,1.1,1.22,0.9
+tool:Clearbit,Clearbit,TOOL,0.1,0.0,,1.4
+tool:LinkedIn Sales Navigator,LinkedIn Sales Navigator,TOOL,2.2,1.4,1.63,2.5
+tool:Outreach.io,Outreach.io,TOOL,0.5,0.7,0.74,-1.0
+tool:Salesloft,Salesloft,TOOL,0.9,0.8,1.13,0.4
+tool:Smartlead / Instantly / Lemlist,Smartlead / Instantly / Lemlist,TOOL,2.5,0.1,28.89,7.4
+tool:Gong / call recording,Gong / call recording,TOOL,2.3,1.3,1.74,2.9
+tool:Zapier,Zapier,TOOL,1.4,0.6,2.62,3.4
+tool:Make,Make,TOOL,1.1,0.6,1.91,2.3
+tool:n8n,n8n,TOOL,1.2,0.9,1.42,1.4
+tool:SQL,SQL,TOOL,5.8,5.0,1.17,1.5
+tool:Python,Python,TOOL,4.7,4.0,1.16,1.3
+tool:JavaScript / TypeScript,JavaScript / TypeScript,TOOL,2.8,1.5,1.86,3.5
+tool:APIs / webhooks,APIs / webhooks,TOOL,13.9,8.2,1.7,7.2
+tool:LLMs / AI tools,LLMs / AI tools,TOOL,28.7,26.4,1.08,2.0
+"tool:Product analytics (Amplitude, Mixpanel, PostHog)","Product analytics (Amplitude, Mixpanel, PostHog)",TOOL,1.5,0.0,,5.9
+tool:Google Analytics / GA4,Google Analytics / GA4,TOOL,1.7,1.0,1.71,2.4
+tool:Segment / CDP,Segment / CDP,TOOL,4.9,5.1,0.97,-0.3
+"tool:BI (Looker, Tableau, Metabase)","BI (Looker, Tableau, Metabase)",TOOL,1.6,2.7,0.59,-3.3
+tool:Spreadsheets,Spreadsheets,TOOL,35.8,39.1,0.92,-2.8
+tool:Webflow / CMS,Webflow / CMS,TOOL,1.9,0.4,4.51,5.1
+"tool:Marketing automation (Marketo, Customer.io)","Marketing automation (Marketo, Customer.io)",TOOL,1.2,1.1,1.05,0.2
+tool:Notion,Notion,TOOL,3.5,4.6,0.77,-2.3
+tool:Common Room / intent tools,Common Room / intent tools,TOOL,1.7,1.0,1.76,2.5
+tool:Ads platforms,Ads platforms,TOOL,1.7,0.5,3.62,4.4
+tool:Calendly / scheduling,Calendly / scheduling,TOOL,0.4,0.1,4.59,2.3
+skill:Written communication / copywriting,Written communication / copywriting,SKILL,12.5,11.5,1.08,1.2
+skill:Verbal communication / presenting,Verbal communication / presenting,SKILL,27.6,33.5,0.83,-5.3
+skill:Data analysis / quantitative,Data analysis / quantitative,SKILL,27.7,26.1,1.06,1.5
+skill:Technical fluency (sell to / work with engineers),Technical fluency (sell to / work with engineers),SKILL,38.3,34.4,1.11,3.3
+skill:Coding / scripting,Coding / scripting,SKILL,19.0,15.4,1.23,3.8
+skill:Experimentation mindset,Experimentation mindset,SKILL,15.7,8.5,1.84,8.6
+skill:Prospecting / outbound craft,Prospecting / outbound craft,SKILL,30.2,21.7,1.39,7.8
+skill:Discovery & qualification,Discovery & qualification,SKILL,54.7,48.7,1.12,5.0
+skill:Closing / negotiation,Closing / negotiation,SKILL,37.8,39.7,0.95,-1.6
+skill:Strategic thinking,Strategic thinking,SKILL,54.9,58.8,0.93,-3.3
+skill:Project / process management,Project / process management,SKILL,22.3,22.4,0.99,-0.2
+skill:Customer empathy,Customer empathy,SKILL,18.2,26.1,0.7,-8.1
+skill:AI fluency,AI fluency,SKILL,31.3,25.2,1.24,5.5
+skill:Domain / industry expertise,Domain / industry expertise,SKILL,4.7,4.7,1.0,0.0
+skill:Startup / early-stage experience,Startup / early-stage experience,SKILL,52.7,24.6,2.14,23.3
+skill:B2B SaaS experience,B2B SaaS experience,SKILL,46.8,32.8,1.43,11.7
+skill:Quota-carrying track record,Quota-carrying track record,SKILL,41.4,44.8,0.92,-2.9
+trait:Ownership / autonomy,Ownership / autonomy,TRAIT,63.2,58.5,1.08,4.0
+trait:Scrappy / hustle,Scrappy / hustle,TRAIT,14.3,8.0,1.78,7.8
+trait:Comfort with ambiguity,Comfort with ambiguity,TRAIT,22.3,16.5,1.35,5.9
+trait:Builder mindset,Builder mindset,TRAIT,20.5,13.4,1.53,7.5
+trait:Speed / urgency,Speed / urgency,TRAIT,57.3,58.5,0.98,-1.0
+trait:Curiosity / learning,Curiosity / learning,TRAIT,29.4,26.4,1.11,2.7
+trait:Competitive drive,Competitive drive,TRAIT,66.3,60.4,1.1,5.1
+trait:Customer obsession,Customer obsession,TRAIT,10.4,15.1,0.69,-6.0
+trait:Data-driven,Data-driven,TRAIT,18.9,22.8,0.83,-4.1
+intent:First GTM / sales / growth hire,First GTM / sales / growth hire,INTENT,5.3,0.6,8.24,9.7
+intent:Take GTM over from the founders,Take GTM over from the founders,INTENT,10.3,0.7,14.31,14.9
+intent:Build a repeatable motion / playbook,Build a repeatable motion / playbook,INTENT,34.8,17.7,1.96,15.4
+intent:Generate pipeline / demand now,Generate pipeline / demand now,INTENT,8.9,8.8,1.01,0.1
+intent:Find product-market fit / early customers,Find product-market fit / early customers,INTENT,4.1,3.1,1.34,2.2
+intent:Scale after fundraise,Scale after fundraise,INTENT,36.4,11.5,3.17,22.5
+intent:Hybrid / generalist (wear many hats),Hybrid / generalist (wear many hats),INTENT,9.1,7.0,1.3,3.1
+intent:AI-native / automation expected,AI-native / automation expected,INTENT,37.6,29.6,1.27,6.9
+kpi:Meetings / demos booked,Meetings / demos booked,KPI,2.8,0.7,4.07,5.9
+kpi:Qualified pipeline / SQLs / opportunities,Qualified pipeline / SQLs / opportunities,KPI,21.5,16.5,1.3,5.1
+kpi:MQLs / leads,MQLs / leads,KPI,1.5,0.7,2.22,3.1
+kpi:Revenue / ARR / quota,Revenue / ARR / quota,KPI,30.5,36.6,0.83,-5.4
+kpi:Conversion rates,Conversion rates,KPI,6.0,3.7,1.62,4.2
+kpi:CAC / payback / efficiency,CAC / payback / efficiency,KPI,4.3,1.1,3.78,7.2
+kpi:Activation / retention / NRR,Activation / retention / NRR,KPI,19.3,14.9,1.3,4.7
+kpi:Traffic / signups,Traffic / signups,KPI,12.4,12.2,1.01,0.1
