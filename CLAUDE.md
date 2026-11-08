@@ -88,3 +88,17 @@ Ashby/Greenhouse/Lever second pass (82,074 boards probed), website scan of every
    104 live companies carry a Series B+ event (flagged `possible_past_series_a`).
 9. **Site-scan hang guard**: `site_scan.py --to-cache` can hang on a pathological page (regex holds the GIL). The
    per-domain runner used in v3 runs one process per domain with `timeout 60`; fold that into `site_scan.py`.
+
+## Future expansion (not started; coverage now ~40-55% of an estimated 25-35K SAM)
+| # | Lever | Expected new ICP companies | Needs owner? |
+|---|---|---|---|
+| E1 | Common Crawl index (index.commoncrawl.org) -> every public Ashby / Greenhouse / Lever / Workable board URL -> `ats_sweep.py` | +2,000-5,000 | no |
+| E2 | More ATS providers (Personio, SmartRecruiters, Rippling, BambooHR, JazzHR) via E1 slugs | +800-2,000 (EU-heavy) | no |
+| E3 | UK Companies House API: SIC 62/63 incorporations 2021+ with a funding or hiring signal | +500-1,500 | free API key, saved as an environment secret |
+| E4 | VC portfolio pages outside Getro (a16z, Sequoia, Accel, Index, Seedcamp, LocalGlobe, Point Nine, ...) | +500-1,500 | no |
+| E5 | More accelerators (Pioneer, South Park Commons, HF0, Neo, Station F, Seedcamp) | +300-800 | no |
+| E6 | Clay "find company domain" for Unresolved_TAM (4,903) + headcount | +1,000-2,000 recovered; C -> A/B | Clay credits |
+| E7 | Workable sweep after the 429 block lifts (backlog 1) | +100-300 | no |
+Realistic ceiling: ~17-22K with E1/E2/E4/E5/E7; ~19-25K adding E3/E6. 100% needs a paid funding database
+(Crunchbase / Dealroom). Out of scope by rule: Wellfound, LinkedIn scraping, Consider boards (login / anti-bot walls).
+
