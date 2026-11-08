@@ -57,28 +57,34 @@ SEC asks for a declared User-Agent (set in `http_fetch.SEC_UA`).
 - Workbook: Arial, formulas (no hardcoded results), yellow = owner input. `build_master.py` preserves owner edits.
 - Commits: never include model identifiers; push to the working branch only; no PR unless asked.
 
-## State at hand-off (2026-11-05)
-12,816 companies in SAM (A 2,127 · B 5,251 · C 4,791 · D 647) + 941 Outside_SAM + 6,249 Unresolved_TAM.
-Tags: H1 1,398 · H2 5,911 · H3 2,175 · H4 520 · H5 1,576 · H6 1,661 · H7 194 · H8 18 · H10 790.
-Gate: PASS. Workbook recalculated, 0 formula errors.
+## State at hand-off (2026-11-08, v3)
+14,240 companies in the DB: 13,157 in SAM (A 2,120 · B 5,444 · C 5,117 · D 476) + 1,082 Outside_SAM + 1 disqualified.
+Unresolved_TAM 5,469 rows (4,903 unique names: HN 2,138 · news 1,699 · Form D 1,632).
+Rings: R1 861 · R2 1,573 · R3 5,130 · Enrich 5,117 · Review 476. Outreach targets (R1+R2) 2,434, reachable now 1,371.
+Tags: H1 1,715 · H2 6,209 · H3 2,180 · H4 524 · H5 1,955 · H6 1,679 · H7 194 · H8 18 · H10 1,029.
+Gate: PASS (idempotent tags). Workbook recalculated: 54,735 formulas, 0 errors.
+v3 added: resolver directory candidates (Clearbit autocomplete, corroborated) + Form D phone/street evidence (+504 matches),
+Ashby/Greenhouse/Lever second pass (82,074 boards probed), website scan of every domain (1 timeout), homepage stage proof.
 
 ## Backlog (in priority order)
-1. **Rebuild with the two hand-off fixes**: `./scripts/run_pipeline_v2.sh`. One fix flags a reliable Series B+ event
-   as `possible_past_series_a`; the other keeps the H3x sublist intact on reruns.
-2. **Finish ATS coverage**: the Workable sweep (rate-limited, ~1 req/s) and the second ATS pass were stopped for time.
-   Run `python3 scripts/ats_sweep.py --providers workable` (background), then
-   `python3 scripts/ats_sweep.py --providers ashby,greenhouse,lever`, then `python3 scripts/universe_ingest.py ats`.
-3. **Site scan the remaining ~3,000 domains**: `for i in 0 1 2 3; do python3 scripts/site_scan.py --to-cache --shard=$i/4 & done; wait; python3 scripts/site_scan.py --load`.
-4. **H8 fix**: `signals_collect.h8()` star regex no longer matches GitHub org pages (stars found for 1 of 2,125 orgs).
-   Parse the current markup or use `api.github.com/orgs/{org}/repos` with a token, then re-run `tag_signals.py`.
-5. **Unresolved_TAM (6,249)**: retry `resolve_domains` with extra hints (Form D street/phone, founders' LinkedIn)
-   or export the list to Clay ("find company domain").
-6. **Headcount enrichment**: about 60% of companies have no exact headcount. A Clay or LinkedIn employee count moves
+1. **Workable** (6,897 boards): stopped on 2026-11-08 because apply.workable.com answered 429 with
+   `Retry-After: 70069` (until ~2026-11-09 01:00 UTC). After that: `python3 scripts/ats_sweep.py --providers workable`
+   (keep RATE 1.2 s or slower), then `python3 scripts/universe_ingest.py ats`, then the tag/build/gate tail of
+   `run_pipeline_v2.sh`. Do not work around the limit.
+2. **H8**: GitHub pages and api.github.com are blocked in cloud sessions (scoped to this repo). Run
+   `python3 scripts/signals_collect.py h8` from a machine with normal GitHub access (fix the star regex for the current
+   org-page markup or use the API with a token), then re-run `tag_signals.py`.
+3. **Unresolved_TAM (4,903 unique)**: many are non-ICP (institutions, stealth, non-tech Form D issuers). Export to Clay
+   ("find company domain") and import the results, or add founder LinkedIn hints.
+4. **Headcount enrichment**: about 78% of companies have no exact headcount band. A Clay or LinkedIn employee count moves
    many C -> B/A. Import with `clay_bridge.py` (the email flow) or extend it with a headcount column.
-7. **H9**: drop the owner's LinkedIn `Connections.csv` at `inputs/linkedin_connections.csv` and re-run `tag_signals.py`.
-8. **News coverage gaps**: tech.eu and Silicon Republic feeds ignore paging (latest items only); UKTN stops at 2026-01.
+5. **H9**: drop the owner's LinkedIn `Connections.csv` at `inputs/linkedin_connections.csv` and re-run `tag_signals.py`.
+6. **News coverage gaps**: tech.eu and Silicon Republic feeds ignore paging (latest items only); UKTN stops at 2026-01.
    Sifted / FinSMEs returned 403. Add other sources rather than circumventing them.
-9. **Form D refresh**: when SEC publishes 2026Q2/Q3 bulk zips, add them to `raw_sources/H2_fresh_capital/sec_formd_bulk/`.
+7. **Form D refresh**: when SEC publishes 2026Q2/Q3 bulk zips, add them to `raw_sources/H2_fresh_capital/sec_formd_bulk/`.
    `formd_collect.py` then uses EFTS only after the last bulk quarter.
-10. **Precision review**: run `gate_check.py --sample 40` and eyeball `resolution_audit_sample` in
-    `raw_sources/gate_report.json`. Medium-confidence domain matches (~3,000) are tier-capped at C until verified.
+8. **Precision review**: run `gate_check.py --sample 40` and eyeball `resolution_audit_sample` in
+   `raw_sources/gate_report.json`. Medium-confidence domain matches (3,351) are tier-capped at C until verified;
+   104 live companies carry a Series B+ event (flagged `possible_past_series_a`).
+9. **Site-scan hang guard**: `site_scan.py --to-cache` can hang on a pathological page (regex holds the GIL). The
+   per-domain runner used in v3 runs one process per domain with `timeout 60`; fold that into `site_scan.py`.

@@ -1,197 +1,237 @@
 {
- "run_at": "2026-11-05T07:24:46Z",
+ "run_at": "2026-11-08T05:49:14Z",
  "fingerprint": {
-  "companies": 13758,
-  "sha1": "2fbe647adbd793198521025c95d7f0e64cbdebcd",
+  "companies": 14240,
+  "sha1": "b7f22b2857794618b0293586d1c57549e1d5d577",
   "tags": {
-   "H0": 8288,
-   "H1": 1398,
-   "H2": 5911,
-   "H3": 2175,
-   "H4": 520,
-   "H5": 1576,
-   "H6": 1661,
+   "H0": 8775,
+   "H1": 1715,
+   "H2": 6209,
+   "H3": 2180,
+   "H4": 524,
+   "H5": 1955,
+   "H6": 1679,
    "H7": 194,
    "H8": 18,
-   "H10": 790
+   "H10": 1029
   }
  },
  "hard_failures": {},
  "warnings": {
-  "series_b_plus_event_on_live_company": 30,
-  "homepage_unreachable": 605,
-  "parked_homepage": 16,
-  "medium_confidence_resolutions": 3044
+  "series_b_plus_event_on_live_company": 104,
+  "homepage_unreachable": 640,
+  "parked_homepage": 20,
+  "medium_confidence_resolutions": 3351
  },
  "examples": {
   "series_b_plus_event_on_live_company": "hypersonica.com: Hypersonica secures \u20ac100 million to boost sovereign hypersonic deep-strike systems for Europe and its allies"
  },
  "resolution_audit_sample": [
   {
-   "entity_key": "formd:2133797",
-   "name": "SEEYA Technologies, LLC",
-   "domain": "tryseeya.com",
-   "score": 4,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\"]"
-  },
-  {
-   "entity_key": "ats:obviant",
-   "name": "obviant",
-   "domain": "obviant.com",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "hn:deviceflow",
-   "name": "Deviceflow",
-   "domain": "deviceflow.com",
-   "score": 8,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:attio",
-   "name": "Attio",
-   "domain": "attio.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2155354",
-   "name": "Terrace Systems, Inc.",
-   "domain": "terrace.com",
-   "score": 6,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2125198",
-   "name": "Troman Industries, Inc.",
-   "domain": "tromanindustries.com",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"city 'elkhart'\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "hn:coast",
-   "name": "Coast",
-   "domain": "coastinc.com",
+   "entity_key": "hn:wme",
+   "name": "WME",
+   "domain": "wmeinc.com",
    "score": 7,
    "confidence": "medium",
    "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\"]"
   },
   {
-   "entity_key": "news:gudea",
-   "name": "Gudea",
-   "domain": "gudea.ai",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2086861",
-   "name": "Sperity Health, Inc.",
-   "domain": "sperityhealth.com",
+   "entity_key": "formd:1913930",
+   "name": "DataBiologics, Inc.",
+   "domain": "databiologics.com",
    "score": 7,
    "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"city 'mobile'\", \"source-published domain\", \"tech product page\"]"
+   "evidence": "[\"brand in title\", \"brand in text\", \"city 'mesa'\", \"source-published domain\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:1524543",
-   "name": "LifeAire Systems, LLC",
-   "domain": "lifeaire.com",
-   "score": 11,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"person 'worrilow'\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:tajir",
-   "name": "tajir",
-   "domain": "tajir.app",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2161767",
-   "name": "Navispend, Inc.",
-   "domain": "navispend.ai",
+   "entity_key": "formd:2136051",
+   "name": "Paralign Health, Inc.",
+   "domain": "paralign.health",
    "score": 6,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:2062338",
-   "name": "Box House Holdings, Inc.",
-   "domain": "boxhouse.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
-  },
-  {
-   "entity_key": "news:idwell",
-   "name": "iDWELL",
-   "domain": "idwell.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:careway",
-   "name": "careway",
-   "domain": "careway.ai",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "hn:aptira",
-   "name": "Aptira",
-   "domain": "aptira.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2155507",
-   "name": "Rise Energy Inc",
-   "domain": "riseenergyservices.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2147273",
-   "name": "Easy Trader App, Inc.",
-   "domain": "easytraderapp.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
-  },
-  {
-   "entity_key": "ats:reka",
-   "name": "reka",
-   "domain": "reka.ai",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2079919",
-   "name": "Revin Inc.",
-   "domain": "revin.ai",
+   "entity_key": "formd:1902299",
+   "name": "60 Decibels, Inc.",
+   "domain": "60decibels.com",
    "score": 6,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:1979890",
+   "name": "Jumplights, Inc.",
+   "domain": "jumplights.com",
+   "score": 9,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:inferact",
+   "name": "Inferact",
+   "domain": "inferact.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2079699",
+   "name": "Beyond Pulse, Inc.",
+   "domain": "beyondpulse.com",
+   "score": 7,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"city 'portland'\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:circle",
+   "name": "Circle",
+   "domain": "circle.com",
+   "score": 6,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:sunhat",
+   "name": "Sunhat",
+   "domain": "getsunhat.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:pleo",
+   "name": "pleo",
+   "domain": "pleo.io",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2142746",
+   "name": "Glauc Inc.",
+   "domain": "glauc.co",
+   "score": 8,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"person 'ramakrishnan'\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:farosai",
+   "name": "faros ai",
+   "domain": "faros.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "hn:larridin",
+   "name": "Larridin",
+   "domain": "larridin.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:1930982",
+   "name": "BuyerCaddy, Inc.",
+   "domain": "buyercaddy.com",
+   "score": 8,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:dubclub",
+   "name": "dubclub",
+   "domain": "dubclub.win",
+   "score": 4,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\"]"
+  },
+  {
+   "entity_key": "formd:1852715",
+   "name": "AstronetX PBC",
+   "domain": "astronetx.com",
+   "score": 9,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"city 'westport'\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2127106",
+   "name": "DeepWeave, Inc.",
+   "domain": "deepweave.ai",
+   "score": 7,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"person 'narayanan'\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:auctane",
+   "name": "Auctane ",
+   "domain": "shipstationglobal.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in text\", \"legal name on page\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:inizioignite",
+   "name": "Inizio Ignite",
+   "domain": "inizio.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:locai",
+   "name": "Locai",
+   "domain": "locai.app",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:processstreet",
+   "name": "Process Street",
+   "domain": "process.st",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2149216",
+   "name": "Noosphere Labs, Inc.",
+   "domain": "getnoosphere.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2080517",
+   "name": "Flow Marketing Intelligence, Inc.",
+   "domain": "freedomflowmarketing.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:furo",
+   "name": "Furo",
+   "domain": "furo.ag",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:shieldspace",
+   "name": "Shield Space",
+   "domain": "shieldspace.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
   }
  ],
  "resolution_status": {
-  "ambiguous": 811,
-  "no_dns_candidate": 1429,
-  "resolved": 6442,
-  "unresolved": 2892
+  "ambiguous": 518,
+  "no_dns_candidate": 1371,
+  "resolved": 7130,
+  "unresolved": 2494
  }
 }

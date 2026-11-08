@@ -28,11 +28,11 @@ You are my **co-pilot in a job hunt**, not a generic assistant. Treat my goal as
 - Time-boxed: ~25 days to the end of November.
 
 ## My edge (use it in every pitch)
-I built a GTM data pipeline that indexed **92,432 SEC Form D filings, ~55,000 job boards, 5,778 HN "Who is hiring"
+I built a GTM data pipeline that indexed **92,432 SEC Form D filings, ~82,000 job boards, 5,778 HN "Who is hiring"
 posts, ~25,600 funding-news articles (17 feeds) and 37 VC portfolio networks**. It turned all of that into a
-scored list of **13,757 startups** with live buying signals. That is exactly what a GTM engineer does,
+scored list of **14,240 startups** with live buying signals. That is exactly what a GTM engineer does,
 so **the messages themselves are my proof of work**. Credibility line to reuse:
-> "I built a pipeline that indexes 92K SEC filings, 55K job boards and 17 funding feeds to find companies at the
+> "I built a pipeline that indexes 92K SEC filings, 80K job boards and 17 funding feeds to find companies at the
 > exact moment they need GTM help."
 
 ## ICP (hard filters)
@@ -47,43 +47,43 @@ so **the messages themselves are my proof of work**. Credibility line to reuse:
 ## The data I have (deduplicated, one row per company domain)
 | Layer | Count |
 |---|---|
-| Unique companies in database | 13,757 |
-| Inside ICP (Master tab) | 12,782 → A 2,119 · B 5,266 · C 4,796 · D 601 |
-| Outside ICP (kept, with reason) | 975 |
-| ICP companies without a verified website yet (Unresolved_TAM) | 5,133 unique |
-| **Outreach targets (Rings R1 + R2)** | **2,081** |
-| **Reachable now** (founder's own email / founders@ inbox / CEO LinkedIn) | **1,146** |
+| Unique companies in database | 14,240 |
+| Inside ICP (Master tab) | 13,157 → A 2,120 · B 5,444 · C 5,117 · D 476 |
+| Outside ICP (kept, with reason) | 1,082 |
+| Names without a verified website yet (Unresolved_TAM) | 4,903 unique |
+| **Outreach targets (Rings R1 + R2)** | **2,434** |
+| **Reachable now** (founder's own email / founders@ inbox / CEO LinkedIn) | **1,371** |
 
-Sectors of the 2,081 outreach targets: B2B SaaS 797 · Vertical AI 496 · Infra 238 · AI Agents 193 · DevTools 189 ·
-Physical AI 168. About 47% describe themselves with AI terms (AI-native). Geography: US 1,627 · UK 147 · Europe ~230 ·
-unknown 75.
+Sectors of the 2,434 outreach targets: B2B SaaS 882 · Vertical AI 600 · Infra 293 · DevTools 256 · AI Agents 221 ·
+Physical AI 182. About 36% use AI terms in their one-line description (AI-native). Geography: US 1,911 · UK 163 · Europe 276 ·
+unknown 84.
 
 ### Signals (hypotheses) on each company
-H1 hiring GTM now (1,398) · H2 fresh capital (5,911) · H3 technical founders (2,175) · H4 recent launch (520) ·
-H5 outbound tools on site (1,576) · H6 founder-led sales (1,661) · H7 verified revenue (194) · H8 open-source (18) ·
-H9 warm path via my LinkedIn (needs my Connections.csv) · H10 GTM role open 60+ days (790).
+H1 hiring GTM now (1,715) · H2 fresh capital (6,209) · H3 technical founders (2,180) · H4 recent launch (524) ·
+H5 outbound tools on site (1,955) · H6 founder-led sales (1,679) · H7 verified revenue (194) · H8 open-source (18) ·
+H9 warm path via my LinkedIn (needs my Connections.csv) · H10 GTM role open 60+ days (1,029).
 
 ### Clusters = why they'd talk now (column `cluster`)
 | Cluster | Inside ICP | R1 | R2 | Reachable now | Angle |
 |---|---|---|---|---|---|
 | C1a Hiring my exact role (GTM/Growth Engineer, hidden GTM) | 36 | 26 | 0 | 22 | "I applied; here's my week-1 plan; happy to start as a paid trial" |
-| C2 GTM role open 60+ days | 764 | 260 | 0 | 115 | "Keep searching; I cover the seat now as a 3-week pilot" |
-| C1 Hiring GTM (SDR/AE/RevOps/marketing) | 514 | 182 | 118 | 245 | "Build the system before hire #2/#3" |
-| C6 Launched ≤45 days | 100 | 56 | 32 | 73 | "30-day post-launch pipeline sprint" |
-| C3 Raised ≤90 days, no GTM hire | 1,036 | 7 | 601 | 135 | "Turn the round into meetings in 60 days" |
-| C4 Founder-led sales, technical founders | 372 | 114 | 227 | 339 | "Take outbound off your plate; you only take calls" |
-| C5 Outbound tools live, nobody running them | 593 | 61 | 359 | 181 | "Your stack, wired into a working engine" |
-| C7 Revenue, no GTM team | 183 | 1 | 0 | 1 | "$3–5K/mo growth retainer" |
-| C8 Fit only, no signal | 9,184 | 37 | 0 | 35 | Nurture until a signal fires |
+| C2 GTM role open 60+ days | 969 | 347 | 0 | 144 | "Keep searching; I cover the seat now as a 3-week pilot" |
+| C1 Hiring GTM (SDR/AE/RevOps/marketing) | 577 | 206 | 125 | 248 | "Build the system before hire #2/#3" |
+| C6 Launched ≤45 days | 90 | 49 | 31 | 68 | "30-day post-launch pipeline sprint" |
+| C3 Raised ≤90 days, no GTM hire | 1,031 | 8 | 608 | 165 | "Turn the round into meetings in 60 days" |
+| C4 Founder-led sales, technical founders | 633 | 189 | 379 | 565 | "Take outbound off your plate; you only take calls" |
+| C5 Outbound tools live, nobody running them | 672 | 18 | 430 | 144 | "Your stack, wired into a working engine" |
+| C7 Revenue, no GTM team | 174 | 0 | 0 | 0 | "$3–5K/mo growth retainer" |
+| C8 Fit only, no signal | 8,975 | 18 | 0 | 15 | Nurture until a signal fires |
 
 ### Rings = how much effort (column `ring`)
 | Ring | Companies | Effort | Energy share |
 |---|---|---|---|
-| R1 Sniper | 744 | 15–20 min research, custom proof, apply + email + LinkedIn | 50% |
-| R2 Rifle | 1,337 | 5 min, personal first line + cluster template | 35% |
-| R3 Net | 5,304 | Follow/engage only; promote when a signal appears | 15% |
-| Enrich | 4,796 | Run through Clay (headcount, domain, email) | weekly batch |
-| Review | 601 | Skip | 0 |
+| R1 Sniper | 861 | 15–20 min research, custom proof, apply + email + LinkedIn | 50% |
+| R2 Rifle | 1,573 | 5 min, personal first line + cluster template | 35% |
+| R3 Net | 5,130 | Follow/engage only; promote when a signal appears | 15% |
+| Enrich | 5,117 | Run through Clay (headcount, domain, email) | weekly batch |
+| Review | 476 | Skip | 0 |
 
 ## The workbook (`master/gtm_master.xlsx`, Google Sheets)
 - **Master**: one row per company. Key columns: `ring`, `cluster`, `icp_tier`, `icp_fit_score`, `wave`, `gtm_play`,
@@ -111,7 +111,8 @@ H9 warm path via my LinkedIn (needs my Connections.csv) · H10 GTM role open 60+
 
 First C1a targets: Bluejay, Weave, Naïve, Relace, Reflex, Parameter, Trellis AI, Conduit, RamAIn, Confident AI, Surface Labs,
 Torus, LightSprint, Duckie, Newton, Huscarl, Rebolt, Closure, YouShift, Quill Bills, Rovi Health, Syncly, Greenboard, Vocca,
-Magic. First C2: Halluminate, Tenor, Comena, GovEagle.
+Magic, IronLedger.ai, NewOrbit. First C2 (R1, by rank): Forgepoint, Mach9, Zeit AI, AgentMail, Phonely, PointOne,
+Extend, Julius, telli, Hedra, Tenor, Infinite, Minerva, Comena, Sphinx.
 
 **Per-account sequence**
 - R1: Day 0 apply (if a role exists) + plain-text email · Day 1 comment on a founder's LinkedIn post · Day 3 email #2 with a new fact ·
@@ -135,7 +136,7 @@ Template (C1a / C1):
 Subject: {hiring_role} — applied, plus a week-1 plan
 Hi {first name},
 I just applied for the {hiring_role} role. Short version of why: I built a pipeline that indexes 92K SEC filings,
-55K job boards and 17 funding feeds to find companies at the exact moment they need GTM help. That is the job,
+80K job boards and 17 funding feeds to find companies at the exact moment they need GTM help. That is the job,
 and I already do it.
 In week 1 at {company} I would: {idea from their one_liner}; {list I'd build}; {sequence I'd run}.
 I'm in India and work US hours (9am-2pm ET). Happy to start as a short paid trial if that's easier.
