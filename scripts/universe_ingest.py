@@ -71,7 +71,28 @@ def gate(text: str, country: str | None, team: int | None, stage: str | None, do
         return "admit", "", flags, label
     if stage in ("pre_seed", "seed", "series_a") or EARLY.search(text or ""):
         return "admit", "", flags + ["admitted_on_text_evidence"], label
+    hp = homepage_stage_proof(domain)
+    if hp:
+        return "admit", "", flags + [f"admitted_on_homepage_evidence:{hp}"], label
     return "pool", "no_early_stage_evidence", flags, label
+
+
+def homepage_stage_proof(domain: str | None) -> str | None:
+    """Second look for pooled companies: the company's own homepage states an early stage (seed / Series A / YC batch /
+    accelerator / founding-team hiring) and shows no late-stage marker. Page comes from the resolver's HTTP cache."""
+    if not domain:
+        return None
+    try:
+        p = rd.page(domain)
+    except Exception:  # noqa: BLE001
+        return None
+    if not (0 < p["status"] < 400):
+        return None
+    blob = f"{p['title']} {p['desc']} {p['text']}"[:60000]
+    if LATE.search(blob):
+        return None
+    m = EARLY.search(blob)
+    return re.sub(r"\s+", " ", m.group(0))[:60] if m else None
 
 
 def brand_link(name: str, hosts: list[str]) -> str | None:
@@ -283,6 +304,8 @@ def ingest_ats(conn) -> dict:
                 continue
             nm = b.get("company_name") or b["slug"].replace("-", " ").replace("_", " ")
             hosts = [pdb.normalize_domain(u) for u in re.findall(r"https?://[^\s\"'<>)]+", txt)]
+            hosts += [m.lower() for m in re.findall(r"(?:\bwww\.|@)([a-z0-9][a-z0-9-]{1,40}\.(?:com|ai|io|co|dev|app|so|tech|"
+                                                     r"xyz|eu|uk|de|fr|nl|se)\b)", txt, re.I)]
             hosts = [h for h in dict.fromkeys(hosts) if h and "ashbyhq" not in h and "greenhouse" not in h
                      and "lever.co" not in h and "linkedin" not in h]
             b["_name"] = nm

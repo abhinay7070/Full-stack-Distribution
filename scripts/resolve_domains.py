@@ -13,6 +13,9 @@ Method
       +3 brand in <title>/og:site_name     +1 brand in visible text (>=2x)     +3 legal name ("X Inc"/"X, Inc.")
       +2 a related person's surname (>=4 letters, uncommon) on the page       +1 issuer city on the page
       +1 hint domain (source-published)    -9 parked / for-sale page          -3 redirect to another site
+      +3 issuer phone number on the page   +2 issuer street address on the page
+      +1 public company directory (Clearbit autocomplete) lists this domain under the same brand
+    Directory domains are only candidates: they still have to pass the page scoring above.
   4 Accept: score >= 4 (>= 6 when the brand is a common English word, wordfreq zipf >= 3.0).
     confidence high >= 6, medium 4-5. Ties between candidates -> 'ambiguous' (not accepted).
 """
@@ -61,6 +64,26 @@ def brand_cores(name: str) -> tuple[str, str, str]:
     return words.lower(), full, short
 
 
+def directory_domains(name: str) -> list[str]:
+    """Domains a public company directory lists for this exact brand (Clearbit autocomplete, no key)."""
+    words, full, short = brand_cores(name)
+    if len(short) < 3:
+        return []
+    from urllib.parse import quote
+    r = hf.fetch(f"https://autocomplete.clearbit.com/v1/companies/suggest?query={quote(words or name)}", timeout=15,
+                 retries=2)
+    try:
+        rows = r.json() if r.status == 200 else []
+    except ValueError:
+        return []
+    out = []
+    for x in rows if isinstance(rows, list) else []:
+        n = alnum(brand_cores(x.get("name") or "")[1])
+        if x.get("domain") and n and n in (full, short):
+            out.append(pdb.normalize_domain(x["domain"]))
+    return [d for d in dict.fromkeys(out) if d]
+
+
 def candidates(name: str, hint_domains: list[str] | None = None) -> tuple[list[str], list[str]]:
     """(primary, extended) candidate lists; extended is only tried when primary finds nothing acceptable."""
     words, full, short = brand_cores(name)
@@ -96,10 +119,14 @@ def dns_exists(domain: str) -> bool:
     return d.get("Status") == 0 and bool(d.get("Answer"))
 
 
+PAGE_TIMEOUT = int(__import__("os").environ.get("RESOLVE_PAGE_TIMEOUT", "10"))  # slow-site retry pass: 25
+PAGE_RETRIES = int(__import__("os").environ.get("RESOLVE_PAGE_RETRIES", "0"))
+
+
 def page(domain: str) -> dict:
-    r = hf.fetch(f"https://{domain}/", timeout=10, retries=0, max_bytes=1_500_000)
+    r = hf.fetch(f"https://{domain}/", timeout=PAGE_TIMEOUT, retries=PAGE_RETRIES, max_bytes=1_500_000)
     if 400 <= r.status or (r.status <= 0 and "Timeout" not in (r.text or "")):
-        r2 = hf.fetch(f"https://www.{domain}/", timeout=10, retries=0, max_bytes=1_500_000)
+        r2 = hf.fetch(f"https://www.{domain}/", timeout=PAGE_TIMEOUT, retries=PAGE_RETRIES, max_bytes=1_500_000)
         if 0 < r2.status < 400:
             r = r2
     t = (r.text or "")[:600_000]
@@ -145,9 +172,25 @@ def score_page(name: str, domain: str, p: dict, hints: dict) -> tuple[int, list[
     if len(city) >= 4 and city in blob.lower():
         s += 1
         ev.append(f"city '{city}'")
-    if domain in (hints.get("domains") or []):
+    if domain in (hints.get("domains_src", hints.get("domains")) or []):
         s += 1
         ev.append("source-published domain")
+    ph = re.sub(r"\D", "", hints.get("phone") or "")[-10:]
+    if len(ph) == 10 and ph in re.sub(r"\D", "", blob):
+        s += 3
+        ev.append("issuer phone on page")
+    st = re.match(r"\s*(\d+)\s+([A-Za-z]{4,})", hints.get("street") or "")
+    if st and re.search(rf"\b{st.group(1)}\s+{re.escape(st.group(2))}", blob, re.I):
+        s += 2
+        ev.append("issuer street on page")
+    if domain in (hints.get("directory") or []) and domain not in (hints.get("domains_src") or []):
+        lab = alnum(domain.split(".")[0])
+        if lab in (full, short):
+            s += 1
+            ev.append("directory listing")
+        elif not any(x.startswith(("person", "city", "issuer", "source-published", "legal name")) for x in ev):
+            s -= 2  # same brand, different label (e.g. brandindustries.com): needs independent corroboration
+            ev.append("directory-only, uncorroborated")
     if hints.get("tech") and len(TECHY.findall(blob[:20000])) >= 3:
         s += 1
         ev.append("tech product page")
@@ -160,7 +203,7 @@ def _db(conn):
         evidence TEXT, tried INTEGER, resolved_at TEXT)""")
 
 
-def resolve(entities: list[dict], workers: int = 24, refresh: bool = False) -> dict[str, dict]:
+def resolve(entities: list[dict], workers: int = 24, refresh: bool = False, directory: bool = True) -> dict[str, dict]:
     conn = pdb.connect()
     _db(conn)
     done = {} if refresh else {r["entity_key"]: dict(r) for r in conn.execute("SELECT * FROM resolutions")}
@@ -170,8 +213,11 @@ def resolve(entities: list[dict], workers: int = 24, refresh: bool = False) -> d
     from concurrent.futures import ThreadPoolExecutor
 
     def one(e):
-        hints = e.get("hints") or {}
-        prim, ext = candidates(e["name"], hints.get("domains"))
+        hints = dict(e.get("hints") or {})
+        if directory:
+            hints["directory"] = directory_domains(e["name"])
+        hints["domains_src"] = list(hints.get("domains") or [])
+        prim, ext = candidates(e["name"], hints["domains_src"] + (hints.get("directory") or []))
         _, full, short = brand_cores(e["name"])
         common = zipf_frequency(short, "en") >= 3.0 or len(short) <= 3
         need = 6 if common else 4

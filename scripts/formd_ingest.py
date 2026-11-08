@@ -154,6 +154,7 @@ def main() -> None:
         sale = min((r["first_sale"] for r in fl if r.get("first_sale")), default=None)
         issuers.append({
             "cik": cik, "name": last["name"], "city": last.get("city", "").title(), "state": last.get("state"),
+            "phone": last.get("phone"), "street": last.get("street"),
             "country": country_of(last), "industry": last.get("industry"), "entity_type": last.get("entity_type"),
             "yoi": last.get("yoi"), "revenue_range": last.get("revenue_range"),
             "amount_usd": int(max(amts)) if amts else None, "first_sale": sale,
@@ -192,7 +193,7 @@ def main() -> None:
         i["hint_domains"] = hd
         ents.append({"key": f"formd:{i['cik']}", "name": i["name"],
                      "hints": {"city": i["city"], "persons": [p["last"] for p in i["persons"]],
-                               "domains": hd, "tech": True}})
+                               "phone": i.get("phone"), "street": i.get("street"), "domains": hd, "tech": True}})
     res = rd.resolve(ents) if resolve else {}
     stats = defaultdict(int)
     run = pdb.start_run(conn, "H2", "sec_form_d", "Form D/D-A 2025-05-01..today; ICP filter; resolve_domains",
