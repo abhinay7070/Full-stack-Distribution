@@ -58,7 +58,7 @@ bystreet.com,Bystreet,S2,"inferred: <=10 people, technical founders, no GTM hire
 waypointtransit.com,Waypoint Transit,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://waypointtransit.com
 withriviera.com,Riviera,S1,founder publishes own email for customers (shaun@withriviera.com),https://www.ycombinator.com/launches/Mob-riviera-multilingual-ai-voice-agents-for-hotels
 confident-ai.com,Confident AI,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://confident-ai.com
-exla.ai,Exla,S1,founder publishes own email for customers (viraat@exla.ai),https://exla.ai
+exla.ai,Exla,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://exla.ai
 gokarsa.com,Karsa,S1,founder publishes own email for customers (shahryar@gokarsa.com),https://www.ycombinator.com/launches/MgV-karsa-the-global-dollar-account
 nitrode.com,Nitrode,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://nitrode.com
 sherpalabs.ai,Sherpa Labs,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://sherpalabs.ai
@@ -217,7 +217,7 @@ topological.com,Topological,S2,"inferred: <=10 people, technical founders, no GT
 getlark.ai,Lark,S1,founder booking link cal.com/founders-lark/lark-chat,https://cal.com/founders-lark/lark-chat
 bitrig.com,Bitrig,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://bitrig.com
 effigov.com,EffiGov,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://effigov.com
-lotas.ai,Lotas,S1,founder publishes own email for customers (jorgeguerra@lotas.ai),https://lotas.ai
+lotas.ai,Lotas,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://lotas.ai
 monarcha.ai,Monarcha,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://monarcha.ai
 orangeslice.ai,Orange Slice,S1,founder booking link cal.com/vihaar-nandigala/30min,https://cal.com/vihaar-nandigala/30min
 wafer.ai,Wafer,S1,founder publishes own email for customers (emilio@wafer.ai),https://www.ycombinator.com/launches/Q9i-wafer-pass-flat-rate-access-to-the-fastest-open-source-llms
@@ -362,7 +362,7 @@ freeportmarkets.com,Freeport Markets,S1,founder publishes own email for customer
 lightberry.com,Lightberry,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://lightberry.com
 getbluma.com,Bluma,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://getbluma.com
 velvetlab.ai,Velvet,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://velvetlab.ai
-lunabill.com,LunaBill,S1,founder publishes own email for customers (suhail@lunabill.com),https://lunabill.com
+lunabill.com,LunaBill,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://lunabill.com
 antigen.sh,Antigen,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://antigen.sh
 fastshot.ai,Fastshot,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://fastshot.ai
 goclicks.ai,Clicks Health,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://goclicks.ai
@@ -449,7 +449,7 @@ stilta.com,Stilta,S2,"inferred: <=10 people, technical founders, no GTM hire or 
 instinct.xyz,Instinct,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://instinct.xyz
 caj.al,Cajal,S1,founder publishes own email for customers (luke@caj.al),https://www.ycombinator.com/companies/cajal-technologies
 overshoot.ai,Overshoot,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://overshoot.ai
-terminaluse.com,Terminal Use,S1,founder publishes own email for customers (vraja@terminaluse.com),https://terminaluse.com
+terminaluse.com,Terminal Use,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://terminaluse.com
 laurence.com,Laurence,S1,founder publishes own email for customers (matthew@laurence.com),https://laurence.com
 seeing-systems.com,Seeing Systems,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://seeing-systems.com
 syntheticsciences.ai,Synthetic Sciences,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://syntheticsciences.ai
@@ -725,7 +725,7 @@ usetokenless.com,Tokenless,S2,"inferred: <=10 people, technical founders, no GTM
 mireye.com,Mireye,S1,founder publishes own email for customers (ansh@mireye.com),https://www.ycombinator.com/launches/SBp-mireye-the-easiest-way-to-build-agentic-applications-for-the-physical-world
 shiraz.ai,Shiraz AI,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://shiraz.ai
 gocapto.com,Capto,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://gocapto.com
-83sciences.ai,83 Sciences,S1,founder publishes own email for customers (ian@83sciences.ai),https://83sciences.ai
+83sciences.ai,83 Sciences,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://83sciences.ai
 skymerse.com,Skymerse,S1,founder booking link cal.com/damian-skymerse/demo,https://cal.com/damian-skymerse/demo
 griprobotics.ai,Grip,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://griprobotics.ai
 hyperprobe.co,HyperProbe,S1,founder booking link calendly.com/shailendra-hyperprobe/30min,https://calendly.com/shailendra-hyperprobe/30min
@@ -819,7 +819,7 @@ vorelios.com,Vorelios,S2,"inferred: <=10 people, technical founders, no GTM hire
 dreamscalelabs.com,Dreamscale Labs,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://dreamscalelabs.com
 telamont.com,Telamont,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://telamont.com
 pomerado.ai,Pomerado,S1,founder publishes own email for customers (akshay@pomerado.ai),https://www.ycombinator.com/launches/WSd-pomerado-the-faster-cheaper-and-more-reliable-alternative-to-browser-use
-archgen.tech,Archgen Labs,S1,founder publishes own email for customers (hari@archgen.tech),https://archgen.tech
+archgen.tech,Archgen Labs,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://archgen.tech
 covera-agents.com,Covera,S1,founder booking link calendly.com/tiphaine-covera-agents/30min,https://calendly.com/tiphaine-covera-agents/30min
 everyapp.com,EveryApp,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://everyapp.com
 particularity.io,Particularity,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://particularity.io
@@ -899,6 +899,7 @@ marlo.today,Marlo,S1,founder booking link calendly.com/itsaustin/marlo-beta,http
 metal.so,Metal,S1,founder publishes own email for customers (gul@metal.so),https://www.ycombinator.com/companies/metal-2
 modaic.dev,Modaic,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://modaic.dev
 modernindustrials.com,Modern Industrials,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://modernindustrials.com
+munari.ai,Munari,S1,job says sales is founder-led: 'Founding Account Executive',https://jobs.ashbyhq.com/a16z-speedrun/32504f21-2270-4bc8-b099-c7f7f1086899
 usenativ.com,Nativ,S1,founder booking link cal.com/ashish-ranjan-jha/30min,https://cal.com/ashish-ranjan-jha/30min
 nex.ad,Nexad,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://nex.ad
 nexxa.ai,Nexxa.ai,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://nexxa.ai
@@ -926,7 +927,6 @@ sourcererai.com,Sourcerer,S2,"inferred: <=10 people, technical founders, no GTM 
 usesparta.co,Sparta,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://usesparta.co
 sunflowersober.com,Sunflower,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://sunflowersober.com
 sweatpals.com,SweatPals,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://sweatpals.com
-maniac.ai,Syzygy,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://maniac.ai
 thirdbrainlabs.ai,ThirdBrain Labs,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://thirdbrainlabs.ai
 ursamining.com,URSA Mining,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://ursamining.com
 joinvalor.com,Valor,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://joinvalor.com
@@ -961,7 +961,7 @@ hammr.com,Hammr,S2,"inferred: <=10 people, technical founders, no GTM hire or GT
 nango.dev,Nango,S1,"job says sales is founder-led: 'Staff Backend Engineer, Founding DevRel, Founder's Associate'",https://news.ycombinator.com/item?id=49168047
 ohm.ai,Ohm,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://ohm.ai
 goveagle.com,GovEagle,S1,founder publishes own email for customers (akash@goveagle.com),https://www.ycombinator.com/launches/M0U-goveagle-win-more-government-awards-faster
-relace.ai,Relace,S1,founder publishes own email for customers (pzhou@relace.ai),https://relace.ai
+relace.ai,Relace,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://relace.ai
 1stcollab.com,1stCollab,S1,founder publishes own email for customers (leon@1stcollab.com),https://www.ycombinator.com/launches/Oey-1stcollab-fully-automated-roi-optimized-influencer-marketing
 withclad.com,Clad,S1,founder booking link cal.com/jasonrudin/clad-intro-call,https://cal.com/jasonrudin/clad-intro-call
 usedill.com,Dill,S1,founder publishes own email for customers (catherine@usedill.com),https://www.ycombinator.com/launches/I86-dill-faster-payments-in-foodservice-distribution
@@ -976,6 +976,7 @@ withsurface.com,Surface Labs,S1,founder publishes own email for customers (sahar
 guac.com,Guac,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://guac.com
 bolto.com,Bolto,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://bolto.com
 inletai.com,Inlet,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://inletai.com
+poh.org,Proof of Human,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://poh.org
 santehq.com,Santé,S1,founder publishes own email for customers (darren@santehq.com),https://www.ycombinator.com/launches/J0o-sant-the-all-in-one-pos-for-liquor-stores
 quillbills.com,Quill Bills,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://quillbills.com
 cairhealth.com,Cair Health,S1,founder booking link calendly.com/ishan-pi4/cair-health-intro,https://calendly.com/ishan-pi4/cair-health-intro
@@ -1542,6 +1543,7 @@ ernd.ai,ernd,S1,founder booking link calendly.com/connor-ernd/ernd-connor,https:
 agent37.com,Agent 37,S1,founder booking link cal.com/vishnukool/30min,https://cal.com/vishnukool/30min
 openscaffold.ai,OpenScaffold,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://openscaffold.ai
 capveon.ai,Capveon,S1,founder booking link meetings.hubspot.com/brison1,https://meetings.hubspot.com/brison1
+useforward.co,Forward,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://useforward.co
 munito.ai,Munito AI,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://munito.ai
 openlakehq.com,OpenLake Technologies,S1,founder publishes own email for customers (arnav@openlakehq.com),https://www.ycombinator.com/launches/Wsz-openlake-fast-inference-for-self-improving-models
 asakana.co,Asakana,S1,founder publishes own email for customers (yudai_matsuoka@asakana.co),https://www.ycombinator.com/launches/VrR-asakana-automating-sales-and-the-entire-back-office-for-food-distributors
@@ -1587,6 +1589,7 @@ zavu.dev,Zavu,S1,founder publishes own email for customers (victor@zavu.dev),htt
 conversion.ai,Conversion AI,S1,job says sales is founder-led: 'Enterprise Account Executive',https://jobs.ashbyhq.com/conversion/c472c380-8109-43d6-b2bf-261809c198de
 loman.ai,Loman AI,S1,founder publishes own email for customers (jansen@loman.ai),raw_sources/H1_job_arbitrage/hn_whoishiring/44434576.json.gz
 toolhouse.ai,Toolhouse AI,S1,job says sales is founder-led: 'Head of AI Sales / AI Go To Market',https://news.ycombinator.com/item?id=49926232
+growfig.ai,Fig,S1,job says sales is founder-led: 'Founding AE',https://jobs.ashbyhq.com/growfig/33f3ca95-28f9-4be5-b197-273327baee68
 newlantern.ai,New Lantern,S1,job says sales is founder-led: 'Software engineers (backend and generalist product engineers',https://news.ycombinator.com/item?id=49939371
 origamics.ai,ORIGAMICS,S1,job says sales is founder-led: 'Founding Researcher',https://news.ycombinator.com/item?id=49522949
 aerdos.com,Aerdos,S1,founder publishes own email for customers (jackson@aerdos.com),https://aerdos.com
@@ -1597,6 +1600,7 @@ puntt.ai,Puntt AI,S1,job says sales is founder-led: 'Founding AI-First Growth Ma
 veedma.com,Veedma,S1,job says sales is founder-led: 'Founding Product Engineer + Founding Growth Engineer',https://news.ycombinator.com/item?id=48361997
 dearhiringmanager.io,Karhuno Group / https://DearHiringManager.io,S1,job says sales is founder-led: 'Full-Stack Developer',https://news.ycombinator.com/item?id=48450323
 babou.ai,Babou,S1,job says sales is founder-led: 'Babou.ai | Remote | Full Time',https://news.ycombinator.com/item?id=46984173
+strix.ai,Strix,S1,job says sales is founder-led: 'Founding Account Executive',https://jobs.ashbyhq.com/strix/882341d6-62f9-4064-9d92-581763db0834
 alterdd.com,Alterdd,S1,job says sales is founder-led: 'Lead Engineer (First Hire)',https://news.ycombinator.com/item?id=47602035
 sigstore.dev,"Always Further, founded by team who created https://sigstore.dev , used to secure npm, pypi, brew, a",S1,"job says sales is founder-led: 'Always Further, founded by team who created https://sigstore'",https://news.ycombinator.com/item?id=47607180
 rdeadvisors.com,RDE Advisors,S1,job says sales is founder-led: 'Senior Full-Stack Engineer',https://news.ycombinator.com/item?id=47712573
@@ -1618,9 +1622,13 @@ coverable.ai,Coverable,S1,founder publishes own email for customers (uzi@coverab
 bildor.com,Bild,S1,founder booking link calendly.com/rambod-bild-engineering/30min,https://calendly.com/rambod-bild-engineering/30min
 casepal.co,Casepal Ai,S1,founder booking link cal.com/anna-balabina-casepal/meeting-with-casepal,https://cal.com/anna-balabina-casepal/meeting-with-casepal
 livsee.com,Livsee,S1,founder publishes own email for customers (andrea@livsee.com),https://livsee.com
+sideshift.com,Sideshift,S1,job says sales is founder-led: 'Account Executive',https://jobs.ashbyhq.com/sideshift/6ed6d9c8-fc30-4465-ac38-3df5d3cfa74a
+reffie.com,Reffie,S1,founder booking link meetings-na2.hubspot.com/connie-lee,https://meetings-na2.hubspot.com/connie-lee
 clevercarnivore.com,Clever Carnivore,S1,founder publishes own email for customers (paul@clevercarnivore.com),https://clevercarnivore.com
 lendersquared.com,Lendersquared,S1,founder booking link calendly.com/arieltrybuch,https://calendly.com/arieltrybuch
 gearflow.com,Gearflow,S1,founder booking link meetings.hubspot.com/luke-powers,https://meetings.hubspot.com/luke-powers
+metactf.com,Metactf,S1,founder booking link meetings.hubspot.com/thomas-rogers,https://meetings.hubspot.com/thomas-rogers
+parfour.com,Parfour,S1,founder booking link meetings.hubspot.com/ethanparfour,https://meetings.hubspot.com/ethanparfour
 dealvue.io,Dealvue,S1,founder publishes own email for customers (tim@dealvue.io),https://dealvue.io
 alphanur.com,Alpha Nur,S1,founder publishes own email for customers (kevin@alphanur.com),https://alphanur.com
 gravitygtm.com,Gravity Gtm,S1,founder publishes own email for customers (ashmer@gravitygtm.com),https://gravitygtm.com
@@ -1628,14 +1636,18 @@ essayonschange.com,Essayons Change,S1,founder publishes own email for customers 
 2clickfit.com,2Clickfit,S1,founder publishes own email for customers (bradford@2clickfit.com),https://2clickfit.com
 8alpha.ai,8Alpha Ai,S1,founder publishes own email for customers (carlos@8alpha.ai),https://8alpha.ai
 freighthero.ai,Freighthero.Ai,S1,founder booking link calendly.com/andrelmartinsf/30m,https://calendly.com/andrelmartinsf/30m
+trutec.ai,Trutec.Ai,S1,founder booking link meetings-na2.hubspot.com/ross-stitts,https://meetings-na2.hubspot.com/ross-stitts
 argosidentity.com,Argos Identity,S1,founder publishes own email for customers (bnoller@argosidentity.com),https://argosidentity.com
+novararobotics.com,Novara Robotics,S1,founder booking link calendly.com/saayuj-novararobotics/30min,https://calendly.com/saayuj-novararobotics/30min
 frozen-one.com,Frozen One,S1,founder publishes own email for customers (alan@frozen-one.com),https://frozen-one.com
 elanorlabs.com,Elanor Labs,S1,founder publishes own email for customers (elan@elanorlabs.com),https://elanorlabs.com
 janetai.co,Janet Ai,S1,founder booking link calendly.com/adhit-janetai/demo,https://calendly.com/adhit-janetai/demo
 cuprummetals.com,Cuprum Metals,S1,founder publishes own email for customers (roger.pettman@cuprummetals.com),https://cuprummetals.com
 gamowlabs.com,Gamow Labs,S1,founder publishes own email for customers (daniel@gamowlabs.com),https://gamowlabs.com
+on3.ai,On3,S1,founder booking link meetings.hubspot.com/paul1264,https://meetings.hubspot.com/paul1264
 fintechfranchisenetwork.com,Fintech Franchise Network,S1,founder publishes own email for customers (ghafner@fintechfranchisenetwork.com),https://fintechfranchisenetwork.com
 eldil.ai,Eldil,S1,founder publishes own email for customers (shawn@eldil.ai),https://eldil.ai
+webaroo.ai,Webaroo,S1,founder booking link calendly.com/connor-webaroo/15-min-discovery-call,https://calendly.com/connor-webaroo/15-min-discovery-call
 demoverse.ai,Demoverse,S1,founder booking link calendly.com/akshay-demoverse/30min,https://calendly.com/akshay-demoverse/30min
 getdispatchdiligence.com,Dispatch Diligence,S1,founder publishes own email for customers (jeff@getdispatchdiligence.com),https://getdispatchdiligence.com
 gwaihirrobotics.com,Gwaihir Robotics,S1,founder publishes own email for customers (mason@gwaihirrobotics.com),https://gwaihirrobotics.com
@@ -1643,6 +1655,7 @@ dessn.ai,Dessn,S1,founder booking link cal.com/gabriella-1ztuzw/dessn-chat-with-
 riplo.ai,Riplo,S1,job says sales is founder-led: 'Open Application',https://jobs.ashbyhq.com/riplo/bc06058e-8b89-4fc0-bc51-65df2fc4e5ab
 dessn.com,Dessn,S1,founder booking link cal.com/gabriella-1ztuzw/dessn-chat-with-lucie-or-gabriella-cofounder,https://cal.com/gabriella-1ztuzw/dessn-chat-with-lucie-or-gabriella-cofounder
 seamflow.com,Seamflow,S1,job says sales is founder-led: 'Founding GTM',https://jobs.ashbyhq.com/seamflow/b7104c97-d551-45e7-a538-fab40a391808
+omnilex.ai,Omnilex,S1,job says sales is founder-led: 'Business Development Manager ',https://jobs.ashbyhq.com/omnilex/a86392ae-cafd-4d48-a3e5-55e1e18b942c
 achilleshr.com,Achilleshr,S1,job says sales is founder-led: 'Sales Development Representative',https://jobs.ashbyhq.com/achilleshr/843e18fd-b19c-436b-a116-4f65a7fecc6e
 crackenagi.com,Crackenagi,S1,job says sales is founder-led: 'CRO (Chief Revenue Officer)',https://jobs.ashbyhq.com/crackenagi/f5224249-117f-4e1d-811d-b72827700894
 droyd.ai,Droyd,S1,job says sales is founder-led: 'Sales Executive',https://jobs.ashbyhq.com/droyd/ea44d42f-34c5-4994-8cf8-8bf04217b1d8
@@ -1660,3 +1673,7 @@ psl.com,Pioneer Square Labs,S1,job says sales is founder-led: 'Founder / CEO —
 pipe17.com,Pipe17,S1,"job says sales is founder-led: 'Director of Sales, UK'",https://job-boards.greenhouse.io/pipe17/jobs/4724717005
 confirmo.com,Confirmo,S1,job says sales is founder-led: 'Head of Business Development',https://confirmo.recruitee.com/o/head-of-business-development
 legalfly.com,LEGALFLY,S1,job says sales is founder-led: 'Senior Account Executive Nordics',https://legalfly.recruitee.com/o/senior-account-executive-nordics
+2ndnature.works,2NDNATURE,S1,job says sales is founder-led: 'Director of Engineering (Player-Coach)',https://news.ycombinator.com/item?id=46506029
+brm.ai,Brm.Ai,S1,job says sales is founder-led: 'Founding Account Executive',https://jobs.ashbyhq.com/brm.ai/858fd935-e3f8-4351-9052-a610952b22c8
+carnot.dk,Carnot Ai,S1,job says sales is founder-led: 'Founding Sales Lead',https://jobs.ashbyhq.com/carnot-ai/188a54f1-bd8b-48ad-a62d-b0be8168878a
+moab.io,Moab,S1,job says sales is founder-led: 'Account Executive',https://jobs.ashbyhq.com/moab/11f4970e-3dbf-4e80-b96c-c67df16d90d8
