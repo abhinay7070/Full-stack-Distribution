@@ -110,7 +110,7 @@ def resolve_all(items: list[dict], prefix: str) -> dict[str, str | None]:
              "hints": {"domains": i.get("hint_domains") or [], "city": i.get("city"), "tech": True}}
             for i in items if i.get("name") and len(rd.alnum(i["name"])) >= 2]
     ents = list({e["key"]: e for e in ents}.values())
-    res = rd.resolve(ents, workers=32)
+    res = rd.resolve(ents, workers=int(__import__("os").environ.get("RESOLVE_WORKERS", "64")))
     return {k: v.get("domain") for k, v in res.items()}
 
 
