@@ -1,0 +1,1456 @@
+{
+ "segments": {
+  "us_vs_euuk": {
+   "n": {
+    "us": 1019,
+    "euuk": 290
+   },
+   "rows": [
+    {
+     "id": "L1",
+     "duty": "Define ICP, segments and personas",
+     "us": 19.0,
+     "euuk": 20.3,
+     "z": -0.5
+    },
+    {
+     "id": "L2",
+     "duty": "Talk to customers / voice of customer research",
+     "us": 7.3,
+     "euuk": 3.1,
+     "z": 2.6
+    },
+    {
+     "id": "L3",
+     "duty": "Positioning, messaging and narrative",
+     "us": 35.2,
+     "euuk": 31.0,
+     "z": 1.3
+    },
+    {
+     "id": "L4",
+     "duty": "Competitive and market intelligence",
+     "us": 14.6,
+     "euuk": 15.2,
+     "z": -0.2
+    },
+    {
+     "id": "L5",
+     "duty": "Become a product expert / feed product team",
+     "us": 9.5,
+     "euuk": 7.6,
+     "z": 1.0
+    },
+    {
+     "id": "D1",
+     "duty": "Own GTM / growth strategy and the plan",
+     "us": 25.7,
+     "euuk": 20.3,
+     "z": 1.9
+    },
+    {
+     "id": "D2",
+     "duty": "Build the repeatable playbook from 0 to 1",
+     "us": 36.5,
+     "euuk": 30.0,
+     "z": 2.0
+    },
+    {
+     "id": "D3",
+     "duty": "Run experiments and growth tests",
+     "us": 24.1,
+     "euuk": 20.3,
+     "z": 1.3
+    },
+    {
+     "id": "D4",
+     "duty": "Choose and open new channels",
+     "us": 11.4,
+     "euuk": 11.4,
+     "z": 0.0
+    },
+    {
+     "id": "D5",
+     "duty": "Forecast, set targets, allocate budget",
+     "us": 18.6,
+     "euuk": 23.4,
+     "z": -1.8
+    },
+    {
+     "id": "F1",
+     "duty": "Prospect and build target account / lead lists",
+     "us": 42.6,
+     "euuk": 38.6,
+     "z": 1.2
+    },
+    {
+     "id": "F2",
+     "duty": "Data sourcing and enrichment",
+     "us": 11.8,
+     "euuk": 11.7,
+     "z": 0.0
+    },
+    {
+     "id": "F3",
+     "duty": "Buying signals, intent and triggers (why now)",
+     "us": 13.3,
+     "euuk": 11.0,
+     "z": 1.0
+    },
+    {
+     "id": "F4",
+     "duty": "Account research and account-based targeting",
+     "us": 12.5,
+     "euuk": 8.3,
+     "z": 2.0
+    },
+    {
+     "id": "F5",
+     "duty": "Lead scoring, routing and inbound triage",
+     "us": 9.0,
+     "euuk": 13.1,
+     "z": -2.0
+    },
+    {
+     "id": "F6",
+     "duty": "Generate pipeline / top-of-funnel demand (outcome)",
+     "us": 31.7,
+     "euuk": 27.9,
+     "z": 1.2
+    },
+    {
+     "id": "R1",
+     "duty": "Run outbound campaigns and sequences",
+     "us": 50.0,
+     "euuk": 46.9,
+     "z": 0.9
+    },
+    {
+     "id": "R2",
+     "duty": "Write copy and personalise messages",
+     "us": 13.1,
+     "euuk": 15.9,
+     "z": -1.2
+    },
+    {
+     "id": "R3",
+     "duty": "Cold calls and LinkedIn / social selling",
+     "us": 14.9,
+     "euuk": 16.6,
+     "z": -0.7
+    },
+    {
+     "id": "R4",
+     "duty": "Email deliverability and sending infrastructure",
+     "us": 1.9,
+     "euuk": 2.4,
+     "z": -0.6
+    },
+    {
+     "id": "R5",
+     "duty": "Content marketing, SEO and case studies",
+     "us": 13.4,
+     "euuk": 11.7,
+     "z": 0.8
+    },
+    {
+     "id": "R6",
+     "duty": "Paid acquisition",
+     "us": 10.4,
+     "euuk": 9.0,
+     "z": 0.7
+    },
+    {
+     "id": "R7",
+     "duty": "Events, conferences and community",
+     "us": 33.6,
+     "euuk": 19.0,
+     "z": 4.8
+    },
+    {
+     "id": "R8",
+     "duty": "Lifecycle, nurture and email marketing",
+     "us": 14.4,
+     "euuk": 10.3,
+     "z": 1.8
+    },
+    {
+     "id": "R9",
+     "duty": "Partnerships, channel and referral programs",
+     "us": 20.1,
+     "euuk": 16.6,
+     "z": 1.4
+    },
+    {
+     "id": "R10",
+     "duty": "Founder-led selling support / founder brand",
+     "us": 15.0,
+     "euuk": 12.8,
+     "z": 1.0
+    },
+    {
+     "id": "B1",
+     "duty": "Respond to replies and inbound, follow up",
+     "us": 14.7,
+     "euuk": 9.3,
+     "z": 2.4
+    },
+    {
+     "id": "B2",
+     "duty": "Qualify prospects (discovery)",
+     "us": 36.5,
+     "euuk": 39.0,
+     "z": -0.8
+    },
+    {
+     "id": "B3",
+     "duty": "Book meetings and demos",
+     "us": 7.8,
+     "euuk": 11.7,
+     "z": -2.1
+    },
+    {
+     "id": "B4",
+     "duty": "Handle objections",
+     "us": 8.1,
+     "euuk": 6.9,
+     "z": 0.7
+    },
+    {
+     "id": "B5",
+     "duty": "Hand off qualified opportunities to AE / founder",
+     "us": 11.5,
+     "euuk": 13.1,
+     "z": -0.8
+    },
+    {
+     "id": "C1",
+     "duty": "Run demos and sales presentations",
+     "us": 19.8,
+     "euuk": 17.2,
+     "z": 1.0
+    },
+    {
+     "id": "C2",
+     "duty": "Negotiate and close deals / carry quota",
+     "us": 22.9,
+     "euuk": 20.0,
+     "z": 1.0
+    },
+    {
+     "id": "C3",
+     "duty": "Manage the pipeline and deal flow",
+     "us": 17.8,
+     "euuk": 19.0,
+     "z": -0.5
+    },
+    {
+     "id": "C4",
+     "duty": "Pricing, proposals, RFPs and procurement",
+     "us": 13.0,
+     "euuk": 11.4,
+     "z": 0.7
+    },
+    {
+     "id": "P1",
+     "duty": "Onboard and implement customers",
+     "us": 5.6,
+     "euuk": 4.8,
+     "z": 0.5
+    },
+    {
+     "id": "P2",
+     "duty": "Retain, expand and upsell accounts",
+     "us": 16.7,
+     "euuk": 13.4,
+     "z": 1.3
+    },
+    {
+     "id": "M1",
+     "duty": "Track metrics, dashboards and reporting",
+     "us": 44.8,
+     "euuk": 50.3,
+     "z": -1.7
+    },
+    {
+     "id": "M2",
+     "duty": "Optimise funnel and conversion rates",
+     "us": 37.3,
+     "euuk": 39.0,
+     "z": -0.5
+    },
+    {
+     "id": "M3",
+     "duty": "Feed learnings back to founders / product / sales",
+     "us": 14.5,
+     "euuk": 8.3,
+     "z": 2.8
+    },
+    {
+     "id": "S1",
+     "duty": "Own the CRM and data hygiene",
+     "us": 28.5,
+     "euuk": 33.4,
+     "z": -1.6
+    },
+    {
+     "id": "S2",
+     "duty": "Automate workflows and integrate tools",
+     "us": 35.1,
+     "euuk": 35.5,
+     "z": -0.1
+    },
+    {
+     "id": "S3",
+     "duty": "Build internal tools, scripts and AI agents",
+     "us": 18.2,
+     "euuk": 19.7,
+     "z": -0.6
+    },
+    {
+     "id": "S4",
+     "duty": "Select and own the GTM tech stack",
+     "us": 8.6,
+     "euuk": 8.3,
+     "z": 0.2
+    },
+    {
+     "id": "S5",
+     "duty": "Document processes and playbooks",
+     "us": 8.9,
+     "euuk": 5.9,
+     "z": 1.7
+    },
+    {
+     "id": "S6",
+     "duty": "Enable and train the team",
+     "us": 14.7,
+     "euuk": 16.2,
+     "z": -0.6
+    },
+    {
+     "id": "O1",
+     "duty": "Hire and manage a team",
+     "us": 2.0,
+     "euuk": 1.7,
+     "z": 0.3
+    },
+    {
+     "id": "O2",
+     "duty": "Represent the company externally / exec presence",
+     "us": 5.4,
+     "euuk": 7.9,
+     "z": -1.6
+    }
+   ]
+  },
+  "small_vs_rest": {
+   "n": {
+    "small": 434,
+    "rest": 1246
+   },
+   "rows": [
+    {
+     "id": "L1",
+     "duty": "Define ICP, segments and personas",
+     "small": 17.1,
+     "rest": 20.5,
+     "z": -1.5
+    },
+    {
+     "id": "L2",
+     "duty": "Talk to customers / voice of customer research",
+     "small": 9.9,
+     "rest": 5.5,
+     "z": 3.2
+    },
+    {
+     "id": "L3",
+     "duty": "Positioning, messaging and narrative",
+     "small": 36.9,
+     "rest": 31.3,
+     "z": 2.1
+    },
+    {
+     "id": "L4",
+     "duty": "Competitive and market intelligence",
+     "small": 10.8,
+     "rest": 16.8,
+     "z": -3.0
+    },
+    {
+     "id": "L5",
+     "duty": "Become a product expert / feed product team",
+     "small": 9.7,
+     "rest": 8.7,
+     "z": 0.6
+    },
+    {
+     "id": "D1",
+     "duty": "Own GTM / growth strategy and the plan",
+     "small": 27.0,
+     "rest": 23.4,
+     "z": 1.5
+    },
+    {
+     "id": "D2",
+     "duty": "Build the repeatable playbook from 0 to 1",
+     "small": 46.3,
+     "rest": 29.9,
+     "z": 6.2
+    },
+    {
+     "id": "D3",
+     "duty": "Run experiments and growth tests",
+     "small": 24.7,
+     "rest": 23.4,
+     "z": 0.5
+    },
+    {
+     "id": "D4",
+     "duty": "Choose and open new channels",
+     "small": 12.0,
+     "rest": 11.2,
+     "z": 0.4
+    },
+    {
+     "id": "D5",
+     "duty": "Forecast, set targets, allocate budget",
+     "small": 12.4,
+     "rest": 23.0,
+     "z": -4.7
+    },
+    {
+     "id": "F1",
+     "duty": "Prospect and build target account / lead lists",
+     "small": 38.9,
+     "rest": 41.5,
+     "z": -0.9
+    },
+    {
+     "id": "F2",
+     "duty": "Data sourcing and enrichment",
+     "small": 12.2,
+     "rest": 12.1,
+     "z": 0.1
+    },
+    {
+     "id": "F3",
+     "duty": "Buying signals, intent and triggers (why now)",
+     "small": 11.1,
+     "rest": 15.2,
+     "z": -2.1
+    },
+    {
+     "id": "F4",
+     "duty": "Account research and account-based targeting",
+     "small": 9.9,
+     "rest": 12.3,
+     "z": -1.3
+    },
+    {
+     "id": "F5",
+     "duty": "Lead scoring, routing and inbound triage",
+     "small": 5.8,
+     "rest": 11.8,
+     "z": -3.6
+    },
+    {
+     "id": "F6",
+     "duty": "Generate pipeline / top-of-funnel demand (outcome)",
+     "small": 29.3,
+     "rest": 29.6,
+     "z": -0.1
+    },
+    {
+     "id": "R1",
+     "duty": "Run outbound campaigns and sequences",
+     "small": 51.6,
+     "rest": 46.4,
+     "z": 1.9
+    },
+    {
+     "id": "R2",
+     "duty": "Write copy and personalise messages",
+     "small": 11.8,
+     "rest": 14.2,
+     "z": -1.3
+    },
+    {
+     "id": "R3",
+     "duty": "Cold calls and LinkedIn / social selling",
+     "small": 15.0,
+     "rest": 14.3,
+     "z": 0.4
+    },
+    {
+     "id": "R4",
+     "duty": "Email deliverability and sending infrastructure",
+     "small": 2.5,
+     "rest": 1.8,
+     "z": 0.9
+    },
+    {
+     "id": "R5",
+     "duty": "Content marketing, SEO and case studies",
+     "small": 16.4,
+     "rest": 12.1,
+     "z": 2.2
+    },
+    {
+     "id": "R6",
+     "duty": "Paid acquisition",
+     "small": 6.0,
+     "rest": 12.2,
+     "z": -3.6
+    },
+    {
+     "id": "R7",
+     "duty": "Events, conferences and community",
+     "small": 34.6,
+     "rest": 27.0,
+     "z": 3.0
+    },
+    {
+     "id": "R8",
+     "duty": "Lifecycle, nurture and email marketing",
+     "small": 10.6,
+     "rest": 15.6,
+     "z": -2.5
+    },
+    {
+     "id": "R9",
+     "duty": "Partnerships, channel and referral programs",
+     "small": 20.3,
+     "rest": 18.9,
+     "z": 0.6
+    },
+    {
+     "id": "R10",
+     "duty": "Founder-led selling support / founder brand",
+     "small": 15.4,
+     "rest": 14.8,
+     "z": 0.3
+    },
+    {
+     "id": "B1",
+     "duty": "Respond to replies and inbound, follow up",
+     "small": 20.0,
+     "rest": 10.8,
+     "z": 4.9
+    },
+    {
+     "id": "B2",
+     "duty": "Qualify prospects (discovery)",
+     "small": 34.6,
+     "rest": 38.0,
+     "z": -1.3
+    },
+    {
+     "id": "B3",
+     "duty": "Book meetings and demos",
+     "small": 6.0,
+     "rest": 9.8,
+     "z": -2.4
+    },
+    {
+     "id": "B4",
+     "duty": "Handle objections",
+     "small": 9.2,
+     "rest": 7.0,
+     "z": 1.5
+    },
+    {
+     "id": "B5",
+     "duty": "Hand off qualified opportunities to AE / founder",
+     "small": 6.9,
+     "rest": 13.9,
+     "z": -3.8
+    },
+    {
+     "id": "C1",
+     "duty": "Run demos and sales presentations",
+     "small": 23.7,
+     "rest": 16.2,
+     "z": 3.5
+    },
+    {
+     "id": "C2",
+     "duty": "Negotiate and close deals / carry quota",
+     "small": 23.7,
+     "rest": 20.7,
+     "z": 1.3
+    },
+    {
+     "id": "C3",
+     "duty": "Manage the pipeline and deal flow",
+     "small": 20.7,
+     "rest": 16.4,
+     "z": 2.1
+    },
+    {
+     "id": "C4",
+     "duty": "Pricing, proposals, RFPs and procurement",
+     "small": 13.6,
+     "rest": 11.4,
+     "z": 1.2
+    },
+    {
+     "id": "P1",
+     "duty": "Onboard and implement customers",
+     "small": 4.8,
+     "rest": 5.7,
+     "z": -0.7
+    },
+    {
+     "id": "P2",
+     "duty": "Retain, expand and upsell accounts",
+     "small": 15.2,
+     "rest": 17.9,
+     "z": -1.3
+    },
+    {
+     "id": "M1",
+     "duty": "Track metrics, dashboards and reporting",
+     "small": 41.2,
+     "rest": 48.3,
+     "z": -2.5
+    },
+    {
+     "id": "M2",
+     "duty": "Optimise funnel and conversion rates",
+     "small": 36.6,
+     "rest": 38.9,
+     "z": -0.8
+    },
+    {
+     "id": "M3",
+     "duty": "Feed learnings back to founders / product / sales",
+     "small": 23.7,
+     "rest": 7.6,
+     "z": 9.0
+    },
+    {
+     "id": "S1",
+     "duty": "Own the CRM and data hygiene",
+     "small": 24.9,
+     "rest": 32.8,
+     "z": -3.1
+    },
+    {
+     "id": "S2",
+     "duty": "Automate workflows and integrate tools",
+     "small": 35.9,
+     "rest": 36.4,
+     "z": -0.2
+    },
+    {
+     "id": "S3",
+     "duty": "Build internal tools, scripts and AI agents",
+     "small": 21.4,
+     "rest": 19.7,
+     "z": 0.8
+    },
+    {
+     "id": "S4",
+     "duty": "Select and own the GTM tech stack",
+     "small": 9.0,
+     "rest": 9.3,
+     "z": -0.2
+    },
+    {
+     "id": "S5",
+     "duty": "Document processes and playbooks",
+     "small": 5.8,
+     "rest": 9.7,
+     "z": -2.5
+    },
+    {
+     "id": "S6",
+     "duty": "Enable and train the team",
+     "small": 13.4,
+     "rest": 16.6,
+     "z": -1.6
+    },
+    {
+     "id": "O1",
+     "duty": "Hire and manage a team",
+     "small": 2.3,
+     "rest": 2.2,
+     "z": 0.1
+    },
+    {
+     "id": "O2",
+     "duty": "Represent the company externally / exec presence",
+     "small": 5.8,
+     "rest": 5.9,
+     "z": -0.1
+    }
+   ]
+  },
+  "stale_vs_fresh": {
+   "n": {
+    "stale": 718,
+    "fresh": 680
+   },
+   "rows": [
+    {
+     "id": "L1",
+     "duty": "Define ICP, segments and personas",
+     "stale": 18.8,
+     "fresh": 20.9,
+     "z": -1.0
+    },
+    {
+     "id": "L2",
+     "duty": "Talk to customers / voice of customer research",
+     "stale": 5.8,
+     "fresh": 5.6,
+     "z": 0.2
+    },
+    {
+     "id": "L3",
+     "duty": "Positioning, messaging and narrative",
+     "stale": 31.8,
+     "fresh": 31.2,
+     "z": 0.2
+    },
+    {
+     "id": "L4",
+     "duty": "Competitive and market intelligence",
+     "stale": 17.8,
+     "fresh": 13.8,
+     "z": 2.0
+    },
+    {
+     "id": "L5",
+     "duty": "Become a product expert / feed product team",
+     "stale": 9.3,
+     "fresh": 8.4,
+     "z": 0.6
+    },
+    {
+     "id": "D1",
+     "duty": "Own GTM / growth strategy and the plan",
+     "stale": 24.9,
+     "fresh": 22.5,
+     "z": 1.1
+    },
+    {
+     "id": "D2",
+     "duty": "Build the repeatable playbook from 0 to 1",
+     "stale": 32.2,
+     "fresh": 30.7,
+     "z": 0.6
+    },
+    {
+     "id": "D3",
+     "duty": "Run experiments and growth tests",
+     "stale": 22.3,
+     "fresh": 24.1,
+     "z": -0.8
+    },
+    {
+     "id": "D4",
+     "duty": "Choose and open new channels",
+     "stale": 10.7,
+     "fresh": 11.9,
+     "z": -0.7
+    },
+    {
+     "id": "D5",
+     "duty": "Forecast, set targets, allocate budget",
+     "stale": 19.9,
+     "fresh": 24.9,
+     "z": -2.2
+    },
+    {
+     "id": "F1",
+     "duty": "Prospect and build target account / lead lists",
+     "stale": 40.3,
+     "fresh": 41.8,
+     "z": -0.6
+    },
+    {
+     "id": "F2",
+     "duty": "Data sourcing and enrichment",
+     "stale": 11.3,
+     "fresh": 14.3,
+     "z": -1.7
+    },
+    {
+     "id": "F3",
+     "duty": "Buying signals, intent and triggers (why now)",
+     "stale": 14.6,
+     "fresh": 15.3,
+     "z": -0.4
+    },
+    {
+     "id": "F4",
+     "duty": "Account research and account-based targeting",
+     "stale": 10.3,
+     "fresh": 14.0,
+     "z": -2.1
+    },
+    {
+     "id": "F5",
+     "duty": "Lead scoring, routing and inbound triage",
+     "stale": 9.7,
+     "fresh": 12.9,
+     "z": -1.9
+    },
+    {
+     "id": "F6",
+     "duty": "Generate pipeline / top-of-funnel demand (outcome)",
+     "stale": 28.4,
+     "fresh": 29.4,
+     "z": -0.4
+    },
+    {
+     "id": "R1",
+     "duty": "Run outbound campaigns and sequences",
+     "stale": 46.5,
+     "fresh": 46.5,
+     "z": 0.0
+    },
+    {
+     "id": "R2",
+     "duty": "Write copy and personalise messages",
+     "stale": 12.3,
+     "fresh": 15.4,
+     "z": -1.7
+    },
+    {
+     "id": "R3",
+     "duty": "Cold calls and LinkedIn / social selling",
+     "stale": 15.5,
+     "fresh": 12.2,
+     "z": 1.8
+    },
+    {
+     "id": "R4",
+     "duty": "Email deliverability and sending infrastructure",
+     "stale": 1.4,
+     "fresh": 2.1,
+     "z": -1.0
+    },
+    {
+     "id": "R5",
+     "duty": "Content marketing, SEO and case studies",
+     "stale": 11.8,
+     "fresh": 11.8,
+     "z": 0.0
+    },
+    {
+     "id": "R6",
+     "duty": "Paid acquisition",
+     "stale": 9.7,
+     "fresh": 13.1,
+     "z": -2.0
+    },
+    {
+     "id": "R7",
+     "duty": "Events, conferences and community",
+     "stale": 24.0,
+     "fresh": 30.0,
+     "z": -2.5
+    },
+    {
+     "id": "R8",
+     "duty": "Lifecycle, nurture and email marketing",
+     "stale": 13.8,
+     "fresh": 16.3,
+     "z": -1.3
+    },
+    {
+     "id": "R9",
+     "duty": "Partnerships, channel and referral programs",
+     "stale": 20.1,
+     "fresh": 18.4,
+     "z": 0.8
+    },
+    {
+     "id": "R10",
+     "duty": "Founder-led selling support / founder brand",
+     "stale": 14.6,
+     "fresh": 14.7,
+     "z": -0.0
+    },
+    {
+     "id": "B1",
+     "duty": "Respond to replies and inbound, follow up",
+     "stale": 8.2,
+     "fresh": 14.7,
+     "z": -3.8
+    },
+    {
+     "id": "B2",
+     "duty": "Qualify prospects (discovery)",
+     "stale": 35.9,
+     "fresh": 37.9,
+     "z": -0.8
+    },
+    {
+     "id": "B3",
+     "duty": "Book meetings and demos",
+     "stale": 8.4,
+     "fresh": 10.0,
+     "z": -1.1
+    },
+    {
+     "id": "B4",
+     "duty": "Handle objections",
+     "stale": 6.7,
+     "fresh": 7.8,
+     "z": -0.8
+    },
+    {
+     "id": "B5",
+     "duty": "Hand off qualified opportunities to AE / founder",
+     "stale": 11.8,
+     "fresh": 14.9,
+     "z": -1.7
+    },
+    {
+     "id": "C1",
+     "duty": "Run demos and sales presentations",
+     "stale": 18.7,
+     "fresh": 13.5,
+     "z": 2.6
+    },
+    {
+     "id": "C2",
+     "duty": "Negotiate and close deals / carry quota",
+     "stale": 20.6,
+     "fresh": 21.2,
+     "z": -0.3
+    },
+    {
+     "id": "C3",
+     "duty": "Manage the pipeline and deal flow",
+     "stale": 16.9,
+     "fresh": 17.6,
+     "z": -0.4
+    },
+    {
+     "id": "C4",
+     "duty": "Pricing, proposals, RFPs and procurement",
+     "stale": 10.2,
+     "fresh": 13.1,
+     "z": -1.7
+    },
+    {
+     "id": "P1",
+     "duty": "Onboard and implement customers",
+     "stale": 7.1,
+     "fresh": 4.1,
+     "z": 2.4
+    },
+    {
+     "id": "P2",
+     "duty": "Retain, expand and upsell accounts",
+     "stale": 16.4,
+     "fresh": 18.5,
+     "z": -1.0
+    },
+    {
+     "id": "M1",
+     "duty": "Track metrics, dashboards and reporting",
+     "stale": 43.7,
+     "fresh": 51.9,
+     "z": -3.1
+    },
+    {
+     "id": "M2",
+     "duty": "Optimise funnel and conversion rates",
+     "stale": 35.5,
+     "fresh": 41.6,
+     "z": -2.3
+    },
+    {
+     "id": "M3",
+     "duty": "Feed learnings back to founders / product / sales",
+     "stale": 8.6,
+     "fresh": 9.3,
+     "z": -0.4
+    },
+    {
+     "id": "S1",
+     "duty": "Own the CRM and data hygiene",
+     "stale": 27.7,
+     "fresh": 36.9,
+     "z": -3.7
+    },
+    {
+     "id": "S2",
+     "duty": "Automate workflows and integrate tools",
+     "stale": 34.3,
+     "fresh": 40.1,
+     "z": -2.3
+    },
+    {
+     "id": "S3",
+     "duty": "Build internal tools, scripts and AI agents",
+     "stale": 19.2,
+     "fresh": 20.4,
+     "z": -0.6
+    },
+    {
+     "id": "S4",
+     "duty": "Select and own the GTM tech stack",
+     "stale": 9.9,
+     "fresh": 9.6,
+     "z": 0.2
+    },
+    {
+     "id": "S5",
+     "duty": "Document processes and playbooks",
+     "stale": 9.7,
+     "fresh": 8.4,
+     "z": 0.9
+    },
+    {
+     "id": "S6",
+     "duty": "Enable and train the team",
+     "stale": 15.0,
+     "fresh": 17.6,
+     "z": -1.3
+    },
+    {
+     "id": "O1",
+     "duty": "Hire and manage a team",
+     "stale": 2.1,
+     "fresh": 2.6,
+     "z": -0.7
+    },
+    {
+     "id": "O2",
+     "duty": "Represent the company externally / exec presence",
+     "stale": 6.1,
+     "fresh": 5.4,
+     "z": 0.5
+    }
+   ]
+  }
+ },
+ "pain": {
+  "core_with_date": 1398,
+  "median_age_days": 65.0,
+  "pct_open_60": 42.7,
+  "pct_open_90": 31.8,
+  "age_by_archetype": {
+   "ae_closer": 115.0,
+   "bizops": 61.0,
+   "content_pmm_brand": 56.5,
+   "customer_success": 72.0,
+   "demand_gen": 66.0,
+   "devrel": 162.5,
+   "growth": 75.0,
+   "gtm_engineer": 65.0,
+   "gtm_generalist_lead": 55.0,
+   "other_gtm": 103.0,
+   "partnerships": 73.0,
+   "revops": 31.0,
+   "sales_leader": 56.0,
+   "sdr_bdr": 67.0,
+   "solutions": 69.0
+  },
+  "companies_core": 897,
+  "companies_2plus_core": 361,
+  "budget_usd_m": 205.8
+ },
+ "comp": {
+  "by_archetype": {
+   "ae_closer": 175000,
+   "bizops": 132500,
+   "content_pmm_brand": 170000,
+   "customer_success": 109000,
+   "demand_gen": 134219,
+   "devrel": 185000,
+   "growth": 153000,
+   "gtm_engineer": 157500,
+   "gtm_generalist_lead": 140000,
+   "other_gtm": 172500,
+   "partnerships": 134500,
+   "revops": 147500,
+   "sales_leader": 332500,
+   "sdr_bdr": 80000,
+   "solutions": 158750
+  },
+  "n_by_archetype": {
+   "ae_closer": 85,
+   "bizops": 4,
+   "content_pmm_brand": 24,
+   "customer_success": 24,
+   "demand_gen": 108,
+   "devrel": 10,
+   "growth": 130,
+   "gtm_engineer": 111,
+   "gtm_generalist_lead": 161,
+   "other_gtm": 18,
+   "partnerships": 8,
+   "revops": 63,
+   "sales_leader": 1,
+   "sdr_bdr": 349,
+   "solutions": 14
+  },
+  "us": 130000.0,
+  "euuk": 90900.0,
+  "founding": 144000.0
+ },
+ "premium": [
+  {
+   "id": "L1",
+   "duty": "Define ICP, segments and personas",
+   "with": 110000,
+   "without": 125000,
+   "n_with": 213
+  },
+  {
+   "id": "L2",
+   "duty": "Talk to customers / voice of customer research",
+   "with": 150000,
+   "without": 120000,
+   "n_with": 76
+  },
+  {
+   "id": "L3",
+   "duty": "Positioning, messaging and narrative",
+   "with": 112500,
+   "without": 126000,
+   "n_with": 376
+  },
+  {
+   "id": "L4",
+   "duty": "Competitive and market intelligence",
+   "with": 100000,
+   "without": 125000,
+   "n_with": 158
+  },
+  {
+   "id": "L5",
+   "duty": "Become a product expert / feed product team",
+   "with": 134219,
+   "without": 120000,
+   "n_with": 98
+  },
+  {
+   "id": "D1",
+   "duty": "Own GTM / growth strategy and the plan",
+   "with": 139000,
+   "without": 120000,
+   "n_with": 278
+  },
+  {
+   "id": "D2",
+   "duty": "Build the repeatable playbook from 0 to 1",
+   "with": 130000,
+   "without": 116250,
+   "n_with": 400
+  },
+  {
+   "id": "D3",
+   "duty": "Run experiments and growth tests",
+   "with": 130000,
+   "without": 120000,
+   "n_with": 266
+  },
+  {
+   "id": "D4",
+   "duty": "Choose and open new channels",
+   "with": 122500,
+   "without": 122500,
+   "n_with": 125
+  },
+  {
+   "id": "D5",
+   "duty": "Forecast, set targets, allocate budget",
+   "with": 150000,
+   "without": 116250,
+   "n_with": 214
+  },
+  {
+   "id": "F1",
+   "duty": "Prospect and build target account / lead lists",
+   "with": 100000,
+   "without": 147500,
+   "n_with": 467
+  },
+  {
+   "id": "F2",
+   "duty": "Data sourcing and enrichment",
+   "with": 134000,
+   "without": 120000,
+   "n_with": 129
+  },
+  {
+   "id": "F3",
+   "duty": "Buying signals, intent and triggers (why now)",
+   "with": 130000,
+   "without": 121525,
+   "n_with": 152
+  },
+  {
+   "id": "F4",
+   "duty": "Account research and account-based targeting",
+   "with": 110000,
+   "without": 125000,
+   "n_with": 135
+  },
+  {
+   "id": "F5",
+   "duty": "Lead scoring, routing and inbound triage",
+   "with": 115000,
+   "without": 124200,
+   "n_with": 115
+  },
+  {
+   "id": "F6",
+   "duty": "Generate pipeline / top-of-funnel demand (outcome)",
+   "with": 105000,
+   "without": 130000,
+   "n_with": 373
+  },
+  {
+   "id": "R1",
+   "duty": "Run outbound campaigns and sequences",
+   "with": 100000,
+   "without": 145000,
+   "n_with": 555
+  },
+  {
+   "id": "R2",
+   "duty": "Write copy and personalise messages",
+   "with": 110000,
+   "without": 125000,
+   "n_with": 140
+  },
+  {
+   "id": "R3",
+   "duty": "Cold calls and LinkedIn / social selling",
+   "with": 77500,
+   "without": 133439,
+   "n_with": 171
+  },
+  {
+   "id": "R5",
+   "duty": "Content marketing, SEO and case studies",
+   "with": 150000,
+   "without": 120000,
+   "n_with": 136
+  },
+  {
+   "id": "R6",
+   "duty": "Paid acquisition",
+   "with": 150000,
+   "without": 120000,
+   "n_with": 96
+  },
+  {
+   "id": "R7",
+   "duty": "Events, conferences and community",
+   "with": 125000,
+   "without": 120650,
+   "n_with": 323
+  },
+  {
+   "id": "R8",
+   "duty": "Lifecycle, nurture and email marketing",
+   "with": 150000,
+   "without": 120000,
+   "n_with": 150
+  },
+  {
+   "id": "R9",
+   "duty": "Partnerships, channel and referral programs",
+   "with": 152500,
+   "without": 115000,
+   "n_with": 199
+  },
+  {
+   "id": "R10",
+   "duty": "Founder-led selling support / founder brand",
+   "with": 138590,
+   "without": 120000,
+   "n_with": 146
+  },
+  {
+   "id": "B1",
+   "duty": "Respond to replies and inbound, follow up",
+   "with": 110000,
+   "without": 125000,
+   "n_with": 159
+  },
+  {
+   "id": "B2",
+   "duty": "Qualify prospects (discovery)",
+   "with": 100000,
+   "without": 140000,
+   "n_with": 421
+  },
+  {
+   "id": "B3",
+   "duty": "Book meetings and demos",
+   "with": 85000,
+   "without": 125000,
+   "n_with": 93
+  },
+  {
+   "id": "B4",
+   "duty": "Handle objections",
+   "with": 112500,
+   "without": 123000,
+   "n_with": 87
+  },
+  {
+   "id": "B5",
+   "duty": "Hand off qualified opportunities to AE / founder",
+   "with": 100000,
+   "without": 125000,
+   "n_with": 141
+  },
+  {
+   "id": "C1",
+   "duty": "Run demos and sales presentations",
+   "with": 123000,
+   "without": 122500,
+   "n_with": 217
+  },
+  {
+   "id": "C2",
+   "duty": "Negotiate and close deals / carry quota",
+   "with": 145000,
+   "without": 120000,
+   "n_with": 253
+  },
+  {
+   "id": "C3",
+   "duty": "Manage the pipeline and deal flow",
+   "with": 150000,
+   "without": 120000,
+   "n_with": 200
+  },
+  {
+   "id": "C4",
+   "duty": "Pricing, proposals, RFPs and procurement",
+   "with": 162386,
+   "without": 120000,
+   "n_with": 138
+  },
+  {
+   "id": "P1",
+   "duty": "Onboard and implement customers",
+   "with": 150000,
+   "without": 120000,
+   "n_with": 50
+  },
+  {
+   "id": "P2",
+   "duty": "Retain, expand and upsell accounts",
+   "with": 152500,
+   "without": 120000,
+   "n_with": 187
+  },
+  {
+   "id": "M1",
+   "duty": "Track metrics, dashboards and reporting",
+   "with": 135000,
+   "without": 112500,
+   "n_with": 492
+  },
+  {
+   "id": "M2",
+   "duty": "Optimise funnel and conversion rates",
+   "with": 125000,
+   "without": 120000,
+   "n_with": 410
+  },
+  {
+   "id": "M3",
+   "duty": "Feed learnings back to founders / product / sales",
+   "with": 137500,
+   "without": 120000,
+   "n_with": 144
+  },
+  {
+   "id": "S1",
+   "duty": "Own the CRM and data hygiene",
+   "with": 108975,
+   "without": 129800,
+   "n_with": 338
+  },
+  {
+   "id": "S2",
+   "duty": "Automate workflows and integrate tools",
+   "with": 150000,
+   "without": 110000,
+   "n_with": 411
+  },
+  {
+   "id": "S3",
+   "duty": "Build internal tools, scripts and AI agents",
+   "with": 137500,
+   "without": 120000,
+   "n_with": 215
+  },
+  {
+   "id": "S4",
+   "duty": "Select and own the GTM tech stack",
+   "with": 140000,
+   "without": 120000,
+   "n_with": 111
+  },
+  {
+   "id": "S5",
+   "duty": "Document processes and playbooks",
+   "with": 112150,
+   "without": 122500,
+   "n_with": 88
+  },
+  {
+   "id": "S6",
+   "duty": "Enable and train the team",
+   "with": 115000,
+   "without": 122750,
+   "n_with": 176
+  },
+  {
+   "id": "O2",
+   "duty": "Represent the company externally / exec presence",
+   "with": 127300,
+   "without": 122400,
+   "n_with": 72
+  }
+ ],
+ "stage_mix": {
+  "unknown": 1083,
+  "pre_seed": 312,
+  "series_a": 202,
+  "seed": 83
+ },
+ "seniority": {
+  "mid": 983,
+  "lead": 445,
+  "exec": 89,
+  "senior": 73,
+  "junior": 55,
+  "intern": 35
+ },
+ "archetypes": {
+  "sdr_bdr": 511,
+  "gtm_generalist_lead": 234,
+  "demand_gen": 211,
+  "growth": 211,
+  "gtm_engineer": 169,
+  "ae_closer": 110,
+  "revops": 108,
+  "content_pmm_brand": 33,
+  "customer_success": 26,
+  "other_gtm": 22,
+  "solutions": 18,
+  "devrel": 10,
+  "partnerships": 9,
+  "sales_leader": 4,
+  "bizops": 4
+ }
+}

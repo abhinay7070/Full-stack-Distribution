@@ -1,7 +1,6 @@
 """Role-scope research, step 3: turn the measured duty prevalence into the unified 8-o agent scope.
 
-Reads  research/gtm_role_scope/analysis/duty_prevalence.csv, founding_vs_nonfounding.csv, lift_vs_market.csv,
-       duty_cooccurrence_core.csv, extracted/postings_tagged.csv
+Reads  research/gtm_role_scope/ml/duty_stats_ml.csv + ml/postings_labels.csv.gz (full-data ML labels, role_scope_ml.py)
 Writes research/gtm_role_scope/analysis/unified_scope.csv   (one row per duty: demand index, priority, 8-o decision,
                                                             build stage, target Gap Meter level)
        research/gtm_role_scope/analysis/duty_clusters.csv   (data-driven duty bundles: hierarchical clustering on
@@ -79,26 +78,39 @@ DECISION = {
 }
 
 
-def read(name):
-    with open(ANA / name, newline="") as fh:
+def read(name, base=ANA):
+    with open(base / name, newline="") as fh:
         return list(csv.DictReader(fh))
 
 
+ML = ROOT / "research" / "gtm_role_scope" / "ml"
+
+
 def main() -> None:
-    prev = {r["duty_id"]: r for r in read("duty_prevalence.csv")}
-    fvn = {r["duty_id"]: r for r in read("founding_vs_nonfounding.csv")}
-    lift = {r["duty_id"]: r for r in read("lift_vs_market.csv")}
-    mx = {k: max(float(r[k]) for r in prev.values()) for k in ("pct_core", "pct_companies", "pct_founding")}
+    """Primary numbers come from the full-data ML labels (ml/duty_stats_ml.csv, written by role_scope_ml.py); the
+    keyword (regex) numbers are kept beside them as a sensitivity check."""
+    import gzip
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import role_taxonomy as T
+    block = {d["id"]: d["block"] for d in T.DUTIES}
+    st = {r["duty_id"]: r for r in read("duty_stats_ml.csv", ML)}
     rows = []
-    for i, r in prev.items():
-        di = 100 * np.mean([float(r[k]) / mx[k] for k in mx])
+    for i, r in st.items():
         dec, stage, gap, why = DECISION[i]
-        rows.append({"duty_id": i, "stage": r["stage"], "block": r["block"], "duty": r["duty"],
-                     "pct_core": r["pct_core"], "ci95_core": r["ci95_core"], "pct_companies": r["pct_companies"],
-                     "pct_founding": r["pct_founding"], "founding_lift": fvn[i]["lift"], "founding_z": fvn[i]["z"],
-                     "icp_vs_market_lift": lift[i]["lift"], "icp_vs_market_z": lift[i]["z"],
-                     "demand_index": round(di, 1),
-                     "priority": "Must" if di >= 55 else ("Should" if di >= 30 else "Could"),
+        fa, fb = float(r["founding_a_ml"]), float(r["founding_b_ml"])
+        di = float(r["demand_index_ml"])
+        rows.append({"duty_id": i, "stage": r["stage"], "block": block[i], "duty": r["duty"],
+                     "pct_core": r["pct_core_ml"], "ci95_core": r["ci95_core_ml"], "pct_core_regex": r["pct_core_regex"],
+                     "pct_companies": r["pct_companies_ml"], "pct_company_weighted": r["pct_company_weighted_ml"],
+                     "pct_founding": r["founding_a_ml"], "founding_lift": round(fa / fb, 2) if fb else "",
+                     "founding_z": r["founding_z_ml"], "founding_robust": r["founding_robust"],
+                     "small_team_pct": r["small_team_a_ml"], "rest_pct": r["small_team_b_ml"], "small_team_z": r["small_team_z_ml"],
+                     "small_team_robust": r["small_team_robust"],
+                     "icp_vs_market_pct_icp": r["icp_vs_market_a_ml"], "icp_vs_market_pct_market": r["icp_vs_market_b_ml"],
+                     "icp_vs_market_z": r["icp_vs_market_z_ml"], "icp_vs_market_robust": r["icp_vs_market_robust"],
+                     "demand_index": di, "demand_ci95": r["demand_ci95"], "rank": r["rank"], "rank_ci95": r["rank_ci95"],
+                     "p_must": r["p_must"], "priority": r["priority_ml"],
                      "decision_8o": dec, "build_stage": stage or "", "target_gap_level": gap, "rationale": why})
     rows.sort(key=lambda x: -x["demand_index"])
     with open(ANA / "unified_scope.csv", "w", newline="") as fh:
@@ -106,13 +118,13 @@ def main() -> None:
         w.writeheader()
         w.writerows(rows)
 
-    # data-driven bundles: average-linkage clustering on (1 - phi) between duty vectors in core postings
+    # data-driven bundles: average-linkage clustering on (1 - phi) between duty vectors, all usable ICP core postings
     from scipy.cluster.hierarchy import fcluster, linkage
     from scipy.spatial.distance import squareform
-    with open(EXT / "postings_tagged.csv", newline="") as fh:
-        core = [r for r in csv.DictReader(fh) if r["core"] == "True" and int(r["n_resp_lines"]) >= 3]
-    ids = list(prev)
-    X = np.array([[i in r["duties"].split("|") for i in ids] for r in core], dtype=float)
+    core = [r for r in csv.DictReader(gzip.open(ML / "postings_labels.csv.gz", "rt"))
+            if r["corpus"] == "icp" and r["core"] == "True" and int(r["n_scope"]) >= 3]
+    ids = list(st)
+    X = np.array([[i in r["duties_ml"].split("|") for i in ids] for r in core], dtype=float)
     keep = X.std(0) > 0
     ids = [i for i, k in zip(ids, keep) if k]
     X = X[:, keep]
@@ -129,7 +141,7 @@ def main() -> None:
         cohesion = float(sub[np.triu_indices(len(idx), 1)].mean()) if len(idx) > 1 else 1.0
         share = float((X[:, idx].sum(1) > 0).mean())
         out.append({"cluster": int(c), "size": len(mem), "duties": " ".join(mem),
-                    "labels": " | ".join(prev[m]["duty"] for m in mem),
+                    "labels": " | ".join(st[m]["duty"] for m in mem),
                     "mean_phi": round(cohesion, 3), "pct_core_postings_any": round(100 * share, 1)})
     out.sort(key=lambda r: -r["pct_core_postings_any"])
     with open(ANA / "duty_clusters.csv", "w", newline="") as fh:
@@ -137,8 +149,8 @@ def main() -> None:
         w.writeheader()
         w.writerows(out)
     for r in rows:
-        print(f"{r['duty_id']:4} {r['demand_index']:5} {r['priority']:6} {r['decision_8o']:6} S{r['build_stage'] or '-'} "
-              f"L{r['target_gap_level']} {r['duty']}")
+        print(f"{r['duty_id']:4} {r['demand_index']:5} [{r['demand_ci95']}] rank {r['rank']} [{r['rank_ci95']}] "
+              f"{r['priority']:6} {r['decision_8o']:6} {r['duty']}")
     for r in out:
         print(r["cluster"], r["size"], r["pct_core_postings_any"], r["mean_phi"], r["labels"])
 

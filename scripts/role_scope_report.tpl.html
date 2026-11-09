@@ -1,0 +1,233 @@
+<title>What Founders Hire For</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: strategy field report. One 1000px reading column; each section = claim, chart, how to read it, so-what for 8-o. */
+:root{
+  --bg:#f4f6f8; --panel:#ffffff; --ink:#15212c; --ink2:#3a4855; --mute:#5f6c79; --line:#dbe2e8; --grid:#e6ebef;
+  --own:#007c99; --own-bg:#d9eef3; --assist:#c4720a; --assist-bg:#f7ead6; --out:#7f8b98; --out-bg:#e8ecf0;
+  --accent:#007c99; --cell-ink:#ffffff;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif; --f-body:"IBM Plex Sans",system-ui,-apple-system,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10171e; --panel:#17212b; --ink:#e7edf3; --ink2:#c2ccd6; --mute:#98a6b3; --line:#28353f; --grid:#212c36;
+  --own:#1aa3c2; --own-bg:#143640; --assist:#bf7a14; --assist-bg:#3a2b14; --out:#7d8a97; --out-bg:#232d37; --accent:#1aa3c2; --cell-ink:#0b1116; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10171e; --panel:#17212b; --ink:#e7edf3; --ink2:#c2ccd6; --mute:#98a6b3; --line:#28353f; --grid:#212c36;
+  --own:#1aa3c2; --own-bg:#143640; --assist:#bf7a14; --assist-bg:#3a2b14; --out:#7d8a97; --out-bg:#232d37; --accent:#1aa3c2; --cell-ink:#0b1116; color-scheme:dark}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 var(--f-body)}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:44px 72px;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(30px,5.2vw,48px);font-weight:800;line-height:1.06}
+h2{font-size:clamp(21px,3vw,26px);font-weight:700;line-height:1.2}
+h3{font-size:16px;font-weight:700}
+p{margin:0;max-width:72ch}
+.eyebrow{font:500 12px var(--f-mono);letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+.lede{font-size:18px;line-height:1.55}
+.mute{color:var(--mute)}
+section{display:grid;gap:16px;min-width:0}
+.sec-head{display:grid;gap:8px}
+.so{border-left:3px solid var(--accent);padding:2px 0 2px 14px;color:var(--ink2);max-width:76ch}
+.so b{color:var(--ink)}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font:500 12.5px var(--f-mono)}
+nav.toc a{color:var(--mute);text-decoration:none;border-bottom:1px solid var(--line)}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--ink);border-color:var(--accent);outline:none}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.tiles div{background:var(--panel);padding:16px;display:grid;gap:4px;align-content:start}
+.tiles b{font:800 30px/1 var(--f-display);font-variant-numeric:tabular-nums}
+.tiles span{font-size:13px;color:var(--mute);line-height:1.4}
+.verdict{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.verdict .big{font:800 15px var(--f-mono);letter-spacing:.06em;color:var(--own);border:2px solid var(--own);border-radius:4px;padding:6px 10px;grid-row:span 2}
+.pill{display:inline-block;font:500 11px var(--f-mono);letter-spacing:.04em;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.pill.own{background:var(--own-bg);color:var(--own)} .pill.assist{background:var(--assist-bg);color:var(--assist)} .pill.out{background:var(--out-bg);color:var(--out)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;min-width:0}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+.tbl table{min-width:680px}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font:500 11px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mute);background:var(--bg);vertical-align:bottom}
+td.h{font-weight:600;width:28%}
+td.num,th.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+tr:last-child td{border-bottom:0}
+.chart{width:100%;height:auto;display:block;font-family:var(--f-body)}
+.chart .grid{stroke:var(--grid);stroke-width:1}
+.chart .ref{stroke:var(--mute);stroke-width:1;stroke-dasharray:3 3}
+.chart .tick{fill:var(--mute);font:11px var(--f-mono)}
+.chart .axl{fill:var(--mute);font:12px var(--f-body)}
+.chart .dl{fill:var(--ink2);font:12px var(--f-body)}
+.chart .val{fill:var(--ink);font:500 11.5px var(--f-mono)}
+.chart .qlab{fill:var(--mute);font:600 10.5px var(--f-mono);letter-spacing:.08em}
+.chart .m-own{fill:var(--own)} .chart .m-assist{fill:var(--assist)} .chart .m-out{fill:var(--out)}
+.chart .m-rest{fill:var(--panel);stroke:var(--out);stroke-width:2}
+.chart .pt circle{stroke:var(--panel);stroke-width:2}
+.chart .link{stroke:var(--own);stroke-width:2;opacity:.45}
+.chart .band{fill:var(--assist);opacity:.14}
+.chart .cellt{fill:var(--ink);font:500 12px var(--f-mono)} .chart .cellt-in{fill:var(--cell-ink);font:600 12px var(--f-mono)}
+.chart g:hover>circle,.chart rect:hover{opacity:.8}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--mute);align-items:center}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:6px}
+.sw.own{background:var(--own)} .sw.assist{background:var(--assist)} .sw.out{background:var(--out)} .sw.rest{border:2px solid var(--out);width:8px;height:8px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
+.two>*{min-width:0}
+/* decomposition tree */
+.tree{display:grid;gap:10px}
+.root{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;font:600 14px var(--f-body)}
+.root b{font:800 18px var(--f-display)}
+.node{display:grid;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px;margin-left:18px;position:relative}
+.node::before{content:"";position:absolute;left:-18px;top:-11px;bottom:50%;width:14px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);border-bottom-left-radius:6px}
+.nh{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr) 54px;gap:12px;align-items:center}
+.nn{font-weight:700}
+.nbar{height:10px;background:var(--out-bg);border-radius:3px;position:relative}
+.nbar i{position:absolute;inset:0 auto 0 0;background:var(--own);border-radius:3px}
+.nv{font:600 13px var(--f-mono);text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:3px 8px;border-radius:4px;border:1px solid var(--line);display:inline-flex;gap:6px;align-items:baseline}
+.chip b{font:500 11px var(--f-mono);color:var(--mute)}
+.chip.c-own{border-color:var(--own);color:var(--ink)} .chip.c-assist{border-color:var(--assist)} .chip.c-out{border-style:dashed;color:var(--mute)}
+.verb{font-size:13px;color:var(--mute);font-style:italic}
+@media (max-width:620px){.nh{grid-template-columns:1fr 54px}.nbar{grid-column:1/-1;order:3}.node{margin-left:10px}.node::before{left:-10px;width:8px}}
+ol.ml{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:2px}
+ol.ml li{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+ol.ml .di{font:600 13px var(--f-mono);color:var(--mute)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px}
+.steps .card{display:grid;gap:8px;align-content:start}
+.steps .card h3{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.steps ul{margin:0;padding-left:18px;font-size:14px;display:grid;gap:4px}
+.kv{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr);gap:8px 16px;font-size:14px}
+.kv dt{font-weight:600} .kv dd{margin:0;color:var(--ink2)}
+@media (max-width:560px){.kv{grid-template-columns:1fr}.kv dd{margin-bottom:8px}}
+footer{font-size:12.5px;color:var(--mute);border-top:1px solid var(--line);padding-top:16px;display:grid;gap:6px}
+code{font-family:var(--f-mono);font-size:.92em}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<header class="sec-head">
+  <div class="eyebrow">8-o · PMF evidence report · full population · {{DATE}}</div>
+  <h1>Founders are hiring a pipeline engine that learns. 8-o is that hire.</h1>
+  <p class="lede">We read every GTM job posting in our database: {{N_POST}} postings from {{N_COMP}} ICP companies, and compared them to {{N_MKT}} postings from the rest of the swept job market. Every responsibility line ({{N_LINES}} in total) was labelled twice, once by a keyword taxonomy and once by a text-embedding model, and grouped bottom-up with no taxonomy at all. This page shows what founders ask for, how sure we are, and what 8-o should build.</p>
+  <nav class="toc" aria-label="Sections">
+    <a href="#verdict">Verdict</a><a href="#decomposition">Reverse breakdown</a><a href="#patterns">Patterns</a><a href="#pain">Pain &amp; budget</a><a href="#scope">Unified scope</a><a href="#translation">8-o translation</a><a href="#blueprint">Directional blueprint</a><a href="#confidence">Confidence</a>
+  </nav>
+</header>
+
+<section id="verdict">
+  <div class="tiles">
+    <div><b>{{N_CO_CORE}}</b><span>ICP companies with an open core growth-hire role</span></div>
+    <div><b>${{BUDGET}}M</b><span>annual base salary posted for those {{N_CORE}} roles</span></div>
+    <div><b>{{OPEN60}}%</b><span>of dated roles open for more than 60 days (median {{MED_AGE}} days)</span></div>
+    <div><b>{{TAKEOVER}}×</b><span>more often than at other companies: "take GTM over from the founders"</span></div>
+  </div>
+  <div class="verdict"><span class="big">PMF SIGNAL: STRONG</span><b>The problem is real, frequent, paid for and still unsolved. The job description matches 8-o's loop.</b><span class="mute">Two gaps to handle in the offer: founders often want the same hire to close deals, and they measure "qualified pipeline", not "meetings".</span></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Hypothesis</th><th>Evidence (full population)</th><th>Verdict</th></tr></thead>
+    <tbody>{{SCORECARD}}</tbody>
+  </table></div>
+</section>
+
+<section id="decomposition">
+  <div class="sec-head"><div class="eyebrow">Reverse breakdown</div><h2>From one job title down to 48 duties</h2>
+  <p class="mute">Duties that appear together in the same posting were clustered (average linkage on co-occurrence). Each bar is the share of {{N_CORE}} core growth-hire postings asking for at least one duty in the cluster. Chips show each duty's own share; the outline shows the 8-o decision. The quote is a real posting line that touches three or more duties in that cluster.</p></div>
+  <div class="tree">
+    <div class="root"><b>Growth / GTM hire at a seed–Series A startup</b><span class="mute">{{N_CORE}} core postings · {{N_CO_CORE}} companies</span></div>
+    {{TREE}}
+  </div>
+  <div class="legend"><span><span class="pill own">OWN</span> 8-o does it</span><span><span class="pill assist">ASSIST</span> 8-o prepares, founder does it</span><span><span class="pill out">OUT</span> not in scope</span></div>
+  <p class="so"><b>So what:</b> the largest bundle is the pipeline engine (ICP → signals → outbound → reply → qualify → book), followed by experiment-and-measure and GTM systems. Those three bundles are 8-o's Brain, Radar, Voice, Reply, Lab and Foundation. Closing is the only large bundle 8-o should not take on.</p>
+</section>
+
+<section id="patterns">
+  <div class="sec-head"><div class="eyebrow">Patterns</div><h2>What the first hire is for, and how that differs from later hires</h2>
+  <p class="mute">Horizontal axis: how often core postings ask for the duty. Vertical axis: how much more often first-hire / founding postings ask for it than later-hire postings. Dashed lines: median prevalence and 1× (no difference). Hover a dot for exact values.</p></div>
+  <div class="legend"><span><span class="sw own"></span>OWN</span><span><span class="sw assist"></span>ASSIST</span><span><span class="sw out"></span>OUT</span></div>
+  <div class="card">{{QUAD}}</div>
+  <p class="so"><b>So what:</b> the top-right quadrant (asked for often, and even more often by first hires) holds the playbook, outbound, strategy, experiments and reporting back to founders. That is Lab plus Voice. CRM hygiene, enablement and onboarding sit lower: later-stage maintenance work, not what a seed founder hires for first.</p>
+
+  <div class="sec-head"><h3>The closer to our ICP (≤ 35 people), the more the job looks like 8-o</h3>
+  <p class="mute">Core postings at companies with a known headcount of 35 or fewer (n {{N_SMALL}}) vs all other core postings (n {{N_REST}}). Largest differences, ML labels; z from a two-proportion test.</p></div>
+  <div class="legend"><span><span class="sw own"></span>≤ 35 people</span><span><span class="sw rest"></span>larger or unknown</span></div>
+  <div class="card">{{SMALL}}</div>
+
+  <div class="sec-head"><h3>Which role types carry which part of the job</h3>
+  <p class="mute">% of postings in each role type asking for at least one duty in each job stage (ML labels). Darker = more.</p></div>
+  <div class="card" style="overflow-x:auto">{{HEAT}}</div>
+  <p class="so"><b>So what:</b> no single role title covers the whole loop. SDRs carry find, reach and reply. Growth and demand gen carry decide and improve. GTM engineers and RevOps carry systems. A founder at 3–35 people cannot hire all of them, and that is the gap 8-o fills: one agent across every column.</p>
+</section>
+
+<section id="pain">
+  <div class="sec-head"><div class="eyebrow">Pain &amp; willingness to pay</div><h2>The roles are expensive and hard to fill</h2></div>
+  <div class="two">
+    <div class="card"><h3>Median posted base salary by role</h3><p class="mute" style="margin:4px 0 8px">Annual, USD. Shaded band = 8-o priced at $3–5K a month.</p>{{COMP}}</div>
+    <div class="card"><h3>Median days the role has been open</h3><p class="mute" style="margin:4px 0 8px">Postings with a publish date, as of {{DATE}}.</p>{{AGE}}</div>
+  </div>
+  <div class="card"><h3>What each duty is worth</h3><p class="mute" style="margin:4px 0 8px">Median posted salary of core postings that ask for the duty, minus those that don't. The 4 highest and 4 lowest premiums are shown.</p>{{PREM}}</div>
+  <p class="so"><b>So what:</b> execution duties (prospecting, outbound, qualifying, booking) sit in roles that pay about $45K less. Strategy and systems duties (automation, forecasting, playbook) pay more. 8-o bundles both, so price it against the founding GTM hire (about {{FOUND_COMP}}), not against an SDR (about $80K).</p>
+</section>
+
+<section id="scope">
+  <div class="sec-head"><div class="eyebrow">Unified scope</div><h2>What founders want, ranked</h2>
+  <p class="mute">Demand index (0–100) = average of three normalised shares: core postings, ICP companies, and founding postings asking for the duty. The ranges are 95% intervals from 1,000 bootstrap resamples of companies.</p></div>
+  <div class="two">{{MUST}}</div>
+  <div class="two">
+    <div class="card"><h3>Why they are hiring</h3><p class="mute" style="margin:4px 0 8px">% of core postings with the phrase evidence</p>{{INTENT}}</div>
+    <div class="card"><h3>What they measure</h3><p class="mute" style="margin:4px 0 8px">% of core postings naming the KPI</p>{{KP}}</div>
+  </div>
+  <p class="so"><b>So what:</b> the stated reason is "build a repeatable motion" and "take it off the founder". The measure is qualified pipeline. Write the 8-o promise in those words.</p>
+</section>
+
+<section id="translation">
+  <div class="sec-head"><div class="eyebrow">Translation to 8-o</div><h2>Where founder demand lands in the 8-o architecture</h2>
+  <p class="mute">Sum of demand index per block, split by decision. "Founder / out of scope" is demand that 8-o deliberately leaves with the founder.</p></div>
+  <div class="legend"><span><span class="sw own"></span>OWN</span><span><span class="sw assist"></span>ASSIST</span><span><span class="sw out"></span>OUT</span></div>
+  <div class="card">{{BLOCKS}}</div>
+  <div class="tbl"><table>
+    <thead><tr><th>Block</th><th>The job founders posted</th><th>What 8-o must do</th><th>Evidence</th></tr></thead>
+    <tbody>{{BLOCKTABLE}}</tbody>
+  </table></div>
+  <div class="two">
+    <div class="card"><h3>Tools named in core postings</h3><p class="mute" style="margin:4px 0 8px">% of core postings. Integrate in this order.</p>{{TOOLS}}</div>
+    <div class="card"><h3>Gap Meter target by stage</h3><p class="mute" style="margin:4px 0 8px">Demand-weighted share of the posted job 8-o does on its own (0–3 per duty). Target, not measurement.</p>{{GAP}}</div>
+  </div>
+</section>
+
+<section id="blueprint">
+  <div class="sec-head"><div class="eyebrow">Directional blueprint</div><h2>What to target, what to build, what to leave</h2></div>
+  <dl class="kv">
+    <dt>Promise</dt><dd>"Qualified pipeline on your calendar every week, without a growth hire. 8-o builds the playbook, runs it, and tells you on Friday what worked." The founder runs the demo and closes.</dd>
+    <dt>Buyer</dt><dd>Technical founder, seed to Series A, 3–35 people, still selling, has just raised or is about to post a growth / founding GTM / SDR role.</dd>
+    <dt>Best buying signal</dt><dd>An open core growth-hire posting. {{AB}} A/B-tier companies in our database have one today; {{ABF}} of those are founding / first-hire roles. These are 8-o's Client #0 outbound list.</dd>
+    <dt>Price anchor</dt><dd>Founding GTM median base {{FOUND_COMP}}, core growth hire {{MED_COMP}}. $3–5K a month is 24–40% of a {{MED_COMP}} salary before employer costs, with no ramp and no knowledge loss.</dd>
+    <dt>Main metric</dt><dd>Qualified meetings held and pipeline created per bet. Secondary: reply → positive → booked → held conversion, human minutes per meeting (Manual Log).</dd>
+  </dl>
+  <div class="steps">{{STAGES}}</div>
+  <div class="tbl"><table>
+    <thead><tr><th>Leave with the founder or out of scope</th><th>Demand</th><th>Why</th></tr></thead>
+    <tbody>{{LEAVE}}</tbody>
+  </table></div>
+  <div class="card"><h3>What would prove this wrong (kill criteria, 60 days)</h3>
+    <ul style="margin:8px 0 0;padding-left:18px;display:grid;gap:4px;font-size:14px">
+      <li>Founders who are actively posting a growth role decline a paid pilot because they want a person who closes. Track the decline reason on every no.</li>
+      <li>Qualified-meeting rate per 100 approved sends stays below the founder's own outbound baseline after three bet cycles.</li>
+      <li>Founders edit more than half of drafts heavily by week 4 (founder taste is not being learned).</li>
+      <li>8-o cannot book qualified demos for 8-o from the {{AB}}-company list (blueprint: Client #0 test).</li>
+    </ul>
+  </div>
+</section>
+
+<section id="confidence">
+  <div class="sec-head"><div class="eyebrow">Confidence</div><h2>How the numbers were produced, and how far to trust them</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Check</th><th>Result</th></tr></thead>
+    <tbody>{{CONF}}</tbody>
+  </table></div>
+  <div class="card"><h3>Bottom-up discovery: themes found with no taxonomy</h3><p class="mute" style="margin:4px 0 8px">K-means on embeddings of all {{N_SCOPE_U}} unique ICP responsibility lines, k = {{K}} chosen on the full data by Davies–Bouldin. The largest themes by number of postings that touch them:</p>
+  <div class="tbl" style="border:0"><table><thead><tr><th>Theme (top terms)</th><th class="num">% ICP postings</th><th>Matched duties</th><th class="num">% lines no duty</th></tr></thead><tbody>{{DISC}}</tbody></table></div></div>
+</section>
+
+<footer>
+  <span>Data: <code>db/gtm_pipeline.db</code> jobs (GTM families) + YC WaaS roles from <code>master/open_roles.csv</code>; full text re-fetched from public ATS APIs. Market: every other GTM posting in <code>raw_sources/H1_job_arbitrage/ats_live</code>.</span>
+  <span>Code: <code>scripts/role_corpus_collect.py</code> → <code>role_scope_analyze.py</code> → <code>role_scope_ml.py</code> → <code>role_scope_synthesize.py</code> → <code>role_scope_report.py</code>. Outputs in <code>research/gtm_role_scope/</code>. Postings state intent, not the work actually done; headcount is known for a minority of companies.</span>
+</footer>
+</div>
