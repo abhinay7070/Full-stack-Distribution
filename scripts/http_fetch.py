@@ -28,7 +28,7 @@ SEC_UA = "gtm-research-pipeline research-bot admin@gtm-research.invalid"  # SEC 
 RATE = {  # min seconds between requests per host
     "api.ashbyhq.com": 0.07, "boards-api.greenhouse.io": 0.07, "api.lever.co": 0.1, "apply.workable.com": 1.2,
     "hn.algolia.com": 0.1, "efts.sec.gov": 0.15, "www.sec.gov": 0.15, "dns.google": 0.004, "trustmrr.com": 0.5,
-    "autocomplete.clearbit.com": 0.15,
+    "autocomplete.clearbit.com": 0.15, "api.smartrecruiters.com": 0.1,
 }
 DEFAULT_RATE = 0.0
 _locks: dict[str, threading.Lock] = {}

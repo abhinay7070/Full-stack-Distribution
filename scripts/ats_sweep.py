@@ -60,6 +60,8 @@ URL = {
     "recruitee": "https://{s}.recruitee.com/api/offers/",
     "breezy": "https://{s}.breezy.hr/json",
     "teamtailor": "https://{s}.teamtailor.com/jobs.rss",
+    "smartrecruiters": "https://api.smartrecruiters.com/v1/companies/{s}/postings?limit=100",
+    "personio": "https://{s}.jobs.personio.de/xml?language=en",
 }
 
 
@@ -135,6 +137,29 @@ def parse(provider: str, slug: str, r: hf.Resp) -> dict | None:
                              "location": " ".join(x.text or "" for x in it.iter() if x.tag.endswith("city")),
                              "posted_at": iso(it.findtext("pubDate")), "url": it.findtext("link"), "comp": None,
                              "description": txt(it.findtext("description"))[:6000]})
+        elif provider == "smartrecruiters":
+            d = r.json()
+            for j in d.get("content") or []:
+                name = name or (j.get("company") or {}).get("name")
+                loc = j.get("location") or {}
+                jobs.append({"id": j.get("id"), "title": j.get("name"),
+                             "department": (j.get("department") or {}).get("label"),
+                             "location": loc.get("fullLocation"), "posted_at": iso(j.get("releasedDate")),
+                             "url": f"https://jobs.smartrecruiters.com/{slug}/{j.get('id')}", "comp": None,
+                             "description": " ".join(x for x in ((j.get("industry") or {}).get("label"),
+                                                                 (j.get("function") or {}).get("label")) if x),
+                             "remote": loc.get("remote")})
+        elif provider == "personio":
+            if "<workzag-jobs" not in r.text[:500]:
+                return None
+            root = ET.fromstring(r.text.encode())
+            for it in root.findall("position"):
+                name = name or (it.findtext("subcompany") or "").strip() or None
+                desc = " ".join(txt(v.findtext("value")) for v in it.iter("jobDescription"))
+                jobs.append({"id": it.findtext("id"), "title": it.findtext("name"), "department": it.findtext("department"),
+                             "location": it.findtext("office"), "posted_at": iso(it.findtext("createdAt")),
+                             "url": f"https://{slug}.jobs.personio.de/job/{it.findtext('id')}", "comp": None,
+                             "description": desc[:6000]})
     except (ValueError, ET.ParseError, AttributeError, TypeError):
         return None
     return {"provider": provider, "slug": slug, "company_name": name, "jobs": jobs}
@@ -185,6 +210,10 @@ def main() -> None:
             for prov, ss in ats.items():
                 for s_ in ss:
                     add(prov.replace("_embed", ""), s_, f"site:{r['company_domain']}")
+    for cc in sorted((RAW / "commoncrawl").glob("*_ats_urls.jsonl.gz")):  # E1: every board URL in Common Crawl
+        for line in gzip.open(cc, "rt"):
+            x = json.loads(line)
+            add(x["provider"], x["slug"], "commoncrawl")
     conn = pdb.connect()
     for c in conn.execute("SELECT company_domain, company_name FROM companies WHERE status!='disqualified'"):
         for s in slug_variants(c["company_domain"], c["company_name"]):
