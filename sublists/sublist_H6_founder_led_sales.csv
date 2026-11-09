@@ -1065,7 +1065,6 @@ usehaystack.io,Haystack,S2,"inferred: <=10 people, technical founders, no GTM hi
 alpas.ai,Alpas,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://alpas.ai
 rejoyhealth.com,Rejoy Health,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://rejoyhealth.com
 wasp-lang.dev,Wasp,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://wasp-lang.dev
-arpio.io,Arpio,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://arpio.io
 chorussleep.com,Chorus Sleep,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://chorussleep.com
 getkanda.com,Kanda,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://getkanda.com
 artillery.io,Artillery,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://artillery.io
@@ -1504,7 +1503,7 @@ traverse.so,Traverse,S1,founder publishes own email for customers (lance@travers
 usereframe.ai,Reframe,S2,"inferred: <=10 people, technical founders, no GTM hire or GTM role",https://usereframe.ai
 inventoryquant.com,InventoryQuant,S1,founder publishes own email for customers (sander@inventoryquant.com),https://inventoryquant.com
 anchorhead.ai,Anchorhead,S1,founder booking link cal.com/perbhat/45,https://cal.com/perbhat/45
-general.legal,General Legal,S1,founder publishes own email for customers (jp@general.legal),raw_sources/H1_job_arbitrage/ats_live/greenhouse.jsonl.gz
+general.legal,General Legal,S1,founder publishes own email for customers (jp@general.legal),raw_sources/H1_job_arbitrage/ats_live/greenhouse.p2.jsonl.gz
 veriad.com,Veriad,S1,founder publishes own email for customers (rohan@veriad.com),https://veriad.com
 voygr.tech,VOYGR,S1,founder publishes own email for customers (yarik@voygr.tech),raw_sources/H1_job_arbitrage/hn_whoishiring/49922569.json.gz
 zymbly.com,Zymbly,S1,founder publishes own email for customers (ben@zymbly.com),https://www.ycombinator.com/launches/PLV-zymbly-the-copilot-for-aircraft-maintenance
