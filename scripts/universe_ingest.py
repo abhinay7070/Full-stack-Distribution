@@ -299,7 +299,9 @@ def ingest_ats(conn) -> dict:
             mapped[key] = dom
         else:
             n_open = len({(j.get("title") or "").lower() for j in b["jobs"]})
-            if n_open > 40 or LATE.search(txt) or not EARLY.search(txt):
+            # v4: small boards (<= 10 roles) are resolved even without stage text; gate() then admits them only on
+            # other stage proof (universe membership / homepage) and pools the rest WITH their domain.
+            if n_open > 40 or LATE.search(txt) or (not EARLY.search(txt) and n_open > 10):
                 b["_skip"] = "no_early_evidence_or_large"  # could not pass the admission gate: do not resolve
                 continue
             nm = b.get("company_name") or b["slug"].replace("-", " ").replace("_", " ")
