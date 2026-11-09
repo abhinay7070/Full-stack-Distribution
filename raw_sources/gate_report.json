@@ -1,19 +1,19 @@
 {
- "run_at": "2026-11-08T05:49:14Z",
+ "run_at": "2026-11-09T13:15:16Z",
  "fingerprint": {
-  "companies": 14240,
-  "sha1": "b7f22b2857794618b0293586d1c57549e1d5d577",
+  "companies": 14352,
+  "sha1": "68ea7787d0c72b3b79c4fa94458e572d2520c579",
   "tags": {
-   "H0": 8775,
-   "H1": 1715,
+   "H0": 8898,
+   "H1": 1802,
    "H2": 6209,
    "H3": 2180,
-   "H4": 524,
-   "H5": 1955,
-   "H6": 1679,
+   "H4": 526,
+   "H5": 2015,
+   "H6": 1689,
    "H7": 194,
    "H8": 18,
-   "H10": 1029
+   "H10": 1097
   }
  },
  "hard_failures": {},
@@ -21,217 +21,217 @@
   "series_b_plus_event_on_live_company": 104,
   "homepage_unreachable": 640,
   "parked_homepage": 20,
-  "medium_confidence_resolutions": 3351
+  "medium_confidence_resolutions": 3418
  },
  "examples": {
   "series_b_plus_event_on_live_company": "hypersonica.com: Hypersonica secures \u20ac100 million to boost sovereign hypersonic deep-strike systems for Europe and its allies"
  },
  "resolution_audit_sample": [
   {
-   "entity_key": "hn:wme",
-   "name": "WME",
-   "domain": "wmeinc.com",
-   "score": 7,
+   "entity_key": "formd:2159418",
+   "name": "Lev 18, Inc.",
+   "domain": "lev18.com",
+   "score": 5,
    "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:deleteme",
+   "name": "deleteme",
+   "domain": "deleteme.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:airwaveai",
+   "name": "Airwave AI",
+   "domain": "airwaveai.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "hn:textql",
+   "name": "TextQL",
+   "domain": "textql.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:faxx",
+   "name": "F/A-XX",
+   "domain": "faxx.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2105311",
+   "name": "Brella Beverage, Inc.",
+   "domain": "brellabeverage.com",
+   "score": 9,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"city 'chicago'\", \"source-published domain\"]"
+  },
+  {
+   "entity_key": "formd:1775734",
+   "name": "Beneficient",
+   "domain": "trustben.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2127592",
+   "name": "Reflux Co",
+   "domain": "reflux.sh",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:algo1",
+   "name": "algo1",
+   "domain": "algo1.ai",
+   "score": 7,
+   "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\"]"
   },
   {
-   "entity_key": "formd:1913930",
-   "name": "DataBiologics, Inc.",
-   "domain": "databiologics.com",
-   "score": 7,
+   "entity_key": "formd:1656387",
+   "name": "Senseye, Inc.",
+   "domain": "senseye.co",
+   "score": 6,
    "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"city 'mesa'\", \"source-published domain\", \"tech product page\"]"
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:2136051",
-   "name": "Paralign Health, Inc.",
-   "domain": "paralign.health",
+   "entity_key": "formd:1973491",
+   "name": "Carbon Insurance Inc.",
+   "domain": "carboninsurance.co",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:onme",
+   "name": "onme",
+   "domain": "onme.com",
    "score": 6,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:1902299",
-   "name": "60 Decibels, Inc.",
-   "domain": "60decibels.com",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:1979890",
-   "name": "Jumplights, Inc.",
-   "domain": "jumplights.com",
+   "entity_key": "ats:granola",
+   "name": "granola",
+   "domain": "granola.ai",
    "score": 9,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
   },
   {
-   "entity_key": "news:inferact",
-   "name": "Inferact",
-   "domain": "inferact.ai",
+   "entity_key": "formd:2074393",
+   "name": "Chukker App LLC",
+   "domain": "chukkerapp.com",
    "score": 5,
    "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\"]"
   },
   {
-   "entity_key": "formd:2079699",
-   "name": "Beyond Pulse, Inc.",
-   "domain": "beyondpulse.com",
-   "score": 7,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"city 'portland'\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:circle",
-   "name": "Circle",
-   "domain": "circle.com",
-   "score": 6,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:sunhat",
-   "name": "Sunhat",
-   "domain": "getsunhat.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:pleo",
-   "name": "pleo",
-   "domain": "pleo.io",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2142746",
-   "name": "Glauc Inc.",
-   "domain": "glauc.co",
-   "score": 8,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"person 'ramakrishnan'\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:farosai",
-   "name": "faros ai",
-   "domain": "faros.ai",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "hn:larridin",
-   "name": "Larridin",
-   "domain": "larridin.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:1930982",
-   "name": "BuyerCaddy, Inc.",
-   "domain": "buyercaddy.com",
+   "entity_key": "news:integrate",
+   "name": "Integrate",
+   "domain": "joinintegrate.com",
    "score": 8,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
   },
   {
-   "entity_key": "ats:dubclub",
-   "name": "dubclub",
-   "domain": "dubclub.win",
-   "score": 4,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\"]"
-  },
-  {
-   "entity_key": "formd:1852715",
-   "name": "AstronetX PBC",
-   "domain": "astronetx.com",
-   "score": 9,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"city 'westport'\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2127106",
-   "name": "DeepWeave, Inc.",
-   "domain": "deepweave.ai",
-   "score": 7,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"person 'narayanan'\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:auctane",
-   "name": "Auctane ",
-   "domain": "shipstationglobal.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in text\", \"legal name on page\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:inizioignite",
-   "name": "Inizio Ignite",
-   "domain": "inizio.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:locai",
-   "name": "Locai",
-   "domain": "locai.app",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:processstreet",
-   "name": "Process Street",
-   "domain": "process.st",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2149216",
-   "name": "Noosphere Labs, Inc.",
-   "domain": "getnoosphere.com",
+   "entity_key": "formd:2075798",
+   "name": "Hipp Health Inc.",
+   "domain": "hippomotorgroup.co.uk",
    "score": 6,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:2080517",
-   "name": "Flow Marketing Intelligence, Inc.",
-   "domain": "freedomflowmarketing.com",
+   "entity_key": "ats:medialicious",
+   "name": "medialicious",
+   "domain": "medialicious.com",
+   "score": 8,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2147743",
+   "name": "Qualified Health PBC",
+   "domain": "qualifiedhealthai.com",
+   "score": 8,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"person 'norden'\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:1973571",
+   "name": "Future Fans Inc.",
+   "domain": "futurefans.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
+  },
+  {
+   "entity_key": "ats:calico",
+   "name": "Calico ",
+   "domain": "getcalico.com",
    "score": 5,
    "confidence": "medium",
    "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
   },
   {
-   "entity_key": "news:furo",
-   "name": "Furo",
-   "domain": "furo.ag",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+   "entity_key": "formd:2077107",
+   "name": "Charta Health, Inc.",
+   "domain": "chartahealth.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
   },
   {
-   "entity_key": "news:shieldspace",
-   "name": "Shield Space",
-   "domain": "shieldspace.ai",
+   "entity_key": "ats:rhymetec",
+   "name": "Rhymetec",
+   "domain": "rhymetec.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2137054",
+   "name": "Evolve Exploration, Inc.",
+   "domain": "evolveexploration.ai",
    "score": 5,
    "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
+  },
+  {
+   "entity_key": "formd:1829221",
+   "name": "Petalfast Inc.",
+   "domain": "petalfast.com",
+   "score": 9,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2145129",
+   "name": "Thira Inc.",
+   "domain": "thira.com",
+   "score": 9,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
   }
  ],
  "resolution_status": {
-  "ambiguous": 518,
-  "no_dns_candidate": 1371,
-  "resolved": 7130,
-  "unresolved": 2494
+  "ambiguous": 531,
+  "no_dns_candidate": 1411,
+  "resolved": 7285,
+  "unresolved": 2545
  }
 }
