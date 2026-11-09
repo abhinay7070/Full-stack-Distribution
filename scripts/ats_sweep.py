@@ -165,6 +165,24 @@ def parse(provider: str, slug: str, r: hf.Resp) -> dict | None:
     return {"provider": provider, "slug": slug, "company_name": name, "jobs": jobs}
 
 
+def split_large(path: Path, limit: int = 45_000_000) -> list[Path]:
+    """Keep every raw file under GitHub's limits: split <prov>.jsonl.gz into <prov>.pN.jsonl.gz parts (< ~45 MB)."""
+    if path.stat().st_size <= limit:
+        return [path]
+    import math
+    n = math.ceil(path.stat().st_size / limit) + 1
+    lines = gzip.open(path, "rt").readlines()
+    per = math.ceil(len(lines) / n)
+    out = []
+    for i in range(n):
+        q = path.with_name(path.name.replace(".jsonl.gz", f".p{i + 1}.jsonl.gz"))
+        with gzip.open(q, "wt") as f:
+            f.writelines(lines[i * per:(i + 1) * per])
+        out.append(q)
+    path.unlink()
+    return out
+
+
 def slug_variants(domain: str, name: str | None) -> list[str]:
     label = domain.split(".")[0]
     _, full, short = rd.brand_cores(name or label)
@@ -227,6 +245,8 @@ def main() -> None:
         res = hf.fetch_many(urls.values(), workers=6 if prov == "workable" else 24, timeout=25, retries=2,
                             max_bytes=8_000_000)
         n_ok = 0
+        for old_part in LIVE.glob(f"{prov}.p*.jsonl.gz"):
+            old_part.unlink()
         with gzip.open(LIVE / f"{prov}.jsonl.gz", "wt") as f:
             for s in slugs:
                 r = res[urls[s]]
@@ -237,6 +257,7 @@ def main() -> None:
                     n_ok += 1
                     b["origins"] = sorted(want[prov][s])
                     f.write(json.dumps(b) + "\n")
+        split_large(LIVE / f"{prov}.jsonl.gz")
         print(f"  {prov}: {n_ok} boards with jobs", file=sys.stderr)
     (LIVE / f"index_{'_'.join(provs)}.json").write_text(json.dumps(index) + "\n")
     st = {}
