@@ -1,19 +1,19 @@
 {
- "run_at": "2026-11-09T13:15:16Z",
+ "run_at": "2026-11-09T14:16:00Z",
  "fingerprint": {
-  "companies": 14352,
-  "sha1": "68ea7787d0c72b3b79c4fa94458e572d2520c579",
+  "companies": 14455,
+  "sha1": "62ebc1af6118c5ea952e05144a2caf5b539bdc4c",
   "tags": {
-   "H0": 8898,
-   "H1": 1802,
+   "H0": 9037,
+   "H1": 1882,
    "H2": 6209,
-   "H3": 2180,
+   "H3": 2181,
    "H4": 526,
-   "H5": 2015,
+   "H5": 2061,
    "H6": 1689,
    "H7": 194,
    "H8": 18,
-   "H10": 1097
+   "H10": 1146
   }
  },
  "hard_failures": {},
@@ -21,217 +21,217 @@
   "series_b_plus_event_on_live_company": 104,
   "homepage_unreachable": 640,
   "parked_homepage": 20,
-  "medium_confidence_resolutions": 3418
+  "medium_confidence_resolutions": 5511
  },
  "examples": {
   "series_b_plus_event_on_live_company": "hypersonica.com: Hypersonica secures \u20ac100 million to boost sovereign hypersonic deep-strike systems for Europe and its allies"
  },
  "resolution_audit_sample": [
   {
-   "entity_key": "formd:2159418",
-   "name": "Lev 18, Inc.",
-   "domain": "lev18.com",
+   "entity_key": "ats:appnovationtechnologies",
+   "name": "Appnovation Technologies",
+   "domain": "appnovation.com",
    "score": 5,
    "confidence": "medium",
    "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
   },
   {
-   "entity_key": "ats:deleteme",
-   "name": "deleteme",
-   "domain": "deleteme.com",
+   "entity_key": "formd:2153441",
+   "name": "TechNovaTime, Inc.",
+   "domain": "technovatime.com",
+   "score": 9,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:boldin",
+   "name": "Boldin",
+   "domain": "boldin.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:saota",
+   "name": "SAOTA",
+   "domain": "saota.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:foleon",
+   "name": "Foleon",
+   "domain": "foleon.com",
    "score": 6,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
   },
   {
-   "entity_key": "ats:airwaveai",
-   "name": "Airwave AI",
-   "domain": "airwaveai.com",
+   "entity_key": "ats:bluetile",
+   "name": "Bluetile",
+   "domain": "bluetile.dev",
    "score": 5,
    "confidence": "medium",
    "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
   },
   {
-   "entity_key": "hn:textql",
-   "name": "TextQL",
-   "domain": "textql.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:faxx",
-   "name": "F/A-XX",
-   "domain": "faxx.ai",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2105311",
-   "name": "Brella Beverage, Inc.",
-   "domain": "brellabeverage.com",
-   "score": 9,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"city 'chicago'\", \"source-published domain\"]"
-  },
-  {
-   "entity_key": "formd:1775734",
-   "name": "Beneficient",
-   "domain": "trustben.com",
+   "entity_key": "ats:nubox",
+   "name": "Nubox",
+   "domain": "nubox.com",
    "score": 6,
    "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:2127592",
-   "name": "Reflux Co",
-   "domain": "reflux.sh",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+   "entity_key": "ats:trevipay",
+   "name": "trevipay",
+   "domain": "trevipay.com",
+   "score": 9,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"directory listing\", \"tech product page\"]"
   },
   {
-   "entity_key": "ats:algo1",
-   "name": "algo1",
-   "domain": "algo1.ai",
+   "entity_key": "formd:2158319",
+   "name": "Particle Horizon, Inc.",
+   "domain": "particle-horizon.com",
    "score": 7,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\"]"
   },
   {
-   "entity_key": "formd:1656387",
-   "name": "Senseye, Inc.",
-   "domain": "senseye.co",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:1973491",
-   "name": "Carbon Insurance Inc.",
-   "domain": "carboninsurance.co",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:onme",
-   "name": "onme",
-   "domain": "onme.com",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:granola",
-   "name": "granola",
-   "domain": "granola.ai",
-   "score": 9,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2074393",
-   "name": "Chukker App LLC",
-   "domain": "chukkerapp.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\"]"
-  },
-  {
-   "entity_key": "news:integrate",
-   "name": "Integrate",
-   "domain": "joinintegrate.com",
-   "score": 8,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2075798",
-   "name": "Hipp Health Inc.",
-   "domain": "hippomotorgroup.co.uk",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:medialicious",
-   "name": "medialicious",
-   "domain": "medialicious.com",
-   "score": 8,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2147743",
-   "name": "Qualified Health PBC",
-   "domain": "qualifiedhealthai.com",
-   "score": 8,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"person 'norden'\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:1973571",
-   "name": "Future Fans Inc.",
-   "domain": "futurefans.com",
+   "entity_key": "ats:leasingmarktde",
+   "name": "LeasingMarkt.de",
+   "domain": "leasingmarkt.de",
    "score": 5,
    "confidence": "medium",
    "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
   },
   {
-   "entity_key": "ats:calico",
-   "name": "Calico ",
-   "domain": "getcalico.com",
+   "entity_key": "formd:1955339",
+   "name": "Carallel, Inc.",
+   "domain": "carallel.com",
+   "score": 8,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "hn:coreflow",
+   "name": "coreflow",
+   "domain": "coreflow.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:givewell",
+   "name": "GiveWell",
+   "domain": "givewell.org",
    "score": 5,
    "confidence": "medium",
    "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:2077107",
-   "name": "Charta Health, Inc.",
-   "domain": "chartahealth.com",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\", \"tech product page\"]"
+   "entity_key": "ats:solestial",
+   "name": "solestial",
+   "domain": "solestial.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\"]"
   },
   {
-   "entity_key": "ats:rhymetec",
-   "name": "Rhymetec",
-   "domain": "rhymetec.com",
+   "entity_key": "formd:2161279",
+   "name": "IWISH AI INC",
+   "domain": "iwish.ai",
+   "score": 7,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"city 'danville'\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:thetrevorproject",
+   "name": "thetrevorproject",
+   "domain": "thetrevorproject.org",
    "score": 6,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:2137054",
-   "name": "Evolve Exploration, Inc.",
-   "domain": "evolveexploration.ai",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"source-published domain\"]"
-  },
-  {
-   "entity_key": "formd:1829221",
-   "name": "Petalfast Inc.",
-   "domain": "petalfast.com",
+   "entity_key": "formd:2133099",
+   "name": "RWA Flood, Inc.",
+   "domain": "rwaflood.com",
    "score": 9,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
   },
   {
-   "entity_key": "formd:2145129",
-   "name": "Thira Inc.",
-   "domain": "thira.com",
+   "entity_key": "ats:elegancia",
+   "name": "ELEGANCIA",
+   "domain": "elegancia.dev",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:blip",
+   "name": "Blip",
+   "domain": "blip.ai",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:cambio",
+   "name": "Cambio",
+   "domain": "cambio.ai",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "ats:talentventuregroup",
+   "name": "Talent Venture Group",
+   "domain": "talentventuregroup.com",
+   "score": 5,
+   "confidence": "medium",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\"]"
+  },
+  {
+   "entity_key": "formd:2104266",
+   "name": "TranscendAP, Inc.",
+   "domain": "transcendap.com",
+   "score": 7,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"city 'hamilton'\", \"source-published domain\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:glean",
+   "name": "Glean",
+   "domain": "glean.com",
+   "score": 6,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "news:zamp",
+   "name": "Zamp",
+   "domain": "zamp.com",
+   "score": 8,
+   "confidence": "high",
+   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
+  },
+  {
+   "entity_key": "formd:2154072",
+   "name": "General Cybernetics Corp",
+   "domain": "generalcybernetics.net",
    "score": 9,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
   }
  ],
  "resolution_status": {
-  "ambiguous": 531,
-  "no_dns_candidate": 1411,
-  "resolved": 7285,
-  "unresolved": 2545
+  "ambiguous": 975,
+  "no_dns_candidate": 3030,
+  "resolved": 12470,
+  "unresolved": 5098
  }
 }

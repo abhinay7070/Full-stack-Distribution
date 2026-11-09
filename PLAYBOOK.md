@@ -24,17 +24,17 @@ Energy goes where pain, reachability and fit intersect. The rest of the list is 
 ## Layer 2 — Rings: how much energy (`Master.ring`)
 | Ring | Size | Who | Effort per account | Energy share |
 |---|---|---|---|---|
-| R1 Sniper | 861 | C1a, C2, C1 with a reachable founder, any company with 3+ signals | 20-30 min research; custom proof in the email; multi-channel | 50% |
-| R2 Rifle | 1,573 | C1, C3, C4, C5, C6 | 5 min; personal first line from `why_now` + cluster template | 35% |
-| R3 Net | 5,130 | C8 fit-only | 0-1 min; follow / engage / content; wait for a trigger | 15% |
-| Enrich | 5,117 | Tier C | Run through Clay (headcount, domain, email). Promote to R2/R3 | batch, weekly |
-| Review | 476 | Tier D | Ignore unless a signal fires | 0 |
+| R1 Sniper | 881 | C1a, C2, C1 with a reachable founder, any company with 3+ signals | 20-30 min research; custom proof in the email; multi-channel | 50% |
+| R2 Rifle | 1,563 | C1, C3, C4, C5, C6 | 5 min; personal first line from `why_now` + cluster template | 35% |
+| R3 Net | 5,119 | C8 fit-only | 0-1 min; follow / engage / content; wait for a trigger | 15% |
+| Enrich | 5,284 | Tier C | Run through Clay (headcount, domain, email). Promote to R2/R3 | batch, weekly |
+| Review | 514 | Tier D | Ignore unless a signal fires | 0 |
 
 ## Layer 3 — Plain text proof inside the message (no links / attachments)
 - **R1:** 3 specific facts about their buyers, built from the dataset. Example: three companies matching their ICP that raised in the
   last 30 days (name, amount, date). Or 2 gaps in their current GTM: tools detected but unused, a role open N days.
 - **R2:** one fact. Their trigger (raise / role / launch) plus one observation.
-- **Credibility line, every message:** "I built a pipeline that indexes 92k SEC filings, 80k job boards and 17 funding feeds to find
+- **Credibility line, every message:** "I built a pipeline that indexes 92k SEC filings, 96k job boards and 17 funding feeds to find
   companies like yours." It is true, specific and checkable on your LinkedIn.
 - **Trust line:** "Based in India, I work 9am-2pm ET. Paid at the end via Deel. References on request."
 

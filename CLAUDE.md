@@ -57,25 +57,30 @@ SEC asks for a declared User-Agent (set in `http_fetch.SEC_UA`).
 - Workbook: Arial, formulas (no hardcoded results), yellow = owner input. `build_master.py` preserves owner edits.
 - Commits: never include model identifiers; push to the working branch only; no PR unless asked.
 
-## State at hand-off (2026-11-08, v3)
-14,240 companies in the DB: 13,157 in SAM (A 2,120 · B 5,444 · C 5,117 · D 476) + 1,082 Outside_SAM + 1 disqualified.
-Unresolved_TAM 5,469 rows (4,903 unique names: HN 2,138 · news 1,699 · Form D 1,632).
-Rings: R1 861 · R2 1,573 · R3 5,130 · Enrich 5,117 · Review 476. Outreach targets (R1+R2) 2,434, reachable now 1,371.
-Tags: H1 1,715 · H2 6,209 · H3 2,180 · H4 524 · H5 1,955 · H6 1,679 · H7 194 · H8 18 · H10 1,029.
-Gate: PASS (idempotent tags). Workbook recalculated: 54,735 formulas, 0 errors.
-v3 added: resolver directory candidates (Clearbit autocomplete, corroborated) + Form D phone/street evidence (+504 matches),
-Ashby/Greenhouse/Lever second pass (82,074 boards probed), website scan of every domain (1 timeout), homepage stage proof.
+## State at hand-off (2026-11-09, v4)
+14,455 companies in the DB: 13,361 in SAM (A 2,120 · B 5,443 · C 5,284 · D 514) + 1,093 Outside_SAM + 1 disqualified.
+Unresolved_TAM 9,710 rows (9,095 unique): 5,380 already have a verified domain but no Seed/A proof (ATS 4,241 ·
+HN 1,139) + names without a domain (news 1,699 · Form D 1,632 · HN 999).
+Rings: R1 881 · R2 1,563 · R3 5,119 · Enrich 5,284 · Review 514. Outreach targets (R1+R2) 2,444, reachable now 1,376.
+Tags: H1 1,882 · H2 6,209 · H3 2,181 · H4 526 · H5 2,061 · H6 1,689 · H7 194 · H8 18 · H10 1,146.
+Gate: PASS (idempotent tags). Workbook recalculated: 55,551 formulas, 0 errors.
+v4 added: Common Crawl board discovery (`cc_ats_discover.py`, CC-MAIN-2026-43 + 2026-39: 16,814 boards, 10,429 new),
+SmartRecruiters + Personio providers, 19,883 boards with jobs (8 providers), small boards (<=10 roles) resolved even
+without stage text (7,907 boards mapped to domains), raw ATS files split into <45 MB parts.
+v3 added: resolver directory candidates + Form D phone/street evidence (+504 matches), Ashby/Greenhouse/Lever second pass.
 
 ## Backlog (in priority order)
-1. **Workable** (6,897 boards): stopped on 2026-11-08 because apply.workable.com answered 429 with
-   `Retry-After: 70069` (until ~2026-11-09 01:00 UTC). After that: `python3 scripts/ats_sweep.py --providers workable`
+1. **Workable** (~11,600 boards: 6,897 known + 4,716 found in Common Crawl): apply.workable.com answers 429 to this
+   environment (2026-11-08 Retry-After 70069 s; re-checked 2026-11-09 12:52 UTC: Retry-After 45111 s, i.e. ~01:30 UTC
+   2026-11-10). Each probe may restart the window, so do not poll it. After it lifts: `python3 scripts/ats_sweep.py --providers workable`
    (keep RATE 1.2 s or slower), then `python3 scripts/universe_ingest.py ats`, then the tag/build/gate tail of
    `run_pipeline_v2.sh`. Do not work around the limit.
 2. **H8**: GitHub pages and api.github.com are blocked in cloud sessions (scoped to this repo). Run
    `python3 scripts/signals_collect.py h8` from a machine with normal GitHub access (fix the star regex for the current
    org-page markup or use the API with a token), then re-run `tag_signals.py`.
-3. **Unresolved_TAM (4,903 unique)**: many are non-ICP (institutions, stealth, non-tech Form D issuers). Export to Clay
-   ("find company domain") and import the results, or add founder LinkedIn hints.
+3. **Unresolved_TAM (9,095 unique)**: (a) 5,380 have a verified domain but no Seed/A proof: Clay / Crunchbase stage or
+   funding lookup promotes them to Master; (b) ~4,300 names without a domain: many are non-ICP (institutions, stealth,
+   non-tech Form D issuers). Export to Clay ("find company domain") and import, or add founder LinkedIn hints.
 4. **Headcount enrichment**: about 78% of companies have no exact headcount band. A Clay or LinkedIn employee count moves
    many C -> B/A. Import with `clay_bridge.py` (the email flow) or extend it with a headcount column.
 5. **H9**: drop the owner's LinkedIn `Connections.csv` at `inputs/linkedin_connections.csv` and re-run `tag_signals.py`.
@@ -84,21 +89,22 @@ Ashby/Greenhouse/Lever second pass (82,074 boards probed), website scan of every
 7. **Form D refresh**: when SEC publishes 2026Q2/Q3 bulk zips, add them to `raw_sources/H2_fresh_capital/sec_formd_bulk/`.
    `formd_collect.py` then uses EFTS only after the last bulk quarter.
 8. **Precision review**: run `gate_check.py --sample 40` and eyeball `resolution_audit_sample` in
-   `raw_sources/gate_report.json`. Medium-confidence domain matches (3,351) are tier-capped at C until verified;
+   `raw_sources/gate_report.json`. Medium-confidence domain matches (5,511) are tier-capped at C until verified;
    104 live companies carry a Series B+ event (flagged `possible_past_series_a`).
-9. **Site-scan hang guard**: `site_scan.py --to-cache` can hang on a pathological page (regex holds the GIL). The
+9. **Common Crawl index service**: index.commoncrawl.org resets connections from cloud sessions; `cc_ats_discover.py`
+   reads the parquet index on data.commoncrawl.org instead. Add newer crawls as they publish (argv: crawl ids).
+10. **Site-scan hang guard**: `site_scan.py --to-cache` can hang on a pathological page (regex holds the GIL). The
    per-domain runner used in v3 runs one process per domain with `timeout 60`; fold that into `site_scan.py`.
 
-## Future expansion (not started; coverage now ~40-55% of an estimated 25-35K SAM)
-| # | Lever | Expected new ICP companies | Needs owner? |
+## Future expansion (coverage now ~45-55% of an estimated 25-35K SAM, plus 5,380 domain-verified but stage-unproven)
+| # | Lever | Status / expected gain | Needs owner? |
 |---|---|---|---|
-| E1 | Common Crawl index (index.commoncrawl.org) -> every public Ashby / Greenhouse / Lever / Workable board URL -> `ats_sweep.py` | +2,000-5,000 | no |
-| E2 | More ATS providers (Personio, SmartRecruiters, Rippling, BambooHR, JazzHR) via E1 slugs | +800-2,000 (EU-heavy) | no |
+| E1 | Common Crawl board discovery | DONE (v4): 16,814 boards, 10,429 new. Add more crawls for a few % more | no |
+| E2 | More ATS providers | DONE for SmartRecruiters + Personio (v4). Rippling / BambooHR / JazzHR not yet: +200-600 | no |
 | E3 | UK Companies House API: SIC 62/63 incorporations 2021+ with a funding or hiring signal | +500-1,500 | free API key, saved as an environment secret |
-| E4 | VC portfolio pages outside Getro (a16z, Sequoia, Accel, Index, Seedcamp, LocalGlobe, Point Nine, ...) | +500-1,500 | no |
-| E5 | More accelerators (Pioneer, South Park Commons, HF0, Neo, Station F, Seedcamp) | +300-800 | no |
-| E6 | Clay "find company domain" for Unresolved_TAM (4,903) + headcount | +1,000-2,000 recovered; C -> A/B | Clay credits |
-| E7 | Workable sweep after the 429 block lifts (backlog 1) | +100-300 | no |
-Realistic ceiling: ~17-22K with E1/E2/E4/E5/E7; ~19-25K adding E3/E6. 100% needs a paid funding database
+| E4 | VC portfolio pages outside Getro (a16z, Sequoia, Accel, Index, Seedcamp, LocalGlobe, Point Nine, ...) | +500-1,500 (bespoke per site) | no |
+| E5 | More accelerators (South Park Commons, HF0, Neo, Station F, Seedcamp) | +300-800 | no |
+| E6 | Clay: stage/funding for the 5,380 pooled domains + domain for ~4,300 names + headcount | +1,500-3,500 promoted; C -> A/B | Clay credits |
+| E7 | Workable sweep after the 429 block lifts (backlog 1) | +300-800 | no |
+Realistic ceiling: ~16-19K in Master with E4/E5/E7; ~18-22K adding E3/E6. 100% needs a paid funding database
 (Crunchbase / Dealroom). Out of scope by rule: Wellfound, LinkedIn scraping, Consider boards (login / anti-bot walls).
-
