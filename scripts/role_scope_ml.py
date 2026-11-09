@@ -14,7 +14,7 @@ Steps
        ml     = one-vs-rest logistic regression on embeddings, trained on the regex labels of ICP lines (weak
                 supervision), scored OUT-OF-FOLD with 5-fold CV grouped by company, so no line is scored by a model that saw
                 its own company. Market lines are scored by the model fit on all ICP lines.
-     Primary label = ml (p >= 0.5): it keeps paraphrases the regex misses and drops keyword hits whose meaning differs.
+     Primary label = ml (p >= per-duty threshold that maximises out-of-fold F1 vs the keyword labels): it keeps paraphrases the regex misses and drops keyword hits whose meaning differs.
      Both are reported; a conclusion is only called robust when both instruments agree on its direction.
   4. Unsupervised discovery (no taxonomy): k-means on all unique ICP scope-line embeddings, k chosen on the full data by
      Davies-Bouldin (lower = better) over k in {20, 30, 40, 50, 60, 80}; clusters described by class-based TF-IDF terms,
@@ -204,6 +204,7 @@ def main():
     P_oof = np.zeros((len(tr_u), len(IDS)), dtype=np.float32)
     P_all = np.zeros((len(utext), len(IDS)), dtype=np.float32)
     metrics = []
+    TAU = np.full(len(IDS), 2.0)        # 2.0 = never positive (duty with too few seeds)
     for j, did in enumerate(IDS):
         y = Ytr[:, j]
         if y.sum() < 20:
@@ -215,18 +216,26 @@ def main():
             P_oof[fold == f, j] = m.predict_proba(Xtr[fold == f])[:, 1]
         m = LogisticRegression(C=2.0, max_iter=400).fit(Xtr, y)
         P_all[:, j] = m.predict_proba(E)[:, 1]
-        pred = P_oof[:, j] >= 0.5
+        # per-duty decision threshold: the out-of-fold score cut that maximises F1 against the keyword labels
+        # (a fixed 0.5 under-calls rare duties because logistic scores are pulled down by class imbalance)
+        from sklearn.metrics import precision_recall_curve
+        pr, rc, th = precision_recall_curve(y, P_oof[:, j])
+        f1 = 2 * pr[:-1] * rc[:-1] / np.maximum(1e-9, pr[:-1] + rc[:-1])
+        TAU[j] = float(th[int(np.argmax(f1))])
+        pred = P_oof[:, j] >= TAU[j]
         tp, fp, fn = int((pred & y).sum()), int((pred & ~y).sum()), int((~pred & y).sum())
         metrics.append({"duty_id": did, "duty": LAB[did], "regex_pos_lines": int(y.sum()),
                         "ml_pos_lines": int(pred.sum()), "agree_both": tp, "ml_only": fp, "regex_only": fn,
-                        "auc_vs_regex": round(float(roc_auc_score(y, P_oof[:, j])), 3),
-                        "precision_vs_regex": round(tp / max(1, tp + fp), 3), "recall_vs_regex": round(tp / max(1, tp + fn), 3)})
+                        "auc_vs_regex": round(float(roc_auc_score(y, P_oof[:, j])), 3), "threshold": round(TAU[j], 3),
+                        "precision_vs_regex": round(tp / max(1, tp + fp), 3), "recall_vs_regex": round(tp / max(1, tp + fn), 3),
+                        "f1_vs_regex": round(2 * tp / max(1, 2 * tp + fp + fn), 3)})
         log(f"clf {did} seeds={int(y.sum())} auc={metrics[-1]['auc_vs_regex']}")
     P_all[tr_u] = P_oof                                       # ICP scope lines keep their out-of-fold score
-    ML = P_all >= 0.5
+    ML = P_all >= TAU[None, :]
     with open(OUT / "classifier_agreement.csv", "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=["duty_id", "duty", "regex_pos_lines", "ml_pos_lines", "agree_both", "ml_only",
-                                           "regex_only", "auc_vs_regex", "precision_vs_regex", "recall_vs_regex", "note"])
+                                           "regex_only", "auc_vs_regex", "threshold", "precision_vs_regex", "recall_vs_regex",
+                                           "f1_vs_regex", "note"])
         w.writeheader()
         w.writerows(metrics)
 
@@ -237,9 +246,9 @@ def main():
         for j, did in enumerate(IDS):
             for k, u in enumerate(tr_u):
                 r, p = R[u, j], P_oof[k, j]
-                if r and p < 0.5:
+                if r and p < TAU[j]:
                     w.writerow([did, "regex_only", round(float(p), 3), utext[u]])
-                elif p >= 0.5 and not r:
+                elif p >= TAU[j] and not r:
                     w.writerow([did, "ml_only", round(float(p), 3), utext[u]])
 
     # ---------------- 4. unsupervised discovery on all unique ICP scope lines
@@ -256,7 +265,8 @@ def main():
         log(f"kmeans k={k} DB={db:.3f} CH={ch:.0f}")
         if best is None or db < best[1]:
             best = (k, db, km)
-    k, _, km = best
+    k_sel, _, km = best
+    k = k_sel
     from sklearn.feature_extraction.text import TfidfVectorizer
     docs = defaultdict(list)
     for i, u in enumerate(tr_u):
@@ -432,8 +442,10 @@ def main():
         "classifier": {"model": "sentence-transformers/all-MiniLM-L6-v2 + one-vs-rest logistic regression (C=2)",
                        "cv": "5-fold grouped by company, out-of-fold scores for every ICP scope line",
                        "median_auc_vs_regex": float(np.median([m["auc_vs_regex"] for m in metrics if "auc_vs_regex" in m])),
+                       "median_f1_vs_regex": float(np.median([m["f1_vs_regex"] for m in metrics if "f1_vs_regex" in m])),
+                       "threshold_rule": "per duty, argmax out-of-fold F1 vs keyword labels",
                        "spearman_core_prevalence_ml_vs_regex": round(float(rho), 3)},
-        "discovery": {"k_selected": k, "grid": grid, "lines_in_low_coverage_clusters": gap_lines,
+        "discovery": {"k_selected": k_sel, "grid": grid, "lines_in_low_coverage_clusters": gap_lines,
                       "pct_scope_lines_with_ml_duty": round(100 * float(ML[tr_u].any(1).mean()), 1),
                       "pct_scope_lines_with_regex_duty": round(100 * float(R[tr_u].any(1).mean()), 1)},
         "bootstrap": {"resamples": B, "unit": "company (all postings of a drawn company kept)", "seed": SEED},
