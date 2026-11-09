@@ -101,7 +101,7 @@ def fetch(url: str, max_age: float | None = None, timeout: float = 20, retries: 
                 time.sleep(min(float(ra), 60) if ra and ra.isdigit() else 2 ** (attempt + 1))
                 continue
             break
-        except requests.RequestException as e:
+        except Exception as e:  # noqa: BLE001  (requests, urllib3 read timeouts mid-body, socket errors)
             status, text = -1, f"{type(e).__name__}: {e}"[:300]
             if attempt < retries:
                 time.sleep(2 ** attempt)
