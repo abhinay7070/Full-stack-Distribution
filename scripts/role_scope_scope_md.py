@@ -1,0 +1,188 @@
+"""Write research/gtm_role_scope/SCOPE.md from the full-data outputs, so the doc and report.html never disagree.
+
+Reads analysis/unified_scope.csv, analysis/duty_clusters.csv, ml/summary_ml.json, ml/intent_kpi_tools_ml.csv,
+ml/classifier_agreement.csv. Run after role_scope_synthesize.py.
+"""
+from __future__ import annotations
+
+import csv
+import json
+from pathlib import Path
+
+import numpy as np
+
+ROOT = Path(__file__).resolve().parent.parent
+B = ROOT / "research" / "gtm_role_scope"
+rd = lambda p: list(csv.DictReader(open(p)))  # noqa: E731
+
+U = rd(B / "analysis" / "unified_scope.csv")
+S = {r["duty_id"]: r for r in U}
+CL = rd(B / "analysis" / "duty_clusters.csv")
+SM = json.load(open(B / "ml" / "summary_ml.json"))
+IKT = rd(B / "ml" / "intent_kpi_tools_ml.csv")
+AG = {r["duty_id"]: r for r in rd(B / "ml" / "classifier_agreement.csv")}
+P = SM["population"]
+w = np.array([float(r["demand_index"]) for r in U])
+
+
+def share(dec):
+    return 100 * sum(float(r["demand_index"]) for r in U if r["decision_8o"] == dec) / w.sum()
+
+
+def gap(st):
+    lv = np.array([int(r["target_gap_level"]) if r["build_stage"] and int(float(r["build_stage"])) <= st else 0 for r in U])
+    return 100 * (lv * w).sum() / (3 * w.sum())
+
+
+def ik(field, item):
+    return next(r for r in IKT if r["field"] == field and r["item"] == item)
+
+
+def low_agree(i):
+    f = AG.get(i, {}).get("f1_vs_regex")
+    return " ⚠" if f and float(f) < 0.45 else ""
+
+
+STAGE_BLOCK = [("LEARN", "🧠 Brain"), ("DECIDE", "🧪 Lab"), ("FIND", "📡 Radar"), ("REACH", "✍️ Voice"), ("REPLY", "📥 Reply"),
+               ("IMPROVE", "🧪 Lab + Friday Memo"), ("SYSTEMS", "Foundation"), ("CLOSE", "Founder"), ("POST-SALE", "Founder"),
+               ("LEAD", "Founder")]
+
+
+def duty_tables():
+    out = []
+    for st, blk in STAGE_BLOCK:
+        rows = sorted((r for r in U if r["stage"] == st), key=lambda r: -float(r["demand_index"]))
+        out.append(f"### {st} → {blk}\n\n| Duty | Demand [95% CI] | Rank [95% CI] | % core (ML / keyword) | % companies | "
+                   f"First-hire lift | Decision | Stage | Gap |\n|---|---|---|---|---|---|---|---|---|")
+        for r in rows:
+            out.append(f'| {r["duty"]}{low_agree(r["duty_id"])} | **{float(r["demand_index"]):.0f}** {r["priority"]} [{r["demand_ci95"]}] | '
+                       f'{r["rank"]} [{r["rank_ci95"]}] | {r["pct_core"]} / {r["pct_core_regex"]} | {r["pct_companies"]} | '
+                       f'{r["founding_lift"]}× (z {r["founding_z"]}) | {r["decision_8o"]} | {r["build_stage"] and int(float(r["build_stage"])) or "—"} | '
+                       f'{r["target_gap_level"]} |')
+        out.append("")
+    return "\n".join(out)
+
+
+def robust(prefix, cols, z_col):
+    rows = sorted((r for r in U if r[f"{prefix}_robust"] == "True"), key=lambda r: -float(r[z_col]))
+    t = ["| Duty | " + " | ".join(h for h, _ in cols) + " | z (ML) |", "|---|" + "---|" * (len(cols) + 1)]
+    t += [f'| {r["duty"]} | ' + " | ".join(str(r[c]) for _, c in cols) + f' | {float(r[z_col]):+.1f} |' for r in rows]
+    return "\n".join(t)
+
+
+def main():
+    pe = CL[0]
+    take, ai = ik("intent", "Take GTM over from the founders"), ik("intent", "AI-native / automation expected")
+    kq, km = ik("kpis", "Qualified pipeline / SQLs / opportunities"), ik("kpis", "Meetings / demos booked")
+    cl_rows = "\n".join(f'| {k+1} | {c["labels"]} | **{c["pct_core_postings_any"]}%** | {c["mean_phi"]} |' for k, c in enumerate(CL[:6]))
+    intent_rows = "\n".join(f'| {r["item"]} | {r["pct_icp_core"]}% [{r["ci95"]}] | {r["pct_market_core"]}% | {float(r["z"]):+.1f} |'
+                            for r in sorted((r for r in IKT if r["field"] == "intent"), key=lambda r: -float(r["pct_icp_core"])))
+    kpi_rows = "\n".join(f'| {r["item"]} | {r["pct_icp_core"]}% | {r["pct_market_core"]}% |'
+                         for r in sorted((r for r in IKT if r["field"] == "kpis"), key=lambda r: -float(r["pct_icp_core"])))
+    tool_rows = "\n".join(f'| {r["item"]} | {r["pct_icp_core"]}% | {r["pct_market_core"]}% | {float(r["z"]):+.1f} |'
+                          for r in sorted((r for r in IKT if r["field"] == "tools"), key=lambda r: -float(r["pct_icp_core"]))[:12])
+    must = [r for r in U if r["priority"] == "Must"]
+    stable = sum(float(r["p_must"]) >= 0.95 for r in must)
+    weak = ", ".join(f'{AG[i]["duty"]} (F1 {AG[i]["f1_vs_regex"]})' for i in AG if AG[i].get("f1_vs_regex") and float(AG[i]["f1_vs_regex"]) < 0.45)
+    doc = f"""# 8-o Unified Agent Scope: what founders hire a growth person to do
+
+> Built from the **full population**: every GTM posting in our database ({P["icp_postings"]:,} postings, {P["icp_companies"]:,} ICP
+> companies) compared against every other GTM posting we swept ({P["market_postings"]:,} postings, {P["market_boards"]:,} job boards).
+> {P["lines"]:,} lines read ({P["unique_lines"]:,} unique), each labelled by two instruments. Nothing is sampled.
+> The visual version is **[report.html](report.html)**. This file is generated by `scripts/role_scope_scope_md.py`; edit the scripts, not this file.
+> When live client results disagree with this, the results win (blueprint s.0).
+
+---
+
+## 0. The answer
+
+**Founders are hiring a pipeline engine that learns.** {pe["pct_core_postings_any"]}% of core growth-hire postings ask for the
+pipeline-engine bundle (ICP → messaging → lists → outbound → reply → qualify → book → CRM). That is 8-o's Brain → Radar → Voice →
+Reply loop. The duties that most separate a **first** hire from later hires are *build the repeatable playbook from 0 to 1*
+({S["D2"]["pct_founding"]}%, {S["D2"]["founding_lift"]}×, z {S["D2"]["founding_z"]}) and *feed learnings back to the founders*
+({S["M3"]["pct_founding"]}%, {S["M3"]["founding_lift"]}×, z {S["M3"]["founding_z"]}). Those are Lab and the Friday Memo.
+
+| | |
+|---|---|
+| 8-o **OWNS** | {sum(r["decision_8o"] == "OWN" for r in U)} of 48 duties = **{share("OWN"):.0f}%** of founder demand |
+| 8-o **ASSISTS** (prepares, founder does it) | {sum(r["decision_8o"] == "ASSIST" for r in U)} duties = {share("ASSIST"):.0f}% |
+| **OUT** of scope | {sum(r["decision_8o"] == "OUT" for r in U)} duties = {share("OUT"):.0f}% (closing, post-sale, content, ads, partner programs, people) |
+| Gap Meter target (demand-weighted) | Stage 1 **{gap(1):.0f}%** · Stage 2 **{gap(2):.0f}%** · Stage 3 **{gap(3):.0f}%** of the posted job |
+| What founders measure | qualified pipeline {kq["pct_icp_core"]}% vs meetings booked {km["pct_icp_core"]}% |
+| Why they hire | "take GTM over from the founders" {take["pct_icp_core"]}% vs {take["pct_market_core"]}% elsewhere (z {take["z"]}) |
+
+**Scope in one sentence:** 8-o owns qualified pipeline for a seed-stage founder. It learns the company, runs the playbook as bets,
+finds the right accounts at the right moment, writes outreach the founder approves, handles every reply, books qualified meetings,
+keeps the CRM true, and reports weekly on what worked. The founder runs demos and closes.
+
+---
+
+## 1. What the job is: duty bundles (clustered from co-occurrence, full ICP core set)
+
+| # | Duties that appear together | % of core postings asking for any | cohesion (mean φ) |
+|---|---|---|---|
+{cl_rows}
+
+## 2. Why they hire and what they measure (ICP core vs rest-of-market core)
+
+| Intent | ICP core [95% CI] | Rest of market | z |
+|---|---|---|---|
+{intent_rows}
+
+| KPI named | ICP core | Rest of market |
+|---|---|---|
+{kpi_rows}
+
+## 3. Unified scope: all 48 duties
+
+Demand index = mean of (share of core postings, share of ICP companies, share of founding postings), each scaled to its maximum.
+Must ≥ 55 · Should 30–55 · Could < 30. Intervals: 1,000 company-level bootstrap resamples. {stable} of {len(must)} Must-haves stay
+Must in ≥ 95% of resamples. % core is shown for both instruments (ML / keyword). ⚠ = low agreement between the two instruments
+(F1 < 0.45), so read that row with care.
+
+{duty_tables()}
+
+## 4. Robust differences (both instruments agree in direction, |z| ≥ 3)
+
+### First hire vs later hires (ICP)
+{robust("founding", [("First-hire %", "pct_founding"), ("Lift vs later hires", "founding_lift")], "founding_z")}
+
+### Team ≤ 35 people vs rest (ICP core)
+{robust("small_team", [("≤ 35 people %", "small_team_pct"), ("Rest %", "rest_pct")], "small_team_z")}
+
+### ICP vs rest of market (all GTM postings)
+{robust("icp_vs_market", [("ICP %", "icp_vs_market_pct_icp"), ("Rest of market %", "icp_vs_market_pct_market")], "icp_vs_market_z")}
+
+## 5. Tools named (integration order)
+
+| Tool | ICP core | Rest of market | z |
+|---|---|---|---|
+{tool_rows}
+
+## 6. Method and confidence
+
+- **Collection:** `role_corpus_collect.py`. All GTM-family postings in `db/gtm_pipeline.db` + YC WaaS roles from `master/open_roles.csv`,
+  full text re-fetched from public ATS APIs / YC pages (99.4% full text).
+- **Market:** every other GTM-family posting with text in `raw_sources/H1_job_arbitrage/ats_live` ({P["market_postings"]:,}).
+- **Lines:** section parser (`role_scope_analyze.py`). Duties are read from responsibility lines only.
+- **Instrument 1, keywords:** `role_taxonomy.py`, 48 duties.
+- **Instrument 2, embeddings:** all-MiniLM-L6-v2 sentence embeddings + one-vs-rest logistic regression trained on the keyword labels,
+  5-fold cross-validation grouped by company, out-of-fold scores, per-duty F1-optimal threshold. Median AUC
+  {SM["classifier"]["median_auc_vs_regex"]:.3f}, median line-level F1 {SM["classifier"]["median_f1_vs_regex"]:.3f}, duty-ranking
+  Spearman ρ {SM["classifier"]["spearman_core_prevalence_ml_vs_regex"]}. Line-level agreement is moderate. Posting-level rankings
+  agree closely. Low-agreement duties: {weak}.
+- **Bottom-up discovery:** k-means on all {P["icp_scope_unique_lines"]:,} unique ICP responsibility lines, k = {SM["discovery"]["k_selected"]}
+  by Davies–Bouldin (`ml/discovered_clusters.csv`). Davies–Bouldin values near 4 mean the themes overlap: job text is a continuum,
+  so treat themes as descriptive.
+- **Decisions** (OWN / ASSIST / OUT, stage, Gap target) are judgment calls applying blueprint s.9 and s.13, held in `DECISION` in
+  `role_scope_synthesize.py` with a reason for each.
+- **Limits:** postings state intent, not the work actually done. Headcount is known for a minority of companies. The embedding
+  classifier learns from keyword seeds, so measuring true accuracy needs a hand-labelled check set (recommended next step:
+  300 lines).
+"""
+    (B / "SCOPE.md").write_text(doc)
+    print("SCOPE.md written", len(doc))
+
+
+if __name__ == "__main__":
+    main()

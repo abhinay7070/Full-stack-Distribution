@@ -271,7 +271,11 @@ def main():
     docs = defaultdict(list)
     for i, u in enumerate(tr_u):
         docs[km.labels_[i]].append(utext[u])
-    vec = TfidfVectorizer(stop_words="english", ngram_range=(1, 2), min_df=3, sublinear_tf=True)
+    # vocabulary = terms used in >= 0.1% of all scope lines (drops company / person names), then class-based TF-IDF
+    from sklearn.feature_extraction.text import CountVectorizer
+    voc = CountVectorizer(stop_words="english", ngram_range=(1, 2), min_df=max(25, len(tr_u) // 1000), binary=True)
+    voc.fit([utext[u] for u in tr_u])
+    vec = TfidfVectorizer(stop_words="english", ngram_range=(1, 2), vocabulary=voc.vocabulary_, sublinear_tf=True)
     M = vec.fit_transform([" ".join(docs[c]) for c in range(k)])
     terms = np.array(vec.get_feature_names_out())
     post_of_u = defaultdict(set)

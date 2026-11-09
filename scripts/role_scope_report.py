@@ -45,7 +45,10 @@ sm = json.load(open(MLD / "summary_ml.json"))
 LAB = {d["id"]: d["label"] for d in T.DUTIES}
 DEC = {i: scope[i]["decision_8o"] for i in scope}
 
-L = pd.read_csv(MLD / "postings_labels.csv.gz", dtype={"duties_ml": str, "duties_regex": str, "intent": str, "kpis": str})
+L = pd.read_csv(MLD / "postings_labels.csv.gz", dtype=str, keep_default_na=False)
+for c in ("core", "founding_title", "small_team", "scaled"):
+    L[c] = L[c] == "True"
+L["n_scope"] = L["n_scope"].astype(int)
 for c in ("duties_ml", "duties_regex", "intent", "kpis", "tools"):
     L[c] = L[c].fillna("")
 TAG = pd.read_csv(B / "extracted" / "postings_tagged.csv", usecols=["job_key", "comp_usd_mid", "posted_at", "founding_any", "icp_tier"])
@@ -64,8 +67,11 @@ def svg(w, h, body, label):
     return f'<svg viewBox="0 0 {w} {h}" role="img" aria-label="{e(label)}" class="chart">{body}</svg>'
 
 
-def hbars(items, xmax, fmt, W=760, Lm=230, title="", ref=None):
-    rowh, R = 26, 70
+def hbars(items, xmax, fmt, W=760, Lm=230, title="", ref=None, half=False):
+    if half:
+        W, Lm = 470, 200
+        items = [((lab if len(lab) <= 30 else lab[:29] + "…"), v, tip, c) for lab, v, tip, c in items]
+    rowh, R = 26, 58
     H = 18 + rowh * len(items) + (22 if ref else 0)
     X = lambda v: Lm + (W - Lm - R) * v / xmax  # noqa: E731
     b = []
@@ -106,24 +112,34 @@ def quadrant():
         b.append(f'<text x="{x}" y="{y}" class="qlab" text-anchor="{a}">{txt}</text>')
     b.append(f'<text x="{(Lm+W-R)/2}" y="{H-8}" class="axl" text-anchor="middle">% of core growth-hire postings asking for the duty</text>'
              f'<text transform="translate(14 {(Tp+H-Bt)/2}) rotate(-90)" class="axl" text-anchor="middle">first-hire vs later-hire lift</text>')
-    # label the 14 highest-demand duties plus the strongest founding lifts
-    top = sorted(scope.values(), key=lambda r: -float(r["demand_index"]))[:12]
-    hi = sorted(pts, key=lambda p: -p[2])[:4]
+    # label the 8 highest-demand duties and the 3 strongest first-hire lifts; avoid label-box overlap
+    top = sorted(scope.values(), key=lambda r: -float(r["demand_index"]))[:8]
+    hi = sorted(pts, key=lambda p: -p[2])[:3]
     show = {r["duty_id"] for r in top} | {p[0] for p in hi}
-    placed = []
+    boxes = []
+    labels = []
     for i, x, y in sorted(pts, key=lambda p: p[0] in show):
         d = DEC[i].lower()
         cy = Y(min(max(y, ymin), ymax))
         b.append(f'<g class="pt"><circle cx="{X(x):.1f}" cy="{cy:.1f}" r="6" class="m-{d}"/>'
                  f'<title>{e(LAB[i])}: {x:.1f}% of core postings; first-hire lift {y:.2f}×; z {scope[i]["founding_z"]}; {DEC[i]}</title></g>')
         if i in show:
-            right = X(x) < W - 200
-            ly = cy + 4
-            while any(abs(ly - py) < 12 and abs(X(x) - px) < 180 for px, py in placed):
-                ly += 12
-            placed.append((X(x), ly))
-            b.append(f'<text x="{X(x) + (9 if right else -9):.1f}" y="{ly:.1f}" class="dl" text-anchor="{"start" if right else "end"}">'
-                     f'{e(LAB[i][:36])}</text>')
+            labels.append((i, X(x), cy))
+    for i, px, py in sorted(labels, key=lambda t: t[2]):
+        txt = LAB[i] if len(LAB[i]) <= 40 else LAB[i][:38] + "…"
+        wdt = 6.3 * len(txt)
+        right = px + 10 + wdt < W - R
+        x0 = px + 10 if right else px - 10 - wdt
+        ly = py + 4
+        for step in (0, 14, -14, 28, -28, 42, -42, 56):
+            cand = py + 4 + step
+            if not any(not (x0 + wdt < bx0 or x0 > bx1) and abs(cand - by) < 13 for bx0, bx1, by in boxes):
+                ly = cand
+                break
+        boxes.append((x0, x0 + wdt, ly))
+        if abs(ly - (py + 4)) > 1:
+            b.append(f'<line x1="{px:.1f}" y1="{py:.1f}" x2="{(x0 if right else x0 + wdt):.1f}" y2="{ly - 4:.1f}" class="ref"/>')
+        b.append(f'<text x="{x0 if right else x0 + wdt:.1f}" y="{ly:.1f}" class="dl" text-anchor="{"start" if right else "end"}">{e(txt)}</text>')
     return svg(W, H, "".join(b), "Duty prevalence versus first-hire lift")
 
 
@@ -148,7 +164,7 @@ def dumbbell():
     return svg(W, H, "".join(b), "Small team versus rest")
 
 
-ARCH = [("sdr_bdr", "SDR / BDR"), ("gtm_generalist_lead", "Founding GTM / generalist"), ("growth", "Growth"),
+ARCH = [("sdr_bdr", "SDR / BDR"), ("gtm_generalist_lead", "Founding GTM"), ("growth", "Growth"),
         ("demand_gen", "Demand gen"), ("gtm_engineer", "GTM engineer"), ("revops", "RevOps"), ("ae_closer", "Founding AE")]
 
 
@@ -232,9 +248,9 @@ def tree():
 
 
 def name_cluster(ids):
-    rules = [({"F1", "R1", "B2"}, "Pipeline engine"), ({"M1", "M2"}, "Experiment & measure"),
-             ({"S1", "S2"}, "GTM systems & data"), ({"S2", "S3"}, "GTM systems & data"), ({"D2"}, "Strategy & playbook"),
-             ({"C2"}, "Closing"), ({"R7"}, "Events & partnerships"), ({"R9"}, "Events & partnerships"), ({"P2"}, "Post-sale")]
+    rules = [({"F1", "R1", "B2"}, "Pipeline engine"), ({"D3", "M2"}, "Experiments & growth channels"),
+             ({"M1", "S2"}, "Systems, data & measurement"), ({"D2"}, "Strategy & playbook"), ({"C2"}, "Closing"),
+             ({"O1"}, "Team building"), ({"S6"}, "Team building"), ({"P2"}, "Post-sale")]
     for need, nm in rules:
         if need <= ids:
             return nm
@@ -328,7 +344,7 @@ def gap_chart():
                        for r in scope.values()])
         v = 100 * (lv * w).sum() / (3 * w.sum())
         items.append((nm, v, f"{nm}: {v:.1f}% of the posted job, demand-weighted", "m-own"))
-    return hbars(items, 100, lambda v: f"{v:.0f}%", Lm=170, title="Gap Meter target")
+    return hbars(items, 100, lambda v: f"{v:.0f}%", title="Gap Meter target", half=True)
 
 
 def stages_cards():
@@ -404,10 +420,10 @@ def build():
     nm = dict(ARCH)
     ages = sorted(((nm[a], float(g.age.median()), len(g)) for a, g in dated.groupby("archetype") if a in nm), key=lambda x: -x[1])
     age_svg = hbars([(f"{n} · n {k:,}", v, f"{n}: median {v:.0f} days open (n {k:,})", "m-own") for n, v, k in ages],
-                    max(130, max(a[1] for a in ages) + 10), lambda v: f"{v:.0f} d", title="Median days open")
+                    max(130, max(a[1] for a in ages) + 10), lambda v: f"{v:.0f} d", title="Median days open", half=True)
     cs = sorted(((nm[a], float(g.comp_usd_mid.median()), len(g)) for a, g in comp.groupby("archetype") if a in nm), key=lambda x: -x[1])
     comp_svg = hbars([(f"{n} · n {k:,}", v / 1000, f"{n}: median base ${v:,.0f} (n {k:,})", "m-own") for n, v, k in cs], 200,
-                     lambda v: f"${v:.0f}K", title="Median base salary", ref=(36, 60, "8-o at $3–5K a month = $36–60K a year"))
+                     lambda v: f"${v:.0f}K", title="Median base salary", ref=(36, 60, "8-o at $3–5K / month"), half=True)
     prem = []
     for i in LAB:
         m = comp.dset.apply(lambda s: i in s)
@@ -424,7 +440,7 @@ def build():
     mk = lambda rows, xm: hbars([(r["item"][:38], float(r["pct_icp_core"]),  # noqa: E731
                                   f'{r["item"]}: {r["pct_icp_core"]}% of ICP core (95% CI {r["ci95"]}); rest of market {r["pct_market_core"]}% (z {r["z"]})',
                                   "m-own") for r in sorted(rows, key=lambda r: -float(r["pct_icp_core"]))], xm,
-                                lambda v: f"{v:.1f}%")
+                                lambda v: f"{v:.1f}%", half=True)
     tiers = C.groupby("company").agg(t=("icp_tier", "first"), f=("founding_any", "max"))
     ab = tiers.t.fillna("").str[:1].isin(["A", "B"])
     p = sm["population"]
