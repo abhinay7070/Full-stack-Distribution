@@ -1,0 +1,49 @@
+field,item,pct_icp_core,ci95,pct_market_core,z
+intent,First GTM / sales / growth hire,10.5,9.2-12.1,2.2,14.81
+intent,Take GTM over from the founders,14.1,12.5-15.9,2.4,18.83
+intent,Build a repeatable motion / playbook,40.2,37.9-42.5,23.2,13.59
+intent,Generate pipeline / demand now,11.4,10.0-13.0,6.7,6.32
+intent,Find product-market fit / early customers,3.9,3.0-4.9,1.6,5.55
+intent,Scale after fundraise,16.5,14.8-18.3,12.6,4.03
+intent,Hybrid / generalist (wear many hats),10.4,9.0-12.0,11.3,-1.02
+intent,AI-native / automation expected,32.9,30.7-35.2,28.8,3.22
+kpis,Meetings / demos booked,6.7,5.6-8.0,4.5,3.59
+kpis,Qualified pipeline / SQLs / opportunities,34.8,32.6-37.1,28.9,4.6
+kpis,MQLs / leads,3.2,2.5-4.2,3.4,-0.44
+kpis,Revenue / ARR / quota,24.6,22.6-26.8,23.1,1.3
+kpis,Conversion rates,9.3,8.0-10.8,9.7,-0.39
+kpis,CAC / payback / efficiency,6.9,5.8-8.2,10.6,-4.46
+kpis,Activation / retention / NRR,15.2,13.5-17.0,18.5,-3.1
+kpis,Traffic / signups,13.3,11.7-15.0,12.7,0.65
+tools,HubSpot,15.7,14.0-17.5,15.6,0.04
+tools,Salesforce,14.2,12.6-16.0,24.4,-8.8
+tools,Attio,1.4,0.9-2.0,0.2,5.98
+tools,Pipedrive,0.1,0.0-0.3,0.3,-1.91
+tools,Clay,7.1,6.0-8.5,5.2,2.94
+tools,Apollo,5.1,4.2-6.3,3.5,3.05
+tools,ZoomInfo,2.1,1.6-3.0,4.3,-4.09
+tools,Clearbit,0.2,0.1-0.6,0.1,1.19
+tools,LinkedIn Sales Navigator,3.5,2.7-4.4,5.9,-3.97
+tools,Outreach.io,1.2,0.8-1.8,1.5,-0.83
+tools,Salesloft,1.1,0.7-1.8,3.2,-4.6
+tools,Smartlead / Instantly / Lemlist,2.0,1.4-2.7,1.4,1.68
+tools,Gong / call recording,2.8,2.1-3.7,4.5,-3.02
+tools,Zapier,1.9,1.4-2.7,1.9,0.07
+tools,Make,1.0,0.6-1.5,1.4,-1.39
+tools,n8n,2.3,1.7-3.2,2.1,0.54
+tools,SQL,8.2,7.0-9.6,10.7,-2.95
+tools,Python,3.4,2.6-4.4,4.0,-1.06
+tools,JavaScript / TypeScript,2.9,2.2-3.8,2.6,0.72
+tools,APIs / webhooks,10.2,8.9-11.8,8.3,2.46
+tools,LLMs / AI tools,23.2,21.2-25.2,22.8,0.27
+tools,"Product analytics (Amplitude, Mixpanel, PostHog)",2.4,1.8-3.2,2.4,-0.09
+tools,Google Analytics / GA4,2.4,1.8-3.2,5.8,-5.62
+tools,Segment / CDP,3.5,2.7-4.5,5.9,-3.74
+tools,"BI (Looker, Tableau, Metabase)",1.8,1.3-2.6,5.9,-6.75
+tools,Spreadsheets,21.4,19.5-23.5,36.2,-11.27
+tools,Webflow / CMS,1.5,1.1-2.3,2.1,-1.34
+tools,"Marketing automation (Marketo, Customer.io)",1.7,1.2-2.5,5.5,-6.4
+tools,Notion,1.2,0.8-1.9,1.4,-0.54
+tools,Common Room / intent tools,2.1,1.6-3.0,2.9,-1.76
+tools,Ads platforms,3.0,2.3-3.9,5.3,-3.97
+tools,Calendly / scheduling,0.7,0.4-1.2,0.5,0.72

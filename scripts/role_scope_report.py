@@ -463,7 +463,9 @@ def build():
         tpl = tpl.replace("{{" + k + "}}", str(v))
     left = re.findall(r"\{\{[A-Z_0-9]+\}\}", tpl)
     assert not left, left
-    (B / "report.html").write_text(tpl)
+    # standalone file: own doctype / charset / viewport so it opens correctly straight from the repo
+    head = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+    (B / "report.html").write_text(head + tpl.replace("<div class=\"wrap\">", "</head><body>\n<div class=\"wrap\">", 1) + "\n</body></html>\n")
     print("written", B / "report.html", f"{len(tpl):,} bytes")
 
 

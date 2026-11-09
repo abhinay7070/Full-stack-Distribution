@@ -1,0 +1,104 @@
+{
+ "population": {
+  "icp_postings": 6183,
+  "market_postings": 30399,
+  "market_scaled_postings": 2379,
+  "market_boards": 6416,
+  "lines": 841325,
+  "unique_lines": 546431,
+  "icp_scope_unique_lines": 57584,
+  "usable_icp": 5547,
+  "usable_icp_core": 1680,
+  "usable_market": 28949,
+  "usable_market_core": 5328,
+  "usable_scaled": 2329,
+  "icp_companies": 1599,
+  "segments_n": {
+   "founding": [
+    494,
+    5053
+   ],
+   "small_team": [
+    434,
+    1246
+   ],
+   "us_vs_euuk": [
+    1019,
+    290
+   ],
+   "seed_vs_seriesA": [
+    395,
+    202
+   ],
+   "icp_vs_market": [
+    5547,
+    28949
+   ],
+   "icp_core_vs_market_core": [
+    1680,
+    5328
+   ],
+   "icp_vs_scaled": [
+    5547,
+    2329
+   ]
+  }
+ },
+ "classifier": {
+  "model": "sentence-transformers/all-MiniLM-L6-v2 + one-vs-rest logistic regression (C=2)",
+  "cv": "5-fold grouped by company, out-of-fold scores for every ICP scope line",
+  "median_auc_vs_regex": 0.9584999999999999,
+  "median_f1_vs_regex": 0.579,
+  "threshold_rule": "per duty, argmax out-of-fold F1 vs keyword labels",
+  "spearman_core_prevalence_ml_vs_regex": 0.931
+ },
+ "discovery": {
+  "k_selected": 80,
+  "grid": [
+   {
+    "k": 20,
+    "davies_bouldin": 4.403,
+    "calinski_harabasz": 516.6,
+    "inertia": 38678.8
+   },
+   {
+    "k": 30,
+    "davies_bouldin": 4.1683,
+    "calinski_harabasz": 402.0,
+    "inertia": 37648.1
+   },
+   {
+    "k": 40,
+    "davies_bouldin": 4.1033,
+    "calinski_harabasz": 332.6,
+    "inertia": 36945.0
+   },
+   {
+    "k": 50,
+    "davies_bouldin": 4.0778,
+    "calinski_harabasz": 287.0,
+    "inertia": 36380.3
+   },
+   {
+    "k": 60,
+    "davies_bouldin": 4.0053,
+    "calinski_harabasz": 253.3,
+    "inertia": 35936.3
+   },
+   {
+    "k": 80,
+    "davies_bouldin": 3.994,
+    "calinski_harabasz": 207.9,
+    "inertia": 35217.1
+   }
+  ],
+  "lines_in_low_coverage_clusters": 20476,
+  "pct_scope_lines_with_ml_duty": 51.7,
+  "pct_scope_lines_with_regex_duty": 54.9
+ },
+ "bootstrap": {
+  "resamples": 1000,
+  "unit": "company (all postings of a drawn company kept)",
+  "seed": 7
+ }
+}
