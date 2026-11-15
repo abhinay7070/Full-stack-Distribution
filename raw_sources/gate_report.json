@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-09T14:16:00Z",
+ "run_at": "2026-11-15T07:16:29Z",
  "fingerprint": {
   "companies": 14455,
   "sha1": "62ebc1af6118c5ea952e05144a2caf5b539bdc4c",
@@ -146,86 +146,6 @@
    "score": 7,
    "confidence": "high",
    "evidence": "[\"brand in title\", \"brand in text\", \"city 'danville'\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:thetrevorproject",
-   "name": "thetrevorproject",
-   "domain": "thetrevorproject.org",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2133099",
-   "name": "RWA Flood, Inc.",
-   "domain": "rwaflood.com",
-   "score": 9,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:elegancia",
-   "name": "ELEGANCIA",
-   "domain": "elegancia.dev",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:blip",
-   "name": "Blip",
-   "domain": "blip.ai",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:cambio",
-   "name": "Cambio",
-   "domain": "cambio.ai",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "ats:talentventuregroup",
-   "name": "Talent Venture Group",
-   "domain": "talentventuregroup.com",
-   "score": 5,
-   "confidence": "medium",
-   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\"]"
-  },
-  {
-   "entity_key": "formd:2104266",
-   "name": "TranscendAP, Inc.",
-   "domain": "transcendap.com",
-   "score": 7,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"city 'hamilton'\", \"source-published domain\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:glean",
-   "name": "Glean",
-   "domain": "glean.com",
-   "score": 6,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"directory listing\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "news:zamp",
-   "name": "Zamp",
-   "domain": "zamp.com",
-   "score": 8,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"tech product page\"]"
-  },
-  {
-   "entity_key": "formd:2154072",
-   "name": "General Cybernetics Corp",
-   "domain": "generalcybernetics.net",
-   "score": 9,
-   "confidence": "high",
-   "evidence": "[\"brand in title\", \"brand in text\", \"legal name on page\", \"source-published domain\", \"tech product page\"]"
   }
  ],
  "resolution_status": {
