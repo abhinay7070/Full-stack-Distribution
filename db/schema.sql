@@ -208,3 +208,15 @@ CREATE TABLE IF NOT EXISTS resolutions (
 -- companies.founded_year   TEXT
 -- companies.linkedin_url   TEXT
 -- companies.sources        TEXT   JSON array of source names that list the company
+
+-- 8-o outbound workspace (v5): owner + automation rows of the Google Sheet, mirrored so a rebuild never loses them.
+-- tab: Log | Angles | Messages | Experiments | Learnings | Mailboxes | AccountNotes | ContactNotes | Settings
+-- row_key: touch_id | angle_id | msg_id | exp_id | learning_id | mailbox | company_domain | email | key
+CREATE TABLE IF NOT EXISTS workspace_rows (
+    tab         TEXT NOT NULL,
+    row_key     TEXT NOT NULL,
+    data        TEXT NOT NULL,          -- JSON object, column -> value
+    source      TEXT,                   -- seed | workbook
+    updated_at  TEXT NOT NULL,
+    PRIMARY KEY (tab, row_key)
+);

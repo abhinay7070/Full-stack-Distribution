@@ -22,7 +22,9 @@ with **no silent omissions**: every record that is dropped is logged with a reas
 | `scripts/` | One script per source/step (see run order). Shared: `pipeline_db`, `http_fetch` (cached, polite), `resolve_domains` (name -> verified domain), `icp_rules`, `gate_check` |
 | `raw_sources/` | Unfiltered raw payloads per hypothesis (gzip) + run reports |
 | `sublists/` | Per-hypothesis CSVs, rejected / pool / unresolved lists, `master_priority.csv` |
-| `master/gtm_master.xlsx` | The workbook (Master, Dashboard, H0-H10 tabs, Contacts, Signals, Open_Roles, Funding_Events, Unresolved_TAM, Outside_SAM, Sources, Outreach_Log, Data_Dictionary) |
+| `master/gtm_master.xlsx` | 8-o Outbound OS (v5): Home, Queue, Log, Accounts, Contacts, Angles, Messages, Experiments, Learnings, Settings. Built by `scripts/workbook.py`; lives in Google Sheets |
+| `apps_script/` | `Code.gs` (Gmail sync per mailbox, reply classes, rollups, Queue, digest, drafts, research import) + setup README. Mirrors `workbook.py` queue/status logic |
+| `scripts/workspace_seed.py` | Seed for the sheet's owner tabs (Gmail backfill 2026-11-15, angles, messages, experiments, learnings). INSERT OR IGNORE into `workspace_rows` |
 | `.cache/` | gitignored: HTTP cache, parsed intermediates. Deleting it only costs re-fetch time |
 
 Hypotheses: H0 universe (weight 0) · H1 hiring GTM · H2 fresh capital · H3 technical founders · H4 launch decay ·
@@ -34,7 +36,7 @@ H10 GTM role open 60+ days.
 pip install -r requirements.txt
 ./scripts/run_all.sh            # full refresh, all live sources (first run 3-5 h; cached re-runs are much faster)
 ./scripts/run_pipeline_v2.sh    # finish only: site scan -> ATS 2nd pass -> tags -> emails -> workbook -> gates
-python3 scripts/build_master.py # rebuild workbook only (syncs the owner's yellow cells + Outreach_Log into DB first)
+python3 scripts/build_master.py # rebuild workbook only (a v5 file at master/gtm_master.xlsx is synced into workspace_rows first)
 python3 scripts/gate_check.py   # checker: must print GATE: PASS
 ```
 Long steps: run in the background and poll the logs in `.cache/*.log`. Domain resolution and site scans are network-bound.
@@ -55,7 +57,18 @@ SEC asks for a declared User-Agent (set in `http_fetch.SEC_UA`).
 - Do not bypass access controls (CSRF / login / paywalls). Consider-hosted VC boards were skipped for that reason.
 - Never execute code from cloned mirrors; parse their data files only.
 - Workbook: Arial, formulas (no hardcoded results), yellow = owner input. `build_master.py` preserves owner edits.
+- The live workbook is the Google Sheet. Apps Script writes only slate (sync) columns and Queue, never formula or yellow
+  columns. Keep `apps_script/Code.gs` and `scripts/workbook.py` (thread_stats / status_of / build_queue) in step.
+- `class_auto` is rule-based: never treat it (or any AI score) as market evidence; `class_human` wins.
 - Commits: never include model identifiers; push to the working branch only; no PR unless asked.
+
+## Outbound OS state (2026-11-15, v5)
+- Workbook rebuilt from 24 tabs to 10 (see README). 30,099 formulas, 0 errors. Gate PASS.
+- Log seeded from abhinay@8-o.co: 21 first touches, 9 follow-ups, 2 positive threads (Spaceflow -> design partner,
+  via oukasha; drip -> 'free now', no follow-up yet). Spaceflow history reconstructed from quotes (`backfill_quoted`);
+  the sync replaces those rows when oukasha's mailbox connects.
+- Mailboxes to connect (each person runs 8-o > Connect my mailbox): abhinay, oukasha, hamza @8-o.co.
+- Gaps (pink on Home): booking link, deliverability results, design-partner segment (L-006), sample size.
 
 ## State at hand-off (2026-11-09, v4)
 14,455 companies in the DB: 13,361 in SAM (A 2,120 · B 5,443 · C 5,284 · D 514) + 1,093 Outside_SAM + 1 disqualified.

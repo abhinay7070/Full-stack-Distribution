@@ -6,3 +6,4 @@ db/*.db-journal
 db/*.db-wal
 db/*.db-shm
 .cache/
+apps_script/test/sheet.json
