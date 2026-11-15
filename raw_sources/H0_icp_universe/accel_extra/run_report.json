@@ -1,0 +1,9 @@
+{
+ "run_at": "2026-11-15T07:17:59Z",
+ "domains": 542,
+ "pool": 269,
+ "already_in_universe": 187,
+ "reject": 38,
+ "homepage_unreachable": 36,
+ "admit": 12
+}
