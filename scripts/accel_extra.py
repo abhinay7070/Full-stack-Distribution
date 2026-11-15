@@ -55,6 +55,7 @@ def main() -> None:
             f.write(r.text)
         for d in domains(r.text):
             seen.setdefault(d, set()).add(prog)
+    ui.prefetch_homepages([d for d in seen if d not in uni])
     for d, progs in sorted(seen.items()):
         label = "/".join(sorted(progs))
         if d in uni:

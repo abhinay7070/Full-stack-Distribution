@@ -77,6 +77,12 @@ def gate(text: str, country: str | None, team: int | None, stage: str | None, do
     return "pool", "no_early_stage_evidence", flags, label
 
 
+def prefetch_homepages(domains: list[str], workers: int = 48) -> None:
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(workers) as ex:
+        list(ex.map(lambda d: rd.page(d) if d else None, domains))
+
+
 def homepage_stage_proof(domain: str | None) -> str | None:
     """Second look for pooled companies: the company's own homepage states an early stage (seed / Series A / YC batch /
     accelerator / founding-team hiring) and shows no late-stage marker. Page comes from the resolver's HTTP cache."""
@@ -323,6 +329,7 @@ def ingest_ats(conn) -> dict:
             st["no_domain"] += 1
             continue
         by_dom[d].append(b)
+    prefetch_homepages([d for d in by_dom if d not in uni])  # gate() may read each homepage: warm the cache in parallel
     for d, bs in by_dom.items():
         jobs = [j for b in bs for j in b["jobs"]]
         n_open = len({(j.get("title") or "").lower() for j in jobs})
