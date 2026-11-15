@@ -1,24 +1,24 @@
 {
- "run_at": "2026-11-15T07:24:31Z",
+ "run_at": "2026-11-15T07:45:34Z",
  "fingerprint": {
   "companies": 14762,
-  "sha1": "790edc278c47eb3521d934e68c969deeb34a82c0",
+  "sha1": "4d1024fef1919509cd901b4e29ca622d3e122228",
   "tags": {
    "H0": 9391,
-   "H1": 2081,
+   "H1": 2083,
    "H2": 6209,
    "H3": 2187,
    "H4": 528,
-   "H5": 2166,
+   "H5": 2168,
    "H6": 1694,
    "H7": 194,
    "H8": 18,
-   "H10": 1263
+   "H10": 1265
   }
  },
  "hard_failures": {},
  "warnings": {
-  "series_b_plus_event_on_live_company": 104,
+  "series_b_plus_event_on_live_company": 115,
   "homepage_unreachable": 657,
   "parked_homepage": 21,
   "medium_confidence_resolutions": 6053
