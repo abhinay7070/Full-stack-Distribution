@@ -95,7 +95,10 @@ v4: Common Crawl discovery, SmartRecruiters + Personio, small boards resolved. v
    104 live companies carry a Series B+ event (flagged `possible_past_series_a`).
 9. **Common Crawl index service**: index.commoncrawl.org resets connections from cloud sessions; `cc_ats_discover.py`
    reads the parquet index on data.commoncrawl.org instead. Add newer crawls as they publish (argv: crawl ids).
-10. **Site-scan hang guard**: `site_scan.py --to-cache` can hang on a pathological page (regex holds the GIL). The
+10. **DB size**: `db/gtm_pipeline.db` is 83 MB (GitHub hard limit 100 MB; VACUUM does not shrink it). Before the next
+   big expansion, either commit a gzip copy (`db/gtm_pipeline.db.gz`, ~25 MB) and gitignore the raw file, or trim
+   `jobs.description_snip` / `site_scan` raw columns.
+11. **Site-scan hang guard**: `site_scan.py --to-cache` can hang on a pathological page (regex holds the GIL). The
    per-domain runner used in v3 runs one process per domain with `timeout 60`; fold that into `site_scan.py`.
 
 ## Future expansion (Master ~40-55% of an estimated 25-35K SAM; free discovery levers are now mostly exhausted)
