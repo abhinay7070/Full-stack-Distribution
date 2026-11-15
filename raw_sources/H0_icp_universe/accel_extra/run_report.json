@@ -1,9 +1,8 @@
 {
- "run_at": "2026-11-15T07:17:59Z",
+ "run_at": "2026-11-15T07:40:52Z",
  "domains": 542,
  "pool": 269,
- "already_in_universe": 187,
+ "already_in_universe": 199,
  "reject": 38,
- "homepage_unreachable": 36,
- "admit": 12
+ "homepage_unreachable": 36
 }
