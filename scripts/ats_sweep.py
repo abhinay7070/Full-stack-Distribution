@@ -62,7 +62,59 @@ URL = {
     "teamtailor": "https://{s}.teamtailor.com/jobs.rss",
     "smartrecruiters": "https://api.smartrecruiters.com/v1/companies/{s}/postings?limit=100",
     "personio": "https://{s}.jobs.personio.de/xml?language=en",
+    "gem": "https://api.gem.com/job_board/v0/{s}/job_posts/",
+    "rippling": "https://api.rippling.com/platform/api/ats/v1/board/{s}/jobs",
+    "pinpoint": "https://{s}.pinpointhq.com/postings.json",
+    "dover": "https://app.dover.com/api/v1/careers-page-slug/{s}",  # -> id + primary_domain; jobs fetched in sweep_dover
 }
+UUID = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$")
+
+
+def sweep_dover(slugs: list[str], want: dict) -> tuple[list[dict], dict]:
+    """Dover public careers API: slug (or client uuid) -> {id, name, primary_domain}, then /careers-page/{id}/jobs.
+    The company's own domain comes from Dover, so the board maps to a domain without name resolution."""
+    slugs = [s for s in slugs if UUID.match(s) or re.fullmatch(r"[a-z0-9][a-z0-9-]{1,60}", s)]
+    info_url = {s: (f"https://app.dover.com/api/v1/careers-page/{s}" if UUID.match(s)
+                    else URL["dover"].format(s=s)) for s in slugs}
+    res = hf.fetch_many(info_url.values(), workers=8, timeout=25, retries=2)
+    infos = {}
+    for s, u in info_url.items():
+        r = res[u]
+        try:
+            d = r.json() if r.status == 200 else None
+        except ValueError:
+            d = None
+        if d and d.get("id"):
+            infos[s] = d
+    jurl = {s: f"https://app.dover.com/api/v1/careers-page/{d['id']}/jobs" for s, d in infos.items()}
+    jres = hf.fetch_many(jurl.values(), workers=8, timeout=25, retries=2)
+    boards, index, seen_ids = [], {}, set()
+    for s in slugs:
+        d = infos.get(s)
+        if not d or d["id"] in seen_ids:
+            index[f"dover:{s}"] = {"status": 0 if not d else 200, "jobs": 0, "origins": sorted(want.get(s, []))[:5]}
+            continue
+        seen_ids.add(d["id"])
+        try:
+            js = jres[jurl[s]].json().get("results") or []
+        except (ValueError, AttributeError):
+            js = []
+        jobs = []
+        for j in js:
+            if j.get("is_sample") or j.get("is_published") is False:
+                continue
+            locs = j.get("locations") or []
+            jobs.append({"id": j.get("id"), "title": j.get("title"), "department": None,
+                         "location": "; ".join(x.get("name") or "" for x in locs),
+                         "posted_at": None, "url": f"https://app.dover.com/apply/{d.get('slug') or s}/{j.get('id')}",
+                         "comp": None, "description": "", "remote": j.get("workplace_type") == "REMOTE"})
+        dom = pdb.normalize_domain(d.get("primary_domain") or d.get("careers_page_logo_redirect_url") or "")
+        origins = sorted(want.get(s, [])) + ([f"site:{dom}"] if dom else [])
+        index[f"dover:{s}"] = {"status": 200, "jobs": len(jobs), "origins": origins[:5]}
+        if jobs:
+            boards.append({"provider": "dover", "slug": d.get("slug") or s, "company_name": d.get("name"),
+                           "jobs": jobs, "origins": origins})
+    return boards, index
 
 
 def parse(provider: str, slug: str, r: hf.Resp) -> dict | None:
@@ -149,6 +201,32 @@ def parse(provider: str, slug: str, r: hf.Resp) -> dict | None:
                              "description": " ".join(x for x in ((j.get("industry") or {}).get("label"),
                                                                  (j.get("function") or {}).get("label")) if x),
                              "remote": loc.get("remote")})
+        elif provider == "gem":
+            d = r.json()
+            for j in d if isinstance(d, list) else []:
+                jobs.append({"id": j.get("id"), "title": j.get("title"),
+                             "department": ", ".join(x.get("name", "") for x in j.get("departments") or []),
+                             "location": (j.get("location") or {}).get("name"),
+                             "posted_at": iso(j.get("first_published_at") or j.get("created_at")),
+                             "url": j.get("absolute_url"), "comp": None,
+                             "description": (j.get("content_plain") or txt(j.get("content")))[:6000],
+                             "remote": j.get("location_type") == "remote"})
+        elif provider == "pinpoint":
+            d = r.json()
+            for j in d.get("data") or []:
+                loc = j.get("location") or {}
+                jobs.append({"id": j.get("id"), "title": j.get("title"), "department": (j.get("department") or {}).get("name")
+                             if isinstance(j.get("department"), dict) else j.get("department"),
+                             "location": loc.get("name") if isinstance(loc, dict) else str(loc),
+                             "posted_at": iso(j.get("created_at") or j.get("published_at")), "url": j.get("url"),
+                             "comp": None, "description": txt(j.get("description"))[:6000]})
+        elif provider == "rippling":
+            d = r.json()
+            for j in d if isinstance(d, list) else []:
+                jobs.append({"id": j.get("uuid"), "title": (j.get("name") or "").strip(),
+                             "department": (j.get("department") or {}).get("label"),
+                             "location": (j.get("workLocation") or {}).get("label"), "posted_at": None,
+                             "url": j.get("url"), "comp": None, "description": ""})
         elif provider == "personio":
             if "<workzag-jobs" not in r.text[:500]:
                 return None
@@ -240,6 +318,17 @@ def main() -> None:
     index = {}
     for prov in provs:
         slugs = sorted(want[prov])
+        if prov == "dover":
+            boards, idx = sweep_dover(slugs, want["dover"])
+            index.update(idx)
+            for old_part in LIVE.glob("dover.p*.jsonl.gz"):
+                old_part.unlink()
+            with gzip.open(LIVE / "dover.jsonl.gz", "wt") as f:
+                for b in boards:
+                    f.write(json.dumps(b) + "\n")
+            split_large(LIVE / "dover.jsonl.gz")
+            print(f"  dover: {len(boards)} boards with jobs", file=sys.stderr)
+            continue
         urls = {s: URL[prov].format(s=s) for s in slugs}
         print(f"{prov}: {len(slugs)} boards", file=sys.stderr)
         res = hf.fetch_many(urls.values(), workers=6 if prov == "workable" else 24, timeout=25, retries=2,

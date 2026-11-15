@@ -41,6 +41,10 @@ PREFIX = {
     "com,recruitee,": ("recruitee", r"https?://([a-z0-9-]+)\.recruitee\.com"),
     "com,teamtailor,": ("teamtailor", r"https?://([a-z0-9-]+)\.teamtailor\.com"),
     "hr,breezy,": ("breezy", r"https?://([a-z0-9-]+)\.breezy\.hr"),
+    "com,gem,jobs)/": ("gem", r"jobs\.gem\.com/([^/?#]+)"),
+    "com,rippling,ats)/": ("rippling", r"ats\.rippling\.com/(?:[a-z]{2}-[A-Z]{2}/)?([^/?#]+)"),
+    "com,pinpointhq,": ("pinpoint", r"https?://([a-z0-9-]+)\.pinpointhq\.com"),
+    "com,dover,app)/": ("dover", r"app\.dover\.com/(?:apply|jobs)/([^/?#]+)"),
 }
 SKIP = {"www", "api", "app", "jobs", "careers", "embed", "static", "assets", "help", "support", "blog", "status",
         "en", "de", "fr", "admin", "login", "signup", "cdn", "images", "img", "media", "docs", "developers", "favicon.ico",
