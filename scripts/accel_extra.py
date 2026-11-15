@@ -4,7 +4,7 @@ Each page is fetched (cached), snapshotted to raw_sources/H0_icp_universe/accel_
 website on it is a candidate. Membership alone is NOT stage proof (these lists include unicorns and exits), so each
 domain goes through universe_ingest.gate(): already in the universe -> source added; homepage states an early stage
 -> admitted; otherwise pooled (with its domain) in sublist_unverified_stage_pool.csv; late-stage / institution ->
-rejected with a reason. Run after universe_ingest (the HN step rewrites the pool file).
+rejected with a reason. Re-runs replace this source's own pool/rejected rows (no duplicates).
 """
 from __future__ import annotations
 
@@ -92,8 +92,8 @@ def main() -> None:
     conn.commit()
     pdb.finish_run(conn, run, records_raw=len(seen), records_unique=len(seen), records_icp_pass=st["admit"],
                    stop_reason="exhausted")
-    ui.write_rows(ui.POOL, pool, append=True)
-    ui.write_rows(ui.REJ, rej, append=True)
+    ui.write_rows(ui.POOL, pool, append=True, replace=("accel:",))
+    ui.write_rows(ui.REJ, rej, append=True, replace=("accel:",))
     rep = {"run_at": pdb.utcnow(), "domains": len(seen), **st}
     (RAW / "run_report.json").write_text(json.dumps(rep, indent=1) + "\n")
     print(json.dumps(rep, indent=1))

@@ -120,7 +120,14 @@ def resolve_all(items: list[dict], prefix: str) -> dict[str, str | None]:
     return {k: v.get("domain") for k, v in res.items()}
 
 
-def write_rows(path: Path, rows: list[dict], append: bool) -> None:
+def write_rows(path: Path, rows: list[dict], append: bool, replace: tuple[str, ...] = ()) -> None:
+    """append=False rewrites the file. append=True adds rows; rows already in the file whose `source` starts with
+    one of `replace` are dropped first, so re-running one source never duplicates its rows."""
+    if append and replace and path.exists():
+        with open(path, newline="") as f:
+            keep = [r for r in csv.DictReader(f) if not (r.get("source") or "").startswith(replace)]
+        rows = keep + rows
+        append = False
     if not rows:
         return
     mode = "a" if append and path.exists() else "w"
@@ -202,8 +209,8 @@ def ingest_hn(conn) -> dict:
     conn.commit()
     pdb.finish_run(conn, run, records_raw=len(posts), records_unique=len(by_dom), records_icp_pass=st["admit"],
                    stop_reason="exhausted")
-    write_rows(POOL, pool, append=False)
-    write_rows(REJ, rej, append=False)
+    write_rows(POOL, pool, append=True, replace=("hn",))
+    write_rows(REJ, rej, append=True, replace=("hn",))
     return {"posts": len(posts), "domains": len(by_dom), **st}
 
 
@@ -260,8 +267,8 @@ def ingest_news(conn) -> dict:
     conn.commit()
     pdb.finish_run(conn, run, records_raw=len(rounds), records_unique=len(rounds), records_icp_pass=st["admit"],
                    stop_reason="exhausted")
-    write_rows(POOL, pool, append=True)
-    write_rows(REJ, rej, append=True)
+    write_rows(POOL, pool, append=True, replace=("news:",))
+    write_rows(REJ, rej, append=True, replace=("news",))
     return {"rounds": len(rounds), **st}
 
 
@@ -391,8 +398,8 @@ def ingest_ats(conn) -> dict:
     conn.commit()
     pdb.finish_run(conn, run, records_raw=len(boards), records_unique=len(by_dom), records_icp_pass=st["admit"],
                    stop_reason="exhausted")
-    write_rows(POOL, pool, append=True)
-    write_rows(REJ, rej, append=True)
+    write_rows(POOL, pool, append=True, replace=("ats:",))
+    write_rows(REJ, rej, append=True, replace=("ats",))
     return {"boards": len(boards), "domains": len(by_dom), **st}
 
 
